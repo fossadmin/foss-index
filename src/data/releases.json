@@ -1,0 +1,44 @@
+{
+  "caddyserver/caddy": {
+    "version": "v2.11.7",
+    "date": "2026-10-03T05:58:33Z",
+    "url": "https://github.com/caddyserver/caddy/releases/tag/v2.11.7",
+    "changelog": "This patch release fixes regressions from 2.11.6, including a crash when proxying over HTTP/2 and streams that were cut off after a minute. **If you're on 2.11.6, we recommend upgrading.** It also adds support for the brand new `Incremental` header field (RFC 10036).\r\n\r\n**Huge thank you to our sponsors for keeping the project alive with resources, and for our maintainers who triage and assist tirelessly in this relentless new age of AI.**\r\n\r\n## Highlights\r\n\r\n- **Fixed: crash and dropped streams caused by the new idle timeouts.** 2.11.6 introduced default idle read/write timeouts, which caused…",
+    "license": "Apache-2.0"
+  },
+  "immich-app/immich": {
+    "version": "v3.3.4",
+    "date": "2026-10-20T10:18:17Z",
+    "url": "https://github.com/immich-app/immich/releases/tag/v3.3.4",
+    "changelog": "Turns out the last people performance fix wasn't quite there for some people. We have now finally resolved that issue.\r\n\r\n## What's Changed\r\n### 🐛 Bug fixes\r\n* fix: missing translation by @waclaw66 in https://github.com/immich-app/immich/pull/32485\r\n* perf(server): more efficient person queries by @mertalev in https://github.com/immich-app/immich/pull/32523\r\n\r\n**Full Changelog**: https://github.com/immich-app/immich/compare/v3.3.3...v3.3.4\r\n",
+    "license": "AGPL-3.0"
+  },
+  "jellyfin/jellyfin": {
+    "version": "v12.2",
+    "date": "2026-10-05T23:07:59Z",
+    "url": "https://github.com/jellyfin/jellyfin/releases/tag/v12.2",
+    "changelog": "# :rocket: Jellyfin Server 12.2\n\nWe are pleased to announce the latest stable release of Jellyfin, version 12.2! This minor release brings several bugfixes to improve your Jellyfin experience. As always, please ensure you take a full backup before upgrading!\n\nDiscuss this release further [on our forums](https://forum.jellyfin.org/t-new-jellyfin-server-web-release-12-2).\n\n## Changelog (51)\n\n### 📈 General Changes\n* Replace custom item display preferences in one transaction [PR #18266], by @martimarkov\n* Use hvc1 for Dolby Vision profile 8 [PR #18300], by @theopeuchlestrade\n* Make the OwnerId an…",
+    "license": "GPL-2.0"
+  },
+  "plausible/analytics": {
+    "version": "v3.2.1",
+    "date": "2026-05-15T09:15:56Z",
+    "url": "https://github.com/plausible/analytics/releases/tag/v3.2.1",
+    "changelog": "# Security related update\r\n\r\nThis patch release **fixes a security vulnerability**[`CVE-2026-8467` / `GHSA-55hg-8qxv-qj4p`](https://github.com/phenixdigital/phoenix_storybook/security/advisories/GHSA-55hg-8qxv-qj4p) affecting the following versions of Plausible Community Edition (image: ghcr.io/plausible/community-edition):\r\nTags:\r\n- v3.2\r\n- v3.2.0\r\n- v3\r\n- v3.2.0-rc.0\r\n- v3.1\r\n- v3.1.0\r\n- v3.1.0-rc.1\r\n- v3.1.0-rc.0\r\n- v3.0.1\r\n- v3.0\r\n- v3.0.0\r\n- v3.0.0-rc.6\r\n- v3.0.0-rc.5\r\n- v3.0.0-rc.4\r\n- v3.0.0-rc.3\r\n- v3.0.0-rc.2\r\n- v3.0.0-rc.1\r\n- v3.0.0-rc.0\r\n\r\nThe affected versions expose a `HTTP \"/story…",
+    "license": "AGPL-3.0"
+  },
+  "umami-software/umami": {
+    "version": "v3.4.0",
+    "date": "2026-09-17T04:21:49Z",
+    "url": "https://github.com/umami-software/umami/releases/tag/v3.4.0",
+    "changelog": "Umami `v3.4.0` is here with new **Annotations**, **MCP support**, API key management, a typed API client, session property segments, and security, analytics, and UI improvements.\n\n## New features\n\n### Annotations\n\nAdd dated notes to your website charts to keep launches, campaigns, and other important events alongside your analytics.\n\n- Chart markers for website annotations\n- Create, edit, and delete annotations\n- All-day and time-specific notes\n- Annotation management and date picker improvements\n\n### Model Context Protocol (MCP)\n\nConnect MCP-compatible assistants to Umami to explore your anal…",
+    "license": "MIT"
+  },
+  "dani-garcia/vaultwarden": {
+    "version": "1.37.4",
+    "date": "2026-10-05T23:40:54Z",
+    "url": "https://github.com/dani-garcia/vaultwarden/releases/tag/1.37.4",
+    "changelog": "## Security Fixes\r\nThis release contains security fixes for the following advisories. We strongly advise updating as soon as possible.\r\n- Organization member revocation [[GHSA-69q9-v8p6-xvx3]](https://github.com/dani-garcia/vaultwarden/security/advisories/GHSA-69q9-v8p6-xvx3) (**High**, 8.1)\r\n- Two-factor authentication [[GHSA-7jg8-8m5x-6j9r]](https://github.com/dani-garcia/vaultwarden/security/advisories/GHSA-7jg8-8m5x-6j9r) (**Medium**, 6.8)\r\n- Organization invitations [[GHSA-v576-3wvq-xh3c]](https://github.com/dani-garcia/vaultwarden/security/advisories/GHSA-v576-3wvq-xh3c) (**Medium**, 6.8…",
+    "license": "AGPL-3.0"
+  }
+}

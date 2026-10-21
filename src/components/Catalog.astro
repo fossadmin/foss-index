@@ -1,0 +1,52 @@
+---
+import CatalogLayout from '../layouts/CatalogLayout.astro';
+import { catalog } from '../lib/catalog';
+const { category } = Astro.props;
+const { tools, categories } = await catalog();
+const selected = categories.find(c => c.slug === category);
+const visible = selected ? tools.filter(t => t.data.category === selected.name) : tools;
+---
+<CatalogLayout title={selected?.name ?? 'Open source, on your terms.'} active={category ?? 'all'}>
+  <section class="catalog-heading">
+    <p class="eyebrow">The directory / {selected?.name ?? 'All tools'}</p>
+    <h1>{selected?.name ?? <>Open source,<br /><span>on your terms.</span></>}</h1>
+    <p class="lede">{selected ? `Explore ${selected.name.toLowerCase()} software you can run yourself.` : 'Software you can run, understand, and support. Start with what you need.'}</p>
+  </section>
+  <section aria-label="Tools" data-catalog>
+    <div class="search-row" hidden data-search-ui>
+      <label class="search-field"><span class="search-prompt" aria-hidden="true">&gt;</span><span class="sr-only">Search {selected?.name ?? 'all tools'}</span><input type="search" placeholder="Find a tool, license, or purpose…" data-search autocomplete="off" /></label>
+      <span class="search-hint">/ to search</span>
+    </div>
+    <div class="list-heading"><h2>{selected?.name ?? 'All tools'}</h2><p role="status" aria-live="polite" data-result-count>{visible.length} {visible.length === 1 ? 'tool' : 'tools'}</p></div>
+    <ul class="tool-list">
+      {visible.map(tool => <li data-tool data-search-text={`${tool.data.title} ${tool.data.description} ${tool.data.category} ${tool.license}`.toLowerCase()}>
+        <a class="tool-row" href={tool.href}>
+          <span class="tool-mark" aria-hidden="true">{tool.data.mark}</span>
+          <span class="tool-copy"><span class="tool-name">{tool.data.title}</span><span class="tool-purpose">{tool.data.description}</span><span class="tool-category">{tool.data.category}</span></span>
+          <span class="tool-meta"><span class="license">{tool.license}</span><span class="version">{tool.release?.version ?? 'Release not recorded'}</span></span>
+          <span class="row-arrow" aria-hidden="true">↗</span>
+        </a>
+      </li>)}
+    </ul>
+    <p class="empty-state" hidden data-empty>No tools match that search. Try another name, purpose, or license.</p>
+    <div class="catalog-note"><span class="eyebrow">A starting point, not a ranking.</span><p>Read the license. Check the release notes. If a project helps you, help it keep going.</p><a href={`${import.meta.env.BASE_URL}about/`}>How this index works <span aria-hidden="true">→</span></a></div>
+  </section>
+</CatalogLayout>
+<script>
+  const input = document.querySelector<HTMLInputElement>('[data-search]');
+  const rows = [...document.querySelectorAll<HTMLElement>('[data-tool]')];
+  const ui = document.querySelector<HTMLElement>('[data-search-ui]');
+  if (input && ui) {
+    ui.hidden = false;
+    input.addEventListener('input', () => {
+      const terms = input.value.toLowerCase().trim().split(/\s+/).filter(Boolean);
+      let count = 0;
+      for (const row of rows) { row.hidden = !terms.every(term => row.dataset.searchText!.includes(term)); if (!row.hidden) count++; }
+      document.querySelector('[data-result-count]')!.textContent = `${count} ${count === 1 ? 'tool' : 'tools'}`;
+      (document.querySelector('[data-empty]') as HTMLElement).hidden = count !== 0;
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === '/' && !e.ctrlKey && !e.metaKey && !(e.target instanceof HTMLInputElement) && !(e.target instanceof HTMLTextAreaElement)) { e.preventDefault(); input.focus(); }
+    });
+  }
+</script>

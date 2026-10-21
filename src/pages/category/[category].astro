@@ -1,0 +1,6 @@
+---
+import Catalog from '../../components/Catalog.astro';
+import { catalog } from '../../lib/catalog';
+export async function getStaticPaths() { const { categories } = await catalog(); return categories.map(c => ({ params: { category: c.slug } })); }
+---
+<Catalog category={Astro.params.category} />

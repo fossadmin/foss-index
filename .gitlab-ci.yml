@@ -1,0 +1,19 @@
+# Copy this site directory to the root of its GitLab project.
+# GitLab Pages serves only dist/; there is no server-side runtime.
+image: node:22-bookworm
+
+stages:
+  - deploy
+
+variables:
+  ASTRO_TELEMETRY_DISABLED: "1"
+
+create-pages:
+  stage: deploy
+  script:
+    - npm ci
+    - npm run build
+  pages:
+    publish: dist
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH

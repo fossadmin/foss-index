@@ -1,0 +1,30 @@
+---
+import { getCollection, render } from 'astro:content';
+import CatalogLayout from '../layouts/CatalogLayout.astro';
+import { catalog, slugify } from '../lib/catalog';
+export async function getStaticPaths() { return (await getCollection('docs')).map(entry => ({ params: { slug: entry.id }, props: { entry } })); }
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const { tools } = await catalog();
+const tool = tools.find(t => t.id === entry.id);
+const data = entry.data;
+const funding = data.funding ?? {};
+const links = [
+  { label: 'GitHub Sponsors', url: funding.githubSponsors }, { label: 'Open Collective', url: funding.openCollective },
+  { label: 'Polar', url: funding.polar }, { label: 'Liberapay', url: funding.liberapay }, ...(funding.custom ?? []),
+].filter(l => l.url);
+---
+<CatalogLayout title={data.title} description={data.description} active={data.category ? slugify(data.category) : ''}>
+  <article class="detail">
+    <a class="back-link" href={import.meta.env.BASE_URL}>← All tools</a>
+    <header class="detail-heading">
+      <p class="eyebrow">{data.category ?? 'The project'}</p>
+      <h1>{data.title}</h1><p class="lede">{data.description}</p>
+      {tool && <div class="detail-meta"><span class="license">{tool.license}</span>{tool.release?.version && <a href={tool.release.url}>Recorded release: {tool.release.version}</a>}<a href={data.repository}>Source code ↗</a></div>}
+    </header>
+    {tool?.release?.changelog && <details class="changelog"><summary>Release notes / {tool.release.version}</summary><p class="release-date">Released {tool.release.date?.slice(0,10)}. Snapshot from the included release data, not a live check.</p><p class="changelog-body">{tool.release.changelog}</p><a href={tool.release.url}>Read the full release notes on GitHub ↗</a></details>}
+    <div class="prose"><Content /></div>
+    {tool && <aside class="support-panel"><p class="eyebrow">Keep open source going</p><h2>Support this project</h2>{links.length ? <><p>Support goes directly to the maintainers through their own channels. We do not take a cut.</p><ul>{links.map(l => <li><a href={l.url}>{l.label} ↗</a></li>)}</ul></> : <p>No direct funding link is recorded for this tool yet. Check its <a href={data.repository}>source repository</a> for ways to contribute.</p>}</aside>}
+    {data.managedHosting && <p class="managed-line">Want help running it? <a href="https://fossadmin.com">Ask FOSSadmin about hosting and maintenance ↗</a></p>}
+  </article>
+</CatalogLayout>

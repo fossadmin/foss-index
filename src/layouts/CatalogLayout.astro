@@ -1,0 +1,73 @@
+---
+import '../styles/custom.css';
+import interRegular from '../assets/fonts/inter-latin-400-normal.woff2?url';
+import { catalog } from '../lib/catalog';
+const { categories, tools } = await catalog();
+const { title = 'Open source, on your terms.', description = 'A small, curated directory of open-source software, with licenses, release notes and direct project support links.', active = 'all' } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" /><meta name="viewport" content="width=device-width" />
+    <title>{title} | FOSS Index</title><meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
+    <script is:inline>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="preload" href={interRegular} as="font" type="font/woff2" crossorigin />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="workspace">
+      <aside class="rail">
+        <a class="brand" href={base}><svg class="brand-mark" viewBox="0 0 200 200" aria-hidden="true" focusable="false"><rect x="22" y="22" width="156" height="156" rx="8" fill="none" stroke="var(--mark)" stroke-width="16"/><path d="M60 72 L96 100 L60 128" fill="none" stroke="var(--mark)" stroke-width="18"/><rect x="108" y="122" width="40" height="16" fill="#a15938"/></svg> FOSS Index</a>
+        <p class="rail-intro">Good software.<br /> Yours to run.</p>
+        <nav aria-label="Directory categories" class="category-nav">
+          <p class="eyebrow">01 / Browse</p>
+          <a class:list={['nav-item', { selected: active === 'all' }]} aria-current={active === 'all' ? 'page' : undefined} href={base}><span>All tools</span><span class="count">{tools.length}</span></a>
+          {categories.map(c => <a class:list={['nav-item', { selected: active === c.slug }]} aria-current={active === c.slug ? 'page' : undefined} href={`${base}category/${c.slug}/`}><span>{c.name}</span><span class="count">{c.count}</span></a>)}
+        </nav>
+        <div class="rail-bottom">
+          <p class="eyebrow">02 / The project</p>
+          <nav aria-label="About the index"><a href={`${base}about/`}>About the index</a><a href={`${base}funding/`}>Funding, explained</a></nav>
+          <a class="parent-brand" href="https://fossadmin.com">A FOSSadmin project <span aria-hidden="true">↗</span></a>
+          <p class="privacy-note">No analytics. No external scripts.</p>
+        </div>
+      </aside>
+      <div class="main-column">
+        <header class="topbar"><a href={base} class="breadcrumb">~/foss-index</a><span class="edition">A small, growing directory</span><button type="button" class="theme-toggle" id="theme-toggle" hidden>Theme</button></header>
+        <main id="main" tabindex="-1"><slot /></main>
+        <footer class="page-footer"><span>Choose the tool. Keep control.</span><a href={`${base}funding/`}>Support the people who build it <span aria-hidden="true">↗</span></a></footer>
+      </div>
+    </div>
+    <script is:inline>
+      (function () {
+        var b = document.getElementById('theme-toggle');
+        if (!b) return;
+        var root = document.documentElement;
+        function current() {
+          return root.dataset.theme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        }
+        function label() {
+          var next = current() === 'dark' ? 'light' : 'dark';
+          b.textContent = next === 'light' ? 'Light mode' : 'Dark mode';
+          b.setAttribute('aria-label', 'Switch to ' + next + ' mode');
+        }
+        b.hidden = false;
+        label();
+        b.addEventListener('click', function () {
+          var next = current() === 'dark' ? 'light' : 'dark';
+          root.dataset.theme = next;
+          try { localStorage.setItem('theme', next); } catch (e) {}
+          label();
+        });
+      })();
+    </script>
+  </body>
+</html>
