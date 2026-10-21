@@ -138,22 +138,76 @@ input {
   flex: none;
   display: block;
 }
-.theme-toggle {
-  font: 11px/1 var(--mono);
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  background: transparent;
-  color: var(--olive);
-  border: 1px solid var(--line);
-  border-radius: 3px;
-  padding: 8px 10px;
-  cursor: pointer;
+/* Sliding theme switch, same shape as the FOSSadmin site toggle. */
+.theme-switcher {
+  display: inline-flex;
+  align-items: center;
   margin-left: auto;
+}
+.theme-switcher[hidden] {
+  display: none;
+}
+.theme-switcher input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
   white-space: nowrap;
 }
-.theme-toggle:hover {
-  border-color: var(--rust);
-  color: var(--rust);
+.theme-switcher label {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 16px;
+  border-radius: 999px;
+  background: var(--line);
+  cursor: pointer;
+  margin: 0;
+}
+.theme-switcher .knob {
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--olive);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    left 0.3s,
+    background-color 0.3s;
+}
+.theme-switcher input:checked + label .knob {
+  left: 16px;
+}
+.theme-switcher svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  transition: opacity 0.15s;
+}
+.theme-switcher .sun {
+  fill: #f6f1e7;
+}
+.theme-switcher .moon {
+  fill: #1f2a1c;
+  opacity: 0;
+}
+:root[data-theme="dark"] .theme-switcher .sun {
+  opacity: 0;
+}
+:root[data-theme="dark"] .theme-switcher .moon {
+  opacity: 1;
+}
+.theme-switcher input:focus-visible + label {
+  outline: 3px solid var(--rust);
+  outline-offset: 2px;
 }
 .rail-intro {
   color: var(--moss);
