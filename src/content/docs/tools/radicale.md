@@ -15,13 +15,13 @@ nixosModule: services.radicale
 managedHosting: true
 screenshot:
   src: radicale.webp
-  alt: "Radicale web interface collection management view after sign-in on a fresh install, with no collections yet"
+  alt: "Radicale web interface collection management view showing a Family Calendar with three sample events and a Shared Contacts address book with three sample contacts"
   width: 1337
   height: 859
   credit: Radicale
   version: "3.9.0"
   own: true
-  captionNote: "Signed-in collection management view; no collections yet on this fresh install. Test install only, not a production setup."
+  captionNote: "Collection management view with clearly fictional sample events and contacts. Test install only, not a production setup."
 ---
 
 Radicale stores calendars and contacts on your own server and syncs them

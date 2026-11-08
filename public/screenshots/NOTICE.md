@@ -57,7 +57,7 @@ screenshot is not a production review of it.
   shipped in the official caddyserver/dist packages)
 - syncthing.webp - Syncthing v2.1.7 web GUI, fresh home, no folders or devices added
 - gotify.webp - Gotify server v3.1.1 web UI, All Messages view, no messages or apps
-- radicale.webp - Radicale 3.9.0 signed-in collection management view, no collections yet
+- radicale.webp - Radicale 3.9.0 signed-in collection management view, populated with clearly fictional sample events and contacts
 - grafana.webp - Grafana OSS v13.3.0 dashboard on the built-in TestData
   generated data source, no real metrics
 - audiobookshelf.webp - Audiobookshelf v2.37.2 Libraries settings page, no libraries added
