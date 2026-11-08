@@ -61,3 +61,11 @@ screenshot is not a production review of it.
 - grafana.webp - Grafana OSS v13.3.0 dashboard on the built-in TestData
   generated data source, no real metrics
 - audiobookshelf.webp - Audiobookshelf v2.37.2 Libraries settings page, no libraries added
+
+## Follow-up batch (November 8, 2026)
+
+- umami.webp - product image from Umami's own website (https://umami.is/), showing their live umami.is dashboard. Used editorially with credit.
+- nextcloud.webp - official screenshot from the nextcloud/screenshots repository (nextcloud-hub-25-files.png), licensed CC BY-SA 4.0. Attribution: Nextcloud GmbH and contributors.
+- karakeep.webp - official screenshot from the karakeep repository (screenshots/homepage.png), licensed AGPL-3.0. Shows v0.23.1.
+- homepage.webp - official demo image from the homepage repository (images/1.png), licensed GPL-3.0. Service icons shown belong to their respective projects.
+- vaultwarden.webp - our own capture of the official Vaultwarden web-vault static build (dani-garcia/bw_web_builds v2026.10.1, GPL-3.0), served locally for the capture only. Login screen, no account or data.

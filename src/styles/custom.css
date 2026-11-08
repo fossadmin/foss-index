@@ -634,7 +634,8 @@ main {
 }
 .managed-line {
   margin-top: 24px;
-  font-size: 12px;
+  font-size: 15px;
+  line-height: 1.7;
 }
 .managed-line a {
   color: var(--rust);

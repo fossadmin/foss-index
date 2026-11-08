@@ -12,6 +12,15 @@ funding:
 dripsEligible: true
 nixosModule: services.homepage-dashboard
 managedHosting: true
+screenshot:
+  src: homepage.webp
+  alt: "Homepage dashboard with service widgets over a custom background image"
+  width: 1400
+  height: 786
+  credit: Homepage
+  sourceUrl: https://github.com/gethomepage/homepage/blob/main/images/1.png
+  license: GPL-3.0
+  captionNote: "Official demo dashboard with a custom background; service icons belong to their respective projects. Not our install."
 ---
 
 Homepage gives your server a front door: one start page with links,

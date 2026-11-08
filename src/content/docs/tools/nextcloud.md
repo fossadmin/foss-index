@@ -15,6 +15,15 @@ funding:
 dripsEligible: true
 nixosModule: services.nextcloud
 managedHosting: true
+screenshot:
+  src: nextcloud.webp
+  alt: "Nextcloud Files interface with file list, sharing sidebar and mobile photos app in a marketing composite"
+  width: 1400
+  height: 800
+  credit: Nextcloud
+  sourceUrl: https://github.com/nextcloud/screenshots/blob/master/nextcloud-hub-25-files.png
+  license: CC BY-SA 4.0
+  captionNote: "Official Nextcloud Hub 25 marketing screenshot with demo content. Not our install."
 ---
 
 Nextcloud is a self-hosted collaboration hub: it stores files, calendars,

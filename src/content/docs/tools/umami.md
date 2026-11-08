@@ -10,6 +10,14 @@ license: MIT
 dripsEligible: true
 nixosModule: services.umami
 managedHosting: true
+screenshot:
+  src: umami.webp
+  alt: "Umami analytics dashboard for umami.is with views, visits, visitors, bounce rate, pages and referrers"
+  width: 1400
+  height: 1188
+  credit: Umami's website
+  sourceUrl: https://umami.is/
+  captionNote: "Product image from Umami's own website, showing example umami.is stats. Not our install."
 ---
 
 Umami is a self-hosted analytics platform focused on simplicity: traffic,

@@ -12,6 +12,15 @@ funding:
 dripsEligible: true
 nixosModule: services.karakeep
 managedHosting: true
+screenshot:
+  src: karakeep.webp
+  alt: "Karakeep home view with saved bookmarks shown as cards, on web and mobile"
+  width: 1400
+  height: 605
+  credit: Karakeep
+  sourceUrl: https://github.com/karakeep-app/karakeep/blob/main/screenshots/homepage.png
+  license: AGPL-3.0
+  captionNote: "Shows the v0.23.1 interface. Demo data, not our install."
 ---
 
 Karakeep is a self-hosted "bookmark everything" app. Save links, notes,

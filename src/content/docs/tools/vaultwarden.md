@@ -13,6 +13,15 @@ funding:
 dripsEligible: true
 nixosModule: services.vaultwarden
 managedHosting: true
+screenshot:
+  src: vaultwarden.webp
+  alt: "Vaultwarden web vault login screen with email field and create account link"
+  width: 1400
+  height: 875
+  credit: Vaultwarden
+  version: "web-vault build v2026.10.1"
+  own: true
+  captionNote: "Login screen of the official Vaultwarden web-vault build, served locally just for this capture. No account created and no server configured."
 ---
 
 Vaultwarden is a self-hosted password manager server that works with the
