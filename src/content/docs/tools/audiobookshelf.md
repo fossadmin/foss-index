@@ -2,6 +2,7 @@
 title: Audiobookshelf
 description: Self-hosted audiobook and podcast server with web, Android, and iOS apps and per-device progress.
 category: Media
+icon: audiobookshelf.svg
 mark: AB
 repository: https://github.com/advplyr/audiobookshelf
 license: GPL-3.0
@@ -10,6 +11,14 @@ funding:
 dripsEligible: true
 nixosModule: services.audiobookshelf
 managedHosting: true
+screenshot:
+  src: audiobookshelf.webp
+  alt: "Audiobookshelf web interface Libraries settings page on a fresh install with no libraries yet"
+  width: 1337
+  height: 859
+  credit: Audiobookshelf
+  version: "v2.37.2"
+  own: true
 ---
 
 Audiobookshelf serves your audiobook and podcast libraries to the web
@@ -51,19 +60,6 @@ listening progress persist in `./config` and `./metadata`. Works on any host wit
 `sudo apt install docker.io docker-compose-v2` covers both; on NixOS,
 `virtualisation.docker.enable = true;` enables Docker.
 
-### NixOS
-
-```nix
-services.audiobookshelf = {
-  enable = true;
-};
-```
-
-Then `sudo nixos-rebuild switch`. The module serves the web app on
-http://127.0.0.1:8000 and stores its data in `/var/lib/audiobookshelf`.
-Set `services.audiobookshelf.host` plus `openFirewall = true` if you
-want LAN access without a reverse proxy.
-
 ### Ubuntu Server
 
 The project maintains an apt repository (amd64 only):
@@ -79,6 +75,19 @@ sudo apt install audiobookshelf
 The package installs a systemd service; the web interface is on
 http://localhost:13378 and the packaged defaults live in
 `/etc/default/audiobookshelf`.
+
+### NixOS
+
+```nix
+services.audiobookshelf = {
+  enable = true;
+};
+```
+
+Then `sudo nixos-rebuild switch`. The module serves the web app on
+http://127.0.0.1:8000 and stores its data in `/var/lib/audiobookshelf`.
+Set `services.audiobookshelf.host` plus `openFirewall = true` if you
+want LAN access without a reverse proxy.
 
 ## Why it's listed
 

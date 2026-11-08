@@ -2,6 +2,7 @@
 title: Nextcloud
 description: File sync and sharing plus calendars, contacts, mail, chat and office documents in one self-hosted hub.
 category: Collaboration
+icon: nextcloud.svg
 mark: NC
 repository: https://github.com/nextcloud/server
 license: AGPL-3.0

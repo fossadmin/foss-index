@@ -15,8 +15,11 @@ const screenshot = z.object({
   width: z.number().int().positive(),
   height: z.number().int().positive(),
   credit: z.string(),
-  sourceUrl: z.string().url(),
-  license: z.string(),
+  sourceUrl: z.string().url().optional(),
+  license: z.string().optional(),
+  own: z.boolean().optional(),
+  captionNote: z.string().optional(),
+  version: z.string().optional(),
 });
 export const collections = {
   docs: defineCollection({
@@ -27,6 +30,8 @@ export const collections = {
         description: z.string(),
         category: z.string().optional(),
         mark: z.string().optional(),
+        icon: z.string().optional(),
+        iconDark: z.string().optional(),
         repository: z.string().url().optional(),
         license: z.string().optional(),
         funding: funding.optional(),

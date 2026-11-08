@@ -2,6 +2,7 @@
 title: Plausible Analytics
 description: Open source, privacy-first web analytics. Lightweight, cookie-free Google Analytics alternative.
 category: Analytics
+icon: plausible.svg
 mark: PL
 repository: https://github.com/plausible/analytics
 license: AGPL-3.0

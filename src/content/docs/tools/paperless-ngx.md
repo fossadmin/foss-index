@@ -2,6 +2,8 @@
 title: Paperless-ngx
 description: Scan, index, and search your documents. OCRs paper into a searchable archive on your own hardware.
 category: Documents
+icon: paperless-ngx.svg
+iconDark: paperless-ngx-dark.svg
 mark: PX
 repository: https://github.com/paperless-ngx/paperless-ngx
 license: GPL-3.0

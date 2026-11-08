@@ -2,6 +2,7 @@
 title: Caddy
 description: Fast, extensible web server with automatic HTTPS. No manual certificate handling.
 category: Infrastructure
+icon: caddy.png
 mark: CD
 repository: https://github.com/caddyserver/caddy
 license: Apache-2.0
@@ -10,6 +11,14 @@ funding:
 dripsEligible: true
 nixosModule: services.caddy
 managedHosting: true
+screenshot:
+  src: caddy.webp
+  alt: "Caddy's default welcome page confirming the web server is working, with next steps for serving a site"
+  width: 1337
+  height: 859
+  credit: Caddy
+  version: "v2.11.9"
+  own: true
 ---
 
 Caddy is an open-source web server written in Go. Its headline feature is
@@ -51,21 +60,6 @@ certificates. Works on any host with Docker and the Compose plugin: on Ubuntu Se
 `sudo apt install docker.io docker-compose-v2` covers both; on NixOS,
 `virtualisation.docker.enable = true;` enables Docker.
 
-### NixOS
-
-A Caddy reverse proxy is a few lines in `configuration.nix`:
-
-```nix
-services.caddy = {
-  enable = true;
-  virtualHosts."example.com".extraConfig = ''
-    reverse_proxy localhost:8080
-  '';
-};
-```
-
-Then `sudo nixos-rebuild switch`.
-
 ### Ubuntu Server
 
 Caddy's official apt repository:
@@ -102,6 +96,21 @@ allow web traffic:
 sudo firewall-cmd --permanent --add-service=http --add-service=https
 sudo firewall-cmd --reload
 ```
+
+### NixOS
+
+A Caddy reverse proxy is a few lines in `configuration.nix`:
+
+```nix
+services.caddy = {
+  enable = true;
+  virtualHosts."example.com".extraConfig = ''
+    reverse_proxy localhost:8080
+  '';
+};
+```
+
+Then `sudo nixos-rebuild switch`.
 
 ## Why it's listed
 

@@ -2,6 +2,8 @@
 title: Umami
 description: Simple, privacy-first web analytics you can self-host. No cookies, no personal data collection.
 category: Analytics
+icon: umami.svg
+iconDark: umami-dark.svg
 mark: UM
 repository: https://github.com/umami-software/umami
 license: MIT
@@ -65,16 +67,6 @@ change it immediately after your first login. Works on any host with Docker and 
 `sudo apt install docker.io docker-compose-v2` covers both; on NixOS,
 `virtualisation.docker.enable = true;` enables Docker.
 
-### NixOS
-
-```nix
-services.umami.enable = true;
-```
-
-Then `sudo nixos-rebuild switch` and open http://localhost:3000. The
-module creates its PostgreSQL database automatically. First login is
-`admin` / `umami`; change it immediately.
-
 ### Ubuntu Server
 
 Umami documents a from-source install (Node.js 20.19+ and PostgreSQL
@@ -91,6 +83,16 @@ pnpm start
 
 Then open http://localhost:3000. First login is `admin` / `umami`; change
 it immediately.
+
+### NixOS
+
+```nix
+services.umami.enable = true;
+```
+
+Then `sudo nixos-rebuild switch` and open http://localhost:3000. The
+module creates its PostgreSQL database automatically. First login is
+`admin` / `umami`; change it immediately.
 
 ## Why it's listed
 

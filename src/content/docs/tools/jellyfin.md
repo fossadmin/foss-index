@@ -2,6 +2,7 @@
 title: Jellyfin
 description: The free software media system. Stream your own movies, shows, and music to any device.
 category: Media
+icon: jellyfin.svg
 mark: JF
 repository: https://github.com/jellyfin/jellyfin
 license: GPL-2.0
@@ -53,6 +54,19 @@ and your media library stay on the host. Works on any host with Docker and the C
 `sudo apt install docker.io docker-compose-v2` covers both; on NixOS,
 `virtualisation.docker.enable = true;` enables Docker.
 
+### Ubuntu Server
+
+Jellyfin's own script adds its apt repository and installs the server:
+
+```bash
+curl -s https://repo.jellyfin.org/install-debuntu.sh -O
+curl -s https://repo.jellyfin.org/install-debuntu.sh.sha256sum -O
+sha256sum -c install-debuntu.sh.sha256sum
+sudo bash install-debuntu.sh
+```
+
+Then `sudo systemctl enable --now jellyfin` and open http://localhost:8096.
+
 ### NixOS
 
 Jellyfin is a single service in `configuration.nix`:
@@ -67,19 +81,6 @@ services.jellyfin = {
 Then `sudo nixos-rebuild switch` and open http://localhost:8096.
 `openFirewall` opens the web UI port; hardware transcoding options live
 under `services.jellyfin.transcoding`.
-
-### Ubuntu Server
-
-Jellyfin's own script adds its apt repository and installs the server:
-
-```bash
-curl -s https://repo.jellyfin.org/install-debuntu.sh -O
-curl -s https://repo.jellyfin.org/install-debuntu.sh.sha256sum -O
-sha256sum -c install-debuntu.sh.sha256sum
-sudo bash install-debuntu.sh
-```
-
-Then `sudo systemctl enable --now jellyfin` and open http://localhost:8096.
 
 ## Why it's listed
 

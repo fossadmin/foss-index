@@ -2,6 +2,7 @@
 title: NetBird
 description: WireGuard-based private network that connects your machines and self-hosted services without port forwarding.
 category: Networking
+icon: netbird.svg
 mark: NB
 repository: https://github.com/netbirdio/netbird
 license: BSD-3-Clause / AGPL-3.0

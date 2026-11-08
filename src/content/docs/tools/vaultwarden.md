@@ -2,6 +2,8 @@
 title: Vaultwarden
 description: Lightweight, self-hosted server compatible with Bitwarden clients. Written in Rust.
 category: Passwords
+icon: vaultwarden.svg
+iconDark: vaultwarden-dark.svg
 mark: VW
 repository: https://github.com/dani-garcia/vaultwarden
 license: AGPL-3.0

@@ -21,7 +21,14 @@ const visible = selected ? tools.filter(t => t.data.category === selected.name) 
     <ul class="tool-list">
       {visible.map(tool => <li data-tool data-search-text={`${tool.data.title} ${tool.data.description} ${tool.data.category} ${tool.license}`.toLowerCase()}>
         <a class="tool-row" href={tool.href}>
-          <span class="tool-mark" aria-hidden="true">{tool.data.mark}</span>
+          {tool.data.icon ? (
+            <span class="tool-mark tool-icon" aria-hidden="true">
+              <img class:list={[{ 'icon-light': tool.data.iconDark }]} src={`${import.meta.env.BASE_URL}icons/${tool.data.icon}`} alt="" width="40" height="40" loading="lazy" decoding="async" />
+              {tool.data.iconDark && <img class="icon-dark" src={`${import.meta.env.BASE_URL}icons/${tool.data.iconDark}`} alt="" width="40" height="40" loading="lazy" decoding="async" />}
+            </span>
+          ) : (
+            <span class="tool-mark" aria-hidden="true">{tool.data.mark}</span>
+          )}
           <span class="tool-copy"><span class="tool-name">{tool.data.title}</span><span class="tool-purpose">{tool.data.description}</span><span class="tool-category">{tool.data.category}</span></span>
           <span class="tool-meta"><span class="license">{tool.license}</span><span class="version">{tool.release?.version ?? 'Release not recorded'}</span></span>
           <span class="row-arrow" aria-hidden="true">↗</span>

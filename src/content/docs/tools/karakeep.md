@@ -2,6 +2,8 @@
 title: Karakeep
 description: Self-hosted bookmark-everything app. Saves the content, not just the link, with search and AI tagging.
 category: Bookmarks
+icon: karakeep.svg
+iconDark: karakeep-dark.svg
 mark: KK
 repository: https://github.com/karakeep-app/karakeep
 license: AGPL-3.0

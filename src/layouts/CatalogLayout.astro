@@ -36,6 +36,8 @@ const base = import.meta.env.BASE_URL;
     <div class="workspace">
       <aside class="rail">
         <a class="brand" href={base}><svg class="brand-mark" viewBox="0 0 200 200" aria-hidden="true" focusable="false"><rect x="22" y="22" width="156" height="156" rx="8" fill="none" stroke="var(--mark)" stroke-width="16"/><path d="M60 72 L96 100 L60 128" fill="none" stroke="var(--mark)" stroke-width="18"/><rect x="108" y="122" width="40" height="16" fill="#a15938"/></svg> FOSS Index</a>
+        <button class="rail-menu" type="button" aria-label="Toggle navigation" aria-expanded="true" aria-controls="rail-collapse" hidden><svg class="menu-open" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="1.7"/></svg><svg class="menu-close" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="m5 5 14 14M19 5 5 19" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></button>
+        <div class="rail-collapse" id="rail-collapse">
         <p class="rail-intro">Good software.<br /> Yours to run.</p>
         <nav aria-label="Directory categories" class="category-nav">
           <p class="eyebrow">01 / Browse</p>
@@ -47,6 +49,7 @@ const base = import.meta.env.BASE_URL;
           <nav aria-label="About the index"><a href={`${base}about/`}>About the index</a><a href={`${base}funding/`}>Funding, explained</a></nav>
           <a class="parent-brand" href="https://fossadmin.com">A FOSSadmin project <span aria-hidden="true">↗</span></a>
           <p class="privacy-note">No analytics. No external scripts.</p>
+        </div>
         </div>
       </aside>
       <div class="main-column">
@@ -79,6 +82,31 @@ const base = import.meta.env.BASE_URL;
           var next = box.checked ? 'dark' : 'light';
           root.dataset.theme = next;
           try { localStorage.setItem('theme', next); } catch (e) {}
+        });
+      })();
+    </script>
+    <script is:inline>
+      (function () {
+        var btn = document.querySelector('.rail-menu');
+        var rail = document.querySelector('.rail');
+        if (!btn || !rail) return;
+        var mq = matchMedia('(max-width: 650px)');
+        function apply() {
+          if (mq.matches) {
+            btn.hidden = false;
+            rail.classList.add('collapsed');
+            btn.setAttribute('aria-expanded', 'false');
+          } else {
+            btn.hidden = true;
+            rail.classList.remove('collapsed');
+            btn.setAttribute('aria-expanded', 'true');
+          }
+        }
+        apply();
+        mq.addEventListener('change', apply);
+        btn.addEventListener('click', function () {
+          var collapsed = rail.classList.toggle('collapsed');
+          btn.setAttribute('aria-expanded', String(!collapsed));
         });
       })();
     </script>

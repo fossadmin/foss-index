@@ -2,6 +2,7 @@
 title: Grafana
 description: Dashboards and alerts for metrics, logs and traces from your own data sources.
 category: Monitoring
+icon: grafana.svg
 mark: GR
 repository: https://github.com/grafana/grafana
 license: AGPL-3.0
@@ -12,6 +13,15 @@ funding:
 dripsEligible: true
 nixosModule: services.grafana
 managedHosting: true
+screenshot:
+  src: grafana.webp
+  alt: "Grafana OSS dashboard with time series, stat, and gauge panels on generated test data"
+  width: 1337
+  height: 859
+  credit: Grafana OSS
+  version: "v13.3.0"
+  own: true
+  captionNote: "Synthetic demo data from the built-in TestData source, not real metrics or a production setup."
 ---
 
 Grafana turns data from sources such as Prometheus, Loki and InfluxDB

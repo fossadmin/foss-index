@@ -2,6 +2,7 @@
 title: Gotify
 description: A private notification server for alerts from your own scripts and services.
 category: Notifications
+icon: gotify.png
 mark: GO
 repository: https://github.com/gotify/server
 license: MIT
@@ -13,6 +14,14 @@ funding:
 dripsEligible: true
 nixosModule: services.gotify
 managedHosting: true
+screenshot:
+  src: gotify.webp
+  alt: "Gotify web UI showing the All Messages view with navigation for users, apps, clients, and plugins"
+  width: 1337
+  height: 859
+  credit: Gotify
+  version: "v3.1.1"
+  own: true
 ---
 
 Gotify receives messages through an HTTP API and delivers them to its

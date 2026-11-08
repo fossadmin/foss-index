@@ -2,6 +2,7 @@
 title: Syncthing
 description: Continuous file synchronization between your devices, with no cloud copy in the middle.
 category: File Sync
+icon: syncthing.svg
 mark: SY
 repository: https://github.com/syncthing/syncthing
 license: MPL-2.0
@@ -13,6 +14,14 @@ funding:
 dripsEligible: true
 nixosModule: services.syncthing
 managedHosting: true
+screenshot:
+  src: syncthing.webp
+  alt: "Syncthing web GUI on a fresh install, showing the Folders, This Device, and Remote Devices panels"
+  width: 1337
+  height: 859
+  credit: Syncthing
+  version: "v2.1.7"
+  own: true
 ---
 
 Syncthing keeps folders in sync between your devices directly - laptop,
@@ -56,20 +65,6 @@ volumes as you need them. Works on any host with Docker and the Compose plugin: 
 `sudo apt install docker.io docker-compose-v2` covers both; on NixOS,
 `virtualisation.docker.enable = true;` enables Docker.
 
-### NixOS
-
-```nix
-services.syncthing = {
-  enable = true;
-  openDefaultPorts = true;
-};
-```
-
-Then `sudo nixos-rebuild switch`. `openDefaultPorts` opens the transfer
-ports (TCP/UDP 22000) and local discovery (UDP 21027); the web GUI
-stays on http://127.0.0.1:8384. Devices and folders can be declared
-under `services.syncthing.settings` or managed in the GUI.
-
 ### Ubuntu Server
 
 Syncthing maintains its own apt repository:
@@ -85,6 +80,20 @@ sudo apt-get install syncthing
 Run it under your user with the packaged systemd unit:
 `sudo systemctl enable --now syncthing@$USER`. The web GUI is on
 http://127.0.0.1:8384.
+
+### NixOS
+
+```nix
+services.syncthing = {
+  enable = true;
+  openDefaultPorts = true;
+};
+```
+
+Then `sudo nixos-rebuild switch`. `openDefaultPorts` opens the transfer
+ports (TCP/UDP 22000) and local discovery (UDP 21027); the web GUI
+stays on http://127.0.0.1:8384. Devices and folders can be declared
+under `services.syncthing.settings` or managed in the GUI.
 
 ## Why it's listed
 
