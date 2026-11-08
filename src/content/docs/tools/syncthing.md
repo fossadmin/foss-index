@@ -16,12 +16,13 @@ nixosModule: services.syncthing
 managedHosting: true
 screenshot:
   src: syncthing.webp
-  alt: "Syncthing web GUI on a fresh install, showing the Folders, This Device, and Remote Devices panels"
+  alt: "Syncthing web GUI with three folders, the Documents folder expanded to show its state and details"
   width: 1337
   height: 859
   credit: Syncthing
   version: "v2.1.7"
   own: true
+  captionNote: "Folders hold fictional sample files. Test install only, not a production setup."
 ---
 
 Syncthing keeps folders in sync between your devices directly - laptop,

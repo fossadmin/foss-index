@@ -13,12 +13,13 @@ nixosModule: services.audiobookshelf
 managedHosting: true
 screenshot:
   src: audiobookshelf.webp
-  alt: "Audiobookshelf web interface Libraries settings page on a fresh install with no libraries yet"
+  alt: "Audiobookshelf web interface home view showing a library of four fictional demo audiobooks with covers"
   width: 1337
   height: 859
   credit: Audiobookshelf
   version: "v2.37.2"
   own: true
+  captionNote: "Library view with four fictional audiobooks (generated covers, synthesized audio). Test install only, not a production setup."
 ---
 
 Audiobookshelf serves your audiobook and podcast libraries to the web

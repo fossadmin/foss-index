@@ -16,12 +16,13 @@ nixosModule: services.gotify
 managedHosting: true
 screenshot:
   src: gotify.webp
-  alt: "Gotify web UI showing the All Messages view with navigation for users, apps, clients, and plugins"
+  alt: "Gotify web UI All Messages view with notifications from three fictional demo apps"
   width: 1337
   height: 859
   credit: Gotify
   version: "v3.1.1"
   own: true
+  captionNote: "Apps and messages are fictional demo data. Test install only, not a production setup."
 ---
 
 Gotify receives messages through an HTTP API and delivers them to its

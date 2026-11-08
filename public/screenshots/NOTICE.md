@@ -48,19 +48,21 @@ only scaled and recompressed to WebP; nothing was cropped or edited.
 
 These six images are screenshots we took ourselves of fresh, local test
 installs of each open-source release, run only to make the picture. They
-show fresh test states with no user data or third-party media; Grafana
-uses synthetic data from its built-in TestData source, while the others
-show empty/default screens. They were resized and recompressed to WebP only. Running an app for a
+show test states with no user data or third-party media: Grafana
+uses synthetic data from its built-in TestData source, Radicale, Gotify,
+Syncthing and Audiobookshelf show clearly fictional sample data we created
+(covers drawn by us, audio synthesized locally), and Caddy shows its own
+default welcome page. They were resized and recompressed to WebP only. Running an app for a
 screenshot is not a production review of it.
 
 - caddy.webp - Caddy v2.11.9 serving its own default welcome page (the page
   shipped in the official caddyserver/dist packages)
-- syncthing.webp - Syncthing v2.1.7 web GUI, fresh home, no folders or devices added
-- gotify.webp - Gotify server v3.1.1 web UI, All Messages view, no messages or apps
+- syncthing.webp - Syncthing v2.1.7 web GUI with three folders holding fictional sample files (generated documents, images and tones); Documents folder expanded
+- gotify.webp - Gotify server v3.1.1 web UI, All Messages view with notifications from three fictional demo apps (Home Lab, Backup Jobs, CI Runner)
 - radicale.webp - Radicale 3.9.0 signed-in collection management view, populated with clearly fictional sample events and contacts
 - grafana.webp - Grafana OSS v13.3.0 dashboard on the built-in TestData
   generated data source, no real metrics
-- audiobookshelf.webp - Audiobookshelf v2.37.2 Libraries settings page, no libraries added
+- audiobookshelf.webp - Audiobookshelf v2.37.2 library home view with four fictional demo audiobooks; covers drawn by us, audio synthesized locally, no third-party media
 
 ## Follow-up batch (November 8, 2026)
 
