@@ -41,7 +41,8 @@ const base = import.meta.env.BASE_URL;
         <div class="rail-collapse" id="rail-collapse">
         <nav aria-label="Directory categories" class="category-nav">
           <p class="eyebrow">01 / Browse</p>
-          <a class:list={['nav-item', { selected: active === 'all' }]} aria-current={active === 'all' ? 'page' : undefined} href={base}><span>All tools</span><span class="count">{tools.length}</span></a>
+          <a class:list={['nav-item', { selected: active === 'all' }]} aria-current={active === 'all' ? 'page' : undefined} href={base} data-all-nav={active === 'all' ? '' : undefined}><span>All tools</span><span class="count">{tools.length}</span></a>
+          <a class="nav-item" data-saved-nav href={`${base}#saved`} hidden><span>Saved</span><span class="count" data-saved-count>0</span></a>
           {categories.map(c => <a class:list={['nav-item', { selected: active === c.slug }]} aria-current={active === c.slug ? 'page' : undefined} href={`${base}category/${c.slug}/`}><span>{c.name}</span><span class="count">{c.count}</span></a>)}
         </nav>
         <div class="rail-bottom">
@@ -83,6 +84,56 @@ const base = import.meta.env.BASE_URL;
           root.dataset.theme = next;
           try { localStorage.setItem('theme', next); } catch (e) {}
         });
+      })();
+    </script>
+    <script is:inline>
+      (function () {
+        var KEY = 'foss-index:saved';
+        function read() {
+          try { var v = JSON.parse(localStorage.getItem(KEY) || '[]'); return Array.isArray(v) ? v : []; } catch (e) { return []; }
+        }
+        function write(ids) { try { localStorage.setItem(KEY, JSON.stringify(ids)); } catch (e) {} }
+        function paint() {
+          var ids = read();
+          document.querySelectorAll('[data-save-toggle]').forEach(function (btn) {
+            var on = ids.indexOf(btn.getAttribute('data-tool-id')) !== -1;
+            btn.hidden = false;
+            btn.classList.toggle('saved', on);
+            btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+            var label = btn.querySelector('.save-label');
+            if (label) label.textContent = on ? 'Saved' : 'Save';
+          });
+          document.querySelectorAll('[data-saved-count]').forEach(function (el) { el.textContent = String(ids.length); });
+          document.dispatchEvent(new CustomEvent('foss-index:saved-changed', { detail: { ids: ids } }));
+        }
+        function syncNav() {
+          var nav = document.querySelector('[data-saved-nav]');
+          if (!nav) return;
+          nav.hidden = false;
+          var on = location.hash === '#saved';
+          nav.classList.toggle('selected', on);
+          if (on) nav.setAttribute('aria-current', 'page'); else nav.removeAttribute('aria-current');
+          var all = document.querySelector('[data-all-nav]');
+          if (all) {
+            all.classList.toggle('selected', !on);
+            if (on) all.removeAttribute('aria-current'); else all.setAttribute('aria-current', 'page');
+          }
+        }
+        document.addEventListener('click', function (e) {
+          var t = e.target;
+          if (!(t instanceof Element)) return;
+          var btn = t.closest('[data-save-toggle]');
+          if (!btn) return;
+          var id = btn.getAttribute('data-tool-id');
+          var ids = read();
+          var i = ids.indexOf(id);
+          if (i === -1) ids.push(id); else ids.splice(i, 1);
+          write(ids);
+          paint();
+        });
+        window.addEventListener('hashchange', syncNav);
+        paint();
+        syncNav();
       })();
     </script>
     <script is:inline>

@@ -22,4 +22,6 @@ part answer to a question the community keeps asking: how do you actually
 pay for open source? One honest answer is to pay the people who support it,
 and to make it easy for users to fund the projects they depend on.
 
+Two small helpers run entirely in your browser: **Surprise me** opens a random tool's page, and the bookmark button keeps a shortlist in this browser's local storage. No account, and nothing is sent anywhere.
+
 Found a mistake? Check the linked project sources before choosing a tool.

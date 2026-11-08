@@ -6,6 +6,12 @@ funding link points to the source repository rather than inventing a destination
 Built with custom Astro layouts. Content lives in `src/content/docs/` as plain
 Markdown with validated frontmatter.
 
+Two client-side helpers run fully in the visitor's browser: "Surprise me"
+opens a random tool's page, and a bookmark toggle per tool feeds a Saved
+filter in the sidebar. Saves stay in `localStorage` (`foss-index:saved`);
+there is no account and nothing is sent anywhere. Both are progressive
+enhancement and stay hidden without JavaScript.
+
 ## Run it locally
 
 ```sh
