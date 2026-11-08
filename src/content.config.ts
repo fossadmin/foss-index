@@ -9,6 +9,15 @@ const funding = z.object({
     .array(z.object({ label: z.string(), url: z.string().url() }))
     .optional(),
 });
+const screenshot = z.object({
+  src: z.string(),
+  alt: z.string(),
+  width: z.number().int().positive(),
+  height: z.number().int().positive(),
+  credit: z.string(),
+  sourceUrl: z.string().url(),
+  license: z.string(),
+});
 export const collections = {
   docs: defineCollection({
     loader: glob({ pattern: "**/*.md", base: "./src/content/docs" }),
@@ -21,6 +30,7 @@ export const collections = {
         repository: z.string().url().optional(),
         license: z.string().optional(),
         funding: funding.optional(),
+        screenshot: screenshot.optional(),
         dripsEligible: z.boolean().default(true),
         nixosModule: z.string().optional(),
         managedHosting: z.boolean().default(false),

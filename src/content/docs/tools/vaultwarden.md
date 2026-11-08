@@ -9,6 +9,7 @@ funding:
   githubSponsors: https://github.com/sponsors/dani-garcia
   liberapay: https://liberapay.com/dani-garcia
 dripsEligible: true
+nixosModule: services.vaultwarden
 managedHosting: true
 ---
 
@@ -16,6 +17,60 @@ Vaultwarden is a self-hosted password manager server that works with the
 official Bitwarden apps and browser extensions. Written in Rust, it's far
 lighter than the official Bitwarden server and runs comfortably on a
 small VPS or a home server.
+
+## Quick start
+
+*Verified against Vaultwarden's own documentation on November 8, 2026; we
+haven't run these setups ourselves.*
+
+Vaultwarden ships as a container image; there is no native Ubuntu
+package, so on Ubuntu use Docker. The NixOS module is maintained in
+nixpkgs.
+
+### Docker Compose
+
+Save this as `compose.yaml`:
+
+```yaml
+services:
+  vaultwarden:
+    image: vaultwarden/server:latest
+    container_name: vaultwarden
+    restart: always
+    environment:
+      DOMAIN: "https://vault.example.com"
+      SIGNUPS_ALLOWED: "true" # set "false" after creating your account
+    volumes:
+      - ./vw-data:/data
+    ports:
+      - 8222:80
+```
+
+Then `docker compose up -d`, open http://localhost:8222 and create your
+account; after that, set `SIGNUPS_ALLOWED` to `"false"` and recreate the
+container. There is no default account; whoever signs up first owns the
+first vault. Vault data persists in `./vw-data`. Bitwarden clients expect
+HTTPS, so put it behind a reverse proxy with TLS for anything beyond
+local testing. Works on any host with Docker and the Compose plugin: on Ubuntu Server,
+`sudo apt install docker.io docker-compose-v2` covers both; on NixOS,
+`virtualisation.docker.enable = true;` enables Docker.
+
+### NixOS
+
+```nix
+services.vaultwarden = {
+  enable = true;
+  config = {
+    DOMAIN = "https://vault.example.com";
+    SIGNUPS_ALLOWED = true; # set false after creating your account
+  };
+};
+```
+
+Then `sudo nixos-rebuild switch`. Data is stored in SQLite and the
+service listens on 127.0.0.1 port 8222, so put a reverse proxy with TLS
+in front (Bitwarden clients expect HTTPS). Create your account first,
+then set `SIGNUPS_ALLOWED` to `false` and rebuild again.
 
 ## Why it's listed
 

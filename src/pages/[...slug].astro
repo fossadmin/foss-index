@@ -9,6 +9,7 @@ const { tools } = await catalog();
 const tool = tools.find(t => t.id === entry.id);
 const data = entry.data;
 const funding = data.funding ?? {};
+const shot = data.screenshot;
 const links = [
   { label: 'GitHub Sponsors', url: funding.githubSponsors }, { label: 'Open Collective', url: funding.openCollective },
   { label: 'Polar', url: funding.polar }, { label: 'Liberapay', url: funding.liberapay }, ...(funding.custom ?? []),
@@ -23,8 +24,87 @@ const links = [
       {tool && <div class="detail-meta"><span class="license">{tool.license}</span>{tool.release?.version && <a href={tool.release.url}>Recorded release: {tool.release.version}</a>}<a href={data.repository}>Source code ↗</a></div>}
     </header>
     {tool?.release?.changelog && <details class="changelog"><summary>Release notes / {tool.release.version}</summary><p class="release-date">Released {tool.release.date?.slice(0,10)}. Snapshot from the included release data, not a live check.</p><p class="changelog-body">{tool.release.changelog}</p><a href={tool.release.url}>Read the full release notes on GitHub ↗</a></details>}
+    {shot && <figure class="shot" data-shot><img src={`${import.meta.env.BASE_URL}screenshots/${shot.src}`} alt={shot.alt} width={shot.width} height={shot.height} decoding="async" /><figcaption>Official screenshot from <a href={shot.sourceUrl}>{shot.credit}'s repository ↗</a> ({shot.license} - <a href={`${import.meta.env.BASE_URL}screenshots/NOTICE.md`}>image credits and license texts</a>). Demo data, not our install.</figcaption></figure>}
     <div class="prose"><Content /></div>
     {tool && <aside class="support-panel"><p class="eyebrow">Keep open source going</p><h2>Support this project</h2>{links.length ? <><p>Support goes directly to the maintainers through their own channels. We do not take a cut.</p><ul>{links.map(l => <li><a href={l.url}>{l.label} ↗</a></li>)}</ul></> : <p>No direct funding link is recorded for this tool yet. Check its <a href={data.repository}>source repository</a> for ways to contribute.</p>}</aside>}
     {data.managedHosting && <p class="managed-line">Want help running it? <a href="https://fossadmin.com">Ask FOSSadmin about hosting and maintenance ↗</a></p>}
   </article>
 </CatalogLayout>
+
+<script>
+  (() => {
+    const fig = document.querySelector('[data-shot]');
+    const qs = [...document.querySelectorAll('.prose h2')].find((h) => h.textContent.trim().toLowerCase() === 'quick start');
+    if (fig && qs) qs.before(fig);
+  })();
+  document.querySelectorAll('.prose h2').forEach((h2) => {
+    if (h2.textContent.trim().toLowerCase() !== 'quick start') return;
+    const lead = [];
+    const sections = [];
+    let node = h2.nextElementSibling;
+    while (node && node.tagName !== 'H2') {
+      if (node.tagName === 'H3') sections.push({ title: node.textContent.trim(), heading: node, nodes: [] });
+      else if (sections.length) sections[sections.length - 1].nodes.push(node);
+      else lead.push(node);
+      node = node.nextElementSibling;
+    }
+    if (sections.length < 2) return;
+    const base = h2.id || 'quick-start';
+    const wrap = document.createElement('div');
+    wrap.className = 'qs-tabs';
+    const tablist = document.createElement('div');
+    tablist.className = 'qs-tablist';
+    tablist.setAttribute('role', 'tablist');
+    tablist.setAttribute('aria-label', 'Quick start platforms');
+    const tabs = [];
+    const panels = [];
+    function select(idx, focus) {
+      tabs.forEach((t, i) => {
+        const on = i === idx;
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        t.tabIndex = on ? 0 : -1;
+        panels[i].hidden = !on;
+      });
+      if (focus) tabs[idx].focus();
+    }
+    sections.forEach((sec, i) => {
+      const tab = document.createElement('button');
+      tab.type = 'button';
+      tab.className = 'qs-tab';
+      tab.id = base + '-tab-' + i;
+      tab.setAttribute('role', 'tab');
+      tab.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
+      tab.tabIndex = i === 0 ? 0 : -1;
+      tab.textContent = sec.title;
+      const panel = document.createElement('div');
+      panel.className = 'qs-panel';
+      panel.id = base + '-panel-' + i;
+      panel.setAttribute('role', 'tabpanel');
+      panel.setAttribute('aria-labelledby', tab.id);
+      panel.tabIndex = 0;
+      panel.hidden = i !== 0;
+      sec.nodes.forEach((n) => panel.appendChild(n));
+      tab.setAttribute('aria-controls', panel.id);
+      tab.addEventListener('click', () => select(i, false));
+      tabs.push(tab);
+      panels.push(panel);
+      tablist.appendChild(tab);
+      sec.heading.remove();
+    });
+    tablist.addEventListener('keydown', (e) => {
+      const cur = tabs.indexOf(document.activeElement);
+      if (cur < 0) return;
+      let next = null;
+      if (e.key === 'ArrowRight') next = (cur + 1) % tabs.length;
+      else if (e.key === 'ArrowLeft') next = (cur - 1 + tabs.length) % tabs.length;
+      else if (e.key === 'Home') next = 0;
+      else if (e.key === 'End') next = tabs.length - 1;
+      if (next === null) return;
+      e.preventDefault();
+      select(next, true);
+    });
+    wrap.appendChild(tablist);
+    panels.forEach((pn) => wrap.appendChild(pn));
+    (lead.length ? lead[lead.length - 1] : h2).after(wrap);
+  });
+</script>

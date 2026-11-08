@@ -1,24 +1,80 @@
 {
+  "advplyr/audiobookshelf": {
+    "version": "v2.37.2",
+    "date": "2026-10-23T20:18:17Z",
+    "url": "https://github.com/advplyr/audiobookshelf/releases/tag/v2.37.2",
+    "changelog": "#### Important: New authentication system was added in [v2.26.0](https://github.com/advplyr/audiobookshelf/releases/tag/v2.26.0). See https://github.com/advplyr/audiobookshelf/discussions/4460 for details.\r\n\r\n### Fixed\r\n\r\n- File copy and move fails with EPERM on some systems (e.g. TrueNAS) #5637 by @nichwall in #5668\r\n- RSS feed cover images not updating after cover change #5306 by @SharonZhu0122 in #5418\r\n- Audible search when API returns null products #5176 by @boqiaok in #5430\r\n- Upload crash when multipart form repeats file fields by @rtainaan in #5437\r\n- Debian package ships `audiobookshe…",
+    "license": "GPL-3.0"
+  },
   "caddyserver/caddy": {
-    "version": "v2.11.7",
-    "date": "2026-10-03T05:58:33Z",
-    "url": "https://github.com/caddyserver/caddy/releases/tag/v2.11.7",
-    "changelog": "This patch release fixes regressions from 2.11.6, including a crash when proxying over HTTP/2 and streams that were cut off after a minute. **If you're on 2.11.6, we recommend upgrading.** It also adds support for the brand new `Incremental` header field (RFC 10036).\r\n\r\n**Huge thank you to our sponsors for keeping the project alive with resources, and for our maintainers who triage and assist tirelessly in this relentless new age of AI.**\r\n\r\n## Highlights\r\n\r\n- **Fixed: crash and dropped streams caused by the new idle timeouts.** 2.11.6 introduced default idle read/write timeouts, which caused…",
+    "version": "v2.11.9",
+    "date": "2026-11-05T01:30:24Z",
+    "url": "https://github.com/caddyserver/caddy/releases/tag/v2.11.9",
+    "changelog": "This is a quick follow-up on top of 2.11.8, to fix a regression it introduced and a few more security issues, mostly in FastCGI. It contains only fixes backported from master, plus a couple of small additions. **If you're on 2.11.8 and serve PHP, we recommend upgrading.**\r\n\r\n**Huge thank you to our sponsors for keeping the project alive with resources, and for our maintainers who triage and assist tirelessly in this relentless new age of AI.**\r\n\r\n## Highlights\r\n\r\n- **Fixed: PHP directory indexes (regression in 2.11.8).** A request for a directory with a trailing slash, like `/wp-admin/`, was m…",
     "license": "Apache-2.0"
   },
+  "gotify/server": {
+    "version": "v3.1.1",
+    "date": "2026-09-15T18:20:20Z",
+    "url": "https://github.com/gotify/server/releases/tag/v3.1.1",
+    "changelog": "- Require an elevated session for creating users (GHSA-phfm-q6fr-wv34 via #1048)\r\n- Move theme selection and password change to separate settings page (#1040 via #1041 by @justadityaraj)\r\n- Disable password change form when [`GOTIFY_LOCALAUTH_ENABLED`](https://gotify.net/docs/config#gotify-localauth-enabled) is disabled (#1040 via #1041 by @justadityaraj)\r\n- Fix crash when a Let's Encrypt request fails (#1046 by @NotAFlightRisk)\r\n- Update dependencies",
+    "license": "MIT"
+  },
+  "grafana/grafana": {
+    "version": "v13.3.0",
+    "date": "2026-10-27T11:08:50Z",
+    "url": "https://github.com/grafana/grafana/releases/tag/v13.3.0",
+    "changelog": "[Download page](https://grafana.com/grafana/download/13.3.0)\n[What's new highlights](https://grafana.com/docs/grafana/latest/whatsnew/)\n\n### Security\n\n- Security: Fix CVE-2026-100105\n- Security: Fix CVE-2026-13719\n- Security: Fix CVE-2026-13720\n- Security: Fix CVE-2026-15577\n- Security: Fix CVE-2026-33374\n- Security: Fix CVE-2026-81841\n- Security: Fix CVE-2026-88858\n- Security: Fix CVE-2026-88967\n- Security: Fix CVE-2026-93294\n- Security: Fix CVE-2026-95502\n\n### Features and enhancements\n\n- **Access control:** reject global role creation in single-org mode (Enterprise)\n- **Alerting:** Add Acce…",
+    "license": "AGPL-3.0"
+  },
+  "gethomepage/homepage": {
+    "version": "v2.7.0",
+    "date": "2026-10-23T15:10:35Z",
+    "url": "https://github.com/gethomepage/homepage/releases/tag/v2.7.0",
+    "changelog": "## What's Changed\r\n\r\n## 🚀 Features\r\n\r\n- Feature: add NetBird service widget (#7260)\r\n\r\n## 🐛 Fixes\r\n\r\n- Fix: prometheusmetric renders only the four metrics it queries (#7262)\r\n\r\n## 🧰 Maintenance\r\n\r\n- Chore: update base image to node 24 (#7277) @shamoon\r\n- Chore: Remove k3d development setup (#7276) @shamoon\r\n- Chore(deps): Bump ip-address from 10.7.2 to 10.7.4 (#7274) @[dependabot[bot]](https://github.com/apps/dependabot)\r\n- Chore(deps): Bump next from 16.3.8 to 16.4.1 (#7275) @[dependabot[bot]](https://github.com/apps/dependabot)\r\n- Chore(deps): Bump astral-sh/setup-uv from 10.2.0 to 10.3.0…",
+    "license": "GPL-3.0"
+  },
   "immich-app/immich": {
-    "version": "v3.3.4",
-    "date": "2026-10-20T10:18:17Z",
-    "url": "https://github.com/immich-app/immich/releases/tag/v3.3.4",
-    "changelog": "Turns out the last people performance fix wasn't quite there for some people. We have now finally resolved that issue.\r\n\r\n## What's Changed\r\n### 🐛 Bug fixes\r\n* fix: missing translation by @waclaw66 in https://github.com/immich-app/immich/pull/32485\r\n* perf(server): more efficient person queries by @mertalev in https://github.com/immich-app/immich/pull/32523\r\n\r\n**Full Changelog**: https://github.com/immich-app/immich/compare/v3.3.3...v3.3.4\r\n",
+    "version": "v3.3.6",
+    "date": "2026-11-04T17:24:55Z",
+    "url": "https://github.com/immich-app/immich/releases/tag/v3.3.6",
+    "changelog": "Unfortunately we missed that onnxruntime enabled telemetry by default in a recent release, resulting in the ML container automatically sending anonymous metric data to Microsoft. We have now disabled it. Apologies to everyone that we did not catch this change immediately, and thanks to our community for flagging it!\r\n\r\n## What's Changed\r\n### 🐛 Bug fixes\r\n* fix(ml): disable onnxruntime telemetry by @mjkent in https://github.com/immich-app/immich/pull/32956\r\n\r\n## New Contributors\r\n* @mjkent made their first contribution in https://github.com/immich-app/immich/pull/32956\r\n\r\n**Full Changelog**: h…",
     "license": "AGPL-3.0"
   },
   "jellyfin/jellyfin": {
-    "version": "v12.2",
-    "date": "2026-10-05T23:07:59Z",
-    "url": "https://github.com/jellyfin/jellyfin/releases/tag/v12.2",
-    "changelog": "# :rocket: Jellyfin Server 12.2\n\nWe are pleased to announce the latest stable release of Jellyfin, version 12.2! This minor release brings several bugfixes to improve your Jellyfin experience. As always, please ensure you take a full backup before upgrading!\n\nDiscuss this release further [on our forums](https://forum.jellyfin.org/t-new-jellyfin-server-web-release-12-2).\n\n## Changelog (51)\n\n### 📈 General Changes\n* Replace custom item display preferences in one transaction [PR #18266], by @martimarkov\n* Use hvc1 for Dolby Vision profile 8 [PR #18300], by @theopeuchlestrade\n* Make the OwnerId an…",
+    "version": "v12.4",
+    "date": "2026-10-26T21:30:17Z",
+    "url": "https://github.com/jellyfin/jellyfin/releases/tag/v12.4",
+    "changelog": "# :rocket: Jellyfin Server 12.4\n\nWe are pleased to announce the latest stable release of Jellyfin, version 12.4! This minor release brings several bugfixes to improve your Jellyfin experience. As always, please ensure you take a full backup before upgrading!\n\nDiscuss this release further [on our forums](https://forum.jellyfin.org/t-new-jellyfin-server-web-release-12-4).\n\n## Changelog (1)\n\n### 📈 General Changes\n* Update to .net 10.0.14 [PR #18535], by @crobibero",
     "license": "GPL-2.0"
+  },
+  "karakeep-app/karakeep": {
+    "version": "v0.34.1",
+    "date": "2026-10-22T06:42:02Z",
+    "url": "https://github.com/karakeep-app/karakeep/releases/tag/v0.34.1",
+    "changelog": "This is a security release on top of 0.34.0. The docker images move from the pinned `node:24.18.1-slim` back to `node:24-slim` (currently Node 24.22.1) to pick up the [October 2026 Node.js security releases](https://nodejs.org/en/blog/vulnerability/october-2026-security-releases). Among other fixes, these patch a Brotli decoder out-of-bounds write (CVE-2026-111497) and several TLS certificate hostname validation bypasses (CVE-2026-105483, CVE-2026-106069, CVE-2026-106072). Thanks @eriktews for the fix (#3217)!\n\nThe node version was pinned in 0.33.2 because of the better-sqlite3 crash loop (#29…",
+    "license": "AGPL-3.0"
+  },
+  "netbirdio/netbird": {
+    "version": "v0.82.0",
+    "date": "2026-10-29T13:56:14Z",
+    "url": "https://github.com/netbirdio/netbird/releases/tag/v0.82.0",
+    "changelog": "# Release Notes for v0.82.0\r\n\r\n## Highlights\r\n\r\n### 🛣️ Latency-aware HA routing that holds stable routes\r\n\r\nRouting peers in an HA group with equal metrics are meant to be chosen by latency, but the client used to sample latency only once, when the connection was set up, and moved the route on events that did not need it. Every switch between masquerading routing peers resets the TCP connections using the route, so SSH sessions and other long-lived flows dropped more often than they had to.\r\n\r\nThe client now samples the latency of connected routing peers continuously and smooths it, and moves…",
+    "license": "BSD-3-Clause / AGPL-3.0"
+  },
+  "nextcloud/server": {
+    "version": "v33.0.10",
+    "date": "2026-10-15T08:37:28Z",
+    "url": "https://github.com/nextcloud/server/releases/tag/v33.0.10",
+    "changelog": "Maintenance release in the Nextcloud 33 series. Fixes include failing uploads when the URI does not match the session or share token, CSRF protection on the share accept endpoint, dashboard scrollbar contrast, CardDAV contact updates, and assorted sharing, tags and external-storage fixes. Full notes: https://github.com/nextcloud-releases/server/releases/tag/v33.0.10",
+    "license": "AGPL-3.0"
+  },
+  "paperless-ngx/paperless-ngx": {
+    "version": "v3.4.2",
+    "date": "2026-11-03T21:57:15Z",
+    "url": "https://github.com/paperless-ngx/paperless-ngx/releases/tag/v3.4.2",
+    "changelog": "## paperless-ngx 3.4.2\r\n\r\n### Bug Fixes\r\n\r\n- Fix: mobile save button display obsessing @shamoon ([#14676](https://github.com/paperless-ngx/paperless-ngx/pull/14676))\r\n- Fix: make index and llmindex init wait for tesseract language install @stumpylog ([#14670](https://github.com/paperless-ngx/paperless-ngx/pull/14670))\r\n- Fix: prevent loss of save view name on save + close @shamoon ([#14667](https://github.com/paperless-ngx/paperless-ngx/pull/14667))\r\n- Fixhancement: doc detail mobile ux tweaks @shamoon ([#14664](https://github.com/paperless-ngx/paperless-ngx/pull/14664))\r\n- Fix: Bumps filelock…",
+    "license": "GPL-3.0"
   },
   "plausible/analytics": {
     "version": "v3.2.1",
@@ -27,18 +83,39 @@
     "changelog": "# Security related update\r\n\r\nThis patch release **fixes a security vulnerability**[`CVE-2026-8467` / `GHSA-55hg-8qxv-qj4p`](https://github.com/phenixdigital/phoenix_storybook/security/advisories/GHSA-55hg-8qxv-qj4p) affecting the following versions of Plausible Community Edition (image: ghcr.io/plausible/community-edition):\r\nTags:\r\n- v3.2\r\n- v3.2.0\r\n- v3\r\n- v3.2.0-rc.0\r\n- v3.1\r\n- v3.1.0\r\n- v3.1.0-rc.1\r\n- v3.1.0-rc.0\r\n- v3.0.1\r\n- v3.0\r\n- v3.0.0\r\n- v3.0.0-rc.6\r\n- v3.0.0-rc.5\r\n- v3.0.0-rc.4\r\n- v3.0.0-rc.3\r\n- v3.0.0-rc.2\r\n- v3.0.0-rc.1\r\n- v3.0.0-rc.0\r\n\r\nThe affected versions expose a `HTTP \"/story…",
     "license": "AGPL-3.0"
   },
+  "Kozea/Radicale": {
+    "version": "v3.9.0",
+    "date": "2026-10-25T17:32:33Z",
+    "url": "https://github.com/Kozea/Radicale/releases/tag/v3.9.0",
+    "changelog": "# Fixes (Security)\r\n* Fix: auth/login-cache: partially missing thread-safety\r\n* Fix: auth/login-cache: add lock around remove expired entry\r\n* Fix: sharing/delete collection: fix uncatched collection URI without trailing '/'\r\n* Fix: auth/sharing+rights: refactoring \"user_groups\" handling to be thread-safe\r\n\r\n# Fixes\r\n* Fix: REPORT expand: non-recurring events with a TZID were time-range filtered by their local time read as UTC\r\n* Fix: typo in /.mobileconfig\r\n* Fix: empty text-match filter no longer fails the REPORT\r\n* Fix: WebUI/Sharing: property overrides on transformed shares\r\n* Fix: PUT req…",
+    "license": "GPL-3.0"
+  },
+  "syncthing/syncthing": {
+    "version": "v2.1.7",
+    "date": "2026-10-21T06:09:14Z",
+    "url": "https://github.com/syncthing/syncthing/releases/tag/v2.1.7",
+    "changelog": "## What's Changed\r\n\r\nBuilt with Go 1.27.3.\r\n\r\n### Fixes\r\n* fix: handle missing max-sequence file entries by @calmh in https://github.com/syncthing/syncthing/pull/10912\r\n* fix(sqlite): avoid early garbage collection of deleted recv-enc files by @calmh in https://github.com/syncthing/syncthing/pull/10916\r\n* fix(sqlite): do not generate unbounded prepared statements (ref #10913) by @calmh in https://github.com/syncthing/syncthing/pull/10915\r\n* fix(discover): skip unnecessary identical global announce updates; obey retry-after by @calmh in https://github.com/syncthing/syncthing/pull/10918\r\n* fix(p…",
+    "license": "MPL-2.0"
+  },
   "umami-software/umami": {
-    "version": "v3.4.0",
-    "date": "2026-09-17T04:21:49Z",
-    "url": "https://github.com/umami-software/umami/releases/tag/v3.4.0",
-    "changelog": "Umami `v3.4.0` is here with new **Annotations**, **MCP support**, API key management, a typed API client, session property segments, and security, analytics, and UI improvements.\n\n## New features\n\n### Annotations\n\nAdd dated notes to your website charts to keep launches, campaigns, and other important events alongside your analytics.\n\n- Chart markers for website annotations\n- Create, edit, and delete annotations\n- All-day and time-specific notes\n- Annotation management and date picker improvements\n\n### Model Context Protocol (MCP)\n\nConnect MCP-compatible assistants to Umami to explore your anal…",
+    "version": "v3.4.1",
+    "date": "2026-10-23T08:26:44Z",
+    "url": "https://github.com/umami-software/umami/releases/tag/v3.4.1",
+    "changelog": "Umami `v3.4.1` is mainly a **security hotfix**. It updates vulnerable dependencies and the Docker base image. All self-hosted users should upgrade.\n\n## Security\n\n- Upgraded Next.js to `16.4.2` (from `16.3.4` in v3.4.0). This fixes a critical RCE in `next/og`, SSRF in image optimization, cache poisoning, and an information disclosure issue. #4645\n- Upgraded React and React DOM to `19.3.1`.\n- Pinned the Docker base image to Node `22.23.4-alpine`, which includes the October 2026 Node.js security fixes. Rebuild or re-pull your images to pick this up. #4657\n- Upgraded `@modelcontextprotocol/server`…",
+    "license": "MIT"
+  },
+  "louislam/uptime-kuma": {
+    "version": "2.5.9",
+    "date": "2026-10-31T16:03:58Z",
+    "url": "https://github.com/louislam/uptime-kuma/releases/tag/2.5.9",
+    "changelog": "\r\n### 🐞 Bug Fixes\r\n\r\n- #8082 fix: runtime timeout fallback used milliseconds for a seconds field \r\n- #8081 fix: reset push monitor retries from the last stored heartbeat \r\n- #8079 fix: remove duplicated refresh timer on status page \r\n- #8064 fix: display recurring maintenance in its configured timezone (Thanks @kuxiaowo)\r\n\r\n### ⬆️ Security Fixes\r\n\r\n- GHSA-86ch-2247-gr56 fix: RSS cache poisoning (Thanks @the-arma-of-owl)\r\n- #8080 chore: drop outdated apicache, migrate to http-cache-semantics (related to the above issue)\r\n- #8050 chore: Update dependencies \r\n\r\n",
     "license": "MIT"
   },
   "dani-garcia/vaultwarden": {
-    "version": "1.37.4",
-    "date": "2026-10-05T23:40:54Z",
-    "url": "https://github.com/dani-garcia/vaultwarden/releases/tag/1.37.4",
-    "changelog": "## Security Fixes\r\nThis release contains security fixes for the following advisories. We strongly advise updating as soon as possible.\r\n- Organization member revocation [[GHSA-69q9-v8p6-xvx3]](https://github.com/dani-garcia/vaultwarden/security/advisories/GHSA-69q9-v8p6-xvx3) (**High**, 8.1)\r\n- Two-factor authentication [[GHSA-7jg8-8m5x-6j9r]](https://github.com/dani-garcia/vaultwarden/security/advisories/GHSA-7jg8-8m5x-6j9r) (**Medium**, 6.8)\r\n- Organization invitations [[GHSA-v576-3wvq-xh3c]](https://github.com/dani-garcia/vaultwarden/security/advisories/GHSA-v576-3wvq-xh3c) (**Medium**, 6.8…",
+    "version": "1.37.5",
+    "date": "2026-11-01T22:16:50Z",
+    "url": "https://github.com/dani-garcia/vaultwarden/releases/tag/1.37.5",
+    "changelog": "## Security Fixes\r\nThis release contains security fixes for the following advisories. We strongly advise updating as soon as possible.\r\n- Website icons [[GHSA-x9cq-f669-vrr4]](https://github.com/dani-garcia/vaultwarden/security/advisories/GHSA-x9cq-f669-vrr4) (**Medium**, 5.3)\r\n- Emergency access [[GHSA-9pjj-f9g5-3x4c]](https://github.com/dani-garcia/vaultwarden/security/advisories/GHSA-9pjj-f9g5-3x4c) (**Medium**, 4.3)\r\n\r\nThese are private for now, pending CVE assignment and publishing at a later date.\r\n\r\n## Note\r\nThis update is required for web vault 2026.7.1+ to turn two-step login methods…",
     "license": "AGPL-3.0"
   }
 }

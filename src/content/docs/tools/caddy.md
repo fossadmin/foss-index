@@ -18,7 +18,40 @@ without any configuration, which removes one of the most error-prone parts
 of running a site. It serves static files, reverse-proxies to apps, and
 handles HTTP/2 and HTTP/3 out of the box.
 
-## Quick start on NixOS
+## Quick start
+
+*Verified against Caddy's own documentation on November 8, 2026; we
+haven't run these setups ourselves.*
+
+### Docker Compose
+
+Save this as `compose.yaml`:
+
+```yaml
+services:
+  caddy:
+    image: caddy
+    container_name: caddy
+    restart: unless-stopped
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./conf:/etc/caddy
+      - caddy-data:/data
+      - caddy-config:/config
+volumes:
+  caddy-data:
+  caddy-config:
+```
+
+Put your Caddyfile at `./conf/Caddyfile` (mount the folder, not the file
+itself), then `docker compose up -d`. The data volume keeps issued
+certificates. Works on any host with Docker and the Compose plugin: on Ubuntu Server,
+`sudo apt install docker.io docker-compose-v2` covers both; on NixOS,
+`virtualisation.docker.enable = true;` enables Docker.
+
+### NixOS
 
 A Caddy reverse proxy is a few lines in `configuration.nix`:
 
@@ -29,6 +62,45 @@ services.caddy = {
     reverse_proxy localhost:8080
   '';
 };
+```
+
+Then `sudo nixos-rebuild switch`.
+
+### Ubuntu Server
+
+Caddy's official apt repository:
+
+```bash
+sudo apt install --yes debian-keyring debian-archive-keyring apt-transport-https curl
+curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | sudo gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg
+curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | sudo tee /etc/apt/sources.list.d/caddy-stable.list
+sudo chmod o+r /usr/share/keyrings/caddy-stable-archive-keyring.gpg
+sudo chmod o+r /etc/apt/sources.list.d/caddy-stable.list
+sudo apt update
+sudo apt install caddy
+```
+
+The package sets Caddy up as a systemd service; `sudo systemctl enable
+--now caddy` starts it. Until you write your own `/etc/caddy/Caddyfile`,
+it serves a default page on port 80.
+
+### Fedora / RHEL
+
+Caddy's official COPR repository:
+
+```bash
+sudo dnf install dnf-plugins-core
+sudo dnf copr enable @caddy/caddy
+sudo dnf install caddy
+```
+
+Then `sudo systemctl enable --now caddy`; it serves a default page on
+port 80 until you write `/etc/caddy/Caddyfile`. If firewalld is active,
+allow web traffic:
+
+```bash
+sudo firewall-cmd --permanent --add-service=http --add-service=https
+sudo firewall-cmd --reload
 ```
 
 ## Why it's listed

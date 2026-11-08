@@ -862,3 +862,38 @@ main {
     white-space: nowrap;
   }
 }
+
+/* Quick start platform tabs (progressive enhancement; no-JS shows all sections) */
+.qs-tablist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 22px 0 0;
+}
+.qs-tab {
+  font: 11px/1 var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 9px 14px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: var(--card);
+  color: var(--moss);
+  cursor: pointer;
+}
+.qs-tab:not([aria-selected='true']):hover {
+  color: var(--rust);
+  border-color: var(--moss);
+}
+.qs-tab[aria-selected='true'] {
+  background: var(--olive);
+  color: var(--cream);
+  border-color: var(--olive);
+}
+.qs-panel {
+  margin-top: 16px;
+}
+
+.shot { margin: 1.5rem 0; }
+.shot img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 8px; }
+.shot figcaption { margin-top: .5rem; font-size: .85rem; opacity: .75; }
