@@ -978,7 +978,8 @@ main {
 }
 
 @media (max-width:650px) {
- .rail-collapse .rail-intro,.rail-collapse .eyebrow { display:none; }
+ .rail > .rail-intro { margin:2px 0 0; font-size:12px; line-height:1.5; max-width:calc(100% - 108px); }
+ .rail-collapse .eyebrow { display:none; }
  .rail-collapse .category-nav { display:block; padding:4px 0; }
  .rail-collapse .nav-item { border:0; justify-content:center; width:100%; font-size:14px; margin:0; }
  .rail-collapse .rail-bottom nav { justify-content:center; flex-wrap:wrap; }
