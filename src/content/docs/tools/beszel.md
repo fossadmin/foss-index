@@ -11,6 +11,7 @@ funding:
     - label: Buy the maintainer a coffee
       url: https://www.buymeacoffee.com/henrygd
 dripsEligible: false
+nixosModule: services.beszel
 managedHosting: false
 screenshot:
   src: beszel.webp
@@ -35,6 +36,9 @@ access to the Docker socket as security-sensitive.
 
 *Checked against the project's docs on November 9, 2026. We have not run
 these setups ourselves.*
+
+Docker is an upstream-supported route. The NixOS hub and agent modules are
+maintained in nixpkgs and may package a different version.
 
 ### Docker hub and agent enrollment
 
@@ -67,6 +71,36 @@ connection settings before enrolling it. Do not open the admin UI publicly
 just to make the example connect. Use the hub-generated configuration rather
 than copying placeholder keys from a tutorial.
 
+### NixOS
+
+nixpkgs ships separate hub and agent modules. On the hub machine:
+
+```nix
+services.beszel.hub.enable = true;
+```
+
+Run `sudo nixos-rebuild switch`, open http://localhost:8090 on the host and
+create the first admin account. The hub listens on localhost by default
+(`services.beszel.hub.host`) and stores its data in `/var/lib/beszel-hub`;
+back that directory up.
+
+On each machine to monitor:
+
+```nix
+services.beszel.agent = {
+  enable = true;
+  environmentFile = "/etc/beszel-agent.env";
+};
+```
+
+Use **Add System** in the hub and put its generated `HUB_URL`, `TOKEN` and
+`KEY` values in that root-owned file with mode `600`. Do not set them in
+`services.beszel.agent.environment`: values there are world-readable in the
+Nix store. `services.beszel.agent.openFirewall = true;` opens the agent's
+listen port (default 45876) when your setup has the hub connect to agents.
+Keep the hub's admin UI off the public internet; use a reachable
+private-network or HTTPS hub URL for remote agents.
+
 ## Why it's listed
 
 A useful middle ground when you want to see how a few servers are doing
@@ -77,4 +111,6 @@ if you also need external service-availability checks.
 
 - [Getting started and agent setup](https://beszel.dev/guide/getting-started)
 - [Hub installation](https://beszel.dev/guide/hub-installation)
+- [NixOS hub module source](https://github.com/NixOS/nixpkgs/blob/master/nixos/modules/services/monitoring/beszel-hub.nix)
+- [NixOS agent module source](https://github.com/NixOS/nixpkgs/blob/master/nixos/modules/services/monitoring/beszel-agent.nix)
 - [Project source](https://github.com/henrygd/beszel)

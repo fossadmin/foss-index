@@ -9,6 +9,7 @@ license: MIT
 funding:
   githubSponsors: https://github.com/sponsors/actualbudget
 dripsEligible: false
+nixosModule: services.actual
 managedHosting: false
 screenshot:
   src: actual-budget.webp
@@ -33,7 +34,10 @@ A budget deserves both exports and backups, not just a running container.
 ## Quick start
 
 *Checked against the official installation docs on November 9, 2026.
-We have not run this Docker setup ourselves.*
+We have not run these setups ourselves.*
+
+Docker is an upstream-supported route. The NixOS module is maintained in
+nixpkgs and may package a different version.
 
 ### Docker Compose
 
@@ -72,6 +76,26 @@ also offers desktop apps. A local budget does not require a self-hosted sync
 server. Start there if you want to learn the budgeting workflow before
 maintaining a service.
 
+### NixOS
+
+```nix
+services.actual = {
+  enable = true;
+  settings = {
+    hostname = "127.0.0.1";
+    port = 3000;
+  };
+};
+```
+
+Run `sudo nixos-rebuild switch`, then open http://localhost:3000 on the host
+and complete the initial server setup. The module's default port is 3000,
+not the 5006 used by the Docker image. Data lives under `/var/lib/actual`
+(`services.actual.settings.dataDir`); back it up along with separate budget
+exports. For other devices, use HTTPS through a reverse proxy as in the
+Docker notes rather than opening the port directly.
+
+
 ## Why it's listed
 
 A concrete way to bring a private, everyday task onto software you control.
@@ -82,4 +106,5 @@ it with sample data before moving your whole financial history.
 
 - [Installation options](https://actualbudget.org/docs/install/)
 - [Docker installation](https://actualbudget.org/docs/install/docker/)
+- [NixOS module source](https://github.com/NixOS/nixpkgs/blob/master/nixos/modules/services/web-apps/actual.nix)
 - [Project website](https://actualbudget.org/)
