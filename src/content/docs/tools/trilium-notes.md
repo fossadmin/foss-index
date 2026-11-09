@@ -9,6 +9,7 @@ license: AGPL-3.0
 funding:
   githubSponsors: https://github.com/sponsors/eliandoran
 dripsEligible: false
+nixosModule: services.trilium-server
 managedHosting: false
 screenshot:
   src: trilium-notes.webp
@@ -34,6 +35,10 @@ compatibility before upgrading a server that syncs with desktop clients.
 
 *Checked against the official docs on November 9, 2026. We have not run
 these setups ourselves.*
+
+Docker and the desktop app are upstream-documented routes. The NixOS module
+is maintained in nixpkgs and may package a different version than the pinned
+Docker example.
 
 ### Docker Compose
 
@@ -70,6 +75,17 @@ You can use Trilium locally without deploying a server first. A server is
 useful when you want browser access or synchronization, not a prerequisite
 to trying the editor.
 
+### NixOS
+
+```nix
+services.trilium-server.enable = true;
+```
+
+Run `sudo nixos-rebuild switch`, then open http://localhost:8080 on the host
+and follow the setup wizard. The module listens on localhost by default
+(`services.trilium-server.host`) and keeps data in `/var/lib/trilium`; back
+it up and test a restore before trusting it with important notes.
+
 ## Why it's listed
 
 A rich, linked notebook for a substantial personal knowledge base. Its
@@ -80,4 +96,5 @@ plain-file approach.
 
 - [Documentation](https://docs.triliumnotes.org/)
 - [Docker installation](https://docs.triliumnotes.org/user-guide/setup/server/installation/docker)
+- [NixOS module source](https://github.com/NixOS/nixpkgs/blob/master/nixos/modules/services/web-apps/trilium.nix)
 - [Project and desktop downloads](https://github.com/TriliumNext/Trilium)

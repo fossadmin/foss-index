@@ -9,6 +9,7 @@ license: AGPL-3.0-or-later
 funding:
   githubSponsors: https://github.com/sponsors/kolaente
 dripsEligible: false
+nixosModule: services.vikunja
 managedHosting: false
 screenshot:
   src: vikunja.webp
@@ -34,8 +35,11 @@ feature is included.
 ## Quick start
 
 *Checked against upstream docs on November 9, 2026. We ran a local v2.8.0
-binary solely to make the fictional screenshot; we have not run this Docker
-setup ourselves.*
+binary solely to make the fictional screenshot; we have not run these setups
+ourselves.*
+
+Docker is the upstream-documented small-install route. The NixOS module is
+maintained in nixpkgs and may package a different version.
 
 ### Docker Compose
 
@@ -78,6 +82,25 @@ section instead of applying the command blindly. For remote access, set the
 real HTTPS public URL and configure a reverse proxy. Upstream recommends
 PostgreSQL or MySQL for more than a handful of users.
 
+### NixOS
+
+```nix
+services.vikunja = {
+  enable = true;
+  address = "127.0.0.1";
+  frontendScheme = "http";
+  frontendHostname = "localhost";
+};
+```
+
+Run `sudo nixos-rebuild switch`, then open http://localhost:3456 and register
+your account. `frontendScheme` and `frontendHostname` are required: they
+build the public URL, so set them to the real HTTPS address for remote
+access. The module stores the SQLite database and files under
+`/var/lib/vikunja`; back that directory up, and keep secrets in
+`services.vikunja.environmentFiles` rather than in the Nix configuration.
+Disable open registration after your intended users have joined.
+
 ## Why it's listed
 
 A focused task manager fills the gap between a notes app and a full office
@@ -88,5 +111,6 @@ account a requirement.
 
 - [Docker, SQLite and permissions](https://vikunja.io/docs/full-docker-example/)
 - [Installation options](https://vikunja.io/docs/installing/)
+- [NixOS module source](https://github.com/NixOS/nixpkgs/blob/master/nixos/modules/services/web-apps/vikunja.nix)
 - [Features](https://vikunja.io/features/)
 - [Support the project](https://vikunja.io/support/)

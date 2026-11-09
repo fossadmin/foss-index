@@ -11,6 +11,7 @@ funding:
     - label: Open Home Foundation support options
       url: https://www.openhomefoundation.org/structure/
 dripsEligible: false
+nixosModule: services.home-assistant
 managedHosting: false
 screenshot:
   src: home-assistant.webp
@@ -40,7 +41,9 @@ We have not run these setups ourselves.*
 
 Home Assistant OS is upstream's recommended install for most users. The
 Container route below is for people comfortable managing Linux and Docker;
-it does not include the apps/add-ons managed by Home Assistant OS.
+it does not include the apps/add-ons managed by Home Assistant OS. The NixOS
+module is maintained in nixpkgs; upstream explicitly does not support that
+installation method.
 
 ### Docker Container on Linux
 
@@ -81,6 +84,28 @@ or choose the appropriate hardware guide linked there. OS manages the
 system and apps/add-ons for you; Container leaves that work to you. Choose
 the install method before investing time in integrations that require apps.
 
+### NixOS
+
+Upstream explicitly does not support running Home Assistant this way; report
+module problems to nixpkgs, not the project.
+
+```nix
+services.home-assistant = {
+  enable = true;
+  config = {
+    default_config = { };
+  };
+};
+# Only for access from other devices on a trusted LAN:
+# networking.firewall.allowedTCPPorts = [ 8123 ];
+```
+
+Run `sudo nixos-rebuild switch`, then open http://localhost:8123 on the host
+and complete onboarding. The instance binds all interfaces on port 8123 by
+default; do not port-forward 8123 to the internet. Configuration and state
+live in `/var/lib/hass`; back it up before upgrades. Add integrations through
+`services.home-assistant.extraComponents` so their dependencies are packaged.
+
 ## Why it's listed
 
 One place to connect a mixed smart home without making a single device
@@ -91,4 +116,5 @@ before trusting it with important household routines.
 
 - [Linux: OS and Container installation](https://www.home-assistant.io/installation/linux)
 - [Documentation](https://www.home-assistant.io/docs/)
+- [NixOS module source](https://github.com/NixOS/nixpkgs/blob/master/nixos/modules/services/home-automation/home-assistant.nix)
 - [Foundation funding and support options](https://www.openhomefoundation.org/structure/)
