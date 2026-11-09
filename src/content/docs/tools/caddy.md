@@ -29,7 +29,7 @@ handles HTTP/2 and HTTP/3 out of the box.
 
 ## Quick start
 
-*Verified against Caddy's own documentation on November 8, 2026; we
+*Verified against Caddy's own documentation on November 9, 2026; we
 haven't run these setups ourselves.*
 
 ### Docker Compose
@@ -78,9 +78,26 @@ The package sets Caddy up as a systemd service; `sudo systemctl enable
 --now caddy` starts it. Until you write your own `/etc/caddy/Caddyfile`,
 it serves a default page on port 80.
 
-### Fedora / RHEL
+### Fedora
 
 Caddy's official COPR repository:
+
+```bash
+sudo dnf install dnf5-plugins
+sudo dnf copr enable @caddy/caddy
+sudo dnf install caddy
+```
+
+Then `sudo systemctl enable --now caddy`; it serves a default page on
+port 80 until you write `/etc/caddy/Caddyfile`. If firewalld is active,
+allow web traffic:
+
+```bash
+sudo firewall-cmd --permanent --add-service=http --add-service=https
+sudo firewall-cmd --reload
+```
+
+### CentOS / RHEL
 
 ```bash
 sudo dnf install dnf-plugins-core
