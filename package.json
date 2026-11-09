@@ -7,7 +7,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "update-releases": "node scripts/update-releases.js"
+    "update-releases": "node scripts/update-releases.js",
+    "test:releases": "node --test scripts/update-releases.test.js"
   },
   "dependencies": {
     "astro": "^7.4.1",

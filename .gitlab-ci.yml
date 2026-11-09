@@ -17,3 +17,20 @@ create-pages:
     publish: dist
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+# Opt-in check only: no bot token, source writes, commits or deployment.
+# No schedule is created by this file. A future schedule requires owner setup.
+check-releases:
+  stage: deploy
+  script:
+    - npm run test:releases
+    - npm run update-releases
+  artifacts:
+    when: always
+    paths:
+      - .release-check/
+    expire_in: 14 days
+  rules:
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
+      when: manual
+      allow_failure: true

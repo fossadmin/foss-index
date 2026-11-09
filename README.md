@@ -20,16 +20,51 @@ npm install
 npm run dev        # http://localhost:4321
 ```
 
-## Refresh release / license data
+## Check release / license data safely
 
 ```sh
-npm run update-releases              # unauthenticated, fine for a few repos
-GITHUB_TOKEN=... npm run update-releases
-OLLAMA_HOST=http://localhost:11434 npm run update-releases   # optional LLM summaries
+npm run test:releases
+npm run update-releases
 ```
 
-The site renders whatever is in `src/data/releases.json`; the listing
-frontmatter is the fallback when no data has been fetched yet.
+Despite its historical name, `update-releases` now checks only. It does not
+write the published `src/data/releases.json`. Review `.release-check/report.md`
+and compare `.release-check/releases.candidate.json` with the published file.
+GitHub's latest stable release metadata goes into the candidate. Existing
+reviewed licenses stay intact. Different or unknown GitHub license detection
+is flagged for human review, never silently applied. New tools use their
+curated frontmatter license. No-release responses keep prior release data.
+
+API/network failures leave published data alone and produce a nonzero exit;
+no partial candidate is written. Checking stops on API403/429 rather than
+continuing requests. Old report/candidate artifacts are cleared
+before each check, so a failed run cannot leave an old candidate looking new.
+An optional `GITHUB_TOKEN` environment variable raises GitHub's API allowance;
+never commit or paste a token. Default checking needs no credentials.
+
+After reviewing release notes, license files and relevant install examples:
+
+```sh
+diff -u src/data/releases.json .release-check/releases.candidate.json
+# Only after review; do not copy if a check failed or the baseline changed.
+cmp src/data/releases.json .release-check/releases.baseline.json &&
+cp .release-check/releases.candidate.json src/data/releases.json
+npm run build
+git diff -- src/data/releases.json
+# Commit and push only the changes you have approved.
+```
+
+A version change does not update installation pins or screenshot captions.
+License detection is repository-level, not proof of the terms for a version,
+edition or bundled component. Check upstream license files before changing a
+curated label. A pending license-review flag does not block building: it is a
+human review item, not an automated legal verdict. Release notes in the JSON
+are untrusted upstream text, not instructions to run commands.
+
+GitLab has an optional manual `check-releases` job with a 14-day downloadable
+report/candidate artifact. It neither commits nor deploys the candidate. No
+schedule is enabled. For future automatic checking, first decide cadence and
+review routing; do not add write credentials or auto-publish license changes.
 
 ## Build the static site
 
@@ -44,7 +79,8 @@ NixOS: `nix build` (first run prints the real `npmDepsHash`, paste it into
 ## Add a tool
 
 Copy any file in `src/content/docs/tools/`, fill in the frontmatter, run
-`npm run update-releases`. Set `category` and a two-letter `mark` (a local
+`npm run update-releases`, review its candidate before copying it into
+`src/data/releases.json`. Set `category` and a two-letter `mark` (a local
 typographic identifier, not an official logo). Category pages and counts are
 derived from the tool frontmatter. Missing tool metadata fails the build.
 
@@ -61,9 +97,9 @@ the provisional `https://index.fossadmin.com`; this is not a live address.
 The GitLab project name and final/custom hostname still need choosing.
 After choosing the hostname, confirm the Pages URL before sharing it.
 
-Release updates are manual for now: run `npm run update-releases`, review
-the data diff, commit it, and push. No scheduled release refresh is claimed
-or configured. The old GitHub Actions workflows were removed.
+Published metadata updates remain manual: check, review the candidate,
+apply, build, commit and push. The optional manual CI check creates review
+artifacts only. No recurring schedule or automatic source writes are enabled.
 
 ## Layout and privacy
 
