@@ -120,3 +120,51 @@ Nothing was redrawn or substituted.
 ## License texts
 
 Repository license texts are shipped under licenses/ with project-specific filenames. These record the source licensing and do not imply a separate trademark grant. Logos are used only as secondary identifiers in editorial descriptions, not as this site's own marks or as evidence of project endorsement.
+
+## actual-budget.png
+- Project: Actual Budget
+- Source: https://github.com/actualbudget/actual/blob/3519dcb7f6e9b12035a4b2f36b0a073023d6e673/packages/desktop-client/public/favicon-32x32.png
+- Repository license: MIT; mark belongs to the project
+- Changes: none
+
+## vikunja.svg
+- Project: Vikunja
+- Source: https://github.com/go-vikunja/vikunja/blob/55f5418b0e4f581fed8b6701e6c961e27148fd68/frontend/originalMedia/images/logo.svg
+- Repository license: AGPL-3.0-or-later; mark belongs to the project
+- Changes: none
+
+## beszel.svg
+- Project: Beszel
+- Source: https://github.com/henrygd/beszel/blob/3392dcc6f0c9e3b7858a0c377577a4b8a40b8b8d/internal/site/public/static/icon.svg
+- Repository license: MIT; mark belongs to the project
+- Changes: none
+
+## silverbullet.png
+- Project: SilverBullet
+- Source: https://github.com/silverbulletmd/silverbullet/blob/0fbe7b51a35fe3d1ef1fe0a4063448ae98b2e052/client/images/logo.png
+- Repository license: MIT; mark belongs to the project
+- Changes: none
+
+## trilium-notes.svg
+- Project: Trilium Notes
+- Source: https://github.com/TriliumNext/Trilium/blob/849f6042766c23b2804716f3da80aebb422ea242/apps/client/src/assets/icon-color.svg
+- Repository license: AGPL-3.0; mark belongs to the project
+- Changes: trailing whitespace removed only
+
+## kitchenowl.svg
+- Project: KitchenOwl
+- Source: https://github.com/TomBursch/kitchenowl/blob/3cc27f41e3de3d805abd66bdac9eb283eb16e72c/design/logo_small.svg
+- Repository license: AGPL-3.0; mark belongs to the project
+- Changes: none
+
+## omni-tools.svg
+- Project: Omni Tools
+- Source: https://github.com/iib0011/omni-tools/blob/9244e02923d99cde143ddd5b8d761d9ed0997da4/public/favicon.svg
+- Repository license: MIT; mark belongs to the project
+- Changes: none
+
+## home-assistant.png
+- Project: Home Assistant
+- Source: https://github.com/home-assistant/frontend/blob/432762a2eaed6ff7282a577c7081624ec896d6c3/public/static/icons/favicon-192x192.png
+- Repository license: Apache-2.0; mark belongs to the project
+- Changes: none

@@ -71,3 +71,59 @@ screenshot is not a production review of it.
 - karakeep.webp - official screenshot from the karakeep repository (screenshots/homepage.png), licensed AGPL-3.0. Shows v0.23.1.
 - homepage.webp - official demo image from the homepage repository (images/1.png), licensed GPL-3.0. Service icons shown belong to their respective projects.
 - vaultwarden.webp - our own capture of the official Vaultwarden web-vault static build (dani-garcia/bw_web_builds v2026.10.1, GPL-3.0), served locally for the capture only. Login screen, no account or data.
+
+## actual-budget.webp
+- Project: Actual Budget
+- Source: https://github.com/actualbudget/actual/blob/3519dcb7f6e9b12035a4b2f36b0a073023d6e673/packages/desktop-client/public/screenshot_wide.png
+- License: MIT (licenses/LICENSE-MIT-actual-budget.txt); repository license covering the published image
+- Changes: resized and recompressed to WebP only
+- Project-published demo image, not our install. Screenshot version not recorded.
+
+## vikunja.webp
+- Project: Vikunja
+- Source: Own capture of official v2.8.0 binary with fictional local data
+- License: AGPL-3.0-or-later (licenses/LICENSE-AGPL-3.0-or-later-vikunja.txt); the captured UI is AGPL-3.0-or-later, our own fictional text is offered under the same terms
+- Changes: resized and recompressed to WebP only
+- Fictional demo data in a local v2.8.0 binary test. Not a production assessment or a test of this Docker example.
+
+## beszel.webp
+- Project: Beszel
+- Source: https://github.com/henrygd/beszel-docs/blob/0e5bc98bf12b47481012eff3c47ec35723e64fbc/public/image/dashboard.png
+- License: MIT (licenses/LICENSE-MIT-beszel.txt); repository license covering the published image
+- Changes: resized and recompressed to WebP only
+- Project-published demo image, not our install. Screenshot version not recorded.
+
+## silverbullet.webp
+- Project: SilverBullet
+- Source: https://github.com/silverbulletmd/silverbullet/blob/0fbe7b51a35fe3d1ef1fe0a4063448ae98b2e052/docs/Screenshots/markdown-basics-preview.png
+- License: MIT (licenses/LICENSE-MIT-silverbullet.txt); repository license covering the published image
+- Changes: resized and recompressed to WebP only
+- Project-published demo image, not our install. Screenshot version not recorded.
+
+## trilium-notes.webp
+- Project: Trilium Notes
+- Source: https://github.com/TriliumNext/Trilium/blob/849f6042766c23b2804716f3da80aebb422ea242/apps/website/public/screenshot_desktop_linux_light.webp
+- License: AGPL-3.0 (licenses/LICENSE-AGPL-3.0-trilium-notes.txt); repository license covering the published image
+- Changes: resized and recompressed to WebP only
+- Project-published demo image, not our install. Screenshot version not recorded.
+
+## kitchenowl.webp
+- Project: KitchenOwl
+- Source: https://github.com/TomBursch/kitchenowl/blob/3cc27f41e3de3d805abd66bdac9eb283eb16e72c/metadata/en-US/images/phoneScreenshots/groceries.png
+- License: AGPL-3.0 (licenses/LICENSE-AGPL-3.0-kitchenowl.txt); repository license covering the published image
+- Changes: resized and recompressed to WebP only
+- Project-published demo image, not our install. Screenshot version not recorded.
+
+## omni-tools.webp
+- Project: Omni Tools
+- Source: https://github.com/iib0011/omni-tools/blob/9244e02923d99cde143ddd5b8d761d9ed0997da4/docs-images/img.png
+- License: MIT (licenses/LICENSE-MIT-omni-tools.txt); repository license covering the published image
+- Changes: resized and recompressed to WebP only
+- Project-published demo image, not our install. Screenshot version not recorded.
+
+## home-assistant.webp
+- Project: Home Assistant
+- Source: https://github.com/home-assistant/core/blob/02035d3a159494266b282c8f5c5d159f1eedaf28/.github/assets/screenshot-states.png
+- License: Apache-2.0 (licenses/LICENSE-Apache-2.0-home-assistant.txt); repository license covering the published image
+- Changes: resized and recompressed to WebP only
+- Project-published demo image, not our install. Screenshot version not recorded.
