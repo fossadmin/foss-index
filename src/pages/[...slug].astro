@@ -2,11 +2,13 @@
 import { getCollection, render } from 'astro:content';
 import CatalogLayout from '../layouts/CatalogLayout.astro';
 import { catalog, slugify } from '../lib/catalog';
+import licenses from '../data/licenses.json';
 export async function getStaticPaths() { return (await getCollection('docs')).map(entry => ({ params: { slug: entry.id }, props: { entry } })); }
 const { entry } = Astro.props;
 const { Content } = await render(entry);
 const { tools } = await catalog();
 const tool = tools.find(t => t.id === entry.id);
+const licInfo = tool?.license ? (licenses as Record<string, { summary: string; url: string }>)[tool.license] : undefined;
 const data = entry.data;
 const funding = data.funding ?? {};
 const shot = data.screenshot;
@@ -21,7 +23,7 @@ const links = [
     <header class="detail-heading">
       <p class="eyebrow">{data.category ?? 'The project'}</p>
       <h1>{data.title}</h1><p class="lede">{data.description}</p>
-      {tool && <div class="detail-meta"><span class="license">{tool.license}</span>{tool.release?.version && !tool.release?.changelog && <a href={tool.release.url}>Recorded release: {tool.release.version}</a>}<a href={data.repository}>Source code ↗</a><button class="save-toggle save-pill" data-save-toggle data-tool-id={entry.id} type="button" hidden aria-pressed="false"><svg class="bookmark" viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M6.5 3.5h11V21L12 16.4 6.5 21z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span class="save-label">Save</span></button></div>}
+      {tool && <div class="detail-meta"><div class="license-wrap"><details class="license-info"><summary class="license">{tool.license}</summary></details><div class="license-note">{licInfo ? <><p>{licInfo.summary}</p><a href={licInfo.url}>Read the full license ↗</a></> : <p>No plain-language summary is recorded for this license yet. Check the <a href={data.repository}>source repository</a> for the full text.</p>}<p class="license-fine">Plain-language summary, not legal advice.</p></div></div>{tool.release?.version && !tool.release?.changelog && <a href={tool.release.url}>Recorded release: {tool.release.version}</a>}<a class="source-link" href={data.repository}>Source code ↗</a><button class="save-toggle save-pill" data-save-toggle data-tool-id={entry.id} type="button" hidden aria-pressed="false"><svg class="bookmark" viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M6.5 3.5h11V21L12 16.4 6.5 21z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span class="save-label">Save</span></button></div>}
     </header>
     {tool?.release?.changelog && <details class="changelog"><summary>Release notes / {tool.release.version}</summary><p class="release-date">Released {tool.release.date?.slice(0,10)}. Snapshot from the included release data, not a live check.</p><p class="changelog-body">{tool.release.changelog}</p><a href={tool.release.url}>Read the full release notes on GitHub ↗</a></details>}
     {shot && <figure class="shot" data-shot><img src={`${import.meta.env.BASE_URL}screenshots/${shot.src}`} alt={shot.alt} width={shot.width} height={shot.height} decoding="async" /><figcaption>{shot.own

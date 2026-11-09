@@ -19,7 +19,8 @@ touch it and we don't take a cut.
 Companies will be able to sponsor the directory itself through
 [Open Collective](https://opencollective.com/), so the ledger is public
 and sponsors get proper invoices. Not open yet — this page gets updated
-when it is.
+when it is. The [sponsor page](/sponsor/) explains the planned placement
+and how to get in touch.
 
 ## 3. An automatic split back to the projects (planned)
 

@@ -1,0 +1,34 @@
+{
+  "MIT": {
+    "summary": "A short, permissive license: use, copy, change and share it for any purpose, including commercial work, as long as the copyright and license notices stay attached.",
+    "url": "https://spdx.org/licenses/MIT.html"
+  },
+  "Apache-2.0": {
+    "summary": "Permissive like MIT, with an express patent grant from contributors and a requirement to state the changes you made.",
+    "url": "https://spdx.org/licenses/Apache-2.0.html"
+  },
+  "BSD-3-Clause": {
+    "summary": "Permissive like MIT, plus a clause barring use of the copyright holder's or contributors' names to promote derived products without consent.",
+    "url": "https://spdx.org/licenses/BSD-3-Clause.html"
+  },
+  "GPL-3.0": {
+    "summary": "Strong copyleft: free to use, study and change, but distributed copies and derivative works must stay under this license with source code available.",
+    "url": "https://spdx.org/licenses/GPL-3.0.html"
+  },
+  "GPL-2.0": {
+    "summary": "The older strong-copyleft GPL: distributed copies and derivative works must stay under this license with source code available.",
+    "url": "https://spdx.org/licenses/GPL-2.0.html"
+  },
+  "AGPL-3.0": {
+    "summary": "Strong copyleft like GPL-3.0, extended to network use: offering a modified version as a service means offering its source code too.",
+    "url": "https://spdx.org/licenses/AGPL-3.0.html"
+  },
+  "MPL-2.0": {
+    "summary": "Weak, file-level copyleft: changes to the licensed files must be shared under the MPL, but a larger work combining them can stay under different terms.",
+    "url": "https://spdx.org/licenses/MPL-2.0.html"
+  },
+  "BSD-3-Clause / AGPL-3.0": {
+    "summary": "Mixed licensing: most of the repository is permissive BSD-3-Clause, while the server components (management, signal, relay, combined) are copyleft AGPL-3.0.",
+    "url": "https://github.com/netbirdio/netbird/blob/main/LICENSE"
+  }
+}

@@ -1,9 +1,9 @@
 ---
 title: About this index
-description: What the FOSS Index is and why it exists.
+description: What the FOSS Index is, how listings work, and what a listing means.
 ---
 
-This is a curated directory of open-source software: a small selection of tools for self-hosting. It is not an automated scrape
+This is a curated directory of open-source software: a selection of tools for self-hosting. It is not an automated scrape
 of GitHub.
 
 Each listing shows the things we want to know before adopting a tool:
@@ -24,4 +24,47 @@ and to make it easy for users to fund the projects they depend on.
 
 Two small helpers run entirely in your browser: **Surprise me** opens a random tool's page, and the bookmark button keeps a shortlist in this browser's local storage. No account, and nothing is sent anywhere.
 
-Found a mistake? Check the linked project sources before choosing a tool.
+## How are tools chosen?
+
+By a person, not a scrape. The list mixes tools we run or test ourselves
+with reader suggestions, and every submission is reviewed before it goes
+in. The index is a starting point, not a ranking.
+
+## Does a listing mean you have tested the tool?
+
+No. A listing means the project looked worth a closer look, not that we
+audited the code or run it everywhere. Each screenshot caption says
+where the image comes from: our own test install (marked as such, with
+fictional demo data) or the project's official material. Quick-start
+snippets come from each project's own documentation, and the page says
+so when we have not executed them. Read the license and the project's
+own docs before committing to anything.
+
+## Can a listing be bought?
+
+No. Listings are editorial and free. When sponsorship opens it will buy
+a clearly labeled placement, never a listing, a review or a category
+position. [How the money side works](/funding/).
+
+## How will sponsored placements be labeled?
+
+Always as Sponsored, kept separate from the directory listings, one
+sponsor at a time. The details live on the [sponsor page](/sponsor/).
+
+## Who runs the index?
+
+[FOSSadmin](https://fossadmin.com), an owner-operated IT practice built
+on open source. The index is part field guide for self-hosters, part
+lead gen, and the tool pages say when managed hosting is available.
+
+## What about privacy here?
+
+No analytics, no external scripts, no accounts. The bookmark feature
+keeps your shortlist in this browser's local storage only; nothing is
+sent anywhere.
+
+## Something missing or wrong?
+
+Found a mistake? Check the linked project sources before choosing a
+tool. Know a tool that belongs here? [Submit it](/submit/), or open an
+issue on the [GitLab repository](https://gitlab.com/fossadmin/foss-index).

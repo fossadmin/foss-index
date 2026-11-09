@@ -3,7 +3,7 @@ import '../styles/custom.css';
 import interRegular from '../assets/fonts/inter-latin-400-normal.woff2?url';
 import { catalog } from '../lib/catalog';
 const { categories, tools } = await catalog();
-const { title = 'Open source, on your terms.', description = 'A small, curated directory of open-source software, with licenses, release notes and direct project support links.', active = 'all' } = Astro.props;
+const { title = 'Discover open-source tools.', description = 'Discover open-source tools. Support the projects you rely on.', active = 'all' } = Astro.props;
 const base = import.meta.env.BASE_URL;
 ---
 <!doctype html>
@@ -47,7 +47,7 @@ const base = import.meta.env.BASE_URL;
         </nav>
         <div class="rail-bottom">
           <p class="eyebrow">02 / The project</p>
-          <nav aria-label="About the index"><a href={`${base}about/`}>About the index</a><a href={`${base}funding/`}>Funding, explained</a></nav>
+          <nav aria-label="About the index"><a href={`${base}about/`}>About the index</a><a href={`${base}funding/`}>Funding, explained</a><a href={`${base}submit/`}>Submit a tool</a><a href={`${base}sponsor/`}>Sponsor the index</a></nav>
           <a class="parent-brand" href="https://fossadmin.com">A FOSSadmin project <span aria-hidden="true">↗</span></a>
           <p class="privacy-note">No analytics. No external scripts.</p>
         </div>

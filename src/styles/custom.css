@@ -485,6 +485,69 @@ main {
   font: 10px var(--mono);
   color: var(--moss);
 }
+.license-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+.license-info summary {
+  list-style: none;
+  cursor: pointer;
+}
+.license-info summary::-webkit-details-marker {
+  display: none;
+}
+.license-info[open] summary {
+  border-color: var(--rust);
+  color: var(--rust);
+}
+.license-note {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  z-index: 30;
+  width: 270px;
+  max-width: 78vw;
+  padding: 12px 14px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.14);
+  font: 12px/1.65 Inter, system-ui, sans-serif;
+  color: var(--olive);
+}
+.license-note p {
+  margin: 0 0 8px;
+}
+.license-note .license-fine {
+  margin: 0;
+  font-size: 10px;
+  color: var(--moss);
+}
+.license-info[open] + .license-note {
+  display: block;
+}
+@media (hover: hover) and (pointer: fine) {
+  .license-wrap:hover .license-note {
+    display: block;
+  }
+}
+.source-link {
+  display: inline-flex;
+  align-items: center;
+  font: 10px/1.4 var(--mono);
+  padding: 5px 10px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: var(--card);
+  color: var(--olive);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.source-link:hover {
+  color: var(--rust);
+}
 .row-arrow {
   font-size: 17px;
   color: var(--rust);
