@@ -2,7 +2,7 @@
 import '../styles/custom.css';
 import interRegular from '../assets/fonts/inter-latin-400-normal.woff2?url';
 import { catalog } from '../lib/catalog';
-const { categories, tools } = await catalog();
+const { groups, tools } = await catalog();
 const { title = 'Discover open-source.', description = 'Discover open-source. Support the projects.', active = 'all' } = Astro.props;
 const base = import.meta.env.BASE_URL;
 ---
@@ -43,7 +43,7 @@ const base = import.meta.env.BASE_URL;
           <p class="eyebrow">01 / Browse</p>
           <a class:list={['nav-item', { selected: active === 'all' }]} aria-current={active === 'all' ? 'page' : undefined} href={base} data-all-nav={active === 'all' ? '' : undefined}><span>All tools</span><span class="count">{tools.length}</span></a>
           <a class="nav-item" data-saved-nav href={`${base}#saved`} hidden><span>Saved</span><span class="count" data-saved-count>0</span></a>
-          {categories.map(c => <a class:list={['nav-item', { selected: active === c.slug }]} aria-current={active === c.slug ? 'page' : undefined} href={`${base}category/${c.slug}/`}><span>{c.name}</span><span class="count">{c.count}</span></a>)}
+          {groups.map(c => <a class:list={['nav-item', { selected: active === c.slug }]} aria-current={active === c.slug ? 'page' : undefined} href={`${base}browse/${c.slug}/`}><span>{c.name}</span><span class="count">{c.count}</span></a>)}
         </nav>
         <div class="rail-bottom">
           <p class="eyebrow">02 / The project</p>

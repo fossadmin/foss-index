@@ -1,0 +1,9 @@
+---
+import Catalog from '../../components/Catalog.astro';
+import { catalog } from '../../lib/catalog';
+export async function getStaticPaths() {
+  const { groups } = await catalog();
+  return groups.map(group => ({ params: { group: group.slug } }));
+}
+---
+<Catalog group={Astro.params.group} />
