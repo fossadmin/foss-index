@@ -6,11 +6,11 @@ const { tools, categories } = await catalog();
 const selected = categories.find(c => c.slug === category);
 const visible = selected ? tools.filter(t => t.data.category === selected.name) : tools;
 ---
-<CatalogLayout title={selected?.name ?? 'Discover open-source tools.'} active={category ?? 'all'}>
+<CatalogLayout title={selected?.name ?? 'Discover open-source.'} active={category ?? 'all'}>
   <section class="catalog-heading">
     <p class="eyebrow">The directory / {selected?.name ?? 'All tools'}</p>
-    <h1>{selected?.name ?? <>Discover open-source tools.<br /><span>Support the projects you rely on.</span></>}</h1>
-    <p class="lede">{selected ? `Explore ${selected.name.toLowerCase()} software you can run yourself.` : 'Software you can run, understand, and support. Start with what you need.'}</p>
+    <h1>{selected?.name ?? <>Discover open-source.<br /><span>Support the projects.</span></>}</h1>
+    <p class="lede">{selected ? `Explore ${selected.name.toLowerCase()} software you can run yourself.` : 'Explore self-hosted software, with setup guides and project-support links.'}</p>
   </section>
   <section aria-label="Tools" data-catalog>
     <div class="search-row" hidden data-search-ui>
