@@ -2,6 +2,7 @@
 title: "Taskwarrior"
 description: "Command-line task management."
 category: Productivity
+icon: taskwarrior.png
 mark: TW
 repository: https://github.com/GothenburgBitFactory/taskwarrior
 license: MIT

@@ -20,7 +20,7 @@ export async function catalog() {
   const tools = entries
     .sort((a, b) => a.data.title.localeCompare(b.data.title))
     .map((entry) => {
-      const repo = entry.data.repository!.split("github.com/")[1];
+      const repo = entry.data.repository!.replace(/^https?:\/\//, "").replace(/^github\.com\//, "");
       const release = (
         releases as Record<
           string,
@@ -30,6 +30,8 @@ export async function catalog() {
             url?: string;
             changelog?: string;
             license?: string;
+            manual?: boolean;
+            checkedOn?: string;
           }
         >
       )[repo];

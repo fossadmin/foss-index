@@ -175,7 +175,11 @@
     "license": "Apache-2.0"
   },
   "LibreOffice/core": {
-    "license": "MPL-2.0"
+    "license": "MPL-2.0",
+    "version": "26.8.2",
+    "url": "https://www.libreoffice.org/download/download-libreoffice/",
+    "manual": true,
+    "checkedOn": "2026-11-10"
   },
   "keepassxreboot/keepassxc": {
     "license": "GPL-2.0 / GPL-3.0",
@@ -213,7 +217,11 @@
     "changelog": "<b>Announcement:</b> GnuCash 5.17 Released\r\n2026-09-27\r\n\r\n<h2>GnuCash 5.17 Released</h2>\r\n\r\n<p>The GnuCash development team announces GnuCash 5.17, the seventeenth release in the stable 5.x series.</p>\r\n\r\n<h4>Between 5.16 and 5.17, the following bugfixes were accomplished:</h4>\r\n<ul>\r\n    <li><a href=\"https://bugs.gnucash.org/show_bug.cgi?id=797872\">Bug 797872 - Multiple check printing results in nothing sent to print queue after first check</a></li>\r\n    <li><a href=\"https://bugs.gnucash.org/show_bug.cgi?id=799753\">Bug 799753 - Reconciliation error when reconciling transactions posted after t"
   },
   "beancount/fava": {
-    "license": "MIT"
+    "license": "MIT",
+    "version": "v1.30.16",
+    "url": "https://pypi.org/project/fava/1.30.16/",
+    "manual": true,
+    "checkedOn": "2026-11-10"
   },
   "beancount/beancount": {
     "license": "GPL-2.0",
@@ -223,10 +231,19 @@
     "changelog": ""
   },
   "KDE/krita": {
-    "license": "GPL-3.0"
+    "license": "GPL-3.0",
+    "version": "5.3.4",
+    "url": "https://krita.org/en/",
+    "manual": true,
+    "checkedOn": "2026-11-10"
   },
   "KDE/kdenlive": {
-    "license": "GPL-3.0"
+    "license": "GPL-3.0",
+    "version": "v26.08.3",
+    "date": "2026-11-03T03:45:21Z",
+    "url": "https://invent.kde.org/multimedia/kdenlive/-/tags/v26.08.3",
+    "manual": true,
+    "checkedOn": "2026-11-10"
   },
   "darktable-org/darktable": {
     "license": "GPL-3.0",
@@ -250,7 +267,9 @@
     "changelog": "- Improved: Add read_notes MCP tool (#16845) (#16782)\r\n- Improved: Reduce read_note token consumption with outline and section navigation (#16838) (#16777)\r\n- Improved: Return the enclosing section with each search_notes result (#16842) (#16778)\r\n- Improved: Treat private network AI providers as local (#16837)\r\n- Improved: Upgrade app banner shows the wrong minimum app version (#16819) (#16721 by [@Rygaa](https://github.com/Rygaa))\r\n- Fixed: Security: Upgrade to Electron 42.11.18 (#16964) (#16939 by [@personalizedrefrigerator](https://github.com/personalizedrefrigerator))"
   },
   "zotero/zotero": {
-    "license": "AGPL-3.0"
+    "license": "AGPL-3.0",
+    "version": "10.0.8",
+    "url": "https://github.com/zotero/zotero/releases/tag/10.0.8"
   },
   "signalapp/Signal-Desktop": {
     "license": "AGPL-3.0",
@@ -288,7 +307,10 @@
     "changelog": "Logseq 2.0.2 Beta brings smoother editing, faster startup, and more reliable everyday workflows to the DB version.\r\n\r\n[Join the iOS TestFlight beta](https://testflight.apple.com/join/eBcJ9Hpc), 2.0.2 is currently under App Store review.\r\n\r\nWeb app: https://app.logseq.com/\r\n\r\n## Features\r\n\r\n- Gallery cards can now use URL properties as covers.\r\n- Added a \"Clear heading\" slash command.\r\n- Improved video embeds, with resizable desktop players and clickable YouTube timestamps.\r\n\r\n## Thanks\r\n\r\n- **Special thanks to our community PR contributors!** Your fixes, performance improvements, translations,"
   },
   "simplex-chat/simplex-chat": {
-    "license": "AGPL-3.0"
+    "license": "AGPL-3.0",
+    "version": "v7.1.2",
+    "date": "2026-11-07T13:25:47Z",
+    "url": "https://github.com/simplex-chat/simplex-chat/releases/tag/v7.1.2"
   },
   "FreshRSS/FreshRSS": {
     "license": "AGPL-3.0",
@@ -298,10 +320,11 @@
     "changelog": ""
   },
   "videolan/vlc": {
-    "license": "GPL-2.0"
-  },
-  "johannesjo/super-productivity": {
-    "license": "MIT"
+    "license": "GPL-2.0",
+    "version": "3.0.24",
+    "url": "https://www.videolan.org/vlc/",
+    "manual": true,
+    "checkedOn": "2026-11-10"
   },
   "standardnotes/app": {
     "license": "AGPL-3.0 / GPL-3.0",
@@ -393,5 +416,39 @@
     "date": "2025-10-26T05:57:54Z",
     "url": "https://github.com/ledger/ledger/releases/tag/v3.4.1",
     "changelog": "- Fix version number in binary"
+  },
+  "gitlab.gnome.org/GNOME/gimp": {
+    "version": "3.2.8",
+    "date": "2026-11-02",
+    "url": "https://www.gimp.org/downloads/",
+    "manual": true,
+    "checkedOn": "2026-11-10"
+  },
+  "invent.kde.org/graphics/digikam": {
+    "version": "9.1.0",
+    "date": "2026-06-07",
+    "url": "https://www.digikam.org/news/2026-06-07-9.1.0_release_announcement/",
+    "manual": true,
+    "checkedOn": "2026-11-10"
+  },
+  "projects.blender.org/blender/blender": {
+    "version": "5.3.0",
+    "date": "2026-11-09",
+    "url": "https://developer.blender.org/docs/release_notes/5.3/",
+    "manual": true,
+    "checkedOn": "2026-11-10"
+  },
+  "codeberg.org/forgejo/forgejo": {
+    "version": "v17.0.1",
+    "date": "2026-10-26",
+    "url": "https://codeberg.org/forgejo/forgejo/releases/tag/v17.0.1",
+    "manual": true,
+    "checkedOn": "2026-11-10"
+  },
+  "super-productivity/super-productivity": {
+    "license": "MIT",
+    "version": "v20.0.0",
+    "date": "2026-11-06T21:02:15Z",
+    "url": "https://github.com/super-productivity/super-productivity/releases/tag/v20.0.0"
   }
 }

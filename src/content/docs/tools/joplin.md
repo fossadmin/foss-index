@@ -13,6 +13,15 @@ funding:
       url: https://www.patreon.com/joplin
     - label: "Donate"
       url: https://joplinapp.org/donate/
+screenshot:
+  src: joplin.webp
+  alt: "Joplin desktop app with the welcome notebook open on a note about importing and exporting notes"
+  width: 1280
+  height: 730
+  credit: Joplin
+  own: true
+  version: "3.7.22"
+  captionNote: "The official 3.7.22 AppImage on first run, showing the built-in welcome notes; the first-run notice bar at the bottom is cropped out."
 managedHosting: false
 ---
 

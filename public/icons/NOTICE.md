@@ -390,3 +390,10 @@ Repository license texts are shipped under licenses/ with project-specific filen
 - Source: Brand-Icon.png from the project's own press kit, linked at standardnotes.com/press (Press.Kit.Standard.Notes.zip, December 2022)
 - Terms: the press kit states no license or reuse terms; shown as nominative use like the other project marks
 - Changes: resized to 256 px only
+
+## taskwarrior.png
+- Project: Taskwarrior
+- Source: the project's own mark, taken from the taskwarrior.org favicon (https://taskwarrior.org/favicon.ico) and the matching 460 px avatar of the project's GitHub organization (https://github.com/GothenburgBitFactory); both carry the same helmet mark
+- Terms: no separate logo license published; shown as nominative use like the other project marks
+- Changes: resized to 256 px only
+

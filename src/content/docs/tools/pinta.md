@@ -6,6 +6,15 @@ icon: pinta.svg
 mark: PI
 repository: https://github.com/PintaProject/Pinta
 license: MIT
+screenshot:
+  src: pinta.webp
+  alt: "Pinta image editor with a photo of a dog open, the toolbox on the left and the layers and history panels on the right"
+  width: 1100
+  height: 750
+  credit: Pinta Project
+  own: true
+  version: "2.1.2"
+  captionNote: "Pinta 2.1.2 built from the release source, editing a sample photo from the project's own test files. The recorded release is 3.1.2; the capture shows the previous major version."
 managedHosting: false
 ---
 

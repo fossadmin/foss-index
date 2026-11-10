@@ -12,9 +12,9 @@ analytics and no third-party scripts.
 
 - **License badge** from the project's own repository, with a human review
   step before any label changes.
-- **Recorded release** and changelog for projects hosted on GitHub, kept as a
-  committed snapshot, not a live guarantee. Other hosts show "Release not
-  recorded".
+- **Recorded release** and changelog, kept as a committed snapshot, not a
+  live guarantee. Projects without a GitHub release carry a version checked
+  by hand against the project's own source, labeled "checked by hand".
 - **Quick start or install notes** adapted from the project's official
   documentation. We have not run these setups ourselves unless a page says so.
 - **Support this project**: the project's own funding link when one is

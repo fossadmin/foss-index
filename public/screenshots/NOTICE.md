@@ -388,3 +388,18 @@ screenshot is not a production review of it.
 - Terms: our own output render; no project image reused
 - Changes: environment override notices (TASKRC/TASKDATA lines) and the post-upgrade hint left out; the rest unedited, long lines wrapped
 - What it shows: adding three tasks, completing one, and the task list table.
+
+## joplin.webp
+- Project: Joplin
+- Source: our own capture of the official Joplin 3.7.22 AppImage (laurent22/joplin release v3.7.22), first run, showing the built-in welcome notes
+- Terms: our own capture of the running app; the repository's Assets/LICENSE covers the project's own asset files, not a capture we made ourselves
+- Changes: window captured as-is, the first-run notice bar at the bottom cropped out
+- What it shows: the welcome notebook with the importing/exporting note.
+
+## pinta.webp
+- Project: Pinta
+- Source: our own capture of Pinta 2.1.2, built from the release source (PintaProject/Pinta tag 2.1.2), opening the project's own benchmark test photo (tests/PintaBenchmarks/Assets/2000px-test.png). The recorded release is 3.1.2; this environment cannot run the GTK4-based 3.x
+- Terms: our own capture of the running app; the opened photo ships in the project's repository (MIT)
+- Changes: captured as-is
+- What it shows: the main editor with a photo open, toolbox, layers and history panels.
+

@@ -17,7 +17,7 @@ screenshot:
   credit: Logseq
   own: true
   version: "2.0.2"
-  captionNote: "Our own capture of a fresh graph with a sample journal and outline."
+  captionNote: "A fresh graph with a sample journal and outline; resized only from the original capture."
 ---
 
 Logseq is a knowledge management and collaboration platform that stores notes as local files and links them into a graph. The repository's LICENSE.md is the GNU AGPL version 3.

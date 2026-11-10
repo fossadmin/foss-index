@@ -4,7 +4,7 @@ description: "To-do list, time tracker and daily planner for focused personal wo
 category: Productivity
 icon: super-productivity.png
 mark: SP
-repository: https://github.com/johannesjo/super-productivity
+repository: https://github.com/super-productivity/super-productivity
 license: MIT
 funding:
   githubSponsors: https://github.com/sponsors/johannesjo

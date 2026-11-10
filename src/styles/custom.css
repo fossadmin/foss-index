@@ -381,7 +381,7 @@ main {
 }
 .tool-row {
   display: grid;
-  grid-template-columns: 40px minmax(0, 1fr) 110px 14px;
+  grid-template-columns: 40px minmax(0, 1fr) max-content 14px;
   gap: 18px;
   align-items: center;
   min-height: 112px;
@@ -739,7 +739,7 @@ main {
     margin: 0 28px;
   }
   .tool-row {
-    grid-template-columns: 34px minmax(0, 1fr) 90px 10px;
+    grid-template-columns: 34px minmax(0, 1fr) max-content 10px;
     gap: 12px;
   }
   .tool-mark {
@@ -1031,6 +1031,11 @@ main {
 }
 .qs-panel {
   margin-top: 16px;
+}
+.qs-os-note {
+  margin: 8px 0 0;
+  font-size: .8rem;
+  color: var(--moss);
 }
 
 .shot { margin: 1.5rem 0; }

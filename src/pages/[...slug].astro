@@ -23,7 +23,7 @@ const links = [
     <header class="detail-heading">
       <p class="eyebrow">{data.category ?? 'The project'}</p>
       <h1>{data.title}</h1><p class="lede">{data.description}</p>
-      {tool && <div class="detail-meta"><div class="license-wrap"><details class="license-info"><summary class="license">{tool.license}</summary></details><div class="license-note">{licInfo ? <><p>{licInfo.summary}</p><a href={licInfo.url}>Read the full license ↗</a></> : <p>No plain-language summary is recorded for this license yet. Check the <a href={data.repository}>source repository</a> for the full text.</p>}<p class="license-fine">Plain-language summary, not legal advice.</p></div></div>{tool.release?.version && !tool.release?.changelog && <a href={tool.release.url}>Recorded release: {tool.release.version}</a>}<a class="source-link" href={data.repository}>Source code ↗</a><button class="save-toggle save-pill" data-save-toggle data-tool-id={entry.id} type="button" hidden aria-pressed="false"><svg class="bookmark" viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M6.5 3.5h11V21L12 16.4 6.5 21z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span class="save-label">Save</span></button></div>}
+      {tool && <div class="detail-meta"><div class="license-wrap"><details class="license-info"><summary class="license">{tool.license}</summary></details><div class="license-note">{licInfo ? <><p>{licInfo.summary}</p><a href={licInfo.url}>Read the full license ↗</a></> : <p>No plain-language summary is recorded for this license yet. Check the <a href={data.repository}>source repository</a> for the full text.</p>}<p class="license-fine">Plain-language summary, not legal advice.</p></div></div>{tool.release?.version && !tool.release?.changelog && <a href={tool.release.url}>Recorded release: {tool.release.version}{tool.release.manual ? ` (checked by hand ${tool.release.checkedOn ?? "recently"})` : ""}</a>}<a class="source-link" href={data.repository}>Source code ↗</a><button class="save-toggle save-pill" data-save-toggle data-tool-id={entry.id} type="button" hidden aria-pressed="false"><svg class="bookmark" viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M6.5 3.5h11V21L12 16.4 6.5 21z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span class="save-label">Save</span></button></div>}
     </header>
     {tool?.release?.changelog && <details class="changelog"><summary>Release notes / {tool.release.version}</summary><p class="release-date">Released {tool.release.date?.slice(0,10)}. Snapshot from the included release data, not a live check.</p><p class="changelog-body">{tool.release.changelog}</p><a href={tool.release.url}>Read the full release notes on GitHub ↗</a></details>}
     {shot && <figure class="shot" data-shot><img src={`${import.meta.env.BASE_URL}screenshots/${shot.src}`} alt={shot.alt} width={shot.width} height={shot.height} style={shot.height > shot.width ? "width:auto;max-width:100%;max-height:560px;margin-inline:auto" : undefined} decoding="async" /><figcaption>{shot.commons
@@ -31,7 +31,7 @@ const links = [
       : shot.terminal
       ? <>Rendered terminal output of {shot.credit}{shot.version ? ` ${shot.version}` : ''}, not a literal screen capture (<a href={`${import.meta.env.BASE_URL}screenshots/NOTICE.md`}>image credits</a>). {shot.captionNote}</>
       : shot.own
-      ? <>Our own screenshot of {shot.credit}{shot.version ? ` ${shot.version}` : ''} (resized only - <a href={`${import.meta.env.BASE_URL}screenshots/NOTICE.md`}>image credits</a>). {shot.captionNote ?? "Empty default state, not a production setup."}</>
+      ? <>Our own screenshot of {shot.credit}{shot.version ? ` ${shot.version}` : ''} (<a href={`${import.meta.env.BASE_URL}screenshots/NOTICE.md`}>image credits</a>). {shot.captionNote ?? "Empty default state, not a production setup."}</>
       : <>Official screenshot from <a href={shot.sourceUrl}>{shot.credit} ↗</a>{shot.license ? <> ({shot.license} - <a href={`${import.meta.env.BASE_URL}screenshots/NOTICE.md`}>image credits and license texts</a>)</> : <> (<a href={`${import.meta.env.BASE_URL}screenshots/NOTICE.md`}>image credits</a>)</>}. {shot.captionNote ?? 'Demo data, not our install.'}</>}{data.icon && <> The tool icon is the project's own mark (<a href={`${import.meta.env.BASE_URL}icons/NOTICE.md`}>icon credits</a>).</>}</figcaption></figure>}
     <div class="prose"><Content /></div>
     {tool && <aside class="support-panel"><p class="eyebrow">Keep open source going</p><h2>Support this project</h2>{links.length ? <><p>Support goes directly to the maintainers through their own channels. We do not take a cut.</p><ul>{links.map(l => <li><a href={l.url}>{l.label} ↗</a></li>)}</ul></> : <p>No direct funding link is recorded for this tool yet. Check its <a href={data.repository}>source repository</a> for ways to contribute.</p>}</aside>}
@@ -66,13 +66,26 @@ const links = [
     tablist.setAttribute('aria-label', 'Quick start platforms');
     const tabs = [];
     const panels = [];
-    function select(idx, focus) {
+    const osNote = document.createElement('p');
+    osNote.className = 'qs-os-note';
+    osNote.hidden = true;
+    const winMacOnly = (t) => /windows|macos/i.test(t) && !/linux/i.test(t);
+    function select(idx, focus, save) {
       tabs.forEach((t, i) => {
         const on = i === idx;
         t.setAttribute('aria-selected', on ? 'true' : 'false');
         t.tabIndex = on ? 0 : -1;
         panels[i].hidden = !on;
       });
+      const title = sections[idx].title;
+      if (winMacOnly(title)) {
+        const plats = [/windows/i.test(title) ? 'Windows' : '', /macos/i.test(title) ? 'macOS' : ''].filter(Boolean).join(' and ');
+        osNote.textContent = `You can use open-source apps on ${plats} too. For an open-source operating system, consider Linux.`;
+        osNote.hidden = false;
+      } else {
+        osNote.hidden = true;
+      }
+      if (save) { try { localStorage.setItem('foss-index:qs-os', title); } catch (e) {} }
       if (focus) tabs[idx].focus();
     }
     sections.forEach((sec, i) => {
@@ -93,7 +106,7 @@ const links = [
       panel.hidden = i !== 0;
       sec.nodes.forEach((n) => panel.appendChild(n));
       tab.setAttribute('aria-controls', panel.id);
-      tab.addEventListener('click', () => select(i, false));
+      tab.addEventListener('click', () => select(i, false, true));
       tabs.push(tab);
       panels.push(panel);
       tablist.appendChild(tab);
@@ -109,10 +122,20 @@ const links = [
       else if (e.key === 'End') next = tabs.length - 1;
       if (next === null) return;
       e.preventDefault();
-      select(next, true);
+      select(next, true, true);
     });
     wrap.appendChild(tablist);
+    wrap.appendChild(osNote);
     panels.forEach((pn) => wrap.appendChild(pn));
     (lead.length ? lead[lead.length - 1] : h2).after(wrap);
+    const linuxFirst = sections.findIndex((s) => /^linux\b/i.test(s.title));
+    const anyLinux = sections.findIndex((s) => /linux/i.test(s.title));
+    let initial = linuxFirst >= 0 ? linuxFirst : anyLinux >= 0 ? anyLinux : 0;
+    try {
+      const saved = localStorage.getItem('foss-index:qs-os');
+      const savedIdx = saved ? sections.findIndex((s) => s.title === saved) : -1;
+      if (savedIdx >= 0) initial = savedIdx;
+    } catch (e) {}
+    if (initial !== 0) select(initial, false, false);
   });
 </script>

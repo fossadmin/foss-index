@@ -11,7 +11,9 @@ Each listing shows the things we want to know before adopting a tool:
 - **Its license**, so you can tell permissive (MIT, Apache-2.0) from
   copyleft (GPL, AGPL) at a glance.
 - **Its recorded release and changelog**, refreshed by the included updater for
-  projects hosted on GitHub. Projects hosted elsewhere show "Release not recorded".
+  projects hosted on GitHub. GIMP, digiKam, Blender and Forgejo are hosted
+  elsewhere; their versions are checked by hand against the projects' own
+  release pages.
 - **A direct way to support the maintainers**, because open source stays
   alive when the people who rely on it fund it. See
   [how the funding works](/funding/).
