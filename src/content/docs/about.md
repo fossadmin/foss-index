@@ -63,6 +63,15 @@ No analytics, no external scripts, no accounts. The bookmark feature
 keeps your shortlist in this browser's local storage only; nothing is
 sent anywhere.
 
+## Source code and license
+
+The site source is public on [GitLab](https://gitlab.com/fossadmin/foss-index).
+Its code and original text are licensed under the
+[GNU AGPL v3](https://gitlab.com/fossadmin/foss-index/-/blob/main/LICENSE) (version 3
+only). Fonts, screenshots, icons and the FOSSadmin name and branding are not covered
+by it; see [LICENSING.md](https://gitlab.com/fossadmin/foss-index/-/blob/main/LICENSING.md).
+The license shown on each listing is that project's own.
+
 ## Something missing or wrong?
 
 Found a mistake? Check the linked project sources before choosing a
