@@ -67,5 +67,5 @@ reboot. From then on the system is managed by editing
 
 <figure class="shot">
   <img src="/screenshots/nixos-26.05-installer-welcome.webp" alt="Welcome screen of the NixOS 26.05 graphical installer, showing the language selector and installer steps" width="914" height="515" loading="lazy" decoding="async" />
-  <figcaption>Our own screenshot of the NixOS 26.05 graphical installer's welcome screen, captured by FOSSadmin in a virtual machine on November 10, 2026. Cropped to the installer window and a small border; converted from the supplied JPEG to WebP (<a href="/credits/screenshots/#nixos-26-05-installer-welcome-webp">image credits</a>).</figcaption>
+  <figcaption>Our own screenshot of the NixOS 26.05 graphical installer's welcome screen, captured by FOSSadmin in a virtual machine on November 10, 2026. Cropped to the installer window and a small border; converted from the supplied JPEG to WebP.</figcaption>
 </figure>

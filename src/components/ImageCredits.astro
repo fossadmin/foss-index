@@ -1,0 +1,45 @@
+---
+import CatalogLayout from '../layouts/CatalogLayout.astro';
+import { catalog } from '../lib/catalog';
+import { imageCredits, renderCreditBody } from '../lib/imageCredits';
+const { tools } = await catalog();
+const { groups, notices, general } = imageCredits(tools);
+const base = import.meta.env.BASE_URL;
+---
+<CatalogLayout title="Image credits" description="Icon and screenshot credits, grouped by service" canonical="https://index.fossadmin.com/credits/">
+  <article class="detail prose credits-page">
+    <h1>Image credits</h1>
+    <p>Icon and screenshot credits are grouped together under each service, in alphabetical order. Each image keeps its own source, terms and record of changes.</p>
+    <p><a href="#general-notices">General notices and raw credit files</a></p>
+    {groups.map((group) => (
+      <section>
+        <h2 id={group.id}>{group.name}</h2>
+        {group.entries.map((entry: any) => (
+          <section>
+            <h3 id={entry.id}>{entry.kind === 'icons' ? 'Icon' : 'Screenshot'}: {entry.head}</h3>
+            <Fragment set:html={renderCreditBody(entry.body, entry.kind, base)} />
+          </section>
+        ))}
+      </section>
+    ))}
+    <section>
+      <h2 id="general-notices">General notices</h2>
+      {notices.map((notice) => (
+        <section>
+          <h3>{notice.kind === 'icons' ? 'Icons' : 'Screenshots'}</h3>
+          <Fragment set:html={renderCreditBody(notice.intro, notice.kind, base)} />
+          <p>Raw credit file: <a href={`${base}${notice.kind}/NOTICE.md`}>{notice.kind}/NOTICE.md</a></p>
+        </section>
+      ))}
+      {general.map((entry) => (
+        <section>
+          <h3 id={entry.id}>{entry.head}</h3>
+          <Fragment set:html={renderCreditBody(entry.body, entry.kind, base)} />
+        </section>
+      ))}
+    </section>
+  </article>
+</CatalogLayout>
+<style>
+  .credits-page h2, .credits-page h3 { scroll-margin-top: 24px; }
+</style>

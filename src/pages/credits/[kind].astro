@@ -1,49 +1,8 @@
 ---
-import CatalogLayout from '../../layouts/CatalogLayout.astro';
-import { slugify } from '../../lib/catalog';
-import { readFileSync } from 'node:fs';
-
+import ImageCredits from '../../components/ImageCredits.astro';
+// Compatibility aliases retain every original asset anchor without JavaScript.
 export function getStaticPaths() {
-  return [
-    { params: { kind: 'screenshots' }, props: { kind: 'screenshots', title: 'Screenshot credits' } },
-    { params: { kind: 'icons' }, props: { kind: 'icons', title: 'Icon credits' } },
-  ];
+  return [{ params: { kind: 'icons' } }, { params: { kind: 'screenshots' } }];
 }
-const { kind, title } = Astro.props;
-const base = import.meta.env.BASE_URL;
-const raw = readFileSync(`public/${kind}/NOTICE.md`, 'utf8');
-
-const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-const linkify = (s: string) => esc(s)
-  .replace(/https?:\/\/[^\s)]+/g, (u) => `<a href="${u}">${u}</a>`)
-  .replace(/(?<![="'/:\w-])licenses\/[\w.-]+/g, (u) => `<a href="${base}${kind}/${u}">${u}</a>`);
-const renderBody = (body: string) =>
-  body.split(/\n\n+/).map((para) => {
-    const lines = para.split('\n');
-    if (lines.every((l) => l.startsWith('- '))) {
-      return `<ul>${lines.map((l) => `<li>${linkify(l.slice(2))}</li>`).join('')}</ul>`;
-    }
-    return `<p>${linkify(para).replace(/\n/g, ' ')}</p>`;
-  }).join('\n');
-
-const chunks = raw.split('\n## ');
-const intro = chunks[0].replace(/^#[^\n]+\n/, '').trim();
-const sections = chunks.slice(1).map((c) => {
-  const nl = c.indexOf('\n');
-  const head = c.slice(0, nl).trim();
-  return { head, id: slugify(head), body: c.slice(nl + 1).trim() };
-});
 ---
-<CatalogLayout title={title} description={`${title} and license notices`}>
-  <article class="detail prose credits-page">
-    <h1>{title}</h1>
-    <Fragment set:html={renderBody(intro)} />
-    <p>Entries are alphabetical by service name. Raw text: <a href={`${base}${kind}/NOTICE.md`}>NOTICE.md</a>.</p>
-    {sections.map((s) => (
-      <section>
-        <h2 id={s.id}>{s.head}</h2>
-        <Fragment set:html={renderBody(s.body)} />
-      </section>
-    ))}
-  </article>
-</CatalogLayout>
+<ImageCredits />
