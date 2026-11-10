@@ -67,6 +67,12 @@ screenshot is not a production review of it.
 - Author: VulcanSphere (software: Johannes Hanika), 2018-11-27. License stated on the Commons file page: GPL-3.0 (https://www.gnu.org/licenses/gpl-3.0.html). The license applies to this image only and was not inferred from the code license.
 - Changes: resized to 1280 px wide and recompressed to WebP only
 - What it shows: darktable 2.4.4 from 2018, an old release. The current interface looks different. The shown photo is part of the Commons upload.
+## debian-13-gnome.webp
+- Project: Debian
+- Source: https://commons.wikimedia.org/wiki/File:Debian_13_(Trixie)_screenshot_-_using_GNOME_desktop.png
+- Author: The Debian Project, 2025-08-22. License stated on the Commons file page: GPL-2.0-or-later (https://www.gnu.org/licenses/gpl-2.0.html). The license applies to this image only and was not inferred from the code license.
+- Changes: resized to 1280 px wide and recompressed to WebP only
+- What it shows: Debian 13 (trixie) GNOME overview captured in a VMware virtual machine: a terminal with system details (a demo user session, with its username and a local network address visible) and a browser on debian.org. Not our install.
 ## digikam.webp
 - Project: digiKam
 - Source: https://commons.wikimedia.org/wiki/File:DigiKam_7.6.0_screenshot.png
@@ -201,6 +207,12 @@ screenshot is not a production review of it.
 - Terms: Published on the project product page. The page states no reuse terms. We did not infer a license from the code license.
 - Changes: recompressed to WebP only
 - What it shows: Image from the LibreOffice product page showing Writer. The release is not stated.
+## mint-22.3-cinnamon.webp
+- Project: Linux Mint
+- Source: https://linuxmint.com/pictures/screenshots/zena/cinnamon.png
+- Terms: the Linux Mint FAQ permits use of the project's logo and screenshots provided no affiliation is implied (https://linuxmint.com/faq.php); this site is not affiliated with or endorsed by Linux Mint.
+- Changes: resized to 1280 px wide and recompressed to WebP only
+- What it shows: Linux Mint 22.3 live session with the Cinnamon menu open and the Install icon on the desktop, published on the project's screenshots page. Not our install.
 ## logseq.webp
 - Project: Logseq
 - Source: our own capture of Logseq 2.0.2 (official AppImage from the project's GitHub release), run locally with a sample journal and outline we wrote
@@ -266,6 +278,12 @@ screenshot is not a production review of it.
 - Source: https://github.com/plausible/analytics/blob/1264998/.github/plausible-analytics-dashboard.webp
 - License: GNU Affero General Public License v3.0 (licenses/LICENSE-AGPL-3.0.txt), the license of the repository that publishes this README image; original source file available at the pinned URL above
 - Changes: resized and recompressed only; sample metrics only
+## pop-os-24.04-default-desktop.webp
+- Project: Pop!_OS
+- Source: https://commons.wikimedia.org/wiki/File:Pop!_OS_24.04_LTS_default_desktop_-_English.png
+- Author: System76, 2025-12-11. License stated on the Commons file page: GPL-3.0-or-later (https://www.gnu.org/licenses/gpl-3.0.html). The license applies to this image only and was not inferred from the code license.
+- Changes: resized to 1280 px wide and recompressed to WebP only
+- What it shows: Pop!_OS 24.04 LTS default COSMIC desktop. Not our install.
 ## prusaslicer.webp
 - Project: PrusaSlicer
 - Source: https://commons.wikimedia.org/wiki/File:PrusaSlicer.png
@@ -324,6 +342,12 @@ screenshot is not a production review of it.
 - Terms: Published by the developer, Raymond Hill, on the project's official Firefox Add-ons listing, which the project's repository links as the Firefox install source. No reuse terms stated. We did not infer a license from the code license.
 - Changes: recompressed to WebP only
 - What it shows: the uBlock Origin popup panel over a Business Insider page, 2021 interface.
+## ubuntu-26.04-desktop.webp
+- Project: Ubuntu
+- Source: https://commons.wikimedia.org/wiki/File:Ubuntu_26.04_LTS_default_desktop_-_English.png
+- Author: Canonical Limited, 2026-04-23. License stated on the Commons file page: GPL-2.0-or-later (https://www.gnu.org/licenses/gpl-2.0.html). The license applies to this image only and was not inferred from the code license.
+- Changes: resized to 1280 px wide and recompressed to WebP only
+- What it shows: Ubuntu 26.04 LTS live session captured from installation media; the dock shows the installer's USB and disk icons. Not our install.
 ## cura.webp
 - Project: UltiMaker Cura
 - Source: https://commons.wikimedia.org/wiki/File:Cura_previewing_sliced_3D_model.png

@@ -3,10 +3,11 @@ import releases from "../data/releases.json";
 export const slugify = (s: string) =>
   s.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 const browseDefinitions = [
+  { name: "Operating systems", categories: ["Operating systems"] },
+  { name: "Home & auto", categories: ["Home", "Home automation"] },
+  { name: "Media & photos", categories: ["Media", "Photos", "Creative"] },
   { name: "Work & organize", categories: ["Finance", "Productivity", "Notes", "Documents", "Bookmarks", "Calendar & Contacts", "Utilities", "Reading"] },
   { name: "Files & sharing", categories: ["Collaboration", "File Sync", "Backup"] },
-  { name: "Media & photos", categories: ["Media", "Photos", "Creative"] },
-  { name: "Home & auto", categories: ["Home", "Home automation"] },
   { name: "Privacy & access", categories: ["Passwords", "Networking", "Security", "Communication"] },
   { name: "Servers & monitoring", categories: ["Infrastructure", "Dashboard", "Monitoring", "Notifications", "Analytics", "Development"] },
 ];
@@ -15,6 +16,11 @@ export function browseSlugForCategory(category: string) {
   if (!group) throw new Error(`No browse group for category: ${category}`);
   return slugify(group.name);
 }
+// Per-name wording overrides for the "Explore ..." lede where the
+// interpolated group or category name reads awkwardly.
+export const exploreLede: Record<string, string> = {
+  "Operating systems": "Explore open-source operating systems.",
+};
 export async function catalog() {
   const entries = await getCollection("docs", ({ data }) => !!data.repository);
   const tools = entries

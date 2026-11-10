@@ -59,6 +59,11 @@ Nothing was redrawn or substituted.
 - Source: https://github.com/darktable-org/darktable/blob/6fc8201a1c44767272c65496b3dac23e89159f4f/data/pixmaps/scalable/darktable.svg
 - Repository license: GPL-3.0; a code license does not grant rights in the mark, which belongs to the project
 - Changes: none
+## debian.svg
+- Project: Debian
+- Source: https://www.debian.org/logos/openlogo-nd.svg (logo terms: https://www.debian.org/logos/)
+- Terms: the Debian Open Use Logo, copyright Software in the Public Interest, is offered under LGPL-3.0-or-later or CC BY-SA 3.0 per the project's logo page. This is the open-use mark; the Restricted Use Logo is not used.
+- Changes: none
 ## digikam.png
 - Project: digiKam
 - Source: https://github.com/KDE/digikam/blob/33d0457e20adda97c003f3dee652a1749406ff9f/core/data/icons/apps/128-apps-digikam.png
@@ -175,6 +180,11 @@ Nothing was redrawn or substituted.
 - Source: https://github.com/LibreOffice/core/blob/16a47d7b5665746debecfbad8d0f5c908961b0da/sysui/desktop/icons/hicolor/128x128/apps/main.png
 - Repository license: MPL-2.0; the repository is a GitHub mirror of the project's official source; a code license does not grant rights in the mark, which belongs to the project
 - Changes: none
+## linux-mint.svg
+- Project: Linux Mint
+- Source: https://commons.wikimedia.org/wiki/File:Linux_Mint_logo_without_wordmark.svg
+- Author: Clement Lefebvre. License stated on the Commons file page: CC BY 3.0 (https://creativecommons.org/licenses/by/3.0). The Mint FAQ permits use of the logo and screenshots provided no affiliation is implied (https://linuxmint.com/faq.php); this site is not affiliated with or endorsed by Linux Mint.
+- Changes: none
 ## logseq.png
 - Project: Logseq
 - Source: https://github.com/logseq/logseq/blob/cdfe1147e41e7176ac4274e1c9a996268e622250/assets/icon.png
@@ -235,6 +245,11 @@ Nothing was redrawn or substituted.
 - Source: https://github.com/plausible/analytics/blob/126499850310a22a2f4fbebf9ba2904a04aef7fe/priv/static/images/ce/favicon.svg
 - Changes: none; the official CE ribbon is preserved to identify the self-hosted edition accurately
 - Plausible's trademark policy https://plausible.io/trademark excludes its logos from the AGPL and describes referential uses of the name. The mark is used here only to identify and discuss the official project, secondary to this site's branding, with no endorsement implied. This is an editorial-use judgment, not a claim of a separate logo license. Edition branding background: https://plausible.io/blog/community-edition.
+## pop-os.svg
+- Project: Pop!_OS
+- Source: https://commons.wikimedia.org/wiki/File:Pop!_OS_Icon.svg
+- Author: System76. The Commons file page tags the logo as public domain (simple shapes) with a trademark notice; the mark belongs to System76. Shown only to identify the project; no affiliation or endorsement implied.
+- Changes: none
 ## prusaslicer.svg
 - Project: PrusaSlicer
 - Source: https://github.com/prusa3d/PrusaSlicer/blob/e6c85c50dcc56f9968a61dfdd7a3b695e1004037/resources/icons/PrusaSlicer.svg
@@ -294,6 +309,11 @@ Nothing was redrawn or substituted.
 - Project: uBlock Origin
 - Source: https://github.com/gorhill/uBlock/blob/7abf6543c09e6bd03202cf73fab1e7bd896d1371/src/img/ublock.svg
 - Repository license: GPL-3.0; a code license does not grant rights in the mark, which belongs to the project
+- Changes: none
+## ubuntu.svg
+- Project: Ubuntu
+- Source: https://commons.wikimedia.org/wiki/File:Ubuntu-logo-no-wordmark-2022.svg
+- Author: Canonical Ltd. License stated on the Commons file page: GPL-3.0-or-later (https://www.gnu.org/licenses/gpl-3.0.html). UBUNTU is a Canonical trademark; Canonical's intellectual property policy permits use of its marks in discussion and commentary provided no endorsement is implied (https://ubuntu.com/legal/intellectual-property-policy), and none is. Shown unchanged.
 - Changes: none
 ## cura.svg
 - Project: UltiMaker Cura

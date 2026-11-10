@@ -3,7 +3,7 @@
 # FOSS Index
 
 [![License: AGPL-3.0-only](https://img.shields.io/badge/license-AGPL--3.0--only-blue)](LICENSE)
-[![Listings: 66 tools](https://img.shields.io/badge/listings-66%20tools-green)](https://index.fossadmin.com)
+[![Listings: 70 tools](https://img.shields.io/badge/listings-70%20tools-green)](https://index.fossadmin.com)
 [![Site: index.fossadmin.com](https://img.shields.io/badge/site-index.fossadmin.com-informational)](https://index.fossadmin.com)
 [![Pipeline status](https://gitlab.com/fossadmin/foss-index/badges/main/pipeline.svg)](https://gitlab.com/fossadmin/foss-index/-/pipelines)
 
@@ -46,6 +46,22 @@ correcting mistakes.
 A listing is a starting point, not an audit or a claim that we've
 personally tested the tool. Screenshot captions identify their sources,
 and quick-start notes say when we haven't run the instructions ourselves.
+
+## Layout and privacy
+
+The home page and category pages are plain HTML, including every tool link, and
+category navigation works with JavaScript disabled. A small local script adds
+name, purpose and license search and the `/` shortcut. Without JavaScript the
+search control is hidden and every listing remains available.
+
+No external requests, analytics, third-party scripts, remote icons or
+embedded widgets.
+
+The palette comes from the FOSSadmin site theme and its warm-terminal CSS.
+Inter (400/600) and Lora (500) font files were copied from the first-party
+font assets on https://fossadmin.com on 2026-10-21 and are served locally.
+Their OFL licenses are included in `public/fonts/`. Labels use the system
+monospace stack. Dark mode follows the system preference.
 
 ## Repository layout
 
@@ -145,22 +161,6 @@ Astro reads `CI_PAGES_URL` to set the hostname and base path; locally it falls
 back to `https://index.fossadmin.com`. Published metadata updates stay manual:
 check, review the candidate, apply, build, commit and push. No recurring
 schedule or automatic source writes are enabled.
-
-## Layout and privacy
-
-The home page and category pages are plain HTML, including every tool link, and
-category navigation works with JavaScript disabled. A small local script adds
-name, purpose and license search and the `/` shortcut. Without JavaScript the
-search control is hidden and every listing remains available.
-
-No external requests, analytics, third-party scripts, remote icons or
-embedded widgets.
-
-The palette comes from the FOSSadmin site theme and its warm-terminal CSS.
-Inter (400/600) and Lora (500) font files were copied from the first-party
-font assets on https://fossadmin.com on 2026-10-21 and are served locally.
-Their OFL licenses are included in `public/fonts/`. Labels use the system
-monospace stack. Dark mode follows the system preference.
 
 ## License
 

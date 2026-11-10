@@ -259,6 +259,12 @@
     "url": "https://github.com/obsproject/obs-studio/releases/tag/33.0.1",
     "changelog": "33.0.1 Hotfix Changes\r\n---------------------\r\n\r\n* Fixed a crash on startup when logged into a service integration [WizardCM] ([#554](https://github.com/obsproject/obs-browser/pull/554))\r\n* Fixed a crash when logging into the Twitch integration [WizardCM] ([#14072](https://github.com/obsproject/obs-studio/pull/14072))\r\n* Fixed a deadlock when logging into the YouTube integration [WizardCM] ([#556](https://github.com/obsproject/obs-browser/pull/556))\r\n* Fixed a race condition where browser panels could end up with incorrectly sized content [WizardCM] ([#558](https://github.com/obsproject/obs-bro"
   },
+  "launchpad.net/ubuntu": {
+    "version": "26.04.1 LTS",
+    "url": "https://ubuntu.com/download/desktop",
+    "manual": true,
+    "checkedOn": "2026-11-10"
+  },
   "laurent22/joplin": {
     "license": "AGPL-3.0-or-later",
     "version": "v3.7.22",
@@ -299,6 +305,12 @@
     "url": "https://github.com/HandBrake/HandBrake/releases/tag/1.11.2",
     "changelog": "## Upgrade Notice\r\n\r\nBefore updating HandBrake, please make sure there are no pending encodes in the queue, and be sure to make a backup of any custom presets and app preferences you have, as they may not be compatible with newer versions.\r\n\r\nWindows users, please make sure to install [Microsoft .NET Desktop Runtime version 10.0](https://dotnet.microsoft.com/en-us/download/dotnet/10.0/runtime)\r\nDownload available from Microsoft:\r\n- [For x64 (AMD or Intel CPUs)](https://aka.ms/dotnet/10.0/windowsdesktop-runtime-win-x64.exe)\r\n- [For Arm64 (Qualcomm or other)](https://aka.ms/dotnet/10.0/windowsde"
   },
+  "linuxmint": {
+    "version": "22.3",
+    "url": "https://linuxmint.com/rel_zena_cinnamon.php",
+    "manual": true,
+    "checkedOn": "2026-11-10"
+  },
   "logseq/logseq": {
     "license": "AGPL-3.0",
     "version": "2.0.2",
@@ -323,6 +335,12 @@
     "license": "GPL-2.0",
     "version": "3.0.24",
     "url": "https://www.videolan.org/vlc/",
+    "manual": true,
+    "checkedOn": "2026-11-10"
+  },
+  "sources.debian.org": {
+    "version": "13.7",
+    "url": "https://www.debian.org/releases/trixie/",
     "manual": true,
     "checkedOn": "2026-11-10"
   },
@@ -428,6 +446,12 @@
     "version": "9.1.0",
     "date": "2026-06-07",
     "url": "https://www.digikam.org/news/2026-06-07-9.1.0_release_announcement/",
+    "manual": true,
+    "checkedOn": "2026-11-10"
+  },
+  "pop-os/pop": {
+    "version": "24.04 LTS",
+    "url": "https://system76.com/pop/download",
     "manual": true,
     "checkedOn": "2026-11-10"
   },
