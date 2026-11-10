@@ -3,15 +3,15 @@ title: About this index
 description: What the FOSS Index is, how listings work, and what a listing means.
 ---
 
-This is a curated directory of open-source software: a selection of tools for self-hosting. It is not an automated scrape
+This is a curated directory of open-source software: a selection of tools to run yourself, from self-hosted services to everyday desktop apps. It is not an automated scrape
 of GitHub.
 
 Each listing shows the things we want to know before adopting a tool:
 
 - **Its license**, so you can tell permissive (MIT, Apache-2.0) from
   copyleft (GPL, AGPL) at a glance.
-- **Its recorded release and changelog**, refreshed by the included updater from the
-  project's GitHub repository.
+- **Its recorded release and changelog**, refreshed by the included updater for
+  projects hosted on GitHub. Projects hosted elsewhere show "Release not recorded".
 - **A direct way to support the maintainers**, because open source stays
   alive when the people who rely on it fund it. See
   [how the funding works](/funding/).
@@ -30,13 +30,23 @@ By a person, not a scrape. The list mixes tools we run or test ourselves
 with reader suggestions, and every submission is reviewed before it goes
 in. The index is a starting point, not a ranking.
 
+## What does "open source" mean here?
+
+We list a project only when the part we describe is under a license that
+meets the open-source definition, and each page names that license. Some
+projects mix licenses or editions: an app and its server may use different
+licenses, a product may sell paid plans, or a program may bundle components
+under other terms. When that applies, the page says which part is covered.
+A project that is free to use but does not publish its source does not
+qualify.
+
 ## Does a listing mean you have tested the tool?
 
 No. A listing means the project looked worth a closer look, not that we
 audited the code or run it everywhere. Each screenshot caption says
 where the image comes from: our own test install (marked as such, with
 fictional demo data) or the project's official material. Quick-start
-snippets come from each project's own documentation, and the page says
+snippets and install notes come from each project's own documentation, and the page says
 so when we have not executed them. Read the license and the project's
 own docs before committing to anything.
 
@@ -53,9 +63,9 @@ sponsor at a time. The details live on the [sponsor page](/sponsor/).
 
 ## Who runs the index?
 
-[FOSSadmin](https://fossadmin.com), an owner-operated IT practice built
-on open source. The index is part field guide for self-hosters, part
-lead gen, and the tool pages say when managed hosting is available.
+[FOSSadmin](https://fossadmin.com), an IT practice built on open source.
+The index is a field guide for people who run their own software, and the tool pages say when
+managed hosting is available.
 
 ## What about privacy here?
 

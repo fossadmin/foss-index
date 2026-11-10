@@ -1,4 +1,3 @@
-# Copy this site directory to the root of its GitLab project.
 # GitLab Pages serves only dist/; there is no server-side runtime.
 image: node:22-bookworm
 
@@ -19,7 +18,7 @@ create-pages:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 
 # Opt-in check only: no bot token, source writes, commits or deployment.
-# No schedule is created by this file. A future schedule requires owner setup.
+# No schedule is created by this file. A schedule has to be set up in GitLab by a maintainer.
 check-releases:
   stage: deploy
   script:

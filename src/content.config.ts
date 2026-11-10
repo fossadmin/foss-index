@@ -18,6 +18,8 @@ const screenshot = z.object({
   sourceUrl: z.string().url().optional(),
   license: z.string().optional(),
   own: z.boolean().optional(),
+  terminal: z.boolean().optional(),
+  commons: z.boolean().optional(),
   captionNote: z.string().optional(),
   version: z.string().optional(),
 });
@@ -32,6 +34,7 @@ export const collections = {
         mark: z.string().optional(),
         icon: z.string().optional(),
         iconDark: z.string().optional(),
+        iconTile: z.boolean().optional(),
         repository: z.string().url().optional(),
         license: z.string().optional(),
         funding: funding.optional(),

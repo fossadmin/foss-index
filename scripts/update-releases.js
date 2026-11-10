@@ -6,8 +6,10 @@ import { pathToFileURL } from 'node:url';
 
 export async function checkReleases({ tools, baseline, fetcher }) {
   const candidate = structuredClone(baseline);
-  const changes = [], errors = [];
-  for (const { repo, license } of tools) {
+  const changes = [], errors = [], skipped = [];
+  for (const { repo, license, unsupportedHost, url, file } of tools) {
+    // Listings hosted outside GitHub are not queried. Their curated data in releases.json is kept as is.
+    if (unsupportedHost) { skipped.push({ file, host: unsupportedHost, url, reason: 'host not supported by this check; curated data kept' }); continue; }
     try {
       const metadata = await fetcher(`https://api.github.com/repos/${repo}`);
       if (!metadata.ok) throw new Error(`repository HTTP ${metadata.status}`);
@@ -40,7 +42,7 @@ export async function checkReleases({ tools, baseline, fetcher }) {
       }
     }
   }
-  return { candidate, changes, errors };
+  return { candidate, changes, errors, skipped };
 }
 
 function listedTools() {
@@ -49,6 +51,8 @@ function listedTools() {
     const front = text.match(/^---\r?\n([\s\S]*?)\r?\n---/)?.[1];
     const repo = front?.match(/^repository:\s*https:\/\/github\.com\/([^\s]+)\s*$/m)?.[1]?.replace(/\/+$/, '');
     const license = front?.match(/^license:\s*(.+)$/m)?.[1]?.trim().replace(/^["']|["']$/g, '');
+    const other = front?.match(/^repository:\s*(https:\/\/([^\/\s]+)\/[^\s]+)\s*$/m);
+    if (!repo && other && other[2] !== 'github.com' && license) return { unsupportedHost: other[2], url: other[1], file, license };
     if (!repo || !license) throw new Error(`Missing GitHub repository/license in ${file}`);
     return { repo, license };
   });
@@ -69,7 +73,7 @@ async function main() {
   delete report.candidate;
   fs.writeFileSync(`${out}/report.json`, JSON.stringify(report, null, 2) + '\n');
   const rows = result.changes.map(c => `- ${c.repo}: ${c.previousVersion ?? 'none'} -> ${c.upstreamVersion ?? 'no published release (previous data kept)'}; kept license ${c.license}; GitHub detects ${c.detectedLicense}${c.licenseReview ? ' [LICENSE REVIEW]' : ''}`);
-  fs.writeFileSync(`${out}/report.md`, `# Release check\n\nChecked ${report.checkedAt}. Nothing published or committed.\n\n${rows.join('\n')}\n\n${result.errors.map(e => `- ERROR ${e.repo}: ${e.error}`).join('\n')}\n\n${result.errors.length ? 'Incomplete check: no candidate written. Fix errors and rerun.' : 'Candidate ready for review, not approval. Licenses were preserved, not replaced by GitHub detection.'}\n\nCheck release notes, repository license files and any changed setup instructions before applying. Repository detection does not establish licensing for a particular version or edition.\n`);
+  fs.writeFileSync(`${out}/report.md`, `# Release check\n\nChecked ${report.checkedAt}. Nothing published or committed.\n\n${rows.join('\n')}\n\n${result.skipped.map(k => `- NOT CHECKED ${k.file} (${k.host}): ${k.reason}`).join('\n')}\n\n${result.errors.map(e => `- ERROR ${e.repo}: ${e.error}`).join('\n')}\n\n${result.errors.length ? 'Incomplete check: no candidate written. Fix errors and rerun.' : 'Candidate ready for review, not approval. Licenses were preserved, not replaced by GitHub detection.'}\n\nCheck release notes, repository license files and any changed setup instructions before applying. Repository detection does not establish licensing for a particular version or edition.\n`);
   if (result.errors.length) { console.error('Check incomplete. See .release-check/report.md; published data untouched.'); process.exitCode = 1; return; }
   fs.writeFileSync(`${out}/releases.baseline.json`, baselineText);
   fs.writeFileSync(`${out}/releases.candidate.json`, JSON.stringify(result.candidate, null, 2) + '\n');

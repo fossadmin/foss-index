@@ -945,6 +945,12 @@ main {
 :root[data-theme="dark"] .tool-row:hover {
     color: var(--olive);
 }
+:root[data-theme="dark"] .tool-icon img.icon-tile {
+    background: #f6f1e7;
+    padding: 3px;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
 :root[data-theme="dark"] .tool-icon img.icon-light {
     display: none;
 }
@@ -973,6 +979,12 @@ main {
   }
   :root:not([data-theme="light"]) .tool-row:hover {
       color: var(--olive);
+  }
+  :root:not([data-theme="light"]) .tool-icon img.icon-tile {
+      background: #f6f1e7;
+      padding: 3px;
+      border-radius: 6px;
+      box-sizing: border-box;
   }
   :root:not([data-theme="light"]) .tool-icon img.icon-light {
       display: none;

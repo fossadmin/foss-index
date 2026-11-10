@@ -30,5 +30,33 @@
   "BSD-3-Clause / AGPL-3.0": {
     "summary": "Mixed licensing: most of the repository is permissive BSD-3-Clause, while the server components (management, signal, relay, combined) are copyleft AGPL-3.0.",
     "url": "https://github.com/netbirdio/netbird/blob/main/LICENSE"
+  },
+  "BSD-2-Clause": {
+    "summary": "Permissive like MIT: use, copy, change and share for any purpose, as long as the copyright notice and license text stay with redistributed source or binaries.",
+    "url": "https://spdx.org/licenses/BSD-2-Clause.html"
+  },
+  "GPL-3.0-or-later": {
+    "summary": "Strong copyleft: free to use, study and change, but distributed copies and derivative works must stay under this license with source available. You may choose version 3 or any later version.",
+    "url": "https://spdx.org/licenses/GPL-3.0-or-later.html"
+  },
+  "AGPL-3.0-or-later": {
+    "summary": "Strong copyleft like GPL-3.0, extended to network use: offering a modified version as a service means offering its source to the users. You may choose version 3 or any later version.",
+    "url": "https://spdx.org/licenses/AGPL-3.0-or-later.html"
+  },
+  "GPL-2.0 / GPL-3.0": {
+    "summary": "Dual choice: the project is offered under GPL version 2 or, at your option, version 3. Both are strong copyleft licenses that require source to stay available in distributed copies and derivative works.",
+    "url": "https://www.gnu.org/licenses/gpl-faq.html#v2OrLater"
+  },
+  "AGPL-3.0 / GPL-3.0": {
+    "summary": "Mixed licensing across repositories: the app is AGPL-3.0 and the server is GPL-3.0. Both are strong copyleft; AGPL also covers offering a modified version as a network service. Check each repository.",
+    "url": "https://github.com/standardnotes/app/blob/main/LICENSE"
+  },
+  "GPL-2.0-or-later": {
+    "summary": "Strong copyleft: free to use, study and change, but distributed copies and derivative works must stay under this license with source available. You may choose version 2 or any later version.",
+    "url": "https://spdx.org/licenses/GPL-2.0-or-later.html"
+  },
+  "LGPL-3.0": {
+    "summary": "Weak copyleft: you may use the software and link it from other programs, but changes to the library itself must be shared under the same license.",
+    "url": "https://spdx.org/licenses/LGPL-3.0-only.html"
   }
 }

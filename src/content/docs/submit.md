@@ -13,6 +13,9 @@ person reviews each submission first.
   to start.
 - **The name and one line on what it does.** Plain words, the way you
   would describe it to a colleague.
+- **The app or edition, if there is more than one.** Some projects use
+  different licenses for the app, the server or a paid version. Tell us
+  which part you mean.
 - **A category, if one fits.** Not sure? Say so and we will place it.
 - **Anything else worth knowing** (optional): who it suits, why you
   like it, what to watch out for.
@@ -31,7 +34,7 @@ listing is one Markdown file under `src/content/docs/tools/`.
 ## What happens next
 
 We check that the project is open source, maintained enough to
-recommend, and a fit for people running their own software. Listing is
+recommend, and useful to people who want to choose open-source software. Listing is
 free and cannot be bought. If the tool goes in, its page links to the
 project's own support channels so the people who rely on it can help
 fund it.

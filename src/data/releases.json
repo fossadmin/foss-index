@@ -173,5 +173,225 @@
     "url": "https://github.com/home-assistant/core/releases/tag/2026.11.1",
     "changelog": "- Bump aiounifi to v98 ([@bhamiltoncx] - [#190145]) ([unifi docs]) (dependency)\r\n- Fix HomeKit camera motion events never reaching HomeKit ([@RaHehl] - [#190440]) ([homekit docs])\r\n- Add new entities to restored sleeping Shelly RPC devices on wake ([@thecode] - [#190447]) ([shelly docs])\r\n- Bump broadlink-async to 1.2.1 ([@DAB-LABS] - [#190471]) ([broadlink docs]) (dependency)\r\n- Bump opower to 0.23.0 ([@tronikos] - [#190486]) ([opower docs]) (dependency)\r\n- Make nexia set_hvac_run_mode fields optional ([@frenck] - [#190498]) ([nexia docs])\r\n- Bump googlewifiapi to 0.1.3 ([@gittastic] - [#190515]) ([google_wifi docs]) (dependency)\r\n- Mark SimpliSafe sensors unavailable when reported offline ([@frenck] - [#190501]) ([simplisafe docs])\r\n- Bump aioamazondevice to 17.2.7 ([@jamesonuk] - [#1905…",
     "license": "Apache-2.0"
+  },
+  "LibreOffice/core": {
+    "license": "MPL-2.0"
+  },
+  "keepassxreboot/keepassxc": {
+    "license": "GPL-2.0 / GPL-3.0",
+    "version": "2.8.0",
+    "date": "2026-10-21T21:57:23Z",
+    "url": "https://github.com/keepassxreboot/keepassxc/releases/tag/2.8.0",
+    "changelog": "### New Features\r\n- Add remote database synchronization and import using external tools [#7222, #10896, #11271]\r\n- Allow configuring keyboard shortcuts [#9643]\r\n- SSH Agent: Add support for generating RSA, ECDSA, and Ed25519 keys [#7215]\r\n- Linux: Add Wayland Auto-Type support using XDG Desktop Portals [#13359, #13449, #13579, #13770, #13810]\r\n- Linux: Add Quick Unlock using Polkit (adds a UUID to public metadata, marking database as modified on first launch) [#8983]\r\n- Linux Add AArch64 AppImage [#13816]\r\n- macOS: Allow Quick Unlock using the device password when Touch ID is unavailable [#114"
+  },
+  "cryptomator/cryptomator": {
+    "license": "GPL-3.0",
+    "version": "1.19.6",
+    "date": "2026-10-30T10:40:14Z",
+    "url": "https://github.com/cryptomator/cryptomator/releases/tag/1.19.6",
+    "changelog": "For a comprehensive view of changes, read the [CHANGELOG](https://github.com/cryptomator/cryptomator/blob/1.19.6/CHANGELOG.md).\r\n\r\n### Bugfixes 🐛\r\n* Fixed supporter certificates being rejected once the certificate that signed them was rotated out: the certificate chain is now required to be valid at the certificate's issue date instead of at verification time\r\n\r\n---\r\n**Full Changelog**: https://github.com/cryptomator/cryptomator/compare/1.19.5...1.19.6\r\n\r\n---\r\n\r\n💾 SHA-256 checksums of release artifacts:\r\n```\r\n8cf31cbd7f5c825c4a4d931c2a02a718f6a5044ef85cb9de434d2ad125bbf3e8  cryptomator-1.19.6."
+  },
+  "kopia/kopia": {
+    "license": "Apache-2.0",
+    "version": "v0.23.1",
+    "date": "2026-06-16T01:27:33Z",
+    "url": "https://github.com/kopia/kopia/releases/tag/v0.23.1",
+    "changelog": "<a name=\"v0.23.1\"></a>\r\n\r\n### Summary\r\n\r\nKopia v0.23.1. is a bugfix release which fixes a rare race condition which might lead to a data loss - an upgrade is recommended - See https://github.com/kopia/kopia/issues/5371\r\n\r\n### Repository\r\n\r\n* Basic tests for getting epoch manager blob set ([#5418](https://github.com/kopia/kopia/issues/5418)) by Julio López\r\n* selection of next epoch to compact ([#5373](https://github.com/kopia/kopia/issues/5373)) by Julio López\r\n\r\n### Storage Providers\r\n\r\n* no_extra_providers build tag ([#5375](https://github.com/kopia/kopia/issues/5375)) by Julio López\r\n\r\n### "
+  },
+  "restic/restic": {
+    "license": "BSD-2-Clause",
+    "version": "v0.19.1",
+    "date": "2026-07-05T08:13:33Z",
+    "url": "https://github.com/restic/restic/releases/tag/v0.19.1",
+    "changelog": "Changelog for restic 0.19.1 (2026-07-05)\r\n=======================================\r\n\r\nThe following sections list the changes in restic 0.19.1 relevant to restic users. The changes are ordered by importance.\r\n\r\nSummary\r\n-------\r\n\r\n * Fix [#5234](https://github.com/restic/restic/issues/5234): Prevent mounting over the repository directory\r\n * Fix [#5667](https://github.com/restic/restic/issues/5667): Skip inaccessible `backup` source paths\r\n * Fix [#5722](https://github.com/restic/restic/issues/5722): Update `mount` latest symlink after snapshot reload\r\n * Fix [#21866](https://github.com/restic/"
+  },
+  "Gnucash/gnucash": {
+    "license": "GPL-2.0 / GPL-3.0",
+    "version": "5.17",
+    "date": "2026-09-27T15:38:18Z",
+    "url": "https://github.com/Gnucash/gnucash/releases/tag/5.17",
+    "changelog": "<b>Announcement:</b> GnuCash 5.17 Released\r\n2026-09-27\r\n\r\n<h2>GnuCash 5.17 Released</h2>\r\n\r\n<p>The GnuCash development team announces GnuCash 5.17, the seventeenth release in the stable 5.x series.</p>\r\n\r\n<h4>Between 5.16 and 5.17, the following bugfixes were accomplished:</h4>\r\n<ul>\r\n    <li><a href=\"https://bugs.gnucash.org/show_bug.cgi?id=797872\">Bug 797872 - Multiple check printing results in nothing sent to print queue after first check</a></li>\r\n    <li><a href=\"https://bugs.gnucash.org/show_bug.cgi?id=799753\">Bug 799753 - Reconciliation error when reconciling transactions posted after t"
+  },
+  "beancount/fava": {
+    "license": "MIT"
+  },
+  "beancount/beancount": {
+    "license": "GPL-2.0",
+    "version": "3.2.3",
+    "date": "2026-05-01T00:36:59Z",
+    "url": "https://github.com/beancount/beancount/releases/tag/3.2.3",
+    "changelog": ""
+  },
+  "KDE/krita": {
+    "license": "GPL-3.0"
+  },
+  "KDE/kdenlive": {
+    "license": "GPL-3.0"
+  },
+  "darktable-org/darktable": {
+    "license": "GPL-3.0",
+    "version": "release-5.6.2",
+    "date": "2026-10-04T16:36:31Z",
+    "url": "https://github.com/darktable-org/darktable/releases/tag/release-5.6.2",
+    "changelog": "We're proud to announce the bug-fix release of darktable, 5.6.2!\r\n\r\nThe github release is here: [https://github.com/darktable-org/darktable/releases/tag/release-5.6.2](https://github.com/darktable-org/darktable/releases/tag/release-5.6.2).\r\n\r\nTo build from source, do not use the autogenerated tarball provided by GitHub on the release page, download our tar.xz file instead. If you're just building for yourself without creating a package for some distribution, then using source code cloning in git is an even more convenient way.\r\n\r\nThe checksums are:\r\n\r\n```\r\n$ sha256sum darktable-5.6.2.tar.xz\r\n "
+  },
+  "obsproject/obs-studio": {
+    "license": "GPL-2.0",
+    "version": "33.0.1",
+    "date": "2026-10-29T21:52:01Z",
+    "url": "https://github.com/obsproject/obs-studio/releases/tag/33.0.1",
+    "changelog": "33.0.1 Hotfix Changes\r\n---------------------\r\n\r\n* Fixed a crash on startup when logged into a service integration [WizardCM] ([#554](https://github.com/obsproject/obs-browser/pull/554))\r\n* Fixed a crash when logging into the Twitch integration [WizardCM] ([#14072](https://github.com/obsproject/obs-studio/pull/14072))\r\n* Fixed a deadlock when logging into the YouTube integration [WizardCM] ([#556](https://github.com/obsproject/obs-browser/pull/556))\r\n* Fixed a race condition where browser panels could end up with incorrectly sized content [WizardCM] ([#558](https://github.com/obsproject/obs-bro"
+  },
+  "laurent22/joplin": {
+    "license": "AGPL-3.0-or-later",
+    "version": "v3.7.22",
+    "date": "2026-10-28T22:32:59Z",
+    "url": "https://github.com/laurent22/joplin/releases/tag/v3.7.22",
+    "changelog": "- Improved: Add read_notes MCP tool (#16845) (#16782)\r\n- Improved: Reduce read_note token consumption with outline and section navigation (#16838) (#16777)\r\n- Improved: Return the enclosing section with each search_notes result (#16842) (#16778)\r\n- Improved: Treat private network AI providers as local (#16837)\r\n- Improved: Upgrade app banner shows the wrong minimum app version (#16819) (#16721 by [@Rygaa](https://github.com/Rygaa))\r\n- Fixed: Security: Upgrade to Electron 42.11.18 (#16964) (#16939 by [@personalizedrefrigerator](https://github.com/personalizedrefrigerator))"
+  },
+  "zotero/zotero": {
+    "license": "AGPL-3.0"
+  },
+  "signalapp/Signal-Desktop": {
+    "license": "AGPL-3.0",
+    "version": "v8.34.0",
+    "date": "2026-11-05T15:31:49Z",
+    "url": "https://github.com/signalapp/Signal-Desktop/releases/tag/v8.34.0",
+    "changelog": "- Signal Desktop now supports contact sharing too, so you can maintain eye contact with your computer screen without having to make physical contact with your smartphone.\r\n- Improved handling and performance for connected audio devices."
+  },
+  "gorhill/uBlock": {
+    "license": "GPL-3.0",
+    "version": "1.76.0",
+    "date": "2026-11-08T17:00:40Z",
+    "url": "https://github.com/gorhill/uBlock/releases/tag/1.76.0",
+    "changelog": "[Commits to master since this release](https://github.com/gorhill/uBlock/compare/1.76.0...master)\r\n[Commits since last release](https://github.com/gorhill/uBlock/compare/1.75.4...1.76.0)\r\n\r\nTo install the stable build:\r\n\r\n- **Firefox**: Install from AMO: <https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/>\r\n    [uBO works best on Firefox](https://github.com/gorhill/uBlock/wiki/uBlock-Origin-works-best-on-Firefox)\r\n- **Chromium**: Install directly from [signed CRX package](https://github.com/gorhill/uBlock/releases/download/1.76.0/uBlock0_1.76.0.chromium.crx)\r\n- **Edge**: Install fro"
+  },
+  "GothenburgBitFactory/taskwarrior": {
+    "license": "MIT",
+    "version": "v3.5.0",
+    "date": "2026-08-16T19:06:45Z",
+    "url": "https://github.com/GothenburgBitFactory/taskwarrior/releases/tag/v3.5.0",
+    "changelog": "## What's Changed\r\n * #3961 - allow hyphens in tags (@smemsh)\r\n * #4111 - Git sync (@carmiac)\r\n * #4127 - Dependency performance improvement (@ashprice)\r\n * #4136 - Burndown performance improvement (@ashprice)\r\n * #4124 - Move default theme into a dedicated file (@dud-eisme)\r\n * #4144 - Fix handling of `scheduled` in recurring tasks (@ashprice, @scompo)\r\n\r\n## New Contributors\r\n* @daeho-ro made their first contribution in https://github.com/GothenburgBitFactory/taskwarrior/pull/3976\r\n* @gonsoos made their first contribution in https://github.com/GothenburgBitFactory/taskwarrior/pull/3998\r\n* @ra"
+  },
+  "HandBrake/HandBrake": {
+    "license": "GPL-2.0",
+    "version": "1.11.2",
+    "date": "2026-06-07T19:08:25Z",
+    "url": "https://github.com/HandBrake/HandBrake/releases/tag/1.11.2",
+    "changelog": "## Upgrade Notice\r\n\r\nBefore updating HandBrake, please make sure there are no pending encodes in the queue, and be sure to make a backup of any custom presets and app preferences you have, as they may not be compatible with newer versions.\r\n\r\nWindows users, please make sure to install [Microsoft .NET Desktop Runtime version 10.0](https://dotnet.microsoft.com/en-us/download/dotnet/10.0/runtime)\r\nDownload available from Microsoft:\r\n- [For x64 (AMD or Intel CPUs)](https://aka.ms/dotnet/10.0/windowsdesktop-runtime-win-x64.exe)\r\n- [For Arm64 (Qualcomm or other)](https://aka.ms/dotnet/10.0/windowsde"
+  },
+  "logseq/logseq": {
+    "license": "AGPL-3.0",
+    "version": "2.0.2",
+    "date": "2026-10-07T14:18:57Z",
+    "url": "https://github.com/logseq/logseq/releases/tag/2.0.2",
+    "changelog": "Logseq 2.0.2 Beta brings smoother editing, faster startup, and more reliable everyday workflows to the DB version.\r\n\r\n[Join the iOS TestFlight beta](https://testflight.apple.com/join/eBcJ9Hpc), 2.0.2 is currently under App Store review.\r\n\r\nWeb app: https://app.logseq.com/\r\n\r\n## Features\r\n\r\n- Gallery cards can now use URL properties as covers.\r\n- Added a \"Clear heading\" slash command.\r\n- Improved video embeds, with resizable desktop players and clickable YouTube timestamps.\r\n\r\n## Thanks\r\n\r\n- **Special thanks to our community PR contributors!** Your fixes, performance improvements, translations,"
+  },
+  "simplex-chat/simplex-chat": {
+    "license": "AGPL-3.0"
+  },
+  "FreshRSS/FreshRSS": {
+    "license": "AGPL-3.0",
+    "version": "1.30.4",
+    "date": "2026-10-21T14:30:01Z",
+    "url": "https://github.com/FreshRSS/FreshRSS/releases/tag/1.30.4",
+    "changelog": ""
+  },
+  "videolan/vlc": {
+    "license": "GPL-2.0"
+  },
+  "johannesjo/super-productivity": {
+    "license": "MIT"
+  },
+  "standardnotes/app": {
+    "license": "AGPL-3.0 / GPL-3.0",
+    "version": "@standardnotes/web@3.203.0",
+    "date": "2026-11-02T14:38:56Z",
+    "url": "https://github.com/standardnotes/app/releases/tag/%40standardnotes%2Fweb%403.203.0",
+    "changelog": ""
+  },
+  "ventoy/Ventoy": {
+    "license": "GPL-3.0-or-later",
+    "version": "v1.1.18",
+    "date": "2026-10-09T05:21:11Z",
+    "url": "https://github.com/ventoy/Ventoy/releases/tag/v1.1.18",
+    "changelog": "Experimental support for SteamOS recovery images. Improve the Linux remount feature so the ISO partition is mountable out of the box on mainstream desktop distros. Fix the Windows/WinPE secure boot version check failure. Fix Fedora 45 beta boot issue."
+  },
+  "audacity/audacity": {
+    "license": "GPL-3.0",
+    "version": "Audacity-4.0.2",
+    "date": "2026-11-02T10:01:34Z",
+    "url": "https://github.com/audacity/audacity/releases/tag/Audacity-4.0.2",
+    "changelog": "While we work hard to add new features and bring back missing ones in the upcoming 4.1, this patch release fixes many crashes and project corruption issues.\r\n\r\n- #12544 Fixed project corruption when loading projects that contain empty clips.\r\n- #12123 Fixed duplicate .aup4 extensions and errors when replacing projects during Save As.\r\n- #12436 Fixed project corruption when copying between projects.\r\n- #12436 Fixed incorrect pitch and clip loss when moving clips across tracks with different sample rates.\r\n- #12569 Fixed a crash when opening projects with sample snapping enabled.\r\n- #12573 Fixed"
+  },
+  "openscad/openscad": {
+    "license": "GPL-2.0",
+    "version": "openscad-2021.01",
+    "date": "2021-02-07T00:14:34Z",
+    "url": "https://github.com/openscad/openscad/releases/tag/openscad-2021.01",
+    "changelog": "**Language Features**\r\n\r\n* New\r\n  * Add function literals\r\n  * Add exponent function (e.g. 2^3)\r\n  * Add convexity parameter to resize()\r\n  * Add support for generic tail recursion\r\n  * Add $vpf for viewport field of view\r\n  * Add warnings for ranges with begin < end\r\n  * Add warnings for matrix structure problems\r\n\r\n* Changed\r\n  * Allow random seeds to stick between rands() calls\r\n  * Make comparison operators on mixed types return undef\r\n  * Track reason for values turning undef\r\n\r\n* Fixed\r\n  * Fix Range precision\r\n  * Fix empty geometry handling\r\n  * Fix search order for imported modules\r\n "
+  },
+  "PintaProject/Pinta": {
+    "license": "MIT",
+    "version": "3.1.2",
+    "date": "2026-04-02T17:27:39Z",
+    "url": "https://github.com/PintaProject/Pinta/releases/tag/3.1.2",
+    "changelog": "This is a bug fix release for Pinta 3.1\r\n\r\n### Fixed\r\n- Fixed issues with some icons failing to load under certain GTK versions (#2078, #1950)\r\n- Fixed crash when right-clicking on a layer in certain scenarios (#1940)\r\n- Fixed bug with the gradient tool creating unnecessary history items (#2060, #2059)\r\n- Fixed crash when setting gamma to zero in the Levels dialog (#2035, #2041)\r\n- The right click menu for layers now includes options to move the layer up or down in the layer stack (#2004, #2007)\r\n\r\n### Checksums\r\n- Fingerprint: `5BDA 30D0 C2E9 85E5 9808  9E44 4CF8 0E80 E77C 5C35`\r\n- GPG Signat"
+  },
+  "Ultimaker/Cura": {
+    "license": "LGPL-3.0",
+    "version": "5.14.0",
+    "date": "2026-11-05T13:48:23Z",
+    "url": "https://github.com/Ultimaker/Cura/releases/tag/5.14.0",
+    "changelog": "<H2>New features and improvements:</H2>\r\n\r\n**Paint-on-Support** You can now define custom support areas by manually by painting regions to enforce, avoid, or auto-generate supports using an interactive overhang angle slider. \r\n\r\n<img width=\"1280\" height=\"720\" alt=\"0\" src=\"https://github.com/user-attachments/assets/d6b78ce1-694d-429b-ac66-3377efbde150\" />\r\n\r\nYou can also **Paint Surface a surface** by selecting an entire contiguous faces or curved features in a single click to apply paint on support or **draw straight lines** for paint on support using Shift and Shift + Ctrl shortcuts.\r\n\r\n<img "
+  },
+  "prusa3d/PrusaSlicer": {
+    "license": "AGPL-3.0",
+    "version": "version_2.9.7",
+    "date": "2026-11-02T16:34:50Z",
+    "url": "https://github.com/prusa3d/PrusaSlicer/releases/tag/version_2.9.7",
+    "changelog": "# ![PrusaSlicer](https://github.com/prusa3d/PrusaSlicer/raw/master/resources/icons/PrusaSlicer_128px.png) \r\n\r\nThis is final release of PrusaSlicer 2.9.7. This is a small maintenance release fixing several security vulnerabilities.\r\n\r\n## Changes with respect to [2.9.6](https://github.com/prusa3d/PrusaSlicer/releases/tag/version_2.9.6).\r\n\r\n- Fixed an out-of-bounds write when loading a 3MF with a negative bed index. \r\n- Fixed a stack buffer overflow in the `digits()` / `zdigits()` placeholder functions.\r\n- Fixed several issues in the downloader from Printables.\r\n- Fixed couple of potencionally ex"
+  },
+  "mixxxdj/mixxx": {
+    "license": "GPL-2.0-or-later",
+    "version": "2.5.6",
+    "date": "2026-03-27T17:45:39Z",
+    "url": "https://github.com/mixxxdj/mixxx/releases/tag/2.5.6",
+    "changelog": "This is is the 5th and last minor release of the Mixxx 2.5 branch.\r\n\r\nHave a look at the CHANGELOG and the Mixxx website for more information:\r\n\r\n- https://mixxx.org/news/2026-03-27-mixxx-2_5_6-released/\r\n- https://github.com/mixxxdj/mixxx/blob/2.5.6/CHANGELOG.md\r\n\r\n**Full Changelog**: https://github.com/mixxxdj/mixxx/compare/2.5.4...2.5.6\r\n\r\nNote: Version 2.5.5 has been skipped following an issue in the release workflow."
+  },
+  "jgraph/drawio-desktop": {
+    "license": "GPL-3.0",
+    "version": "v32.6.10",
+    "date": "2026-11-04T20:40:55Z",
+    "url": "https://github.com/jgraph/drawio-desktop/releases/tag/v32.6.10",
+    "changelog": "## Release Notes for 32.6.10\r\n\r\n[Windows Installer](https://github.com/jgraph/drawio-desktop/releases/download/v32.6.10/draw.io-32.6.10-windows-installer.exe)\r\n[Windows No Installer (zip)](https://github.com/jgraph/drawio-desktop/releases/download/v32.6.10/draw.io-32.6.10-windows.zip)\r\n[macOS - Universal](https://github.com/jgraph/drawio-desktop/releases/download/v32.6.10/draw.io-universal-32.6.10.dmg)\r\nLinux - [deb](https://github.com/jgraph/drawio-desktop/releases/download/v32.6.10/drawio-amd64-32.6.10.deb), [AppImage](https://github.com/jgraph/drawio-desktop/releases/download/v32.6.10/drawi"
+  },
+  "flameshot-org/flameshot": {
+    "license": "GPL-3.0",
+    "version": "v15.0.0",
+    "date": "2026-11-07T16:42:38Z",
+    "url": "https://github.com/flameshot-org/flameshot/releases/tag/v15.0.0",
+    "changelog": "# What's Changed\r\n## New Features\r\n* Let the GUI colors be choosen via hex values by @IndolikarQuantifier in https://github.com/flameshot-org/flameshot/pull/4738\r\n* Add arrow style selector by @serebryakov02 in https://github.com/flameshot-org/flameshot/pull/4769\r\n* Increment/decrement circle counter on mouse wheel by @milnadar in https://github.com/flameshot-org/flameshot/pull/4698\r\n* Add keyboard controls to monitor selector by @serebryakov02 in https://github.com/flameshot-org/flameshot/pull/4811\r\n* Fall back to native X11 capture when the portal is unavailable by @jmcarthur in https://gith"
+  },
+  "penpot/penpot": {
+    "license": "MPL-2.0",
+    "version": "2.19.0",
+    "date": "2026-11-09T14:03:36Z",
+    "url": "https://github.com/penpot/penpot/releases/tag/2.19.0",
+    "changelog": "\n### :boom: Breaking changes & Deprecations\n\n#### Migrate legacy file payloads to file_data and delete orphan revisions\n\nFile payloads now live in one place: every file state and snapshot is kept in `file_data`, and the orphan `file_change` rows that kept old payloads alive forever are removed. No read path reached those rows and nothing ever collected them, so the upgrade also reclaims the database and TOAST space they held. There is no API or UI change.\n\nOn small and medium instances this happens automatically on boot and there is nothing to do. On large instances (millions of snapshots, hun"
+  },
+  "simonmichael/hledger": {
+    "license": "GPL-3.0-or-later",
+    "version": "1.52.4",
+    "date": "2026-09-10T23:51:51Z",
+    "url": "https://github.com/hledgerorg/hledger/releases/tag/1.52.4",
+    "changelog": "\n<details>\n<summary>\n\n## Release notes\n\n</summary>\n\n\n**hledger-web packaging fixes for stackage; misc dependency and doc updates**\n\n### hledger 1.52.4\n\n\nImprovements\n\n- Allow megaparsec 9.8.1+ (but not 9.8.0, because of [megaparsec#572](https://github.com/mrkkrp/megaparsec/issues/572)).\n\nDocs\n\n- csv: the manual now correctly documents that most top-level rules are evaluated first-wins, not last-wins as previously stated. \n  (Accepting the status quo, unlike hledger 2.x where they are changed to last-wins.) [#2539]\n\n[#2539]: https://github.com/simonmichael/hledger/issues/2539\n\n\n### hledger-ui 1"
+  },
+  "ledger/ledger": {
+    "license": "BSD-3-Clause",
+    "version": "v3.4.1",
+    "date": "2025-10-26T05:57:54Z",
+    "url": "https://github.com/ledger/ledger/releases/tag/v3.4.1",
+    "changelog": "- Fix version number in binary"
   }
 }

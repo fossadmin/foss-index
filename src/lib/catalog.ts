@@ -3,12 +3,12 @@ import releases from "../data/releases.json";
 export const slugify = (s: string) =>
   s.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 const browseDefinitions = [
-  { name: "Work & organize", categories: ["Finance", "Productivity", "Notes", "Documents", "Bookmarks", "Calendar & Contacts", "Utilities"] },
-  { name: "Files & sharing", categories: ["Collaboration", "File Sync"] },
-  { name: "Media & photos", categories: ["Media", "Photos"] },
+  { name: "Work & organize", categories: ["Finance", "Productivity", "Notes", "Documents", "Bookmarks", "Calendar & Contacts", "Utilities", "Reading"] },
+  { name: "Files & sharing", categories: ["Collaboration", "File Sync", "Backup"] },
+  { name: "Media & photos", categories: ["Media", "Photos", "Creative"] },
   { name: "Home", categories: ["Home", "Home automation"] },
-  { name: "Privacy & access", categories: ["Passwords", "Networking"] },
-  { name: "Servers & monitoring", categories: ["Infrastructure", "Dashboard", "Monitoring", "Notifications", "Analytics"] },
+  { name: "Privacy & access", categories: ["Passwords", "Networking", "Security", "Communication"] },
+  { name: "Servers & monitoring", categories: ["Infrastructure", "Dashboard", "Monitoring", "Notifications", "Analytics", "Development"] },
 ];
 export function browseSlugForCategory(category: string) {
   const group = browseDefinitions.find((g) => g.categories.includes(category));

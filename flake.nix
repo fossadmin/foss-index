@@ -17,7 +17,8 @@
           version = "0.1.0";
           src = ./.;
 
-          # First `nix build` fails and prints the real hash; paste it here.
+          # Placeholder hash. The first `nix build` should print the real one; paste it
+          # here. Not yet verified against the current lockfile.
           npmDepsHash = pkgs.lib.fakeHash;
 
           npmBuildScript = "build";
