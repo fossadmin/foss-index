@@ -1,0 +1,37 @@
+{
+  "tools/gimp": {
+    "names": ["Photoshop", "Adobe Photoshop"],
+    "source": "https://www.gimp.org/docs/userfaq.html",
+    "scope": "Raster image editing; not identical Photoshop features or workflows."
+  },
+  "tools/libreoffice": {
+    "names": ["Microsoft Office", "MS Office", "Microsoft 365", "Office 365", "Microsoft Word", "MS Word", "Microsoft Excel", "Excel", "Microsoft PowerPoint", "PowerPoint"],
+    "source": "https://help.libreoffice.org/latest/en-US/text/shared/guide/ms_user.html",
+    "scope": "Documents, spreadsheets and presentations; file and macro compatibility have limits."
+  },
+  "tools/joplin": {
+    "names": ["Evernote", "Microsoft OneNote", "OneNote"],
+    "source": "https://joplinapp.org/help/apps/import_export/",
+    "scope": "Notes with documented import routes; migration and feature coverage differ."
+  },
+  "tools/darktable": {
+    "names": ["Lightroom", "Adobe Lightroom", "Lightroom Classic"],
+    "source": "https://www.darktable.org/about/faq/",
+    "scope": "RAW photo workflow; the project explicitly warns it is not a direct replacement."
+  },
+  "tools/penpot": {
+    "names": ["Figma"],
+    "source": "https://penpot.app/penpot-vs-figma",
+    "scope": "Interface design and prototyping; not full feature equivalence."
+  },
+  "tools/kdenlive": {
+    "names": ["Adobe Premiere Pro", "Premiere Pro", "Final Cut Pro"],
+    "source": "https://docs.kdenlive.org/en/getting_started/introduction.html",
+    "scope": "Non-linear video editing; not identical professional workflows or project-file compatibility."
+  },
+  "tools/nextcloud": {
+    "names": ["Dropbox", "Google Drive", "OneDrive", "Microsoft OneDrive"],
+    "source": "https://nextcloud.com/compare/",
+    "scope": "File storage, sync and sharing; self-hosting and administration differ from hosted services."
+  }
+}
