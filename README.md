@@ -37,6 +37,16 @@ random tool's page, and a bookmark button keeps a shortlist in `localStorage`
 (`foss-index:saved`). That shortlist needs no account and is never sent
 anywhere. Both are progressive enhancement and stay hidden without JavaScript.
 
+## AI use
+
+AI assistants do much of the coding, research and writing on this project,
+under our direction. We remain responsible for what we publish, including
+correcting mistakes.
+
+A listing is a starting point, not an audit or a claim that we've
+personally tested the tool. Screenshot captions identify their sources,
+and quick-start notes say when we haven't run the instructions ourselves.
+
 ## Repository layout
 
 | Path | What it holds |

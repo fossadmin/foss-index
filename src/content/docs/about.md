@@ -52,6 +52,16 @@ snippets and install notes come from each project's own documentation, and the p
 so when we have not executed them. Read the license and the project's
 own docs before committing to anything.
 
+## Do you use AI on this project?
+
+AI assistants do much of the coding, research and writing on this project,
+under our direction. We remain responsible for what we publish, including
+correcting mistakes.
+
+A listing is a starting point, not an audit or a claim that we've
+personally tested the tool. Screenshot captions identify their sources,
+and quick-start notes say when we haven't run the instructions ourselves.
+
 ## Can a listing be bought?
 
 No. Listings are editorial and free. When sponsorship opens it will buy
