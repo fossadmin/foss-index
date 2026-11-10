@@ -338,6 +338,12 @@
     "manual": true,
     "checkedOn": "2026-11-10"
   },
+  "NixOS/nixpkgs": {
+    "version": "26.05",
+    "url": "https://nixos.org/download/",
+    "manual": true,
+    "checkedOn": "2026-11-10"
+  },
   "sources.debian.org": {
     "version": "13.7",
     "url": "https://www.debian.org/releases/trixie/",

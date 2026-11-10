@@ -205,6 +205,11 @@ Nothing was redrawn or substituted.
 - Source: https://github.com/netbirdio/netbird/blob/0270bfa8641eb4cbac3813ffe74a57fb8be813a0/client/ui/frontend/src/assets/logos/netbird.svg
 - Repository license: BSD-3-Clause; mark belongs to the project
 - Changes: none
+## nixos.svg
+- Project: NixOS
+- Source: the project's brand asset set at brand.nixos.org, distributed via https://github.com/NixOS/branding (usage: https://nixos.org/branding/)
+- Terms: "NixOS Logo" by Simon Frankau, Tim Cuthbertson and Daniel Baker (maintained by the NixOS Marketing Team), from nixos/branding (https://github.com/NixOS/branding), licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/); the project states the branding assets may be shared and adapted for any purpose, including commercial use, with credit. Identifying use only; no endorsement implied.
+- Changes: cropped to the lambda mark (wordmark removed) and resized; not recolored or distorted.
 ## nextcloud.svg
 - Project: Nextcloud
 - Source: https://github.com/nextcloud/promo/blob/e0dcbbb1d12fb79da355e536bfd961c9e108fee4/nextcloud-icon.svg (the project's official promo/brand repository)

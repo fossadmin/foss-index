@@ -3,7 +3,7 @@
 # FOSS Index
 
 [![License: AGPL-3.0-only](https://img.shields.io/badge/license-AGPL--3.0--only-blue)](LICENSE)
-[![Listings: 70 tools](https://img.shields.io/badge/listings-70%20tools-green)](https://index.fossadmin.com)
+[![Listings: 71 tools](https://img.shields.io/badge/listings-71%20tools-green)](https://index.fossadmin.com)
 [![Site: index.fossadmin.com](https://img.shields.io/badge/site-index.fossadmin.com-informational)](https://index.fossadmin.com)
 [![Pipeline status](https://gitlab.com/fossadmin/foss-index/badges/main/pipeline.svg)](https://gitlab.com/fossadmin/foss-index/-/pipelines)
 

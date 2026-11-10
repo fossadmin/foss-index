@@ -238,6 +238,16 @@ screenshot is not a production review of it.
 - Changes: resized and recompressed only; peer names shown are the project's own demo data
 ## nextcloud.webp
 - Official screenshot from the nextcloud/screenshots repository (nextcloud-hub-25-files.png), licensed CC BY-SA 4.0. Attribution: Nextcloud GmbH and contributors.
+## nixos-26.05-installer-desktop.webp
+- Project: NixOS
+- Source: FOSSadmin's own NixOS 26.05 virtual-machine capture, supplied on November 10, 2026; shows the graphical installer's desktop-selection step with GNOME selected.
+- Terms: an original capture made for this listing, not a reused third-party screenshot. Underlying software, interface artwork and trademarks remain their respective owners' work; no exclusive ownership of that material is claimed. Identifying documentation use, no endorsement implied.
+- Changes: cropped from the supplied 1600 by 960 JPEG to 914 by 515 pixels, removing the VM toolbar and excess desktop space while preserving the entire installer window. Recompressed to WebP; no enlargement or invented detail.
+## nixos-26.05-installer-welcome.webp
+- Project: NixOS
+- Source: FOSSadmin's own NixOS 26.05 virtual-machine capture, supplied on November 10, 2026; shows the graphical installer's welcome screen.
+- Terms: an original capture made for this listing, not a reused third-party screenshot. Underlying software, interface artwork and trademarks remain their respective owners' work; no exclusive ownership of that material is claimed. Identifying documentation use, no endorsement implied.
+- Changes: cropped from the supplied 1600 by 960 JPEG to 914 by 515 pixels, removing the VM toolbar and excess desktop space while preserving the entire installer window. Recompressed to WebP; no enlargement or invented detail.
 ## obs-studio.webp
 - Project: OBS Studio
 - Source: https://obsproject.com/
