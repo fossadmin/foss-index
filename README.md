@@ -1,6 +1,6 @@
-![FOSS Index - Good software. Yours to run.](docs/readme/banner.png)
-
 # FOSS Index
+
+![FOSS Index - Good software. Yours to run.](docs/readme/banner.png)
 
 [![License: AGPL-3.0-only](https://img.shields.io/badge/license-AGPL--3.0--only-blue)](LICENSE)
 [![Listings: 71 tools](https://img.shields.io/badge/listings-71%20tools-green)](https://index.fossadmin.com)
