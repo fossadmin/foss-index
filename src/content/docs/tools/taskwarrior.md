@@ -26,9 +26,9 @@ Taskwarrior manages to-do lists from the terminal, with tags, priorities, due da
 
 *Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
-### macOS and Linux
+### Linux and macOS
 
-Your system probably has a package called `task`. Homebrew has one too:
+Your distribution probably packages it. From the project's [download page](https://taskwarrior.org/download/): Debian and Ubuntu `sudo apt-get install taskwarrior`, Fedora `sudo dnf install task`, Arch `pacman -S task`, NixOS `nix-env -i taskwarrior3`. On macOS, Homebrew has it:
 
 ```bash
 brew install task

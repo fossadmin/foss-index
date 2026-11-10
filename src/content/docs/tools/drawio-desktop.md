@@ -28,7 +28,7 @@ This listing covers the desktop app repository, whose LICENSE file is the GNU GP
 
 *Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
-### Windows, macOS and Linux
+### Linux, Windows and macOS
 
 Pick the installer for your system on the [releases page](https://github.com/jgraph/drawio-desktop/releases). draw.io's own docs send desktop users to that page.
 

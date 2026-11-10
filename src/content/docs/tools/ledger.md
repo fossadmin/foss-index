@@ -27,9 +27,9 @@ The repository's LICENSE.md is the BSD 3-clause license. GitHub labels it "Other
 
 *Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
-### macOS and Linux
+### Linux and macOS
 
-Homebrew has a `ledger` formula, and Debian-family systems package `ledger`. Both are third-party packaging.
+Debian-family systems package `ledger`, and Homebrew has a `ledger` formula. Both are third-party packaging.
 
 ```bash
 brew install ledger

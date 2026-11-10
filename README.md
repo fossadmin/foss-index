@@ -1,4 +1,13 @@
+![FOSS Index - Good software. Yours to run.](docs/readme/banner.png)
+
 # FOSS Index
+
+[![License: AGPL-3.0-only](https://img.shields.io/badge/license-AGPL--3.0--only-blue)](LICENSE)
+[![Listings: 66 tools](https://img.shields.io/badge/listings-66%20tools-green)](https://index.fossadmin.com)
+[![Site: index.fossadmin.com](https://img.shields.io/badge/site-index.fossadmin.com-informational)](https://index.fossadmin.com)
+[![Pipeline status](https://gitlab.com/fossadmin/foss-index/badges/main/pipeline.svg)](https://gitlab.com/fossadmin/foss-index/-/pipelines)
+
+[About](https://index.fossadmin.com/about/) / [Funding](https://index.fossadmin.com/funding/) / [Sponsor](https://index.fossadmin.com/sponsor/) / [Submit a tool](https://index.fossadmin.com/submit/) / [Contributing](CONTRIBUTING.md) / [License](LICENSE)
 
 A curated, plain-HTML directory of open-source software. Each listing shows
 the project's license, its recorded release and changelog, and a "Support this
@@ -7,6 +16,8 @@ point, not a ranking.
 
 Built with Astro. The site is static: no server runtime, no accounts, no
 analytics and no third-party scripts.
+
+![A short tour of the FOSS Index: browsing the catalog, a category page, and a listing with its quick-start tabs.](docs/readme/tour.gif)
 
 ## What is on a listing
 

@@ -28,20 +28,20 @@ The repository's COPYING file is the GNU GPL version 2, with an added exception 
 
 *Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
-### Windows and macOS
-
-Installers (exe, zip, dmg) are on [openscad.org/downloads](https://openscad.org/downloads.html). The page also mentions Homebrew for snapshots:
-
-```bash
-brew install openscad@snapshot
-```
-
 ### Linux
 
 The downloads page shows `sudo apt-get install openscad` for Debian-family systems and offers AppImages for x86-64 and ARM64. The Flathub package is verified by its publisher:
 
 ```bash
 flatpak install flathub org.openscad.OpenSCAD
+```
+
+### Windows and macOS
+
+Installers (exe, zip, dmg) are on [openscad.org/downloads](https://openscad.org/downloads.html). The page also mentions Homebrew for snapshots:
+
+```bash
+brew install openscad@snapshot
 ```
 
 ## First steps

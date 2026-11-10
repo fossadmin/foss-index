@@ -33,10 +33,6 @@ The repository's COPYING file points to the GPL version 2 or later text, and ind
 
 *Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
-### Windows and macOS
-
-Installers are on the [digiKam download page](https://www.digikam.org/download/). The page also lists weekly pre-release snapshots; use the stable download unless you want to test.
-
 ### Linux
 
 The download page offers an Intel AppImage (it needs glibc 2.31 or newer) and suggests AppImageLauncher for desktop integration.
@@ -48,6 +44,10 @@ flatpak install flathub org.kde.digikam
 ```
 
 This needs Flatpak set up on your system first (see [flatpak.org/setup](https://flatpak.org/setup/)).
+
+### Windows and macOS
+
+Installers are on the [digiKam download page](https://www.digikam.org/download/). The page also lists weekly pre-release snapshots; use the stable download unless you want to test.
 
 ## First steps
 

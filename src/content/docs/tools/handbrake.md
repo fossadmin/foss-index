@@ -27,6 +27,14 @@ The project's LICENSE file says most files are GPLv2, some are GPLv2-or-later, L
 
 *Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
+### Linux
+
+The project's [download page](https://handbrake.fr/docs/en/latest/get-handbrake/download-and-install.html) covers Linux. The Flathub package is verified by its publisher:
+
+```bash
+flatpak install flathub fr.handbrake.ghb
+```
+
 ### Windows and macOS
 
 Download from [handbrake.fr](https://handbrake.fr/), which the project calls its only official download source. It publishes checksums so you can verify the file.
@@ -35,14 +43,6 @@ Homebrew has a cask for it. That is Homebrew's packaging, not the project's own:
 
 ```bash
 brew install --cask handbrake-app
-```
-
-### Linux
-
-The project's [download page](https://handbrake.fr/docs/en/latest/get-handbrake/download-and-install.html) covers Linux. The Flathub package is verified by its publisher:
-
-```bash
-flatpak install flathub fr.handbrake.ghb
 ```
 
 ## First steps

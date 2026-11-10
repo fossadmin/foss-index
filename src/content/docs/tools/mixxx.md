@@ -31,6 +31,14 @@ The repository's LICENSE file says Mixxx is under the GNU GPL version 2 or any l
 
 *Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
+### Linux
+
+The download page lists the Linux options. The Flathub package is verified by its publisher:
+
+```bash
+flatpak install flathub org.mixxx.Mixxx
+```
+
 ### Windows and macOS
 
 Download from [mixxx.org/download](https://mixxx.org/download/). The page recommends the stable 2.5.6 release for live use.
@@ -39,14 +47,6 @@ Homebrew has a cask for it. That is Homebrew's packaging, not the project's own:
 
 ```bash
 brew install --cask mixxx
-```
-
-### Linux
-
-The download page lists the Linux options. The Flathub package is verified by its publisher:
-
-```bash
-flatpak install flathub org.mixxx.Mixxx
 ```
 
 ## First steps

@@ -26,10 +26,6 @@ The project's README says original Pinta code is MIT licensed. It also includes 
 
 *Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
-### Windows and macOS
-
-Download the installer from the [Pinta Project site](https://www.pinta-project.com/). On Windows, open the file and follow the wizard, as the [user guide](https://www.pinta-project.com/user-guide/start/) describes.
-
 ### Linux
 
 The Pinta site lists Linux options. The Flathub package is verified by its publisher:
@@ -37,6 +33,10 @@ The Pinta site lists Linux options. The Flathub package is verified by its publi
 ```bash
 flatpak install flathub com.github.PintaProject.Pinta
 ```
+
+### Windows and macOS
+
+Download the installer from the [Pinta Project site](https://www.pinta-project.com/). On Windows, open the file and follow the wizard, as the [user guide](https://www.pinta-project.com/user-guide/start/) describes.
 
 ## First steps
 

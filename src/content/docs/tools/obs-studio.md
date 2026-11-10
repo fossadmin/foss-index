@@ -28,16 +28,6 @@ OBS Studio records your screen, windows and cameras to a file or streams them li
 
 *Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
-### Windows and macOS
-
-Download the installer from [obsproject.com/download](https://obsproject.com/download).
-
-Homebrew has a cask for it. That is Homebrew's packaging, not the project's own:
-
-```bash
-brew install --cask obs
-```
-
 ### Linux
 
 OBS says it is officially distributed as a Flatpak on Flathub, and as a PPA for Ubuntu 26.04 and newer:
@@ -50,6 +40,16 @@ flatpak install flathub com.obsproject.Studio
 sudo add-apt-repository ppa:obsproject/obs-studio
 sudo apt update
 sudo apt install obs-studio
+```
+
+### Windows and macOS
+
+Download the installer from [obsproject.com/download](https://obsproject.com/download).
+
+Homebrew has a cask for it. That is Homebrew's packaging, not the project's own:
+
+```bash
+brew install --cask obs
 ```
 
 ## First steps

@@ -25,13 +25,13 @@ darktable manages and develops RAW photos on your desktop without altering the o
 
 *Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
-### Windows and macOS
-
-Installers are on the [darktable install page](https://www.darktable.org/install/). On macOS, if you see the warning that the app could not be verified, the project documents a fix on that page. It involves removing the quarantine flag from the app, so read the page first and only do it for a download you got from darktable.org.
-
 ### Linux
 
 The install page offers an AppImage for x86-64 and aarch64, and notes a Flatpak that does not include darktable's AI features. Distribution packages also exist; see the page for the project's notes.
+
+### Windows and macOS
+
+Installers are on the [darktable install page](https://www.darktable.org/install/). On macOS, if you see the warning that the app could not be verified, the project documents a fix on that page. It involves removing the quarantine flag from the app, so read the page first and only do it for a download you got from darktable.org.
 
 ## First steps
 

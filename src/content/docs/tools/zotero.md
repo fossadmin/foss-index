@@ -25,6 +25,10 @@ Zotero's optional sync and storage service is run by the project and is a separa
 
 *Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
+### Linux
+
+Download the tarball, extract it, and run `zotero` from that directory. The installation page also shows how to symlink the `zotero.desktop` file into `~/.local/share/applications/` so it appears in your menu.
+
 ### Windows and macOS
 
 Download from [zotero.org/download](https://www.zotero.org/download/). On Windows run the setup program. On macOS open the `.dmg` and drag Zotero to Applications, per the [installation page](https://www.zotero.org/support/installation).
@@ -34,10 +38,6 @@ Homebrew has a cask for it. That is Homebrew's packaging, not the project's own:
 ```bash
 brew install --cask zotero
 ```
-
-### Linux
-
-Download the tarball, extract it, and run `zotero` from that directory. The installation page also shows how to symlink the `zotero.desktop` file into `~/.local/share/applications/` so it appears in your menu.
 
 ## First steps
 

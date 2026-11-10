@@ -26,7 +26,7 @@ Fava needs Beancount, which is listed separately.
 
 *Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
-### pip (Windows, macOS, Linux)
+### pip (Linux, Windows, macOS)
 
 Fava needs Python 3 and pulls in Beancount with it:
 
@@ -36,9 +36,9 @@ pip3 install fava
 
 The project's [install notes](https://beancount.github.io/fava/usage.html) also describe installing it in an isolated environment with `uv`.
 
-### Homebrew and distro packages
+### Distro packages and Homebrew
 
-Homebrew has a `fava` formula, and Debian and Ubuntu have a `fava` package. These are third-party packaging and can lag behind the project's release.
+Debian and Ubuntu have a `fava` package, and Homebrew has a `fava` formula. These are third-party packaging and can lag behind the project's release.
 
 ```bash
 brew install fava

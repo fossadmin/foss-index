@@ -30,16 +30,6 @@ The client code is open source. The messaging service it connects to is run by S
 
 *Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
-### Windows and macOS
-
-Signal Desktop is linked to the Signal app on your phone, so install Signal on your phone first. Then download the desktop app from [signal.org/download](https://signal.org/download/).
-
-Homebrew has a cask for it. That is Homebrew's packaging, not the project's own:
-
-```bash
-brew install --cask signal
-```
-
 ### Debian and Ubuntu
 
 From [signal.org/download/linux](https://signal.org/download/linux/), for 64-bit Debian-based systems:
@@ -53,6 +43,16 @@ sudo apt update && sudo apt install signal-desktop
 ```
 
 The page also offers an AppImage with a signing key for other distributions.
+
+### Windows and macOS
+
+Signal Desktop is linked to the Signal app on your phone, so install Signal on your phone first. Then download the desktop app from [signal.org/download](https://signal.org/download/).
+
+Homebrew has a cask for it. That is Homebrew's packaging, not the project's own:
+
+```bash
+brew install --cask signal
+```
 
 ## First steps
 

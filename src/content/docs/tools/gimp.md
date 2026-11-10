@@ -33,6 +33,14 @@ The project's own FAQ says GIMP is distributed under the GNU GPL version 3 and l
 
 *Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
+### Linux
+
+The download page lists an AppImage, a Flatpak and a Snap for x86_64 and Aarch64. The Flathub listing is verified by its publisher:
+
+```bash
+flatpak install flathub org.gimp.GIMP
+```
+
 ### Windows and macOS
 
 Installers are on [gimp.org/downloads](https://www.gimp.org/downloads/).
@@ -41,14 +49,6 @@ Homebrew has a cask for it. That is Homebrew's packaging, not the project's own:
 
 ```bash
 brew install --cask gimp
-```
-
-### Linux
-
-The download page lists an AppImage, a Flatpak and a Snap for x86_64 and Aarch64. The Flathub listing is verified by its publisher:
-
-```bash
-flatpak install flathub org.gimp.GIMP
 ```
 
 ## First steps

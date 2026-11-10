@@ -27,6 +27,14 @@ The repository's LICENSE file is the GNU AGPL version 3. See also [UltiMaker Cur
 
 *Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
+### Linux
+
+The same page covers Linux. The Flathub package is verified by its publisher:
+
+```bash
+flatpak install flathub com.prusa3d.PrusaSlicer
+```
+
 ### Windows and macOS
 
 Download from [Prusa's PrusaSlicer page](https://help.prusa3d.com/article/install-prusaslicer_1903).
@@ -35,14 +43,6 @@ Homebrew has a cask for it. That is Homebrew's packaging, not the project's own:
 
 ```bash
 brew install --cask prusaslicer
-```
-
-### Linux
-
-The same page covers Linux. The Flathub package is verified by its publisher:
-
-```bash
-flatpak install flathub com.prusa3d.PrusaSlicer
 ```
 
 ## First steps

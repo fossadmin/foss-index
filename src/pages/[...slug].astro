@@ -1,7 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import CatalogLayout from '../layouts/CatalogLayout.astro';
-import { catalog, browseSlugForCategory } from '../lib/catalog';
+import { catalog, browseSlugForCategory, slugify } from '../lib/catalog';
 import licenses from '../data/licenses.json';
 export async function getStaticPaths() { return (await getCollection('docs')).map(entry => ({ params: { slug: entry.id }, props: { entry } })); }
 const { entry } = Astro.props;
@@ -12,6 +12,9 @@ const licInfo = tool?.license ? (licenses as Record<string, { summary: string; u
 const data = entry.data;
 const funding = data.funding ?? {};
 const shot = data.screenshot;
+const shotCreditHref = shot ? `${import.meta.env.BASE_URL}credits/screenshots/#${slugify(shot.src)}` : '';
+const iconHeading = data.icon ? (data.iconDark ? `${data.icon}, ${data.iconDark}` : data.icon) : '';
+const iconCreditHref = data.icon ? `${import.meta.env.BASE_URL}credits/icons/#${slugify(iconHeading)}` : '';
 const links = [
   { label: 'GitHub Sponsors', url: funding.githubSponsors }, { label: 'Open Collective', url: funding.openCollective },
   { label: 'Polar', url: funding.polar }, { label: 'Liberapay', url: funding.liberapay }, ...(funding.custom ?? []),
@@ -27,12 +30,12 @@ const links = [
     </header>
     {tool?.release?.changelog && <details class="changelog"><summary>Release notes / {tool.release.version}</summary><p class="release-date">Released {tool.release.date?.slice(0,10)}. Snapshot from the included release data, not a live check.</p><p class="changelog-body">{tool.release.changelog}</p><a href={tool.release.url}>Read the full release notes on GitHub ↗</a></details>}
     {shot && <figure class="shot" data-shot><img src={`${import.meta.env.BASE_URL}screenshots/${shot.src}`} alt={shot.alt} width={shot.width} height={shot.height} style={shot.height > shot.width ? "width:auto;max-width:100%;max-height:560px;margin-inline:auto" : undefined} decoding="async" /><figcaption>{shot.commons
-      ? <>Screenshot by {shot.credit} on <a href={shot.sourceUrl}>Wikimedia Commons ↗</a>{shot.license ? <> ({shot.license} - <a href={`${import.meta.env.BASE_URL}screenshots/NOTICE.md`}>image credits</a>)</> : null}. {shot.captionNote}</>
+      ? <>Screenshot by {shot.credit} on <a href={shot.sourceUrl}>Wikimedia Commons ↗</a>{shot.license ? <> ({shot.license} - <a href={`${shotCreditHref}`}>image credits</a>)</> : null}. {shot.captionNote}</>
       : shot.terminal
-      ? <>Rendered terminal output of {shot.credit}{shot.version ? ` ${shot.version}` : ''}, not a literal screen capture (<a href={`${import.meta.env.BASE_URL}screenshots/NOTICE.md`}>image credits</a>). {shot.captionNote}</>
+      ? <>Rendered terminal output of {shot.credit}{shot.version ? ` ${shot.version}` : ''}, not a literal screen capture (<a href={`${shotCreditHref}`}>image credits</a>). {shot.captionNote}</>
       : shot.own
-      ? <>Our own screenshot of {shot.credit}{shot.version ? ` ${shot.version}` : ''} (<a href={`${import.meta.env.BASE_URL}screenshots/NOTICE.md`}>image credits</a>). {shot.captionNote ?? "Empty default state, not a production setup."}</>
-      : <>Official screenshot from <a href={shot.sourceUrl}>{shot.credit} ↗</a>{shot.license ? <> ({shot.license} - <a href={`${import.meta.env.BASE_URL}screenshots/NOTICE.md`}>image credits and license texts</a>)</> : <> (<a href={`${import.meta.env.BASE_URL}screenshots/NOTICE.md`}>image credits</a>)</>}. {shot.captionNote ?? 'Demo data, not our install.'}</>}{data.icon && <> The tool icon is the project's own mark (<a href={`${import.meta.env.BASE_URL}icons/NOTICE.md`}>icon credits</a>).</>}</figcaption></figure>}
+      ? <>Our own screenshot of {shot.credit}{shot.version ? ` ${shot.version}` : ''} (<a href={`${shotCreditHref}`}>image credits</a>). {shot.captionNote ?? "Empty default state, not a production setup."}</>
+      : <>Official screenshot from <a href={shot.sourceUrl}>{shot.credit} ↗</a>{shot.license ? <> ({shot.license} - <a href={`${shotCreditHref}`}>image credits and license texts</a>)</> : <> (<a href={`${shotCreditHref}`}>image credits</a>)</>}. {shot.captionNote ?? 'Demo data, not our install.'}</>}{data.icon && <> The tool icon is the project's own mark (<a href={`${iconCreditHref}`}>icon credits</a>).</>}</figcaption></figure>}
     <div class="prose"><Content /></div>
     {tool && <aside class="support-panel"><p class="eyebrow">Keep open source going</p><h2>Support this project</h2>{links.length ? <><p>Support goes directly to the maintainers through their own channels. We do not take a cut.</p><ul>{links.map(l => <li><a href={l.url}>{l.label} ↗</a></li>)}</ul></> : <p>No direct funding link is recorded for this tool yet. Check its <a href={data.repository}>source repository</a> for ways to contribute.</p>}</aside>}
     {data.managedHosting && <p class="managed-line">Want help running it? <a href="https://fossadmin.com">Ask FOSSadmin about hosting and maintenance ↗</a></p>}

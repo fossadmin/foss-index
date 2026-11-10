@@ -450,5 +450,12 @@
     "version": "v20.0.0",
     "date": "2026-11-06T21:02:15Z",
     "url": "https://github.com/super-productivity/super-productivity/releases/tag/v20.0.0"
+  },
+  "hargata/lubelog": {
+    "license": "MIT",
+    "version": "v1.7.4",
+    "url": "https://github.com/hargata/lubelog/releases/tag/v1.7.4",
+    "manual": true,
+    "checkedOn": "2026-11-10"
   }
 }

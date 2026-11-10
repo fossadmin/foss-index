@@ -32,16 +32,6 @@ This listing covers the Joplin apps. The repository's license file says code is 
 
 *Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
-### Windows and macOS
-
-Download from [joplinapp.org/help/install](https://joplinapp.org/help/install/). Windows also has a portable build you can copy to a USB key.
-
-Homebrew has a cask for it. That is Homebrew's packaging, not the project's own:
-
-```bash
-brew install --cask joplin
-```
-
 ### Linux
 
 The project recommends its install script, which also sets up the desktop icon:
@@ -51,6 +41,16 @@ wget -O - https://raw.githubusercontent.com/laurent22/joplin/dev/Joplin_install_
 ```
 
 That pipes a script from the internet into your shell. If you prefer, download it first and read it.
+
+### Windows and macOS
+
+Download from [joplinapp.org/help/install](https://joplinapp.org/help/install/). Windows also has a portable build you can copy to a USB key.
+
+Homebrew has a cask for it. That is Homebrew's packaging, not the project's own:
+
+```bash
+brew install --cask joplin
+```
 
 ## First steps
 

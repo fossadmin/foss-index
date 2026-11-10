@@ -27,6 +27,15 @@ The Cura application in the repository is under the GNU LGPL version 3. UltiMake
 
 *Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
+### Linux
+
+The same page offers a Linux AppImage. Make it executable and run it:
+
+```bash
+chmod +x UltiMaker-Cura-*.AppImage
+./UltiMaker-Cura-*.AppImage
+```
+
 ### Windows and macOS
 
 Download the installer from [UltiMaker's Cura page](https://ultimaker.com/software/ultimaker-cura/). The page lists a Windows installer (.exe or enterprise .msi, including ARM64) and macOS .dmg files for Intel and Apple Silicon.
@@ -35,15 +44,6 @@ Homebrew has a cask for it. That is Homebrew's packaging, not the project's own:
 
 ```bash
 brew install --cask ultimaker-cura
-```
-
-### Linux
-
-The same page offers a Linux AppImage. Make it executable and run it:
-
-```bash
-chmod +x UltiMaker-Cura-*.AppImage
-./UltiMaker-Cura-*.AppImage
 ```
 
 ## First steps

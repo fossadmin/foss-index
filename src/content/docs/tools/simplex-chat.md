@@ -2,6 +2,8 @@
 title: "SimpleX Chat"
 description: "Messenger with no user identifiers of any kind."
 category: Communication
+icon: simplex-chat.svg
+iconDark: simplex-chat-dark.svg
 mark: SX
 repository: https://github.com/simplex-chat/simplex-chat
 license: AGPL-3.0
@@ -19,9 +21,9 @@ The repository is licensed under the AGPL-3.0. The README adds that the SimpleX 
 
 *Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
-### Windows, macOS and Linux
+### Linux, Windows and macOS
 
-Download from [simplex.chat/downloads](https://simplex.chat/downloads/). The page lists a Windows x86_64 build, macOS builds for Apple Silicon and Intel, and a Linux AppImage for x86_64 and aarch64.
+Download from [simplex.chat/downloads](https://simplex.chat/downloads/). The page lists a Linux AppImage for x86_64 and aarch64, a Windows x86_64 build, and macOS builds for Apple Silicon and Intel.
 
 Homebrew has a cask for it. That is Homebrew's packaging, not the project's own:
 

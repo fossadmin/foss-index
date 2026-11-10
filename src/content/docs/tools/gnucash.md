@@ -25,6 +25,14 @@ The project's LICENSE file says the software is licensed under the GNU GPL versi
 
 *Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
+### Linux
+
+Use your distribution's software manager, or the Flatpak the download page mentions for newer versions:
+
+```bash
+flatpak install flathub org.gnucash.GnuCash
+```
+
 ### Windows and macOS
 
 Download from [gnucash.org/download.phtml](https://www.gnucash.org/download.phtml).
@@ -33,14 +41,6 @@ Homebrew has a cask for it. That is Homebrew's packaging, not the project's own:
 
 ```bash
 brew install --cask gnucash
-```
-
-### Linux
-
-Use your distribution's software manager, or the Flatpak the download page mentions for newer versions:
-
-```bash
-flatpak install flathub org.gnucash.GnuCash
 ```
 
 ## First steps

@@ -27,10 +27,6 @@ The repository's COPYING file is the GPL version 3. The GitHub repository is a m
 
 *Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
-### Windows and macOS
-
-Installers are on the [Kdenlive download page](https://kdenlive.org/download/).
-
 ### Linux
 
 The download page offers an AppImage and a Flatpak. The Flathub package is verified by its publisher:
@@ -38,6 +34,10 @@ The download page offers an AppImage and a Flatpak. The Flathub package is verif
 ```bash
 flatpak install flathub org.kde.kdenlive
 ```
+
+### Windows and macOS
+
+Installers are on the [Kdenlive download page](https://kdenlive.org/download/).
 
 ## First steps
 

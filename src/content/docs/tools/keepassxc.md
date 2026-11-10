@@ -33,14 +33,6 @@ The project's COPYING file offers the code under GPL version 2 or version 3, and
 
 *Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
-### Windows and macOS
-
-Download the installer from [keepassxc.org/download](https://keepassxc.org/download/). On macOS, Homebrew also works (the project lists this on its page):
-
-```bash
-brew install --cask keepassxc
-```
-
 ### Linux
 
 From the same page:
@@ -56,6 +48,14 @@ sudo zypper install keepassxc
 ```
 
 For Ubuntu the page gives a PPA (`sudo add-apt-repository ppa:phoerious/keepassxc`, then `sudo apt update` and `sudo apt install keepassxc`). It also offers an AppImage with a PGP signature and checksum.
+
+### Windows and macOS
+
+Download the installer from [keepassxc.org/download](https://keepassxc.org/download/). On macOS, Homebrew also works (the project lists this on its page):
+
+```bash
+brew install --cask keepassxc
+```
 
 ## First steps
 

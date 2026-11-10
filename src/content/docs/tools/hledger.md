@@ -33,13 +33,15 @@ The repository's README shows a GPLv3+ badge and its LICENSE file is the GPL ver
 
 *Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
-### macOS and Linux
+### Linux and macOS
+
+On Debian-family systems the project lists `apt install hledger hledger-ui hledger-web`, on Fedora `dnf install hledger`, and on Arch `pacman -Sy hledger hledger-ui hledger-web`. Distribution versions can lag. Homebrew has a formula too:
 
 ```bash
 brew install hledger
 ```
 
-On Debian-family systems the project lists `apt install hledger hledger-ui hledger-web`, on Fedora `dnf install hledger`, and on Arch `pacman -Sy hledger hledger-ui hledger-web`. Distribution versions can lag. The [install page](https://hledger.org/install.html) also offers official binaries from GitHub for Linux, macOS and Windows.
+The [install page](https://hledger.org/install.html) also offers official binaries from GitHub for Linux, macOS and Windows.
 
 ### Windows
 

@@ -31,6 +31,10 @@ Blender's license page says its source is licensed GNU GPL version 2 or later by
 
 *Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
+### Linux
+
+Blender's [Linux install page](https://docs.blender.org/manual/en/latest/getting_started/installing/linux.html) says to download the Linux build from blender.org, decompress it where you want it (for example `~/software`), and start the `blender` executable. This way you can keep several versions side by side. Some distributions also package Blender, and the same page notes that.
+
 ### Windows and macOS
 
 Download the installer for your system from [blender.org/download](https://www.blender.org/download/).
@@ -40,10 +44,6 @@ Homebrew has a cask for it. That is Homebrew's packaging, not the project's own:
 ```bash
 brew install --cask blender
 ```
-
-### Linux
-
-Blender's [Linux install page](https://docs.blender.org/manual/en/latest/getting_started/installing/linux.html) says to download the Linux build from blender.org, decompress it where you want it (for example `~/software`), and start the `blender` executable. This way you can keep several versions side by side. Some distributions also package Blender, and the same page notes that.
 
 ## First steps
 

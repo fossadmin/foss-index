@@ -32,12 +32,6 @@ Ventoy's own code is GPLv3 or later, per the project's [license file](https://gi
 
 *Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
-### Windows
-
-**Installing Ventoy erases the USB drive it is installed to.** Back up anything on it first and double-check which drive you pick.
-
-Per the [install guide](https://www.ventoy.net/en/doc_start.html): download `ventoy-x.x.xx-windows.zip` from the project, unzip it, run `Ventoy2Disk.exe`, select your USB device and click Install. By default it lists only USB drives, to prevent mistakes.
-
 ### Linux
 
 **Installing Ventoy erases the USB drive.** Identify the drive carefully first, for example with `lsblk`, and make sure it is the USB stick and not an internal disk.
@@ -49,6 +43,12 @@ sudo sh Ventoy2Disk.sh -i /dev/sdX
 ```
 
 `-i` installs and fails if Ventoy is already on the disk. `-u` updates an existing install and keeps your files. The guide also describes a GTK or Qt app and a web interface for Linux.
+
+### Windows
+
+**Installing Ventoy erases the USB drive it is installed to.** Back up anything on it first and double-check which drive you pick.
+
+Per the [install guide](https://www.ventoy.net/en/doc_start.html): download `ventoy-x.x.xx-windows.zip` from the project, unzip it, run `Ventoy2Disk.exe`, select your USB device and click Install. By default it lists only USB drives, to prevent mistakes.
 
 ### macOS
 

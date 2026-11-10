@@ -28,6 +28,10 @@ It is one of two backup listings. [restic](/tools/restic/) is a command-line-fir
 
 *Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
+### Linux
+
+The guide lists an APT repository for Debian and Ubuntu (it covers both the command line tool and KopiaUI) and Docker images. Follow its Linux section for the repository setup. We don't copy those steps here so they stay current.
+
 ### Windows and macOS
 
 ```powershell
@@ -36,10 +40,6 @@ winget install Kopia.KopiaUI
 ```
 
 The [installation guide](https://kopia.io/docs/installation/) also offers Scoop (`scoop bucket add kopia https://github.com/kopia/scoop-bucket.git` then `scoop install kopia`), a `KopiaUI-Setup` installer for Windows, and Homebrew on macOS (`brew install kopia` for the CLI, `brew install --cask kopiaui` for the app).
-
-### Linux
-
-The guide lists an APT repository for Debian and Ubuntu (it covers both the command line tool and KopiaUI) and Docker images. Follow its Linux section for the repository setup. We don't copy those steps here so they stay current.
 
 ## First steps
 

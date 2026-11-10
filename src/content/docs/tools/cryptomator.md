@@ -27,15 +27,15 @@ This listing covers the desktop app in this repository. The README says the proj
 
 *Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
-### Windows, macOS and Linux
+### Linux, Windows and macOS
 
-Download the installer for your system from [cryptomator.org/downloads](https://cryptomator.org/downloads/) and run it. The Flathub package is verified by its publisher:
+The Flathub package is verified by its publisher:
 
 ```bash
 flatpak install flathub org.cryptomator.Cryptomator
 ```
 
-Homebrew has a cask for it. That is Homebrew's packaging, not the project's own:
+Or download the installer for your system from [cryptomator.org/downloads](https://cryptomator.org/downloads/) and run it. Homebrew has a cask for it. That is Homebrew's packaging, not the project's own:
 
 ```bash
 brew install --cask cryptomator

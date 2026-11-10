@@ -28,6 +28,14 @@ There are two versions. The file-based version is the established one. The READM
 
 *Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
+### Linux
+
+The download page offers an AppImage and recommends AppImageLauncher for desktop integration. The Flathub package is verified by its publisher:
+
+```bash
+flatpak install flathub com.logseq.Logseq
+```
+
 ### Windows and macOS
 
 Download from [logseq.com/downloads](https://logseq.com/downloads).
@@ -36,14 +44,6 @@ Homebrew has a cask for it. That is Homebrew's packaging, not the project's own:
 
 ```bash
 brew install --cask logseq
-```
-
-### Linux
-
-The download page offers an AppImage and recommends AppImageLauncher for desktop integration. The Flathub package is verified by its publisher:
-
-```bash
-flatpak install flathub com.logseq.Logseq
 ```
 
 ## First steps

@@ -29,7 +29,7 @@ The project's pyproject.toml declares GPL-2.0-only. [Fava](/tools/fava/) adds a 
 
 *Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
-### pip (Windows, macOS, Linux)
+### pip (Linux, Windows, macOS)
 
 Beancount is a Python package and needs a working Python 3 (the [install guide](https://beancount.github.io/docs/installing_beancount/) names the minimum version):
 
@@ -37,9 +37,9 @@ Beancount is a Python package and needs a working Python 3 (the [install guide](
 pip install beancount
 ```
 
-### Homebrew and distro packages
+### Distro packages and Homebrew
 
-Homebrew has a `beancount` formula, and Debian and Ubuntu have a `beancount` package. Both are third-party packaging and can lag behind the project's own release.
+Debian and Ubuntu have a `beancount` package, and Homebrew has a `beancount` formula. Both are third-party packaging and can lag behind the project's own release.
 
 ```bash
 brew install beancount

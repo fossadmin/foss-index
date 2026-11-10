@@ -6,7 +6,7 @@ const browseDefinitions = [
   { name: "Work & organize", categories: ["Finance", "Productivity", "Notes", "Documents", "Bookmarks", "Calendar & Contacts", "Utilities", "Reading"] },
   { name: "Files & sharing", categories: ["Collaboration", "File Sync", "Backup"] },
   { name: "Media & photos", categories: ["Media", "Photos", "Creative"] },
-  { name: "Home", categories: ["Home", "Home automation"] },
+  { name: "Home & auto", categories: ["Home", "Home automation"] },
   { name: "Privacy & access", categories: ["Passwords", "Networking", "Security", "Communication"] },
   { name: "Servers & monitoring", categories: ["Infrastructure", "Dashboard", "Monitoring", "Notifications", "Analytics", "Development"] },
 ];

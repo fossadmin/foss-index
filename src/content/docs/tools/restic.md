@@ -27,16 +27,16 @@ Choose [Kopia](/tools/kopia/) instead if you want a graphical app.
 
 *Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
-### macOS and Linux
+### Linux and macOS
 
 From the [installation docs](https://restic.readthedocs.io/en/stable/020_installation.html). Choose the one line for your system. Do not run them all:
 
 ```bash
-brew install restic      # macOS
 apt-get install restic   # Debian
 dnf install restic       # Fedora
 pacman -S restic         # Arch
 zypper install restic    # openSUSE
+brew install restic      # macOS
 ```
 
 Distribution packages can be older than the current release. The page also covers a Docker image and downloading the binary.

@@ -29,6 +29,14 @@ The license is the Mozilla Public License 2.0, as stated on the project's [licen
 
 *Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
+### Linux
+
+The download page offers deb and rpm archives. Many distributions also ship LibreOffice in their own repositories. The Flathub package is verified by its publisher:
+
+```bash
+flatpak install flathub org.libreoffice.LibreOffice
+```
+
 ### Windows and macOS
 
 Download from [libreoffice.org/download](https://www.libreoffice.org/download/download-libreoffice/). Pick the build for your processor: x86-64 or ARM64 on Windows, Apple Silicon or Intel on macOS.
@@ -37,14 +45,6 @@ Homebrew has a cask for it. That is Homebrew's packaging, not the project's own:
 
 ```bash
 brew install --cask libreoffice
-```
-
-### Linux
-
-The download page offers deb and rpm archives. Many distributions also ship LibreOffice in their own repositories. The Flathub package is verified by its publisher:
-
-```bash
-flatpak install flathub org.libreoffice.LibreOffice
 ```
 
 ## First steps

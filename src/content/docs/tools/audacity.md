@@ -27,6 +27,10 @@ The project's LICENSE file says Audacity is released under the GNU GPL version 3
 
 *Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
+### Linux
+
+The project's [Linux download page](https://www.audacityteam.org/download/linux/) lists the supported packages for each distribution. Use the option it gives for yours.
+
 ### Windows and macOS
 
 Download the installer from [audacityteam.org/download](https://www.audacityteam.org/download/) and run it.
@@ -36,10 +40,6 @@ Homebrew has a cask for it. That is Homebrew's packaging, not the project's own:
 ```bash
 brew install --cask audacity
 ```
-
-### Linux
-
-The project's [Linux download page](https://www.audacityteam.org/download/linux/) lists the supported packages for each distribution. Use the option it gives for yours.
 
 ## First steps
 

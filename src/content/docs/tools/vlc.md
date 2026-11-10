@@ -25,16 +25,6 @@ VideoLAN's legal page says its software is under the GNU GPL version 2 or the LG
 
 *Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
-### Windows and macOS
-
-Download from [videolan.org/vlc](https://www.videolan.org/vlc/).
-
-Homebrew has a cask for it. That is Homebrew's packaging, not the project's own:
-
-```bash
-brew install --cask vlc
-```
-
 ### Linux
 
 VideoLAN's [Ubuntu page](https://www.videolan.org/vlc/download-ubuntu.html) says to search for vlc in the graphical software centre, or use:
@@ -44,6 +34,16 @@ sudo snap install vlc
 ```
 
 Other distributions package VLC in their own repositories.
+
+### Windows and macOS
+
+Download from [videolan.org/vlc](https://www.videolan.org/vlc/).
+
+Homebrew has a cask for it. That is Homebrew's packaging, not the project's own:
+
+```bash
+brew install --cask vlc
+```
 
 ## First steps
 
