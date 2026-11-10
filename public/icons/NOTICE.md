@@ -253,12 +253,6 @@ Repository license texts are shipped under licenses/ with project-specific filen
 - Repository license: GPL-3.0-or-later; a code license does not grant rights in the mark, which belongs to the project
 - Changes: none
 
-## joplin.svg
-- Project: Joplin
-- Source: https://github.com/laurent22/joplin/blob/9b11538a0e2272d8be1b75afe412291508f2df5c/Assets/JoplinIcon.svg
-- Repository license: AGPL-3.0-or-later; a code license does not grant rights in the mark, which belongs to the project
-- Changes: none
-
 ## kdenlive.svg
 - Project: Kdenlive
 - Source: https://github.com/KDE/kdenlive/blob/19da23183a3990c421ec6892ee6ee4ed284ee071/data/icons/sc-apps-kdenlive.svg

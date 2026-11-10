@@ -2,7 +2,6 @@
 title: "Joplin"
 description: "Note-taking apps with sync, in Markdown."
 category: Notes
-icon: joplin.svg
 mark: JP
 repository: https://github.com/laurent22/joplin
 license: AGPL-3.0-or-later
