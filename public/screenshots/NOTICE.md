@@ -163,6 +163,13 @@ screenshot is not a production review of it.
 - Terms: our own capture of the running app; the repository's Assets/LICENSE covers the project's own asset files, not a capture we made ourselves
 - Changes: window captured as-is, the first-run notice bar at the bottom cropped out
 - What it shows: the welcome notebook with the importing/exporting note.
+## kali-2021-2-xfce.webp
+- Project: Kali Linux
+- Source: https://commons.wikimedia.org/wiki/File:Kali_Linux_2021.2.png
+- Author: Purpurreiher, July 27, 2021
+- License: GPL-2.0-or-later, as stated on the Commons file page (/screenshots/licenses/LICENSE-GPL-2.0.txt)
+- Changes: resized from 1920 by 1080 to 1280 by 720 and recompressed to WebP; no cropping or other edits
+- What it shows: Kali Linux 2021.2 Xfce desktop. Historical screenshot, not current 2026.3 or our install. The Kali marks remain OffSec trademarks; no endorsement implied.
 ## karakeep.webp
 - Official screenshot from the karakeep repository (screenshots/homepage.png), licensed AGPL-3.0. Shows v0.23.1.
 ## kdenlive.webp

@@ -145,6 +145,11 @@ Nothing was redrawn or substituted.
 - Source: https://github.com/jellyfin/jellyfin-ux/blob/69a2b7b1237732a134dd501ff55b9404cf2d1601/branding/SVG/icon-transparent.svg
 - License: Creative Commons Attribution-ShareAlike 4.0 International (licenses/LICENSE-CC-BY-SA-4.0.txt), the license the Jellyfin project publishes for its branding; copyright the Jellyfin contributors
 - Changes: none
+## kali.svg, kali-dark.svg
+- Project: Kali Linux
+- Source: Kali/Logomark/kali-dragon-black.svg and kali-dragon-white.svg in the official press pack, commit 360c018b5cf65179ad3883d393b8ccbdfa674bc7 (https://gitlab.com/kalilinux/documentation/press-pack/-/archive/main/press-pack-main.zip)
+- Terms: Kali Linux is a trademark of OffSec; identifying use under https://www.kali.org/docs/policy/trademark/ . No affiliation or endorsement implied. No code license is inferred for the marks.
+- Changes: none; official black mark in light mode and official white variant in dark mode
 ## karakeep.svg, karakeep-dark.svg
 - Project: Karakeep
 - Source: https://github.com/karakeep-app/karakeep/blob/8b2c2bac09ccaf24eea4740c87990887b0a20aec/apps/landing/public/icons/logo-icon.svg and logo-icon-dark.svg

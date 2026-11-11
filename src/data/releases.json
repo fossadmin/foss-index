@@ -487,5 +487,12 @@
     "url": "https://github.com/hargata/lubelog/releases/tag/v1.7.4",
     "manual": true,
     "checkedOn": "2026-11-10"
+  },
+  "gitlab.com/kalilinux/build-scripts/live-build-config": {
+    "version": "2026.3",
+    "date": "2026-10-26",
+    "url": "https://www.kali.org/blog/kali-linux-2026-3-release/",
+    "manual": true,
+    "checkedOn": "2026-11-10"
   }
 }
