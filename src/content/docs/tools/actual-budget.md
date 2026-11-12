@@ -8,6 +8,7 @@ repository: https://github.com/actualbudget/actual
 license: MIT
 funding:
   githubSponsors: https://github.com/sponsors/actualbudget
+  openCollective: https://opencollective.com/actual
 dripsEligible: false
 nixosModule: services.actual
 managedHosting: false
@@ -30,6 +31,33 @@ is available; it is not a claim that every server feature is encrypted.
 Bank connections are optional and depend on external providers, coverage and
 provider terms. You can start with manual entries or file imports instead.
 A budget deserves both exports and backups, not just a running container.
+
+## Try it and keep a way out
+
+Start with the [official demo](https://demo.actualbudget.org/) and sample data,
+not your financial history. The [desktop app](https://actualbudget.org/docs/install/)
+is a server-optional way to learn the workflow and includes automatic local backups.
+
+The standalone browser-only route is different: clearing browser data can erase
+your budget. Upstream warns against that route for long-term use. Export after
+every session if you use it; do not confuse it with a backed-up sync server.
+
+Before moving real data:
+
+- Check the [migration guide](https://actualbudget.org/docs/migration/) for your
+  old app. Whole-budget migration and transaction-file import are different;
+  do not assume every account, rule or attachment will transfer.
+- In Actual, use Settings → Export data to keep an Actual budget ZIP. Keep a
+  separate copy away from the server or browser. This is an Actual restore
+  format, not a promise that another finance app can read it.
+- Follow the [restore guide](https://actualbudget.org/docs/backup-restore/restore)
+  to import that ZIP as an Actual file. Verify the imported copy before removing
+  the original. Keep server data backups as well as budget exports.
+
+Sources checked November 12, 2026: [installation](https://actualbudget.org/docs/install/),
+[export/backup](https://actualbudget.org/docs/backup-restore/backup),
+[restore](https://actualbudget.org/docs/backup-restore/restore) and migration above.
+No migration, export or restore was performed for this listing.
 
 ## Quick start
 

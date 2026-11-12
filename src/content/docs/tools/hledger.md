@@ -51,6 +51,16 @@ scoop install hledger
 
 The install page also lists a WinGet package and the official Windows binaries.
 
+### NixOS
+
+nixpkgs packages hledger as `hledger` (source: [pkgs/top-level/all-packages.nix](https://github.com/NixOS/nixpkgs/blob/8e246c66fe7112839781b2200b017f0a587d25d3/pkgs/top-level/all-packages.nix)):
+
+```nix
+environment.systemPackages = [ pkgs.hledger ];
+```
+
+Rebuild with `sudo nixos-rebuild switch`, then run `hledger bal` on your journal from a terminal.
+
 ## First steps
 
 Make a journal file, for example `~/.hledger.journal`, which hledger reads by default:

@@ -41,6 +41,16 @@ Homebrew has a cask for it. That is Homebrew's packaging, not the project's own:
 brew install --cask audacity
 ```
 
+### NixOS
+
+nixpkgs packages Audacity as `audacity` (source: [pkgs/by-name/au/audacity/package.nix](https://github.com/NixOS/nixpkgs/blob/8e246c66fe7112839781b2200b017f0a587d25d3/pkgs/by-name/au/audacity/package.nix)):
+
+```nix
+environment.systemPackages = [ pkgs.audacity ];
+```
+
+Rebuild with `sudo nixos-rebuild switch`, then launch Audacity from the application menu.
+
 ## First steps
 
 - Open Audacity. The project's built-in guide is under **Help > Quick Help**.

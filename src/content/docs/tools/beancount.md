@@ -45,6 +45,16 @@ Debian and Ubuntu have a `beancount` package, and Homebrew has a `beancount` for
 brew install beancount
 ```
 
+### NixOS
+
+nixpkgs packages Beancount as `beancount` (source: [pkgs/development/python-modules/beancount/default.nix](https://github.com/NixOS/nixpkgs/blob/8e246c66fe7112839781b2200b017f0a587d25d3/pkgs/development/python-modules/beancount/default.nix)):
+
+```nix
+environment.systemPackages = [ pkgs.beancount ];
+```
+
+Rebuild with `sudo nixos-rebuild switch`, then run `bean-check` on your ledger file from a terminal.
+
 ## First steps
 
 Create a text file called `first.beancount` with the project's minimal example (two accounts and one transaction):

@@ -39,6 +39,16 @@ flatpak install flathub org.kde.kdenlive
 
 Installers are on the [Kdenlive download page](https://kdenlive.org/download/).
 
+### NixOS
+
+nixpkgs packages Kdenlive as `kdePackages.kdenlive` (source: [pkgs/kde/gear/kdenlive/default.nix](https://github.com/NixOS/nixpkgs/blob/8e246c66fe7112839781b2200b017f0a587d25d3/pkgs/kde/gear/kdenlive/default.nix)):
+
+```nix
+environment.systemPackages = [ pkgs.kdePackages.kdenlive ];
+```
+
+Rebuild with `sudo nixos-rebuild switch`, then launch Kdenlive from the application menu.
+
 ## First steps
 
 - Make a folder for the project and put your video clips in it.

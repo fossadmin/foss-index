@@ -1,6 +1,6 @@
 ---
-title: "Signal Desktop"
-description: "Desktop client for the Signal private messenger."
+title: "Signal"
+description: "Private messaging and calls, with phone apps and a linked desktop client."
 category: Communication
 icon: signal-desktop.svg
 iconTile: true
@@ -22,7 +22,7 @@ screenshot:
   captionNote: "Image from the Signal download page, showing Signal Desktop on macOS with the project's own sample chats. The page states no reuse terms."
 ---
 
-Signal Desktop is the open-source desktop app for Signal, a private messenger. It links to your Signal account on a phone.
+Signal is a private messenger with open-source phone and desktop apps. This page keeps the existing desktop setup instructions and source link; the platform section links the Android and iOS clients separately. Signal Desktop links to your Signal account on a phone.
 
 The client code is open source. The messaging service it connects to is run by Signal, so using the app means using their service.
 
@@ -53,6 +53,16 @@ Homebrew has a cask for it. That is Homebrew's packaging, not the project's own:
 ```bash
 brew install --cask signal
 ```
+
+### NixOS
+
+nixpkgs packages Signal as `signal-desktop` (source: [pkgs/by-name/si/signal-desktop/package.nix](https://github.com/NixOS/nixpkgs/blob/8e246c66fe7112839781b2200b017f0a587d25d3/pkgs/by-name/si/signal-desktop/package.nix)):
+
+```nix
+environment.systemPackages = [ pkgs.signal-desktop ];
+```
+
+Rebuild with `sudo nixos-rebuild switch`, then launch Signal from the application menu and link your phone.
 
 ## First steps
 

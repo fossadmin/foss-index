@@ -1,16 +1,9 @@
 import { getCollection } from "astro:content";
 import releases from "../data/releases.json";
+import platformSupport from "../data/platform-support.json";
 export const slugify = (s: string) =>
   s.toLowerCase().replace(/[^a-z0-9]+/g, "-");
-const browseDefinitions = [
-  { name: "Operating systems", categories: ["Operating systems"] },
-  { name: "Home & auto", categories: ["Home", "Home automation"] },
-  { name: "Media & photos", categories: ["Media", "Photos", "Creative"] },
-  { name: "Work & organize", categories: ["Finance", "Productivity", "Notes", "Documents", "Bookmarks", "Calendar & Contacts", "Utilities", "Reading"] },
-  { name: "Files & sharing", categories: ["Collaboration", "File Sync", "Backup"] },
-  { name: "Privacy & access", categories: ["Passwords", "Networking", "Security", "Communication"] },
-  { name: "Servers & monitoring", categories: ["Infrastructure", "Dashboard", "Monitoring", "Notifications", "Analytics", "Development"] },
-];
+import { browseDefinitions, broadCategory, tagsFor } from "./taxonomy.mjs";
 export function browseSlugForCategory(category: string) {
   const group = browseDefinitions.find((g) => g.categories.includes(category));
   if (!group) throw new Error(`No browse group for category: ${category}`);
@@ -43,6 +36,9 @@ export async function catalog() {
       )[repo];
       return {
         ...entry,
+        tags: tagsFor(entry.data),
+        broadCategory: broadCategory(entry.data.category!),
+        platformRecord: (platformSupport as Record<string, {checkedOn:string; note:string; platforms:{name:string; kind:string; url:string}[]}>)[entry.id],
         href: `${import.meta.env.BASE_URL}${entry.id}/`,
         release,
         license: release?.license ?? entry.data.license,
@@ -63,5 +59,7 @@ export async function catalog() {
   }));
   // New categories need a deliberate placement instead of disappearing from Browse.
   tools.forEach((tool) => browseSlugForCategory(tool.data.category!));
-  return { tools, categories, groups };
+  const tags = [...new Set(tools.flatMap(tool => tool.tags))].sort().map(name => ({ name, slug: slugify(name), count: tools.filter(tool => tool.tags.includes(name)).length }));
+  const platforms = [...new Set(tools.flatMap(tool => tool.platformRecord?.platforms.map(row => row.name) ?? []))].sort().map(name => ({ name, slug: slugify(name), count: tools.filter(tool => tool.platformRecord?.platforms.some(row => row.name === name)).length }));
+  return { tools, categories, groups, tags, platforms };
 }

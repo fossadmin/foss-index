@@ -47,6 +47,16 @@ Homebrew has a cask for it. That is Homebrew's packaging, not the project's own:
 brew install --cask krita
 ```
 
+### NixOS
+
+nixpkgs packages Krita as `krita` (source: [pkgs/by-name/kr/krita/package.nix](https://github.com/NixOS/nixpkgs/blob/8e246c66fe7112839781b2200b017f0a587d25d3/pkgs/by-name/kr/krita/package.nix)):
+
+```nix
+environment.systemPackages = [ pkgs.krita ];
+```
+
+Rebuild with `sudo nixos-rebuild switch`, then launch Krita from the application menu.
+
 ## First steps
 
 - On first start Krita opens with no document. Use **File > New** (Ctrl+N), open the **Custom Document** section and pick a size such as A4 at 300 ppi.

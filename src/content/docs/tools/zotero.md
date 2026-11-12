@@ -39,6 +39,16 @@ Homebrew has a cask for it. That is Homebrew's packaging, not the project's own:
 brew install --cask zotero
 ```
 
+### NixOS
+
+nixpkgs packages Zotero as `zotero` (source: [pkgs/by-name/zo/zotero/package.nix](https://github.com/NixOS/nixpkgs/blob/8e246c66fe7112839781b2200b017f0a587d25d3/pkgs/by-name/zo/zotero/package.nix)):
+
+```nix
+environment.systemPackages = [ pkgs.zotero ];
+```
+
+Rebuild with `sudo nixos-rebuild switch`, then launch Zotero from the application menu.
+
 ## First steps
 
 - Also install the **Zotero Connector** for your browser from the download page. It saves papers, pages and books to Zotero in one click.

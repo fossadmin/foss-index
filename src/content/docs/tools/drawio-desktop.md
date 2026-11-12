@@ -42,6 +42,16 @@ brew install --cask drawio
 
 The desktop app works without an internet connection, which draw.io's [offline guide](https://www.drawio.com/docs/manual/editor/offline/) recommends when data protection matters. The web editor is a separate, online route.
 
+### NixOS
+
+nixpkgs packages draw.io as `drawio` (source: [pkgs/by-name/dr/drawio/package.nix](https://github.com/NixOS/nixpkgs/blob/8e246c66fe7112839781b2200b017f0a587d25d3/pkgs/by-name/dr/drawio/package.nix)):
+
+```nix
+environment.systemPackages = [ pkgs.drawio ];
+```
+
+Rebuild with `sudo nixos-rebuild switch`, then launch draw.io from the application menu.
+
 ## First steps
 
 - Start draw.io Desktop and choose to create a new diagram (or open a `.drawio` file).

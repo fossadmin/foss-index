@@ -47,6 +47,16 @@ Homebrew has a cask for it. That is Homebrew's packaging, not the project's own:
 brew install --cask libreoffice
 ```
 
+### NixOS
+
+nixpkgs packages LibreOffice as `libreoffice` (source: [pkgs/applications/office/libreoffice/default.nix](https://github.com/NixOS/nixpkgs/blob/8e246c66fe7112839781b2200b017f0a587d25d3/pkgs/applications/office/libreoffice/default.nix)):
+
+```nix
+environment.systemPackages = [ pkgs.libreoffice ];
+```
+
+Rebuild with `sudo nixos-rebuild switch`, then launch the LibreOffice apps from the application menu.
+
 ## First steps
 
 - Open LibreOffice. The Start Center shows Writer (documents), Calc (spreadsheets), Impress (presentations), Draw and others.

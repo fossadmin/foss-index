@@ -46,6 +46,16 @@ Homebrew has a cask for it. That is Homebrew's packaging, not the project's own:
 brew install --cask ultimaker-cura
 ```
 
+### NixOS
+
+nixpkgs packages the official UltiMaker Cura AppImage as `cura-appimage` (source: [pkgs/by-name/cu/cura-appimage/package.nix](https://github.com/NixOS/nixpkgs/blob/8e246c66fe7112839781b2200b017f0a587d25d3/pkgs/by-name/cu/cura-appimage/package.nix)):
+
+```nix
+environment.systemPackages = [ pkgs.cura-appimage ];
+```
+
+Rebuild with `sudo nixos-rebuild switch`, then launch Cura from the application menu.
+
 ## First steps
 
 - On first start Cura asks you to add a printer. Choose your printer model from the list.

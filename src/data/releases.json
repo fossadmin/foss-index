@@ -3,14 +3,14 @@
     "version": "v2.37.2",
     "date": "2026-10-23T20:18:17Z",
     "url": "https://github.com/advplyr/audiobookshelf/releases/tag/v2.37.2",
-    "changelog": "#### Important: New authentication system was added in [v2.26.0](https://github.com/advplyr/audiobookshelf/releases/tag/v2.26.0). See https://github.com/advplyr/audiobookshelf/discussions/4460 for details.\r\n\r\n### Fixed\r\n\r\n- File copy and move fails with EPERM on some systems (e.g. TrueNAS) #5637 by @nichwall in #5668\r\n- RSS feed cover images not updating after cover change #5306 by @SharonZhu0122 in #5418\r\n- Audible search when API returns null products #5176 by @boqiaok in #5430\r\n- Upload crash when multipart form repeats file fields by @rtainaan in #5437\r\n- Debian package ships `audiobookshe…",
+    "changelog": "#### Important: New authentication system was added in [v2.26.0](https://github.com/advplyr/audiobookshelf/releases/tag/v2.26.0). See https://github.com/advplyr/audiobookshelf/discussions/4460 for details.\r\n\r\n### Fixed\r\n\r\n- File copy and move fails with EPERM on some systems (e.g. TrueNAS) #5637 by @nichwall in #5668\r\n- RSS feed cover images not updating after cover change #5306 by @SharonZhu0122 in #5418\r\n- Audible search when API returns null products #5176 by @boqiaok in #5430\r\n- Upload crash when multipart form repeats file fields by @rtainaan in #5437\r\n- Debian package ships `audiobookshe\u2026",
     "license": "GPL-3.0"
   },
   "caddyserver/caddy": {
     "version": "v2.11.9",
     "date": "2026-11-05T01:30:24Z",
     "url": "https://github.com/caddyserver/caddy/releases/tag/v2.11.9",
-    "changelog": "This is a quick follow-up on top of 2.11.8, to fix a regression it introduced and a few more security issues, mostly in FastCGI. It contains only fixes backported from master, plus a couple of small additions. **If you're on 2.11.8 and serve PHP, we recommend upgrading.**\r\n\r\n**Huge thank you to our sponsors for keeping the project alive with resources, and for our maintainers who triage and assist tirelessly in this relentless new age of AI.**\r\n\r\n## Highlights\r\n\r\n- **Fixed: PHP directory indexes (regression in 2.11.8).** A request for a directory with a trailing slash, like `/wp-admin/`, was m…",
+    "changelog": "This is a quick follow-up on top of 2.11.8, to fix a regression it introduced and a few more security issues, mostly in FastCGI. It contains only fixes backported from master, plus a couple of small additions. **If you're on 2.11.8 and serve PHP, we recommend upgrading.**\r\n\r\n**Huge thank you to our sponsors for keeping the project alive with resources, and for our maintainers who triage and assist tirelessly in this relentless new age of AI.**\r\n\r\n## Highlights\r\n\r\n- **Fixed: PHP directory indexes (regression in 2.11.8).** A request for a directory with a trailing slash, like `/wp-admin/`, was m\u2026",
     "license": "Apache-2.0"
   },
   "gotify/server": {
@@ -21,101 +21,101 @@
     "license": "MIT"
   },
   "grafana/grafana": {
-    "version": "v13.3.0",
-    "date": "2026-10-27T11:08:50Z",
-    "url": "https://github.com/grafana/grafana/releases/tag/v13.3.0",
-    "changelog": "[Download page](https://grafana.com/grafana/download/13.3.0)\n[What's new highlights](https://grafana.com/docs/grafana/latest/whatsnew/)\n\n### Security\n\n- Security: Fix CVE-2026-100105\n- Security: Fix CVE-2026-13719\n- Security: Fix CVE-2026-13720\n- Security: Fix CVE-2026-15577\n- Security: Fix CVE-2026-33374\n- Security: Fix CVE-2026-81841\n- Security: Fix CVE-2026-88858\n- Security: Fix CVE-2026-88967\n- Security: Fix CVE-2026-93294\n- Security: Fix CVE-2026-95502\n\n### Features and enhancements\n\n- **Access control:** reject global role creation in single-org mode (Enterprise)\n- **Alerting:** Add Acce…",
+    "version": "v13.3.1",
+    "date": "2026-11-10T21:31:44Z",
+    "url": "https://github.com/grafana/grafana/releases/tag/v13.3.1",
+    "changelog": "[Download page](https://grafana.com/grafana/download/13.3.1)\n[What's new highlights](https://grafana.com/docs/grafana/latest/whatsnew/)\n\n### Security\n\n- Security: Fix CVE-2026-102589\n- Security: Fix CVE-2026-107509\n- Security: Fix CVE-2026-110992\n- Security: Fix CVE-2026-111024\n- Security: Fix CVE-2026-13721\n- Security: Fix CVE-2026-14242\n\n### Features and enhancements\n\n- **DateTime:** Update moment-timezone and easy-tz for 2026 time zone changes [#136951](https://github.com/grafana/grafana/pull\u2026",
     "license": "AGPL-3.0"
   },
   "gethomepage/homepage": {
-    "version": "v2.7.0",
-    "date": "2026-10-23T15:10:35Z",
-    "url": "https://github.com/gethomepage/homepage/releases/tag/v2.7.0",
-    "changelog": "## What's Changed\r\n\r\n## 🚀 Features\r\n\r\n- Feature: add NetBird service widget (#7260)\r\n\r\n## 🐛 Fixes\r\n\r\n- Fix: prometheusmetric renders only the four metrics it queries (#7262)\r\n\r\n## 🧰 Maintenance\r\n\r\n- Chore: update base image to node 24 (#7277) @shamoon\r\n- Chore: Remove k3d development setup (#7276) @shamoon\r\n- Chore(deps): Bump ip-address from 10.7.2 to 10.7.4 (#7274) @[dependabot[bot]](https://github.com/apps/dependabot)\r\n- Chore(deps): Bump next from 16.3.8 to 16.4.1 (#7275) @[dependabot[bot]](https://github.com/apps/dependabot)\r\n- Chore(deps): Bump astral-sh/setup-uv from 10.2.0 to 10.3.0…",
+    "version": "v2.8.0",
+    "date": "2026-11-11T22:13:34Z",
+    "url": "https://github.com/gethomepage/homepage/releases/tag/v2.8.0",
+    "changelog": "## What's Changed\r\n\r\n## \ud83d\ude80 Features\r\n\r\n- Enhancement: add BookOrbit API key authentication support (#7339) @mehalter\r\n- Enhancement: use language in html document, consolidate normalize handler (#7313) @shamoon\r\n- Enhancement: sort Deluge leech progress by completion (#7304) @prashantsolanki3\r\n- Enhancement: add more optional fields to beszel widget (#7303) @remc0r\r\n- Enhancement: localize the sign-in page (#7293) @brushax\r\n- Enhancement: allow disabling quicklaunch (#7288) @shamoon\r\n- Enhanceme\u2026",
     "license": "GPL-3.0"
   },
   "immich-app/immich": {
-    "version": "v3.3.6",
-    "date": "2026-11-04T17:24:55Z",
-    "url": "https://github.com/immich-app/immich/releases/tag/v3.3.6",
-    "changelog": "Unfortunately we missed that onnxruntime enabled telemetry by default in a recent release, resulting in the ML container automatically sending anonymous metric data to Microsoft. We have now disabled it. Apologies to everyone that we did not catch this change immediately, and thanks to our community for flagging it!\r\n\r\n## What's Changed\r\n### 🐛 Bug fixes\r\n* fix(ml): disable onnxruntime telemetry by @mjkent in https://github.com/immich-app/immich/pull/32956\r\n\r\n## New Contributors\r\n* @mjkent made their first contribution in https://github.com/immich-app/immich/pull/32956\r\n\r\n**Full Changelog**: h…",
+    "version": "v3.4.1",
+    "date": "2026-11-11T18:27:16Z",
+    "url": "https://github.com/immich-app/immich/releases/tag/v3.4.1",
+    "changelog": "This patch release fixes various bugs. Notably, it also fixes the performance issues with shared links. \r\n\r\n## What's Changed\r\n### \ud83c\udf1f Enhancements\r\n* feat: futo backups 1.16.0 by @nutgood in https://github.com/immich-app/immich/pull/33216\r\n### \ud83d\udc1b Bug fixes\r\n* fix(server): map .hif to image/heif by @nornewman in https://github.com/immich-app/immich/pull/33167\r\n* fix(server): queue job status query by @jrasm91 in https://github.com/immich-app/immich/pull/33182\r\n* perf(server): shared links cover q\u2026",
     "license": "AGPL-3.0"
   },
   "jellyfin/jellyfin": {
     "version": "v12.4",
     "date": "2026-10-26T21:30:17Z",
     "url": "https://github.com/jellyfin/jellyfin/releases/tag/v12.4",
-    "changelog": "# :rocket: Jellyfin Server 12.4\n\nWe are pleased to announce the latest stable release of Jellyfin, version 12.4! This minor release brings several bugfixes to improve your Jellyfin experience. As always, please ensure you take a full backup before upgrading!\n\nDiscuss this release further [on our forums](https://forum.jellyfin.org/t-new-jellyfin-server-web-release-12-4).\n\n## Changelog (1)\n\n### 📈 General Changes\n* Update to .net 10.0.14 [PR #18535], by @crobibero",
+    "changelog": "# :rocket: Jellyfin Server 12.4\n\nWe are pleased to announce the latest stable release of Jellyfin, version 12.4! This minor release brings several bugfixes to improve your Jellyfin experience. As always, please ensure you take a full backup before upgrading!\n\nDiscuss this release further [on our forums](https://forum.jellyfin.org/t-new-jellyfin-server-web-release-12-4).\n\n## Changelog (1)\n\n### \ud83d\udcc8 General Changes\n* Update to .net 10.0.14 [PR #18535], by @crobibero",
     "license": "GPL-2.0"
   },
   "karakeep-app/karakeep": {
     "version": "v0.34.1",
     "date": "2026-10-22T06:42:02Z",
     "url": "https://github.com/karakeep-app/karakeep/releases/tag/v0.34.1",
-    "changelog": "This is a security release on top of 0.34.0. The docker images move from the pinned `node:24.18.1-slim` back to `node:24-slim` (currently Node 24.22.1) to pick up the [October 2026 Node.js security releases](https://nodejs.org/en/blog/vulnerability/october-2026-security-releases). Among other fixes, these patch a Brotli decoder out-of-bounds write (CVE-2026-111497) and several TLS certificate hostname validation bypasses (CVE-2026-105483, CVE-2026-106069, CVE-2026-106072). Thanks @eriktews for the fix (#3217)!\n\nThe node version was pinned in 0.33.2 because of the better-sqlite3 crash loop (#29…",
+    "changelog": "This is a security release on top of 0.34.0. The docker images move from the pinned `node:24.18.1-slim` back to `node:24-slim` (currently Node 24.22.1) to pick up the [October 2026 Node.js security releases](https://nodejs.org/en/blog/vulnerability/october-2026-security-releases). Among other fixes, these patch a Brotli decoder out-of-bounds write (CVE-2026-111497) and several TLS certificate hostname validation bypasses (CVE-2026-105483, CVE-2026-106069, CVE-2026-106072). Thanks @eriktews for the fix (#3217)!\n\nThe node version was pinned in 0.33.2 because of the better-sqlite3 crash loop (#29\u2026",
     "license": "AGPL-3.0"
   },
   "netbirdio/netbird": {
-    "version": "v0.82.0",
-    "date": "2026-10-29T13:56:14Z",
-    "url": "https://github.com/netbirdio/netbird/releases/tag/v0.82.0",
-    "changelog": "# Release Notes for v0.82.0\r\n\r\n## Highlights\r\n\r\n### 🛣️ Latency-aware HA routing that holds stable routes\r\n\r\nRouting peers in an HA group with equal metrics are meant to be chosen by latency, but the client used to sample latency only once, when the connection was set up, and moved the route on events that did not need it. Every switch between masquerading routing peers resets the TCP connections using the route, so SSH sessions and other long-lived flows dropped more often than they had to.\r\n\r\nThe client now samples the latency of connected routing peers continuously and smooths it, and moves…",
+    "version": "v0.83.0",
+    "date": "2026-11-12T15:52:11Z",
+    "url": "https://github.com/netbirdio/netbird/releases/tag/v0.83.0",
+    "changelog": "# Release Notes for v0.83.0\r\n\r\n## \u26a0\ufe0f Breaking changes: profile ownership and daemon access control\r\n\r\nEach profile now has an owner, and local users can control only their own profiles as the daemon has a new IPC authorization layer. Single-user desktops and headless peers registered with a setup key and auto-start (the default) need no action. They reconnect on their own after the upgrade. Act only if one of the cases below applies to you. [#7407](https://github.com/netbirdio/netbird/pull/7407)\u2026",
     "license": "BSD-3-Clause / AGPL-3.0"
   },
   "nextcloud/server": {
-    "version": "v33.0.10",
-    "date": "2026-10-15T08:37:28Z",
-    "url": "https://github.com/nextcloud/server/releases/tag/v33.0.10",
-    "changelog": "Maintenance release in the Nextcloud 33 series. Fixes include failing uploads when the URI does not match the session or share token, CSRF protection on the share accept endpoint, dashboard scrollbar contrast, CardDAV contact updates, and assorted sharing, tags and external-storage fixes. Full notes: https://github.com/nextcloud-releases/server/releases/tag/v33.0.10",
+    "version": "v33.0.11",
+    "date": "2026-11-12T17:21:37Z",
+    "url": "https://github.com/nextcloud/server/releases/tag/v33.0.11",
+    "changelog": "https://github.com/nextcloud-releases/server/releases/tag/v33.0.11",
     "license": "AGPL-3.0"
   },
   "paperless-ngx/paperless-ngx": {
     "version": "v3.4.2",
     "date": "2026-11-03T21:57:15Z",
     "url": "https://github.com/paperless-ngx/paperless-ngx/releases/tag/v3.4.2",
-    "changelog": "## paperless-ngx 3.4.2\r\n\r\n### Bug Fixes\r\n\r\n- Fix: mobile save button display obsessing @shamoon ([#14676](https://github.com/paperless-ngx/paperless-ngx/pull/14676))\r\n- Fix: make index and llmindex init wait for tesseract language install @stumpylog ([#14670](https://github.com/paperless-ngx/paperless-ngx/pull/14670))\r\n- Fix: prevent loss of save view name on save + close @shamoon ([#14667](https://github.com/paperless-ngx/paperless-ngx/pull/14667))\r\n- Fixhancement: doc detail mobile ux tweaks @shamoon ([#14664](https://github.com/paperless-ngx/paperless-ngx/pull/14664))\r\n- Fix: Bumps filelock…",
+    "changelog": "## paperless-ngx 3.4.2\r\n\r\n### Bug Fixes\r\n\r\n- Fix: mobile save button display obsessing @shamoon ([#14676](https://github.com/paperless-ngx/paperless-ngx/pull/14676))\r\n- Fix: make index and llmindex init wait for tesseract language install @stumpylog ([#14670](https://github.com/paperless-ngx/paperless-ngx/pull/14670))\r\n- Fix: prevent loss of save view name on save + close @shamoon ([#14667](https://github.com/paperless-ngx/paperless-ngx/pull/14667))\r\n- Fixhancement: doc detail mobile ux tweaks @shamoon ([#14664](https://github.com/paperless-ngx/paperless-ngx/pull/14664))\r\n- Fix: Bumps filelock\u2026",
     "license": "GPL-3.0"
   },
   "plausible/analytics": {
     "version": "v3.2.1",
     "date": "2026-05-15T09:15:56Z",
     "url": "https://github.com/plausible/analytics/releases/tag/v3.2.1",
-    "changelog": "# Security related update\r\n\r\nThis patch release **fixes a security vulnerability**[`CVE-2026-8467` / `GHSA-55hg-8qxv-qj4p`](https://github.com/phenixdigital/phoenix_storybook/security/advisories/GHSA-55hg-8qxv-qj4p) affecting the following versions of Plausible Community Edition (image: ghcr.io/plausible/community-edition):\r\nTags:\r\n- v3.2\r\n- v3.2.0\r\n- v3\r\n- v3.2.0-rc.0\r\n- v3.1\r\n- v3.1.0\r\n- v3.1.0-rc.1\r\n- v3.1.0-rc.0\r\n- v3.0.1\r\n- v3.0\r\n- v3.0.0\r\n- v3.0.0-rc.6\r\n- v3.0.0-rc.5\r\n- v3.0.0-rc.4\r\n- v3.0.0-rc.3\r\n- v3.0.0-rc.2\r\n- v3.0.0-rc.1\r\n- v3.0.0-rc.0\r\n\r\nThe affected versions expose a `HTTP \"/story…",
+    "changelog": "# Security related update\r\n\r\nThis patch release **fixes a security vulnerability**[`CVE-2026-8467` / `GHSA-55hg-8qxv-qj4p`](https://github.com/phenixdigital/phoenix_storybook/security/advisories/GHSA-55hg-8qxv-qj4p) affecting the following versions of Plausible Community Edition (image: ghcr.io/plausible/community-edition):\r\nTags:\r\n- v3.2\r\n- v3.2.0\r\n- v3\r\n- v3.2.0-rc.0\r\n- v3.1\r\n- v3.1.0\r\n- v3.1.0-rc.1\r\n- v3.1.0-rc.0\r\n- v3.0.1\r\n- v3.0\r\n- v3.0.0\r\n- v3.0.0-rc.6\r\n- v3.0.0-rc.5\r\n- v3.0.0-rc.4\r\n- v3.0.0-rc.3\r\n- v3.0.0-rc.2\r\n- v3.0.0-rc.1\r\n- v3.0.0-rc.0\r\n\r\nThe affected versions expose a `HTTP \"/story\u2026",
     "license": "AGPL-3.0"
   },
   "Kozea/Radicale": {
-    "version": "v3.9.0",
-    "date": "2026-10-25T17:32:33Z",
-    "url": "https://github.com/Kozea/Radicale/releases/tag/v3.9.0",
-    "changelog": "# Fixes (Security)\r\n* Fix: auth/login-cache: partially missing thread-safety\r\n* Fix: auth/login-cache: add lock around remove expired entry\r\n* Fix: sharing/delete collection: fix uncatched collection URI without trailing '/'\r\n* Fix: auth/sharing+rights: refactoring \"user_groups\" handling to be thread-safe\r\n\r\n# Fixes\r\n* Fix: REPORT expand: non-recurring events with a TZID were time-range filtered by their local time read as UTC\r\n* Fix: typo in /.mobileconfig\r\n* Fix: empty text-match filter no longer fails the REPORT\r\n* Fix: WebUI/Sharing: property overrides on transformed shares\r\n* Fix: PUT req…",
+    "version": "v3.9.1",
+    "date": "2026-11-12T08:51:09Z",
+    "url": "https://github.com/Kozea/Radicale/releases/tag/v3.9.1",
+    "changelog": "# Fixes (Security)\r\n* Fix: storage/hook: escape `$` on all placeholder values received from external\r\n  *  credits to @sdushantha for report\r\n* Fix: auth: reject empty login earlier and empty password on all external verification types\r\n  *  credits to @sdushantha for report\r\n   \r\n# Fixes\r\n* Fix: [sharing] owner cannot change the user or the mapped collection of a map-based share if not permitted to create it\r\n* Fix: doc of rights permissions `Mm` and `Tt` in reference config and SHARING.md\r\n* F\u2026",
     "license": "GPL-3.0"
   },
   "syncthing/syncthing": {
     "version": "v2.1.7",
     "date": "2026-10-21T06:09:14Z",
     "url": "https://github.com/syncthing/syncthing/releases/tag/v2.1.7",
-    "changelog": "## What's Changed\r\n\r\nBuilt with Go 1.27.3.\r\n\r\n### Fixes\r\n* fix: handle missing max-sequence file entries by @calmh in https://github.com/syncthing/syncthing/pull/10912\r\n* fix(sqlite): avoid early garbage collection of deleted recv-enc files by @calmh in https://github.com/syncthing/syncthing/pull/10916\r\n* fix(sqlite): do not generate unbounded prepared statements (ref #10913) by @calmh in https://github.com/syncthing/syncthing/pull/10915\r\n* fix(discover): skip unnecessary identical global announce updates; obey retry-after by @calmh in https://github.com/syncthing/syncthing/pull/10918\r\n* fix(p…",
+    "changelog": "## What's Changed\r\n\r\nBuilt with Go 1.27.3.\r\n\r\n### Fixes\r\n* fix: handle missing max-sequence file entries by @calmh in https://github.com/syncthing/syncthing/pull/10912\r\n* fix(sqlite): avoid early garbage collection of deleted recv-enc files by @calmh in https://github.com/syncthing/syncthing/pull/10916\r\n* fix(sqlite): do not generate unbounded prepared statements (ref #10913) by @calmh in https://github.com/syncthing/syncthing/pull/10915\r\n* fix(discover): skip unnecessary identical global announce updates; obey retry-after by @calmh in https://github.com/syncthing/syncthing/pull/10918\r\n* fix(p\u2026",
     "license": "MPL-2.0"
   },
   "umami-software/umami": {
-    "version": "v3.4.1",
-    "date": "2026-10-23T08:26:44Z",
-    "url": "https://github.com/umami-software/umami/releases/tag/v3.4.1",
-    "changelog": "Umami `v3.4.1` is mainly a **security hotfix**. It updates vulnerable dependencies and the Docker base image. All self-hosted users should upgrade.\n\n## Security\n\n- Upgraded Next.js to `16.4.2` (from `16.3.4` in v3.4.0). This fixes a critical RCE in `next/og`, SSRF in image optimization, cache poisoning, and an information disclosure issue. #4645\n- Upgraded React and React DOM to `19.3.1`.\n- Pinned the Docker base image to Node `22.23.4-alpine`, which includes the October 2026 Node.js security fixes. Rebuild or re-pull your images to pick this up. #4657\n- Upgraded `@modelcontextprotocol/server`…",
+    "version": "v3.5.0",
+    "date": "2026-11-12T02:57:20Z",
+    "url": "https://github.com/umami-software/umami/releases/tag/v3.5.0",
+    "changelog": "Umami `v3.5.0` adds **browser error tracking**, improved replay navigation, and fixes across tracking, reporting, and sharing.\r\n\r\n## New features\r\n\r\n### Browser error tracking\r\n\r\nCapture JavaScript errors alongside your analytics and investigate affected visits.\r\n\r\n- Automatically capture uncaught exceptions and unhandled promise rejections with `data-errors=\"true\"`\r\n- Capture handled errors with `umami.captureException()`\r\n- Group errors into issues with stack traces, occurrence counts, and ses\u2026",
     "license": "MIT"
   },
   "louislam/uptime-kuma": {
-    "version": "2.5.9",
-    "date": "2026-10-31T16:03:58Z",
-    "url": "https://github.com/louislam/uptime-kuma/releases/tag/2.5.9",
-    "changelog": "\r\n### 🐞 Bug Fixes\r\n\r\n- #8082 fix: runtime timeout fallback used milliseconds for a seconds field \r\n- #8081 fix: reset push monitor retries from the last stored heartbeat \r\n- #8079 fix: remove duplicated refresh timer on status page \r\n- #8064 fix: display recurring maintenance in its configured timezone (Thanks @kuxiaowo)\r\n\r\n### ⬆️ Security Fixes\r\n\r\n- GHSA-86ch-2247-gr56 fix: RSS cache poisoning (Thanks @the-arma-of-owl)\r\n- #8080 chore: drop outdated apicache, migrate to http-cache-semantics (related to the above issue)\r\n- #8050 chore: Update dependencies \r\n\r\n",
+    "version": "2.5.11",
+    "date": "2026-11-12T09:20:06Z",
+    "url": "https://github.com/louislam/uptime-kuma/releases/tag/2.5.11",
+    "changelog": "### \u2b06\ufe0f Security Fixes\r\n- #8094 chore: Update dependencies \r\n- GHSA-437w-j82f-9vjh fix: [Admin Only] RCE via an upstream package's regression (Details will be revealed after 7 days) (Thanks @Tomer-PL)\r\n",
     "license": "MIT"
   },
   "dani-garcia/vaultwarden": {
     "version": "1.37.5",
     "date": "2026-11-01T22:16:50Z",
     "url": "https://github.com/dani-garcia/vaultwarden/releases/tag/1.37.5",
-    "changelog": "## Security Fixes\r\nThis release contains security fixes for the following advisories. We strongly advise updating as soon as possible.\r\n- Website icons [[GHSA-x9cq-f669-vrr4]](https://github.com/dani-garcia/vaultwarden/security/advisories/GHSA-x9cq-f669-vrr4) (**Medium**, 5.3)\r\n- Emergency access [[GHSA-9pjj-f9g5-3x4c]](https://github.com/dani-garcia/vaultwarden/security/advisories/GHSA-9pjj-f9g5-3x4c) (**Medium**, 4.3)\r\n\r\nThese are private for now, pending CVE assignment and publishing at a later date.\r\n\r\n## Note\r\nThis update is required for web vault 2026.7.1+ to turn two-step login methods…",
+    "changelog": "## Security Fixes\r\nThis release contains security fixes for the following advisories. We strongly advise updating as soon as possible.\r\n- Website icons [[GHSA-x9cq-f669-vrr4]](https://github.com/dani-garcia/vaultwarden/security/advisories/GHSA-x9cq-f669-vrr4) (**Medium**, 5.3)\r\n- Emergency access [[GHSA-9pjj-f9g5-3x4c]](https://github.com/dani-garcia/vaultwarden/security/advisories/GHSA-9pjj-f9g5-3x4c) (**Medium**, 4.3)\r\n\r\nThese are private for now, pending CVE assignment and publishing at a later date.\r\n\r\n## Note\r\nThis update is required for web vault 2026.7.1+ to turn two-step login methods\u2026",
     "license": "AGPL-3.0"
   },
   "actualbudget/actual": {
@@ -129,57 +129,59 @@
     "version": "v2.8.0",
     "date": "2026-11-05T20:44:21Z",
     "url": "https://github.com/go-vikunja/vikunja/releases/tag/v2.8.0",
-    "changelog": "🦙 Vikunja 2.8.0 is out! It fixes 19 security issues, so please update soon 🔒\n\nAlso new: a trash bin with undo for tasks and projects 🗑️ and a way to link your SSO account to your local one 🔗\n\nhttps://vikunja.io/changelog/vikunja-2.8.0-was-released/",
+    "changelog": "\ud83e\udd99 Vikunja 2.8.0 is out! It fixes 19 security issues, so please update soon \ud83d\udd12\n\nAlso new: a trash bin with undo for tasks and projects \ud83d\uddd1\ufe0f and a way to link your SSO account to your local one \ud83d\udd17\n\nhttps://vikunja.io/changelog/vikunja-2.8.0-was-released/",
     "license": "AGPL-3.0-or-later"
   },
   "henrygd/beszel": {
     "version": "v0.21.1",
     "date": "2026-10-22T17:24:08Z",
     "url": "https://github.com/henrygd/beszel/releases/tag/v0.21.1",
-    "changelog": "## What's Changed\r\nFor developers using the agent as a Go package, `Agent.Start` now requires a `context.Context`.\r\n\r\nFor authors of integrations, existing memory fields other than memory percentage are deprecated in favor of new fields which provide raw byte values. The deprecated fields are still populated, but will be removed from the API in a future version.\r\n\r\n```go\r\ntype Stats struct {\r\n  // Deprecated fields (populated on hubs <= 0.21.1; will be removed in a future version)\r\n\tMem            float64     `json:\"m\" cbor:\"2,keyasint\"`  // Deprecated: GB, use MemBytes. Memory GB fields are kept for older hubs and integrations.\r\n\tMaxMem         float64     `json:\"mm,omitzero\" cbor:\"-\"` // Deprecated: GB, use MaxMemBytes.\r\n\tMemUsed        float64     `json:\"mu\" cbor:\"3,keyasint\"` // Deprec…",
+    "changelog": "## What's Changed\r\nFor developers using the agent as a Go package, `Agent.Start` now requires a `context.Context`.\r\n\r\nFor authors of integrations, existing memory fields other than memory percentage are deprecated in favor of new fields which provide raw byte values. The deprecated fields are still populated, but will be removed from the API in a future version.\r\n\r\n```go\r\ntype Stats struct {\r\n  // Deprecated fields (populated on hubs <= 0.21.1; will be removed in a future version)\r\n\tMem            float64     `json:\"m\" cbor:\"2,keyasint\"`  // Deprecated: GB, use MemBytes. Memory GB fields are kept for older hubs and integrations.\r\n\tMaxMem         float64     `json:\"mm,omitzero\" cbor:\"-\"` // Deprecated: GB, use MaxMemBytes.\r\n\tMemUsed        float64     `json:\"mu\" cbor:\"3,keyasint\"` // Deprec\u2026",
     "license": "MIT"
   },
   "silverbulletmd/silverbullet": {
     "version": "2.12.1",
     "date": "2026-10-12T06:28:07Z",
     "url": "https://github.com/silverbulletmd/silverbullet/releases/tag/2.12.1",
-    "changelog": "* Security: the filesystem API refuses access to dot-prefixed files and directories, consistent with space listings.\r\n* Fix: HTTP file validators respect `If-None-Match` precedence, and file reads and conditional writes tolerate proxies that weaken or transform ETags.\r\n* Fix: YAML data blocks split only on standalone `---` lines; X-Ray includes attributes added during indexing.\r\n* Fix: `system.reboot()` preserves external edits and clears cached widgets. Reopening a page restores a remembered scroll position of zero.\r\n* Fix: the [[Runtime API]] returns JSON for query rows, null values, dates and other Lua values without serialization crashes, and remains usable after the client reloads its UI.\r\n* SLIQ errors offer more specific explanations for common mistakes.\r\n* Public spaces expose `rob…",
+    "changelog": "* Security: the filesystem API refuses access to dot-prefixed files and directories, consistent with space listings.\r\n* Fix: HTTP file validators respect `If-None-Match` precedence, and file reads and conditional writes tolerate proxies that weaken or transform ETags.\r\n* Fix: YAML data blocks split only on standalone `---` lines; X-Ray includes attributes added during indexing.\r\n* Fix: `system.reboot()` preserves external edits and clears cached widgets. Reopening a page restores a remembered scroll position of zero.\r\n* Fix: the [[Runtime API]] returns JSON for query rows, null values, dates and other Lua values without serialization crashes, and remains usable after the client reloads its UI.\r\n* SLIQ errors offer more specific explanations for common mistakes.\r\n* Public spaces expose `rob\u2026",
     "license": "MIT"
   },
   "TriliumNext/Trilium": {
     "version": "v0.107.0",
     "date": "2026-11-08T22:06:59Z",
     "url": "https://github.com/TriliumNext/Trilium/releases/tag/v0.107.0",
-    "changelog": "# v0.107.0\n> [!NOTE]\n> If you enjoyed this release, consider showing a token of appreciation by:\n> \n> *   Pressing the “Star” button on [GitHub](https://github.com/TriliumNext/Trilium) (top-right).\n> *   Considering a one-time or recurrent donation to the [lead developer](https://github.com/eliandoran) via [GitHub Sponsors](https://github.com/sponsors/eliandoran) or [PayPal](https://paypal.me/eliandoran).\n\n> [!TIP]\n> For Linux users: Trilium is now available on [Flathub](https://flathub.org/en/apps/org.triliumnotes.Trilium)!\n\nThis is the release where a text note stops being a single document. Notes can be embedded, quoted and referenced inside other notes and edited where they appear, laid out in columns and tabs, and mixed with drawings, attached files and video. Tables in text notes get…",
+    "changelog": "# v0.107.0\n> [!NOTE]\n> If you enjoyed this release, consider showing a token of appreciation by:\n> \n> *   Pressing the \u201cStar\u201d button on [GitHub](https://github.com/TriliumNext/Trilium) (top-right).\n> *   Considering a one-time or recurrent donation to the [lead developer](https://github.com/eliandoran) via [GitHub Sponsors](https://github.com/sponsors/eliandoran) or [PayPal](https://paypal.me/eliandoran).\n\n> [!TIP]\n> For Linux users: Trilium is now available on [Flathub](https://flathub.org/en/apps/org.triliumnotes.Trilium)!\n\nThis is the release where a text note stops being a single document. Notes can be embedded, quoted and referenced inside other notes and edited where they appear, laid out in columns and tabs, and mixed with drawings, attached files and video. Tables in text notes get\u2026",
     "license": "AGPL-3.0"
   },
   "TomBursch/kitchenowl": {
     "version": "v0.8.1",
     "date": "2026-11-08T02:14:01Z",
     "url": "https://github.com/TomBursch/kitchenowl/releases/tag/v0.8.1",
-    "changelog": "It's been a short while, but this release packs many bug fixes and improvements with many new faces who contributed!\r\nFor self-hosters: We're migrating to rootless Docker images. The entrypoint should take care of the migration so no manual change is required, but it's something to be aware of if you're using a very custom setup.\r\n\r\n## ✨ Features\r\n\r\n- Add household currency setting (#1207 by @TomBursch)\r\n- Add AI recipe generator chat (#1160 by @vanalmsick)\r\n- Show longer ingredient names in recipe ingredient cards (#1103 by @Percy2Live)\r\n- Open URL from item description on long press (#1132 by @xoiram)\r\n- Sort and search shopping list items, ignoring diacritics (#1172 by @paulmiddelkoop)\r\n- Environment option to default to NLP for English recipes even when LLM is enabled (#1133 by @wh1t3-…",
+    "changelog": "It's been a short while, but this release packs many bug fixes and improvements with many new faces who contributed!\r\nFor self-hosters: We're migrating to rootless Docker images. The entrypoint should take care of the migration so no manual change is required, but it's something to be aware of if you're using a very custom setup.\r\n\r\n## \u2728 Features\r\n\r\n- Add household currency setting (#1207 by @TomBursch)\r\n- Add AI recipe generator chat (#1160 by @vanalmsick)\r\n- Show longer ingredient names in recipe ingredient cards (#1103 by @Percy2Live)\r\n- Open URL from item description on long press (#1132 by @xoiram)\r\n- Sort and search shopping list items, ignoring diacritics (#1172 by @paulmiddelkoop)\r\n- Environment option to default to NLP for English recipes even when LLM is enabled (#1133 by @wh1t3-\u2026",
     "license": "AGPL-3.0"
   },
   "iib0011/omni-tools": {
     "version": "v0.7.0",
     "date": "2026-10-20T13:37:22Z",
     "url": "https://github.com/iib0011/omni-tools/releases/tag/v0.7.0",
-    "changelog": "This release introduces **25 new tools** across converters, image processing, JSON, numbers, PDF, text, time, and video utilities.\r\n\r\n## ✨ What's New\r\n\r\n### 🔄 Converters\r\n- **Audio Converter** — Convert audio files between supported formats.\r\n- **Convert to JPG** — Convert images to JPG.\r\n- **Convert to WebP** — Convert images to WebP.\r\n\r\n### 🖼️ Image Tools\r\n- **Split Image** — Split images into smaller sections.\r\n- **Watermark** — Add watermarks to images.\r\n\r\n### 📊 JSON Tools\r\n- **JSON to CSV** — Convert JSON data to CSV format.\r\n- **JSON Sort** — Sort JSON data.\r\n\r\n### 🔢 Number Tools\r\n- **Byte Converter** — Convert between byte units.\r\n- **Number to Words** — Convert numbers into words.\r\n\r\n### 📄 PDF Tools\r\n- **Convert to PDF** — Convert supported files to PDF.\r\n- **Extract Images from PD…",
+    "changelog": "This release introduces **25 new tools** across converters, image processing, JSON, numbers, PDF, text, time, and video utilities.\r\n\r\n## \u2728 What's New\r\n\r\n### \ud83d\udd04 Converters\r\n- **Audio Converter** \u2014 Convert audio files between supported formats.\r\n- **Convert to JPG** \u2014 Convert images to JPG.\r\n- **Convert to WebP** \u2014 Convert images to WebP.\r\n\r\n### \ud83d\uddbc\ufe0f Image Tools\r\n- **Split Image** \u2014 Split images into smaller sections.\r\n- **Watermark** \u2014 Add watermarks to images.\r\n\r\n### \ud83d\udcca JSON Tools\r\n- **JSON to CSV** \u2014 Convert JSON data to CSV format.\r\n- **JSON Sort** \u2014 Sort JSON data.\r\n\r\n### \ud83d\udd22 Number Tools\r\n- **Byte Converter** \u2014 Convert between byte units.\r\n- **Number to Words** \u2014 Convert numbers into words.\r\n\r\n### \ud83d\udcc4 PDF Tools\r\n- **Convert to PDF** \u2014 Convert supported files to PDF.\r\n- **Extract Images from PD\u2026",
     "license": "MIT"
   },
   "home-assistant/core": {
     "version": "2026.11.1",
     "date": "2026-11-09T18:52:28Z",
     "url": "https://github.com/home-assistant/core/releases/tag/2026.11.1",
-    "changelog": "- Bump aiounifi to v98 ([@bhamiltoncx] - [#190145]) ([unifi docs]) (dependency)\r\n- Fix HomeKit camera motion events never reaching HomeKit ([@RaHehl] - [#190440]) ([homekit docs])\r\n- Add new entities to restored sleeping Shelly RPC devices on wake ([@thecode] - [#190447]) ([shelly docs])\r\n- Bump broadlink-async to 1.2.1 ([@DAB-LABS] - [#190471]) ([broadlink docs]) (dependency)\r\n- Bump opower to 0.23.0 ([@tronikos] - [#190486]) ([opower docs]) (dependency)\r\n- Make nexia set_hvac_run_mode fields optional ([@frenck] - [#190498]) ([nexia docs])\r\n- Bump googlewifiapi to 0.1.3 ([@gittastic] - [#190515]) ([google_wifi docs]) (dependency)\r\n- Mark SimpliSafe sensors unavailable when reported offline ([@frenck] - [#190501]) ([simplisafe docs])\r\n- Bump aioamazondevice to 17.2.7 ([@jamesonuk] - [#1905…",
+    "changelog": "- Bump aiounifi to v98 ([@bhamiltoncx] - [#190145]) ([unifi docs]) (dependency)\r\n- Fix HomeKit camera motion events never reaching HomeKit ([@RaHehl] - [#190440]) ([homekit docs])\r\n- Add new entities to restored sleeping Shelly RPC devices on wake ([@thecode] - [#190447]) ([shelly docs])\r\n- Bump broadlink-async to 1.2.1 ([@DAB-LABS] - [#190471]) ([broadlink docs]) (dependency)\r\n- Bump opower to 0.23.0 ([@tronikos] - [#190486]) ([opower docs]) (dependency)\r\n- Make nexia set_hvac_run_mode fields optional ([@frenck] - [#190498]) ([nexia docs])\r\n- Bump googlewifiapi to 0.1.3 ([@gittastic] - [#190515]) ([google_wifi docs]) (dependency)\r\n- Mark SimpliSafe sensors unavailable when reported offline ([@frenck] - [#190501]) ([simplisafe docs])\r\n- Bump aioamazondevice to 17.2.7 ([@jamesonuk] - [#1905\u2026",
     "license": "Apache-2.0"
   },
   "LibreOffice/core": {
     "license": "MPL-2.0",
-    "version": "26.8.2",
-    "url": "https://www.libreoffice.org/download/download-libreoffice/",
+    "version": "26.8.3.1",
+    "url": "https://github.com/LibreOffice/core/releases/tag/libreoffice-26.8.3.1",
     "manual": true,
-    "checkedOn": "2026-11-10"
+    "checkedOn": "2026-11-10",
+    "date": "2026-11-09T22:45:40Z",
+    "changelog": "p Tag libreoffice-26.8.3.1 /p"
   },
   "keepassxreboot/keepassxc": {
     "license": "GPL-2.0 / GPL-3.0",
@@ -193,14 +195,14 @@
     "version": "1.19.6",
     "date": "2026-10-30T10:40:14Z",
     "url": "https://github.com/cryptomator/cryptomator/releases/tag/1.19.6",
-    "changelog": "For a comprehensive view of changes, read the [CHANGELOG](https://github.com/cryptomator/cryptomator/blob/1.19.6/CHANGELOG.md).\r\n\r\n### Bugfixes 🐛\r\n* Fixed supporter certificates being rejected once the certificate that signed them was rotated out: the certificate chain is now required to be valid at the certificate's issue date instead of at verification time\r\n\r\n---\r\n**Full Changelog**: https://github.com/cryptomator/cryptomator/compare/1.19.5...1.19.6\r\n\r\n---\r\n\r\n💾 SHA-256 checksums of release artifacts:\r\n```\r\n8cf31cbd7f5c825c4a4d931c2a02a718f6a5044ef85cb9de434d2ad125bbf3e8  cryptomator-1.19.6."
+    "changelog": "For a comprehensive view of changes, read the [CHANGELOG](https://github.com/cryptomator/cryptomator/blob/1.19.6/CHANGELOG.md).\r\n\r\n### Bugfixes \ud83d\udc1b\r\n* Fixed supporter certificates being rejected once the certificate that signed them was rotated out: the certificate chain is now required to be valid at the certificate's issue date instead of at verification time\r\n\r\n---\r\n**Full Changelog**: https://github.com/cryptomator/cryptomator/compare/1.19.5...1.19.6\r\n\r\n---\r\n\r\n\ud83d\udcbe SHA-256 checksums of release artifacts:\r\n```\r\n8cf31cbd7f5c825c4a4d931c2a02a718f6a5044ef85cb9de434d2ad125bbf3e8  cryptomator-1.19.6."
   },
   "kopia/kopia": {
     "license": "Apache-2.0",
     "version": "v0.23.1",
     "date": "2026-06-16T01:27:33Z",
     "url": "https://github.com/kopia/kopia/releases/tag/v0.23.1",
-    "changelog": "<a name=\"v0.23.1\"></a>\r\n\r\n### Summary\r\n\r\nKopia v0.23.1. is a bugfix release which fixes a rare race condition which might lead to a data loss - an upgrade is recommended - See https://github.com/kopia/kopia/issues/5371\r\n\r\n### Repository\r\n\r\n* Basic tests for getting epoch manager blob set ([#5418](https://github.com/kopia/kopia/issues/5418)) by Julio López\r\n* selection of next epoch to compact ([#5373](https://github.com/kopia/kopia/issues/5373)) by Julio López\r\n\r\n### Storage Providers\r\n\r\n* no_extra_providers build tag ([#5375](https://github.com/kopia/kopia/issues/5375)) by Julio López\r\n\r\n### "
+    "changelog": "<a name=\"v0.23.1\"></a>\r\n\r\n### Summary\r\n\r\nKopia v0.23.1. is a bugfix release which fixes a rare race condition which might lead to a data loss - an upgrade is recommended - See https://github.com/kopia/kopia/issues/5371\r\n\r\n### Repository\r\n\r\n* Basic tests for getting epoch manager blob set ([#5418](https://github.com/kopia/kopia/issues/5418)) by Julio L\u00f3pez\r\n* selection of next epoch to compact ([#5373](https://github.com/kopia/kopia/issues/5373)) by Julio L\u00f3pez\r\n\r\n### Storage Providers\r\n\r\n* no_extra_providers build tag ([#5375](https://github.com/kopia/kopia/issues/5375)) by Julio L\u00f3pez\r\n\r\n### "
   },
   "restic/restic": {
     "license": "BSD-2-Clause",
@@ -232,10 +234,12 @@
   },
   "KDE/krita": {
     "license": "GPL-3.0",
-    "version": "5.3.4",
-    "url": "https://krita.org/en/",
+    "version": "6.0.4.1",
+    "url": "https://github.com/KDE/krita/releases/tag/v6.0.4.1",
     "manual": true,
-    "checkedOn": "2026-11-10"
+    "checkedOn": "2026-11-10",
+    "date": "2026-10-01T10:04:55Z",
+    "changelog": "p An critical bigfix release to fix a regression in making br impossible to change an ICC profile attached to a display /p"
   },
   "KDE/kdenlive": {
     "license": "GPL-3.0",
@@ -279,10 +283,10 @@
   },
   "signalapp/Signal-Desktop": {
     "license": "AGPL-3.0",
-    "version": "v8.34.0",
-    "date": "2026-11-05T15:31:49Z",
-    "url": "https://github.com/signalapp/Signal-Desktop/releases/tag/v8.34.0",
-    "changelog": "- Signal Desktop now supports contact sharing too, so you can maintain eye contact with your computer screen without having to make physical contact with your smartphone.\r\n- Improved handling and performance for connected audio devices."
+    "version": "v8.35.0",
+    "date": "2026-11-11T23:24:02Z",
+    "url": "https://github.com/signalapp/Signal-Desktop/releases/tag/v8.35.0",
+    "changelog": "- Small tweaks, bug fixes, and performance enhancements. Thanks for using Signal!"
   },
   "gorhill/uBlock": {
     "license": "GPL-3.0",
@@ -320,9 +324,10 @@
   },
   "simplex-chat/simplex-chat": {
     "license": "AGPL-3.0",
-    "version": "v7.1.2",
-    "date": "2026-11-07T13:25:47Z",
-    "url": "https://github.com/simplex-chat/simplex-chat/releases/tag/v7.1.2"
+    "version": "v7.1.3",
+    "date": "2026-11-11T13:34:59Z",
+    "url": "https://github.com/simplex-chat/simplex-chat/releases/tag/v7.1.3",
+    "changelog": "New in v7.1-7.1.3:\r\n\r\nSupporter badges: larger files, available for longer.\r\n\r\nSimpleX public names: sale starts on December 12.\r\n\r\nSafer channels: add moderators and sign every message.\r\n\r\nFlat layout and markdown: enable in Appearance settings.\r\n\r\nGet your badge: https://simplex.chat/badges/\r\nRead more about SimpleX public names: https://simplex.domains\r\n\r\nCommits:\r\n- ios: update to 371 v7.1.2, reduce app size (#8129)\r\n- android, desktop: show What's new once while conditions are pending (#812\u2026"
   },
   "FreshRSS/FreshRSS": {
     "license": "AGPL-3.0",
@@ -422,10 +427,10 @@
   },
   "penpot/penpot": {
     "license": "MPL-2.0",
-    "version": "2.19.0",
-    "date": "2026-11-09T14:03:36Z",
-    "url": "https://github.com/penpot/penpot/releases/tag/2.19.0",
-    "changelog": "\n### :boom: Breaking changes & Deprecations\n\n#### Migrate legacy file payloads to file_data and delete orphan revisions\n\nFile payloads now live in one place: every file state and snapshot is kept in `file_data`, and the orphan `file_change` rows that kept old payloads alive forever are removed. No read path reached those rows and nothing ever collected them, so the upgrade also reclaims the database and TOAST space they held. There is no API or UI change.\n\nOn small and medium instances this happens automatically on boot and there is nothing to do. On large instances (millions of snapshots, hun"
+    "version": "2.19.1",
+    "date": "2026-11-11T10:03:30Z",
+    "url": "https://github.com/penpot/penpot/releases/tag/2.19.1",
+    "changelog": "\n### :lock: Security fixes\n\n- Fix editor-role team members retrieving the signed invitation token of any pending invitation (https://github.com/penpot/penpot/security/advisories/GHSA-4mmc-j8rh-74pf) (PR: [#12892](https://github.com/penpot/penpot/pull/12892))\n\n- Fix share-link page-scope escape in `get-profiles-for-file-comments` leaking the identity of comment authors outside the link's scope (https://github.com/penpot/penpot/security/advisories/GHSA-89cq-3wv7-987r) (PR: [#12888](https://github.\u2026"
   },
   "simonmichael/hledger": {
     "license": "GPL-3.0-or-later",
@@ -494,5 +499,230 @@
     "url": "https://www.kali.org/blog/kali-linux-2026-3-release/",
     "manual": true,
     "checkedOn": "2026-11-10"
+  },
+  "hg.mozilla.org/comm-central/": {
+    "version": "160.0",
+    "url": "https://www.thunderbird.net/en-US/thunderbird/160.0/releasenotes/",
+    "license": "MPL-2.0",
+    "manual": true,
+    "checkedOn": "2026-11-11"
+  },
+  "dbeaver/dbeaver": {
+    "version": "26.2.4",
+    "url": "https://github.com/dbeaver/dbeaver/releases/tag/26.2.4",
+    "license": "Apache-2.0",
+    "manual": true,
+    "checkedOn": "2026-11-11"
+  },
+  "git.postgresql.org/gitweb/?p=postgresql.git": {
+    "version": "18.6",
+    "url": "https://www.postgresql.org/docs/18/release-18-6.html",
+    "license": "PostgreSQL",
+    "manual": true,
+    "checkedOn": "2026-11-11"
+  },
+  "build.opensuse.org/": {
+    "version": "Tumbleweed (rolling)",
+    "url": "https://get.opensuse.org/tumbleweed/",
+    "license": "Per-package licenses",
+    "manual": true,
+    "checkedOn": "2026-11-11"
+  },
+  "opnsense/core": {
+    "version": "26.7.9",
+    "url": "https://github.com/opnsense/changelog/blob/master/community/26.7/26.7.9",
+    "license": "BSD-2-Clause",
+    "manual": true,
+    "checkedOn": "2026-11-11"
+  },
+  "pi-hole/pi-hole": {
+    "version": "Core 6.6",
+    "url": "https://github.com/pi-hole/pi-hole/releases/tag/v6.6",
+    "license": "EUPL-1.2",
+    "manual": true,
+    "checkedOn": "2026-11-11",
+    "date": "2026-11-11T19:20:58Z",
+    "changelog": "## Security\r\n\r\nThis release fixes the following security advisories (credit to the reporters named):\r\n\r\n**High**\r\n- [GHSA-wp3p-45h3-2v82](https://github.com/pi-hole/pi-hole/security/advisories/GHSA-wp3p-45h3-2v82) (CVSS 7.3): `pihole -r` and `pihole -up` still followed symlinks in `/etc/pihole` when writing `install.log`, `migration_backup_v6` and `hosts/custom.list`, so a `pihole` user could get root to take over files of their choice. Found by @cerodah, reported by @pmagayon.\r\n- [GHSA-5w4v-f65\u2026"
+  },
+  "privacyidea/privacyidea": {
+    "version": "v3.14",
+    "date": "2026-10-07T12:19:14Z",
+    "url": "https://github.com/privacyidea/privacyidea/releases/tag/v3.14",
+    "license": "AGPL-3.0",
+    "changelog": "**Please read [READ_BEFORE_UPDATE.md](https://github.com/privacyidea/privacyidea/blob/v3.14/READ_BEFORE_UPDATE.md) before updating.** It describes the changes that may need action on your side.\n\n  Features:\n  * API clients can authenticate with an API key in the `X-API-Key` header, which gives an integration a stable,\n    revocable machine identity of its own. On top of that, such a client can be issued a rotating \"remember this\n    device\" cookie with theft detection, gated by the new `remember_device` policy and revocable per device by an\n    admin (#5636, #5637, #5639, #5640, #5696)\n  * Use"
+  },
+  "VictoriaMetrics/VictoriaMetrics": {
+    "version": "v1.156.0",
+    "date": "2026-11-09T10:02:46Z",
+    "url": "https://github.com/VictoriaMetrics/VictoriaMetrics/releases/tag/v1.156.0",
+    "license": "Apache-2.0",
+    "changelog": "## [v1.156.0](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/tag/v1.156.0)\r\n\r\nReleased at 2026-11-09\r\n\r\n* FEATURE: all VictoriaMetrics [Enterprise](https://docs.victoriametrics.com/victoriametrics/enterprise/) components: run with the `-eula` command-line flag to accept [ESA](https://victoriametrics.com/legal/esa/). License keys are no longer verified. The `-license`, `-licenseFile`, `-licenseFile.reloadInterval` and `-license.forceOffline` flags are deprecated and are treated as `-eula`, so existing setups keep working. See [Running VictoriaMetrics Enterprise](https://docs.victor"
+  },
+  "AdguardTeam/AdGuardHome": {
+    "version": "v0.107.80",
+    "date": "2026-11-03T13:10:22Z",
+    "url": "https://github.com/AdguardTeam/AdGuardHome/releases/tag/v0.107.80",
+    "license": "GPL-3.0",
+    "changelog": "Being vulnerable is fine, but not when it comes to dependencies. That's why we're making this release with updated dependencies to keep AdGuard Home running smoothly and securely \ud83d\udcaa\r\n\r\n## Full changelog\r\n\r\nSee also the [v0.107.80 GitHub milestone][ms-v0.107.80].\r\n\r\n### Security\r\n\r\n- Go version has been updated to mitigate the possibility of exploiting the Go vulnerabilities fixed in [1.27.3][go-1.27.3].\r\n\r\n- Support for Multipath TCP has been disabled to mitigate the possibility of exploiting the vulnerability described in [CVE-2026-98432][cve-2026-98432].\r\n\r\n### Removed\r\n\r\n- The support for ma"
+  },
+  "percona/percona-server": {
+    "version": "8.4.11-11 (8.4 series)",
+    "url": "https://docs.percona.com/percona-server/8.4/index.html",
+    "license": "GPL-2.0",
+    "manual": true,
+    "checkedOn": "2026-11-11",
+    "changelog": "Recorded 8.4-series release, not a claim that 8.4 is the newest Percona product line. Official 8.4 documentation identifies 8.4.11-11. GitHub latest-release metadata points to an old 5.5 release and is not authoritative for this line."
+  },
+  "src.fedoraproject.org": {
+    "version": "45",
+    "url": "https://www.redhat.com/en/blog/announcing-fedora-45",
+    "license": "Per-package licenses",
+    "manual": true,
+    "checkedOn": "2026-11-11",
+    "changelog": "Fedora Project Leader announcement confirms general availability on November 3, 2026. The Workstation download page also displays a contradictory BETA label; verify the selected release image and signed checksum."
+  },
+  "freebsd/freebsd-src": {
+    "version": "15.1-RELEASE",
+    "url": "https://www.freebsd.org/releases/15.1R/announce/",
+    "license": "BSD-2-Clause",
+    "manual": true,
+    "checkedOn": "2026-11-11",
+    "changelog": "The official release page identifies 15.1 as the production release. Legacy releases have separate support windows. Base-system BSD-style terms do not replace the licenses of all imported components or installed packages."
+  },
+  "GrapheneOS/platform_manifest": {
+    "version": "2026110800",
+    "date": "2026-11-08",
+    "url": "https://grapheneos.org/releases",
+    "manual": true,
+    "checkedOn": "2026-11-12",
+    "license": "Multiple (component-specific)",
+    "changelog": "Device/channel-specific snapshot: the official releases page lists 2026110800 as its newest changelog entry and keeps Pixel 7 in the supported-device table when checked. Channel timing can differ by device. This is not a universal release or a claim that your phone is supported.",
+    "manualOnly": true
+  },
+  "gitlab.com/CalyxOS/platform_manifest": {
+    "version": "8.0.5.20",
+    "date": "2026-11-03",
+    "url": "https://calyxos.org/install/",
+    "manual": true,
+    "checkedOn": "2026-11-12",
+    "license": "Multiple (component-specific)",
+    "changelog": "The current official install matrix lists 8.0.5.20 dated November 3, 2026 on its displayed devices. Match the exact model/codename and current support tier before choosing an image; this is not support for every phone.",
+    "manualOnly": true
+  },
+  "LineageOS/android": {
+    "version": "24.0",
+    "date": "2026-10-11",
+    "url": "https://lineageos.org/Changelog-32/",
+    "manual": true,
+    "checkedOn": "2026-11-12",
+    "license": "Multiple (component-specific)",
+    "changelog": "Official October 11, 2026 announcement: LineageOS 24.0 is ready for initial release on a selection of devices. Devices can remain on older branches. This is a project-generation snapshot, not the latest available build for every phone.",
+    "manualOnly": true
+  },
+  "AlmaLinux": {
+    "version": "10.2 / 9.8",
+    "url": "https://wiki.almalinux.org/release-notes/",
+    "license": "Per-package licenses",
+    "manual": true,
+    "checkedOn": "2026-11-12",
+    "changelog": "Current supported branches per the official release notes: 10.2 (released May 26, 2026) and 9.8 (released May 26, 2026); 10.3 and 9.9 were in beta at check time. Each minor version reaches end of life when the next ships."
+  },
+  "BlackArch/blackarch": {
+    "version": "2023.05.01",
+    "url": "https://blackarch.org/downloads.html",
+    "license": "Per-package licenses",
+    "manual": true,
+    "manualOnly": true,
+    "checkedOn": "2026-11-12",
+    "changelog": "Downloads page lists Slim ISO 2023.05.01 and Full/Netinstall ISO 2023.04.01 snapshots; the package repository is rolling, so the ISO label is not system currency. The project recommends netinstall or slim over the full ISO."
+  },
+  "QubesOS": {
+    "version": "4.3.2",
+    "url": "https://www.qubes-os.org/downloads/",
+    "license": "Per-package licenses",
+    "manual": true,
+    "checkedOn": "2026-11-12",
+    "changelog": "Downloads page lists Qubes OS 4.3.2 as the latest stable release, recommended for all new and existing users. Verify the ISO with the detached PGP signature and release signing key published beside it."
+  },
+  "gitlab.tails.boum.org/tails/tails": {
+    "version": "7.17",
+    "date": "2026-11-11",
+    "url": "https://tails.net/install/",
+    "license": "Per-package licenses",
+    "manual": true,
+    "checkedOn": "2026-11-12",
+    "changelog": "Install page lists Tails 7.17 released November 11, 2026. USB image; verify with the project's browser verification or documented GnuPG method."
+  },
+  "nest.parrot.sh": {
+    "version": "7.4",
+    "url": "https://www.parrotsec.org/download/",
+    "license": "Per-package licenses",
+    "manual": true,
+    "checkedOn": "2026-11-12",
+    "changelog": "Download page lists Parrot OS 7.4 (October 2026) for the Security/Home edition ISOs; per-release hash file and GPG-signed repository. Edition and VM images differ; this is the site-listed current release."
+  },
+  "omacom/omarchy": {
+    "version": "v4.5.0",
+    "url": "https://github.com/omacom/omarchy/releases/tag/v4.5.0",
+    "license": "MIT",
+    "manual": true,
+    "checkedOn": "2026-11-12",
+    "changelog": "GitHub release v4.5.0 matches the omarchy.org ISO download (x86 and ARM64, with SHA-256 checksums and signatures). The weekly checker can track this repository's GitHub releases normally."
+  },
+  "TechnitiumSoftware/DnsServer": {
+    "version": "v15.6.2",
+    "date": "2026-10-17",
+    "url": "https://github.com/TechnitiumSoftware/DnsServer/releases/tag/v15.6.2",
+    "license": "GPL-3.0",
+    "checkedOn": "2026-11-12",
+    "changelog": "Latest GitHub release at check time."
+  },
+  "AnalogJ/scrutiny": {
+    "version": "v0.10.0",
+    "date": "2026-11-01",
+    "url": "https://github.com/AnalogJ/scrutiny/releases/tag/v0.10.0",
+    "license": "MIT",
+    "checkedOn": "2026-11-12",
+    "changelog": "Latest GitHub release at check time."
+  },
+  "cryptpad/cryptpad": {
+    "version": "2026.10.1",
+    "date": "2026-11-10",
+    "url": "https://github.com/cryptpad/cryptpad/releases/tag/2026.10.1",
+    "license": "AGPL-3.0",
+    "checkedOn": "2026-11-12",
+    "changelog": "Latest GitHub release at check time."
+  },
+  "ollama/ollama": {
+    "version": "v0.40.16",
+    "date": "2026-11-09",
+    "url": "https://github.com/ollama/ollama/releases/tag/v0.40.16",
+    "license": "MIT",
+    "checkedOn": "2026-11-12",
+    "changelog": "Latest GitHub release at check time."
+  },
+  "9001/copyparty": {
+    "version": "v1.20.26",
+    "date": "2026-10-14",
+    "url": "https://github.com/9001/copyparty/releases/tag/v1.20.26",
+    "license": "MIT",
+    "checkedOn": "2026-11-12",
+    "changelog": "Latest GitHub release at check time."
+  },
+  "warp-tech/warpgate": {
+    "version": "v0.30.4",
+    "date": "2026-11-03",
+    "url": "https://github.com/warp-tech/warpgate/releases/tag/v0.30.4",
+    "license": "Apache-2.0",
+    "checkedOn": "2026-11-12",
+    "changelog": "Latest GitHub release at check time. The repository moved from Eugeny/warpgate to the warp-tech org; the old path redirects."
+  },
+  "mealie-recipes/mealie": {
+    "version": "v3.30.0",
+    "date": "2026-10-31",
+    "url": "https://github.com/mealie-recipes/mealie/releases/tag/v3.30.0",
+    "license": "AGPL-3.0",
+    "checkedOn": "2026-11-12",
+    "changelog": "Latest GitHub release at check time. The default branch is mealie-next; releases are tagged normally."
   }
 }

@@ -11,6 +11,14 @@ funding:
   githubSponsors: https://github.com/sponsors/simplex-chat
   openCollective: https://opencollective.com/simplex-chat
 managedHosting: false
+screenshot:
+  src: simplex-chat-source.webp
+  alt: "Three SimpleX Chat mobile screens: the welcome page describing relay-free private messaging, a one-time invitation link shown as a QR code, and an open conversation"
+  width: 1187
+  height: 720
+  credit: SimpleX Chat
+  sourceUrl: https://github.com/simplex-chat/simplex-chat/blob/master/images/conversation.png
+  license: AGPL-3.0
 ---
 
 SimpleX Chat is a messaging app that does not assign user identifiers. The README says an implementation security assessment by Trail of Bits is linked from the project; read it and the project's own documentation before trusting it with anything sensitive.
@@ -38,6 +46,16 @@ The Flathub package is verified by its publisher:
 ```bash
 flatpak install flathub chat.simplex.simplex
 ```
+
+### NixOS
+
+nixpkgs packages SimpleX Chat as `simplex-chat-desktop` (source: [pkgs/by-name/si/simplex-chat-desktop/package.nix](https://github.com/NixOS/nixpkgs/blob/8e246c66fe7112839781b2200b017f0a587d25d3/pkgs/by-name/si/simplex-chat-desktop/package.nix)):
+
+```nix
+environment.systemPackages = [ pkgs.simplex-chat-desktop ];
+```
+
+Rebuild with `sudo nixos-rebuild switch`, then launch SimpleX Chat from the application menu.
 
 ## First steps
 

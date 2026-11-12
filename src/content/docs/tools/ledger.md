@@ -2,6 +2,7 @@
 title: "Ledger"
 description: "The original command-line double-entry accounting system, using plain text files."
 category: Finance
+icon: ledger.png
 mark: LE
 repository: https://github.com/ledger/ledger
 license: BSD-3-Clause
@@ -38,6 +39,16 @@ brew install ledger
 ### Windows and building
 
 We didn't find an official Windows installer. The project's [README](https://github.com/ledger/ledger/blob/master/README.md) describes building from source, with Homebrew or MacPorts helping on macOS, and also mentions a Docker route. On Windows, WSL with the Linux package may work, but we haven't verified that against the project's docs.
+
+### NixOS
+
+nixpkgs packages Ledger as `ledger` (source: [pkgs/by-name/le/ledger/package.nix](https://github.com/NixOS/nixpkgs/blob/8e246c66fe7112839781b2200b017f0a587d25d3/pkgs/by-name/le/ledger/package.nix)):
+
+```nix
+environment.systemPackages = [ pkgs.ledger ];
+```
+
+Rebuild with `sudo nixos-rebuild switch`, then run `ledger bal` on your journal from a terminal.
 
 ## First steps
 

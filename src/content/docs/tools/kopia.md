@@ -41,6 +41,16 @@ winget install Kopia.KopiaUI
 
 The [installation guide](https://kopia.io/docs/installation/) also offers Scoop (`scoop bucket add kopia https://github.com/kopia/scoop-bucket.git` then `scoop install kopia`), a `KopiaUI-Setup` installer for Windows, and Homebrew on macOS (`brew install kopia` for the CLI, `brew install --cask kopiaui` for the app).
 
+### NixOS
+
+nixpkgs packages Kopia as `kopia` (source: [pkgs/by-name/ko/kopia/package.nix](https://github.com/NixOS/nixpkgs/blob/8e246c66fe7112839781b2200b017f0a587d25d3/pkgs/by-name/ko/kopia/package.nix)):
+
+```nix
+environment.systemPackages = [ pkgs.kopia ];
+```
+
+Rebuild with `sudo nixos-rebuild switch`, then run `kopia` commands from a terminal; `kopia server start` serves its web UI.
+
 ## First steps
 
 Before anything else you need somewhere to store the backup. Kopia doesn't provide storage, so pick a folder on another drive, a NAS, or a cloud bucket you already pay for.

@@ -53,16 +53,17 @@ and run `./CarCareTracker` (make it executable first, for example
 `chmod u+x CarCareTracker` - the docs' `chmod 777` grants far more than
 needed).
 
-### NixOS
-
-```nix
-services.lubelogger.enable = true;
-```
 
 ### Windows
 
 Download the Windows zip from the latest release and run
 `CarCareTracker.exe`.
+
+### NixOS
+
+```nix
+services.lubelogger.enable = true;
+```
 
 ## First steps
 

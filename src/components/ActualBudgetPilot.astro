@@ -1,0 +1,23 @@
+---
+const { part } = Astro.props;
+---
+{part === 'brief' ? <section class="decision-brief" aria-labelledby="before-you-install">
+  <p class="eyebrow">Before you install</p>
+  <h2 id="before-you-install">Start with a budget, not a server.</h2>
+  <dl>
+    <div><dt>Server needed?</dt><dd>Not for local budgeting in the desktop app. Device sync, bank sync and the API need a server. Mobile use is through a browser or installed web app, not a native phone app.</dd></div>
+    <div><dt>Where is my data?</dt><dd>Actual is local-first. A sync server keeps a copy for your devices. Bank connections are optional external services; manual entries and file imports are an alternative.</dd></div>
+    <div><dt>What will I maintain?</dt><dd>A self-hosted server needs updates, HTTPS for other devices and backups. A hosted option can reduce server work, but you still need a way to export and restore your budget.</dd></div>
+  </dl>
+  <div class="pilot-actions"><a href="https://demo.actualbudget.org/">Try the official demo ↗</a><a href="#try-it-and-keep-a-way-out">Trial and backup notes ↓</a><a href="#project-support">Give back ↓</a></div>
+  <p class="pilot-check">Advice and funding routes source-checked November 12, 2026. Researched, not an install or restore test. <a href="https://actualbudget.org/docs/install/">Installation source ↗</a> · <a href={`${import.meta.env.BASE_URL}submit/`}>Report a correction</a></p>
+</section> : <div class="pilot-contribute">
+  <p class="pilot-check">Funding routes checked November 12, 2026 against the <a href="https://github.com/actualbudget/actual/blob/master/.github/FUNDING.yml">project's funding file ↗</a> and official Donate link. This supports Actual Budget, not the Index.</p>
+  <h3>Support without money</h3>
+  <ul>
+    <li><a href="https://actualbudget.org/docs/contributing/writing-docs">Improve the documentation ↗</a>: follow the project's end-user writing guide.</li>
+    <li><a href="https://actualbudget.org/docs/contributing/i18n">Help with translations ↗</a>: use Weblate suggestions, not translation pull requests. An account with two-factor authentication is required.</li>
+    <li><a href="https://actualbudget.org/docs/contributing/">Contribute code or discuss a change ↗</a>: read the expectations first; discuss larger features before building them.</li>
+  </ul>
+  <p>Maintainer time is limited. Follow the <a href="https://actualbudget.org/docs/contributing/ai-usage-policy">AI-use policy ↗</a>, review your own work and disclose significant AI help. Do not post unreviewed automated replies to maintainers.</p>
+</div>}

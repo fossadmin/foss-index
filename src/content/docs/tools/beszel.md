@@ -6,10 +6,6 @@ icon: beszel.svg
 mark: BE
 repository: https://github.com/henrygd/beszel
 license: MIT
-funding:
-  custom:
-    - label: Buy the maintainer a coffee
-      url: https://www.buymeacoffee.com/henrygd
 dripsEligible: false
 nixosModule: services.beszel
 managedHosting: false

@@ -45,6 +45,16 @@ Homebrew has a cask for it. That is Homebrew's packaging, not the project's own:
 brew install --cask vlc
 ```
 
+### NixOS
+
+nixpkgs packages VLC as `vlc` (source: [pkgs/by-name/vl/vlc/package.nix](https://github.com/NixOS/nixpkgs/blob/8e246c66fe7112839781b2200b017f0a587d25d3/pkgs/by-name/vl/vlc/package.nix)):
+
+```nix
+environment.systemPackages = [ pkgs.vlc ];
+```
+
+Rebuild with `sudo nixos-rebuild switch`, then launch VLC from the application menu.
+
 ## First steps
 
 - Open VLC and use **Media > Open File** to play a video or audio file.

@@ -49,6 +49,16 @@ This needs Flatpak set up on your system first (see [flatpak.org/setup](https://
 
 The README links an open-in-browser web app. The project notes it has limits compared with the desktop app, listed in its web versus desktop comparison.
 
+### NixOS
+
+nixpkgs packages Super Productivity as `super-productivity` (source: [pkgs/by-name/su/super-productivity/package.nix](https://github.com/NixOS/nixpkgs/blob/8e246c66fe7112839781b2200b017f0a587d25d3/pkgs/by-name/su/super-productivity/package.nix)):
+
+```nix
+environment.systemPackages = [ pkgs.super-productivity ];
+```
+
+Rebuild with `sudo nixos-rebuild switch`, then launch Super Productivity from the application menu.
+
 ## First steps
 
 - Add a task with the add-task bar, then give it a time estimate and start tracking.

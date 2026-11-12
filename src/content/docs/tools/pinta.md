@@ -38,6 +38,16 @@ flatpak install flathub com.github.PintaProject.Pinta
 
 Download the installer from the [Pinta Project site](https://www.pinta-project.com/). On Windows, open the file and follow the wizard, as the [user guide](https://www.pinta-project.com/user-guide/start/) describes.
 
+### NixOS
+
+nixpkgs packages Pinta as `pinta` (source: [pkgs/by-name/pi/pinta/package.nix](https://github.com/NixOS/nixpkgs/blob/8e246c66fe7112839781b2200b017f0a587d25d3/pkgs/by-name/pi/pinta/package.nix)):
+
+```nix
+environment.systemPackages = [ pkgs.pinta ];
+```
+
+Rebuild with `sudo nixos-rebuild switch`, then launch Pinta from the application menu.
+
 ## First steps
 
 - Open an image with **File > Open** or create one with **File > New**.

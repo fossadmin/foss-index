@@ -54,6 +54,16 @@ Per the [install guide](https://www.ventoy.net/en/doc_start.html): download `ven
 
 We found no macOS installer in the project's install guide, which covers Windows and Linux. Prepare the drive on one of those.
 
+### NixOS
+
+nixpkgs packages the Ventoy tools as `ventoy` (source: [pkgs/by-name/ve/ventoy/package.nix](https://github.com/NixOS/nixpkgs/blob/8e246c66fe7112839781b2200b017f0a587d25d3/pkgs/by-name/ve/ventoy/package.nix)):
+
+```nix
+environment.systemPackages = [ pkgs.ventoy ];
+```
+
+Rebuild with `sudo nixos-rebuild switch`, then run `sudo ventoy-web` for the browser interface or `sudo ventoy` for the command-line tool. Write only to a USB stick you mean to erase.
+
 ## First steps
 
 - After install, the large partition on the stick looks like a normal drive. Copy ISO files (or WIM, IMG, VHD, EFI files) onto it. You don't need to reformat it for each image.

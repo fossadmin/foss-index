@@ -45,6 +45,16 @@ brew install --cask cryptomator
 
 Cryptomator makes an encrypted vault folder inside a folder you choose (for example one your cloud storage app already syncs). When you unlock it, Cryptomator shows the decrypted contents as a virtual drive. Whatever you put on that drive is stored encrypted in the vault folder.
 
+### NixOS
+
+nixpkgs packages Cryptomator as `cryptomator` (source: [pkgs/by-name/cr/cryptomator/package.nix](https://github.com/NixOS/nixpkgs/blob/8e246c66fe7112839781b2200b017f0a587d25d3/pkgs/by-name/cr/cryptomator/package.nix)):
+
+```nix
+environment.systemPackages = [ pkgs.cryptomator ];
+```
+
+Rebuild with `sudo nixos-rebuild switch`, then launch Cryptomator from the application menu.
+
 ## First steps
 
 - Open Cryptomator and choose **Add Vault > Create New Vault**.

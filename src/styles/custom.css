@@ -1156,3 +1156,272 @@ main {
     padding-top: 22px;
   }
 }
+
+/* Some projects require their mark to link to the official site. Keep that
+   link separate from the catalog row link, without nested anchors. */
+.tool-item { position: relative; }
+.project-icon-link { position: absolute; left: 0; top: 50%; transform: translateY(-50%); z-index: 1; }
+.project-icon-link:focus-visible { outline: 2px solid var(--rust); outline-offset: 3px; }
+
+.linked-icon-placeholder { visibility: hidden; }
+@media (max-width: 650px) { .project-icon-link { top: 20px; transform: none; } }
+
+/* Compact / Detail listing layouts. Compact is the default; the choice is
+   kept in this browser only (localStorage "foss-index:view"). */
+.view-toggle {
+  display: inline-flex;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  overflow: hidden;
+  background: var(--card);
+}
+.view-toggle button {
+  font: 10px var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 8px 12px;
+  border: 0;
+  background: transparent;
+  color: var(--moss);
+  cursor: pointer;
+}
+.view-toggle button + button {
+  border-left: 1px solid var(--line);
+}
+.view-toggle button[aria-pressed="true"] {
+  background: var(--tint);
+  color: var(--olive);
+}
+.view-toggle button:focus-visible {
+  outline: 2px solid var(--rust);
+  outline-offset: -2px;
+}
+.tool-shot {
+  display: none;
+}
+@media (min-width: 651px) {
+  .tool-list[data-view] {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 20px;
+  }
+  .tool-list[data-view] .tool-item[hidden] {
+    display: none;
+  }
+  .tool-list[data-view] .tool-item {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .tool-list[data-view] .tool-row {
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 14px;
+    align-items: start;
+    min-height: 0;
+    padding: 16px 44px 16px 0;
+  }
+  .tool-list[data-view] .row-arrow,
+  .tool-list[data-view] .tool-category,
+  .tool-list[data-view] .version {
+    display: none;
+  }
+  .tool-list[data-view] .tool-purpose {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-top: 4px;
+  }
+  .tool-list[data-view] .tool-meta {
+    grid-column: 2;
+    flex-direction: row;
+    align-items: center;
+  }
+  .tool-list[data-view] .save-toggle {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 36px;
+    height: 36px;
+    border-bottom: 0;
+  }
+  .tool-list[data-view] .project-icon-link {
+    top: 16px;
+    transform: none;
+  }
+}
+@media (min-width: 1100px) {
+  .tool-list[data-view] {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+/* Detail: the earlier row content as a fuller card, with the screenshot. */
+@media (min-width: 651px) {
+  .tool-list[data-view="detail"] .tool-item {
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: var(--card);
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  .tool-list[data-view="detail"] .tool-row {
+    border-bottom: 0;
+    padding: 0 0 16px;
+    grid-template-columns: 40px minmax(0, 1fr);
+    row-gap: 14px;
+    column-gap: 14px;
+  }
+  .tool-list[data-view="detail"] .tool-shot {
+    display: block;
+    grid-column: 1 / -1;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: var(--sand);
+    border-bottom: 1px solid var(--line);
+  }
+  .tool-list[data-view="detail"] .tool-shot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top left;
+    display: block;
+  }
+  .tool-list[data-view="detail"] .tool-mark,
+  .tool-list[data-view="detail"] .tool-copy {
+    margin-top: 0;
+  }
+  .tool-list[data-view="detail"] .tool-mark {
+    margin-left: 16px;
+  }
+  .tool-list[data-view="detail"] .tool-copy {
+    padding-right: 16px;
+  }
+  .tool-list[data-view="detail"] .tool-purpose {
+    -webkit-line-clamp: unset;
+    display: block;
+  }
+  .tool-list[data-view="detail"] .tool-category,
+  .tool-list[data-view="detail"] .version {
+    display: block;
+  }
+  .tool-list[data-view="detail"] .tool-meta {
+    padding: 0 16px;
+    grid-column: 1 / -1;
+    justify-content: space-between;
+  }
+  .tool-list[data-view="detail"] .save-toggle {
+    background: var(--card);
+    border-radius: 0 0 0 6px;
+  }
+  .tool-list[data-view="detail"] .project-icon-link {
+    top: auto;
+    left: 16px;
+  }
+}
+/* Phones: one column, rows as before. Detail adds the screenshot. */
+@media (max-width: 650px) {
+  .tool-list[data-view="detail"] .tool-shot {
+    display: block;
+    grid-column: 1 / -1;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: var(--sand);
+    margin-bottom: 4px;
+  }
+  .tool-list[data-view="detail"] .tool-shot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top left;
+  }
+  .tool-list[data-view="detail"] .tool-row {
+    align-items: start;
+  }
+}
+
+@media (min-width: 651px) {
+  .tool-list[data-view="detail"] .tool-row {
+    align-content: start;
+    grid-template-rows: auto;
+    grid-auto-flow: row;
+  }
+  .tool-list[data-view="detail"] .tool-shot { grid-row: 1; grid-column: 1 / -1; }
+  .tool-list[data-view="detail"] .tool-mark { grid-row: 2; grid-column: 1; }
+  .tool-list[data-view="detail"] .tool-copy { grid-row: 2; grid-column: 2; min-width: 0; }
+  .tool-list[data-view="detail"] .tool-meta { grid-row: 3; grid-column: 1 / -1; }
+  .tool-list[data-view="detail"] .tool-meta { align-self: end; }
+}
+@media (max-width: 650px) {
+  .tool-list[data-view="detail"] .tool-shot { grid-row: 1; grid-column: 1 / -1; }
+  .tool-list[data-view="detail"] .tool-mark { grid-row: 2; grid-column: 1; }
+  .tool-list[data-view="detail"] .tool-copy { grid-row: 2; grid-column: 2; }
+  .tool-list[data-view="detail"] .row-arrow { grid-row: 2; grid-column: 3; }
+  .tool-list[data-view="detail"] .tool-meta { grid-row: 3; grid-column: 2; }
+  .list-heading { flex-wrap: wrap; gap: 10px; }
+  .list-tools { flex-wrap: wrap; gap: 10px; }
+  .view-toggle button { padding: 7px 10px; white-space: nowrap; }
+}
+
+.tool-shot .no-shot-text {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  font: 10px var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--moss);
+}
+
+.view-toggle button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.version-date {
+  display: none;
+}
+@media (min-width: 651px) {
+  .tool-list[data-view="detail"] .version-date {
+    display: inline;
+  }
+  /* Hairline above the license/release row, as a quiet card footer. */
+  .tool-list[data-view="detail"] .tool-meta {
+    border-top: 1px solid var(--line);
+    padding-top: 12px;
+    margin: 0 16px;
+    padding-left: 0;
+    padding-right: 0;
+    grid-column: 1 / -1;
+  }
+}
+
+/* Project support stays reachable before the installation details. */
+.support-shortcut { border-color: var(--mark); }
+#project-support { scroll-margin-top: 24px; }
+.catalog-support { display: block; width: fit-content; margin: 0 16px 12px; font-family: var(--mono); font-size: 11px; line-height: 1.5; text-decoration: underline; text-underline-offset: 3px; }
+.decision-brief { margin: 24px 0; padding: 20px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.decision-brief h2 { margin: 8px 0 18px; font-size: 23px; line-height: 1.3; letter-spacing: -.02em; }
+.decision-brief dl { margin: 0; }
+.decision-brief dl > div { display: grid; grid-template-columns: 145px 1fr; gap: 16px; margin: 12px 0; }
+.decision-brief dt { font-weight: 600; font-size: 14px; }
+.decision-brief dd { margin: 0; font-size: 14px; line-height: 1.65; }
+.pilot-actions { display: flex; flex-wrap: wrap; gap: 10px 22px; margin: 20px 0 12px; font-size: 13px; font-weight: 600; }
+.pilot-actions a, .pilot-check a, .pilot-contribute a { text-decoration: underline; text-underline-offset: 3px; }
+.pilot-check { font-size: 11px; line-height: 1.65; color: var(--moss); }
+.pilot-contribute { margin-top: 22px; padding-top: 16px; border-top: 1px solid var(--line); }
+.pilot-contribute h3 { font-size: 18px; margin: 12px 0; }
+.pilot-contribute p, .pilot-contribute li { font-size: 14px; line-height: 1.7; }
+@media (max-width: 650px) {
+  .decision-brief dl > div { grid-template-columns: 1fr; gap: 4px; margin: 18px 0; }
+  .decision-brief h2 { font-size: 21px; }
+}
+.tool-list[data-view="compact"] .tool-row { border-bottom: 0; padding-bottom: 10px; }
+.tool-list[data-view="compact"] .tool-item { border-bottom: 1px solid var(--line); }
+.tool-list[data-view="compact"] .catalog-support { margin-left: 54px; margin-bottom: 16px; }
+@media (max-width: 650px) {
+  .tool-list[data-view] .catalog-support { grid-column: 1 / -1; margin-left: 54px; }
+}
+@media (max-width: 650px) {
+  .tool-list[data-view] .tool-row { grid-column: 1; grid-row: 1; border-bottom: 0; }
+  .tool-list[data-view] .save-toggle { grid-column: 2; grid-row: 1; border-bottom: 0; }
+  .tool-list[data-view] .catalog-support { grid-row: 2; margin-bottom: 16px; }
+  .tool-list[data-view] .tool-item { border-bottom: 1px solid var(--line); }
+}

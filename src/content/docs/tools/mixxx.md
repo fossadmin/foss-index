@@ -49,6 +49,16 @@ Homebrew has a cask for it. That is Homebrew's packaging, not the project's own:
 brew install --cask mixxx
 ```
 
+### NixOS
+
+nixpkgs packages Mixxx as `mixxx` (source: [pkgs/by-name/mi/mixxx/package.nix](https://github.com/NixOS/nixpkgs/blob/8e246c66fe7112839781b2200b017f0a587d25d3/pkgs/by-name/mi/mixxx/package.nix)):
+
+```nix
+environment.systemPackages = [ pkgs.mixxx ];
+```
+
+Rebuild with `sudo nixos-rebuild switch`, then launch Mixxx from the application menu.
+
 ## First steps
 
 - Open Mixxx and import your music into the library. Go to **Preferences > Library** and click **Add** to choose your music directory. Mixxx watches that folder for new tracks.

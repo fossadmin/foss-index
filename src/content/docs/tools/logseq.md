@@ -46,6 +46,16 @@ Homebrew has a cask for it. That is Homebrew's packaging, not the project's own:
 brew install --cask logseq
 ```
 
+### NixOS
+
+nixpkgs packages Logseq as `logseq` (source: [pkgs/by-name/lo/logseq/package.nix](https://github.com/NixOS/nixpkgs/blob/8e246c66fe7112839781b2200b017f0a587d25d3/pkgs/by-name/lo/logseq/package.nix)):
+
+```nix
+environment.systemPackages = [ pkgs.logseq ];
+```
+
+Rebuild with `sudo nixos-rebuild switch`, then launch Logseq from the application menu.
+
 ## First steps
 
 - On first start Logseq asks you to create a *graph*, which is a folder on your disk holding your pages as plain files. Pick or create the folder yourself, in a place you back up.

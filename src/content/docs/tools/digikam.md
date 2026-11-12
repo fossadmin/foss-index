@@ -49,6 +49,16 @@ This needs Flatpak set up on your system first (see [flatpak.org/setup](https://
 
 Installers are on the [digiKam download page](https://www.digikam.org/download/). The page also lists weekly pre-release snapshots; use the stable download unless you want to test.
 
+### NixOS
+
+nixpkgs packages digiKam as `digikam` (source: [pkgs/by-name/di/digikam/package.nix](https://github.com/NixOS/nixpkgs/blob/8e246c66fe7112839781b2200b017f0a587d25d3/pkgs/by-name/di/digikam/package.nix)):
+
+```nix
+environment.systemPackages = [ pkgs.digikam ];
+```
+
+Rebuild with `sudo nixos-rebuild switch`, then launch digiKam from the application menu.
+
 ## First steps
 
 - On first start digiKam asks a short series of setup questions. The first is where your photos live. Pick any local, removable or network folder. You can change every answer later.

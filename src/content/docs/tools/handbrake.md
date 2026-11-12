@@ -45,6 +45,16 @@ Homebrew has a cask for it. That is Homebrew's packaging, not the project's own:
 brew install --cask handbrake-app
 ```
 
+### NixOS
+
+nixpkgs packages HandBrake as `handbrake` (source: [pkgs/by-name/ha/handbrake/package.nix](https://github.com/NixOS/nixpkgs/blob/8e246c66fe7112839781b2200b017f0a587d25d3/pkgs/by-name/ha/handbrake/package.nix)):
+
+```nix
+environment.systemPackages = [ pkgs.handbrake ];
+```
+
+Rebuild with `sudo nixos-rebuild switch`, then launch HandBrake from the application menu.
+
 ## First steps
 
 - Start HandBrake and choose **Open Source** to pick a video file (or drag one onto the window).

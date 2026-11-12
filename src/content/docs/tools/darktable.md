@@ -33,6 +33,16 @@ The install page offers an AppImage for x86-64 and aarch64, and notes a Flatpak 
 
 Installers are on the [darktable install page](https://www.darktable.org/install/). On macOS, if you see the warning that the app could not be verified, the project documents a fix on that page. It involves removing the quarantine flag from the app, so read the page first and only do it for a download you got from darktable.org.
 
+### NixOS
+
+nixpkgs packages darktable as `darktable` (source: [pkgs/by-name/da/darktable/package.nix](https://github.com/NixOS/nixpkgs/blob/8e246c66fe7112839781b2200b017f0a587d25d3/pkgs/by-name/da/darktable/package.nix)):
+
+```nix
+environment.systemPackages = [ pkgs.darktable ];
+```
+
+Rebuild with `sudo nixos-rebuild switch`, then launch darktable from the application menu.
+
 ## First steps
 
 - Open darktable. It starts in the **lighttable** view, where you import photos.

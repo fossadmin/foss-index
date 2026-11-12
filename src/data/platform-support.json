@@ -1,0 +1,1753 @@
+{
+  "tools/joplin": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Native app",
+        "url": "https://joplinapp.org/download/"
+      },
+      {
+        "name": "Windows",
+        "kind": "Native app",
+        "url": "https://joplinapp.org/download/"
+      },
+      {
+        "name": "macOS",
+        "kind": "Native app",
+        "url": "https://joplinapp.org/download/"
+      },
+      {
+        "name": "Android",
+        "kind": "Native app",
+        "url": "https://joplinapp.org/download/"
+      },
+      {
+        "name": "iOS",
+        "kind": "Native app",
+        "url": "https://joplinapp.org/download/"
+      }
+    ],
+    "note": "Desktop and mobile apps share the Joplin project. Choose the download for your device; sync services are a separate choice."
+  },
+  "tools/simplex-chat": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Native app",
+        "url": "https://simplex.chat/downloads/"
+      },
+      {
+        "name": "Windows",
+        "kind": "Native app",
+        "url": "https://simplex.chat/downloads/"
+      },
+      {
+        "name": "macOS",
+        "kind": "Native app",
+        "url": "https://simplex.chat/downloads/"
+      },
+      {
+        "name": "Android",
+        "kind": "Native app",
+        "url": "https://simplex.chat/downloads/"
+      },
+      {
+        "name": "iOS",
+        "kind": "Native app",
+        "url": "https://simplex.chat/downloads/"
+      }
+    ],
+    "note": "Use the official download selector for desktop or phone. Mobile and desktop features and release availability can differ."
+  },
+  "tools/standard-notes": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Native app",
+        "url": "https://standardnotes.com/download"
+      },
+      {
+        "name": "Windows",
+        "kind": "Native app",
+        "url": "https://standardnotes.com/download"
+      },
+      {
+        "name": "macOS",
+        "kind": "Native app",
+        "url": "https://standardnotes.com/download"
+      },
+      {
+        "name": "Android",
+        "kind": "Native app",
+        "url": "https://standardnotes.com/download"
+      },
+      {
+        "name": "iOS",
+        "kind": "Native app",
+        "url": "https://standardnotes.com/download"
+      },
+      {
+        "name": "Web",
+        "kind": "Browser client",
+        "url": "https://standardnotes.com/download"
+      }
+    ],
+    "note": "The web client runs in a browser. Native apps and paid service features are separate questions."
+  },
+  "tools/cryptomator": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Native app",
+        "url": "https://cryptomator.org/downloads/"
+      },
+      {
+        "name": "Windows",
+        "kind": "Native app",
+        "url": "https://cryptomator.org/downloads/"
+      },
+      {
+        "name": "macOS",
+        "kind": "Native app",
+        "url": "https://cryptomator.org/downloads/"
+      },
+      {
+        "name": "Android",
+        "kind": "Native app",
+        "url": "https://cryptomator.org/downloads/"
+      },
+      {
+        "name": "iOS",
+        "kind": "Native app",
+        "url": "https://cryptomator.org/downloads/"
+      }
+    ],
+    "note": "The mobile apps are open source but not every feature is free. The current download page says free mobile use is read-only; write access requires a platform-specific purchase. This is not a hosted storage service."
+  },
+  "tools/signal-desktop": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Native app",
+        "url": "https://signal.org/download/"
+      },
+      {
+        "name": "Windows",
+        "kind": "Native app",
+        "url": "https://signal.org/download/"
+      },
+      {
+        "name": "macOS",
+        "kind": "Native app",
+        "url": "https://signal.org/download/"
+      },
+      {
+        "name": "Android",
+        "kind": "Native app",
+        "url": "https://github.com/signalapp/Signal-Android"
+      },
+      {
+        "name": "iOS",
+        "kind": "Native app",
+        "url": "https://github.com/signalapp/Signal-iOS"
+      }
+    ],
+    "note": "This listing and recorded release cover Signal Desktop. The phone apps have their own source repositories and releases. Signal Desktop must link to Signal installed on a phone; it is not an independent phone-free account."
+  },
+  "tools/nextcloud": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Client app",
+        "url": "https://nextcloud.com/install/"
+      },
+      {
+        "name": "Windows",
+        "kind": "Client app",
+        "url": "https://nextcloud.com/install/"
+      },
+      {
+        "name": "macOS",
+        "kind": "Client app",
+        "url": "https://nextcloud.com/install/"
+      },
+      {
+        "name": "Android",
+        "kind": "Client app",
+        "url": "https://nextcloud.com/install/"
+      },
+      {
+        "name": "iOS",
+        "kind": "Client app",
+        "url": "https://nextcloud.com/install/"
+      },
+      {
+        "name": "Web",
+        "kind": "Browser client",
+        "url": "https://nextcloud.com/install/"
+      }
+    ],
+    "note": "These are ways to use a Nextcloud server, not platforms that run the full Nextcloud server. Mobile Files and Talk are separate apps; calendar and contact integration has its own setup. The recorded source and release describe the server."
+  },
+  "tools/vlc": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Native app",
+        "url": "https://www.videolan.org/vlc/"
+      },
+      {
+        "name": "Windows",
+        "kind": "Native app",
+        "url": "https://www.videolan.org/vlc/"
+      },
+      {
+        "name": "macOS",
+        "kind": "Native app",
+        "url": "https://www.videolan.org/vlc/"
+      },
+      {
+        "name": "Android",
+        "kind": "Native app",
+        "url": "https://www.videolan.org/vlc/download-android.html"
+      },
+      {
+        "name": "iOS",
+        "kind": "Native app",
+        "url": "https://www.videolan.org/vlc/download-ios.html"
+      }
+    ],
+    "note": "VideoLAN publishes desktop and mobile players. VLC for iOS also supports iPadOS. Mobile interfaces, supported features and releases differ from the desktop player."
+  },
+  "tools/zotero": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Native app",
+        "url": "https://www.zotero.org/support/installation"
+      },
+      {
+        "name": "Windows",
+        "kind": "Native app",
+        "url": "https://www.zotero.org/support/installation"
+      },
+      {
+        "name": "macOS",
+        "kind": "Native app",
+        "url": "https://www.zotero.org/support/installation"
+      },
+      {
+        "name": "Android",
+        "kind": "Native app",
+        "url": "https://www.zotero.org/support/android"
+      },
+      {
+        "name": "iOS",
+        "kind": "Native app",
+        "url": "https://www.zotero.org/support/ios"
+      }
+    ],
+    "note": "Official iOS and Android apps work with your research library. iOS includes iPhone and iPad. Desktop browser connectors and word-processor integration are not promises of identical mobile features."
+  },
+  "tools/thunderbird": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Native app",
+        "url": "https://www.thunderbird.net/en-US/download/"
+      },
+      {
+        "name": "Windows",
+        "kind": "Native app",
+        "url": "https://www.thunderbird.net/en-US/download/"
+      },
+      {
+        "name": "macOS",
+        "kind": "Native app",
+        "url": "https://www.thunderbird.net/en-US/download/"
+      },
+      {
+        "name": "Android",
+        "kind": "Native app",
+        "url": "https://www.thunderbird.net/en-US/mobile/"
+      }
+    ],
+    "note": "The Android app is a separate client with its own releases. Thunderbird for iOS is in development, not listed as an available app here: the October 1, 2026 project update describes a first community test as a future goal."
+  },
+  "tools/immich": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Android",
+        "kind": "Mobile client",
+        "url": "https://immich.app/download"
+      },
+      {
+        "name": "iOS",
+        "kind": "Mobile client",
+        "url": "https://immich.app/download"
+      }
+    ],
+    "note": "The phone apps back up to an Immich server. They do not run the server on your phone; the source and recorded release describe the server project."
+  },
+  "tools/home-assistant": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Android",
+        "kind": "Companion client",
+        "url": "https://companion.home-assistant.io/docs/getting_started/"
+      },
+      {
+        "name": "iOS",
+        "kind": "Companion client",
+        "url": "https://companion.home-assistant.io/docs/getting_started/"
+      }
+    ],
+    "note": "These companion apps connect to Home Assistant. They do not replace the server or imply identical sensors, permissions or background behavior across phones."
+  },
+  "tools/karakeep": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Android",
+        "kind": "Mobile client",
+        "url": "https://karakeep.com/apps/"
+      },
+      {
+        "name": "iOS",
+        "kind": "Mobile client",
+        "url": "https://karakeep.com/apps/"
+      }
+    ],
+    "note": "The mobile apps connect to a Karakeep server. Browser extensions and the web interface are separate ways to use it; Android and iOS are not server-hosting targets."
+  },
+  "tools/netbird": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "VPN client",
+        "url": "https://docs.netbird.io/get-started/install"
+      },
+      {
+        "name": "Windows",
+        "kind": "VPN client",
+        "url": "https://docs.netbird.io/get-started/install"
+      },
+      {
+        "name": "macOS",
+        "kind": "VPN client",
+        "url": "https://docs.netbird.io/get-started/install"
+      },
+      {
+        "name": "Android",
+        "kind": "VPN client",
+        "url": "https://docs.netbird.io/get-started/install/mobile"
+      },
+      {
+        "name": "iOS",
+        "kind": "VPN client",
+        "url": "https://docs.netbird.io/get-started/install/mobile"
+      }
+    ],
+    "note": "Mobile VPN clients join a NetBird network. This is not a claim that the management server runs on iOS or Android; mobile features and routing behavior can differ."
+  },
+  "tools/jellyfin": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Android",
+        "kind": "Mobile client",
+        "url": "https://jellyfin.org/downloads/clients/"
+      },
+      {
+        "name": "iOS",
+        "kind": "Mobile client",
+        "url": "https://jellyfin.org/downloads/clients/"
+      }
+    ],
+    "note": "The official Jellyfin mobile apps connect to a Jellyfin server. Other clients on the download page can be third-party projects with separate source and support. Mobile support is not server support."
+  },
+  "tools/audiobookshelf": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Android",
+        "kind": "Beta mobile client",
+        "url": "https://github.com/advplyr/audiobookshelf-app"
+      }
+    ],
+    "note": "The official Android app is beta. The project also has an early iOS beta, but its README currently says TestFlight is full, so it is not listed as an available iOS download here. The mobile client connects to an Audiobookshelf server; third-party players are separate projects."
+  },
+  "tools/krita": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Native desktop app",
+        "url": "https://krita.org/en/download/"
+      },
+      {
+        "name": "Windows",
+        "kind": "Native desktop app",
+        "url": "https://krita.org/en/download/"
+      },
+      {
+        "name": "macOS",
+        "kind": "Native desktop app",
+        "url": "https://krita.org/en/download/"
+      }
+    ],
+    "note": "Check the official download page for the supported OS version and processor architecture. A desktop download is not evidence of a native phone app."
+  },
+  "tools/mixxx": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Native desktop app",
+        "url": "https://mixxx.org/download/"
+      },
+      {
+        "name": "Windows",
+        "kind": "Native desktop app",
+        "url": "https://mixxx.org/download/"
+      },
+      {
+        "name": "macOS",
+        "kind": "Native desktop app",
+        "url": "https://mixxx.org/download/"
+      }
+    ],
+    "note": "Check the official download page for the supported OS version and processor architecture. A desktop download is not evidence of a native phone app."
+  },
+  "tools/libreoffice": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Native desktop app",
+        "url": "https://www.libreoffice.org/get-help/system-requirements/"
+      },
+      {
+        "name": "Windows",
+        "kind": "Native desktop app",
+        "url": "https://www.libreoffice.org/get-help/system-requirements/"
+      },
+      {
+        "name": "macOS",
+        "kind": "Native desktop app",
+        "url": "https://www.libreoffice.org/get-help/system-requirements/"
+      },
+      {
+        "name": "Android",
+        "kind": "Document viewer, not the desktop editor",
+        "url": "https://www.libreoffice.org/get-help/system-requirements/"
+      }
+    ],
+    "note": "The official requirements page lists an Android LibreOffice Viewer separately. Do not assume a full desktop office suite on a phone. Other related mobile office products are separate projects."
+  },
+  "tools/drawio-desktop": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Native desktop app",
+        "url": "https://github.com/jgraph/drawio-desktop"
+      },
+      {
+        "name": "Windows",
+        "kind": "Native desktop app",
+        "url": "https://github.com/jgraph/drawio-desktop"
+      },
+      {
+        "name": "macOS",
+        "kind": "Native desktop app",
+        "url": "https://github.com/jgraph/drawio-desktop"
+      }
+    ],
+    "note": "Check the official download page for the supported OS version and processor architecture. A desktop download is not evidence of a native phone app."
+  },
+  "tools/kdenlive": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Native desktop app",
+        "url": "https://kdenlive.org/download/"
+      },
+      {
+        "name": "Windows",
+        "kind": "Native desktop app",
+        "url": "https://kdenlive.org/download/"
+      },
+      {
+        "name": "macOS",
+        "kind": "Native desktop app",
+        "url": "https://kdenlive.org/download/"
+      }
+    ],
+    "note": "Check the official download page for the supported OS version and processor architecture. A desktop download is not evidence of a native phone app."
+  },
+  "tools/openscad": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Native desktop app",
+        "url": "https://openscad.org/downloads.html"
+      },
+      {
+        "name": "Windows",
+        "kind": "Native desktop app",
+        "url": "https://openscad.org/downloads.html"
+      },
+      {
+        "name": "macOS",
+        "kind": "Native desktop app",
+        "url": "https://openscad.org/downloads.html"
+      }
+    ],
+    "note": "Check the official download page for the supported OS version and processor architecture. A desktop download is not evidence of a native phone app."
+  },
+  "tools/gimp": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Native desktop app",
+        "url": "https://www.gimp.org/downloads/"
+      },
+      {
+        "name": "Windows",
+        "kind": "Native desktop app",
+        "url": "https://www.gimp.org/downloads/"
+      },
+      {
+        "name": "macOS",
+        "kind": "Native desktop app",
+        "url": "https://www.gimp.org/downloads/"
+      }
+    ],
+    "note": "Check the official download page for the supported OS version and processor architecture. A desktop download is not evidence of a native phone app."
+  },
+  "tools/obs-studio": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Native desktop app",
+        "url": "https://obsproject.com/kb/linux-installation"
+      },
+      {
+        "name": "Windows",
+        "kind": "Native desktop app",
+        "url": "https://obsproject.com/download"
+      },
+      {
+        "name": "macOS",
+        "kind": "Native desktop app",
+        "url": "https://obsproject.com/download"
+      }
+    ],
+    "note": "Check the official download page for the supported OS version and processor architecture. A desktop download is not evidence of a native phone app."
+  },
+  "tools/pinta": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Native desktop app",
+        "url": "https://www.pinta-project.com/"
+      },
+      {
+        "name": "Windows",
+        "kind": "Native desktop app",
+        "url": "https://www.pinta-project.com/"
+      },
+      {
+        "name": "macOS",
+        "kind": "Native desktop app",
+        "url": "https://www.pinta-project.com/"
+      }
+    ],
+    "note": "Check the official download page for the supported OS version and processor architecture. A desktop download is not evidence of a native phone app."
+  },
+  "tools/blender": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Native desktop app",
+        "url": "https://www.blender.org/download/"
+      },
+      {
+        "name": "Windows",
+        "kind": "Native desktop app",
+        "url": "https://www.blender.org/download/"
+      },
+      {
+        "name": "macOS",
+        "kind": "Native desktop app",
+        "url": "https://www.blender.org/download/"
+      }
+    ],
+    "note": "Check the official download page for the supported OS version and processor architecture. A desktop download is not evidence of a native phone app."
+  },
+  "tools/keepassxc": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Native desktop app",
+        "url": "https://keepassxc.org/download/"
+      },
+      {
+        "name": "Windows",
+        "kind": "Native desktop app",
+        "url": "https://keepassxc.org/download/"
+      },
+      {
+        "name": "macOS",
+        "kind": "Native desktop app",
+        "url": "https://keepassxc.org/download/"
+      }
+    ],
+    "note": "Check the official download page for the supported OS version and processor architecture. A desktop download is not evidence of a native phone app."
+  },
+  "tools/audacity": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Native desktop app",
+        "url": "https://www.audacityteam.org/download/"
+      },
+      {
+        "name": "Windows",
+        "kind": "Native desktop app",
+        "url": "https://www.audacityteam.org/download/"
+      },
+      {
+        "name": "macOS",
+        "kind": "Native desktop app",
+        "url": "https://www.audacityteam.org/download/"
+      }
+    ],
+    "note": "Check the official download page for the supported OS version and processor architecture. A desktop download is not evidence of a native phone app."
+  },
+  "tools/darktable": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Native desktop app",
+        "url": "https://www.darktable.org/install/"
+      },
+      {
+        "name": "Windows",
+        "kind": "Native desktop app",
+        "url": "https://www.darktable.org/install/"
+      },
+      {
+        "name": "macOS",
+        "kind": "Native desktop app",
+        "url": "https://www.darktable.org/install/"
+      }
+    ],
+    "note": "Check the official download page for the supported OS version and processor architecture. A desktop download is not evidence of a native phone app."
+  },
+  "tools/gnucash": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Native desktop app",
+        "url": "https://www.gnucash.org/download.phtml"
+      },
+      {
+        "name": "Windows",
+        "kind": "Native desktop app",
+        "url": "https://www.gnucash.org/download.phtml"
+      },
+      {
+        "name": "macOS",
+        "kind": "Native desktop app",
+        "url": "https://www.gnucash.org/download.phtml"
+      }
+    ],
+    "note": "Check the official download page for the supported OS version and processor architecture. A desktop download is not evidence of a native phone app."
+  },
+  "tools/digikam": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Native desktop app",
+        "url": "https://www.digikam.org/download/"
+      },
+      {
+        "name": "Windows",
+        "kind": "Native desktop app",
+        "url": "https://www.digikam.org/download/"
+      },
+      {
+        "name": "macOS",
+        "kind": "Native desktop app",
+        "url": "https://www.digikam.org/download/"
+      }
+    ],
+    "note": "Check the official download page for the supported OS version and processor architecture. A desktop download is not evidence of a native phone app."
+  },
+  "tools/handbrake": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Native desktop app",
+        "url": "https://handbrake.fr/docs/en/latest/get-handbrake/download-and-install.html"
+      },
+      {
+        "name": "Windows",
+        "kind": "Native desktop app",
+        "url": "https://handbrake.fr/docs/en/latest/get-handbrake/download-and-install.html"
+      },
+      {
+        "name": "macOS",
+        "kind": "Native desktop app",
+        "url": "https://handbrake.fr/docs/en/latest/get-handbrake/download-and-install.html"
+      }
+    ],
+    "note": "Check the official download page for the supported OS version and processor architecture. A desktop download is not evidence of a native phone app."
+  },
+  "tools/prusaslicer": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Native desktop app",
+        "url": "https://help.prusa3d.com/article/install-prusaslicer_1903"
+      },
+      {
+        "name": "Windows",
+        "kind": "Native desktop app",
+        "url": "https://help.prusa3d.com/article/install-prusaslicer_1903"
+      },
+      {
+        "name": "macOS",
+        "kind": "Native desktop app",
+        "url": "https://help.prusa3d.com/article/install-prusaslicer_1903"
+      }
+    ],
+    "note": "Check the official download page for the supported OS version and processor architecture. A desktop download is not evidence of a native phone app."
+  },
+  "tools/cura": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Native desktop app",
+        "url": "https://ultimaker.com/software/ultimaker-cura/"
+      },
+      {
+        "name": "Windows",
+        "kind": "Native desktop app",
+        "url": "https://ultimaker.com/software/ultimaker-cura/"
+      },
+      {
+        "name": "macOS",
+        "kind": "Native desktop app",
+        "url": "https://ultimaker.com/software/ultimaker-cura/"
+      }
+    ],
+    "note": "Check the official download page for the supported OS version and processor architecture. A desktop download is not evidence of a native phone app."
+  },
+  "tools/super-productivity": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Native desktop app",
+        "url": "https://github.com/super-productivity/super-productivity"
+      },
+      {
+        "name": "Windows",
+        "kind": "Native desktop app",
+        "url": "https://github.com/super-productivity/super-productivity"
+      },
+      {
+        "name": "macOS",
+        "kind": "Native desktop app",
+        "url": "https://github.com/super-productivity/super-productivity"
+      },
+      {
+        "name": "Android",
+        "kind": "Native mobile app",
+        "url": "https://github.com/super-productivity/super-productivity"
+      },
+      {
+        "name": "iOS",
+        "kind": "Native mobile app",
+        "url": "https://github.com/super-productivity/super-productivity"
+      },
+      {
+        "name": "Web",
+        "kind": "Browser app",
+        "url": "https://github.com/super-productivity/super-productivity"
+      }
+    ],
+    "note": "The project lists desktop, mobile and browser versions. Capabilities and release channels can differ; choose the official installation route for your device."
+  },
+  "tools/actual-budget": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Native desktop app",
+        "url": "https://actualbudget.org/docs/install/"
+      },
+      {
+        "name": "Windows",
+        "kind": "Native desktop app",
+        "url": "https://actualbudget.org/docs/install/"
+      },
+      {
+        "name": "macOS",
+        "kind": "Native desktop app",
+        "url": "https://actualbudget.org/docs/install/"
+      },
+      {
+        "name": "Web",
+        "kind": "Browser app / mobile PWA",
+        "url": "https://actualbudget.org/docs/install/"
+      }
+    ],
+    "note": "Desktop apps are available for Linux, Windows and macOS. Mobile access uses the web app/PWA, not a native iOS or Android app. A personal server provides sync; local-only browser use has separate data-loss and backup limits."
+  },
+  "tools/dbeaver": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Native desktop app",
+        "url": "https://dbeaver.io/download/"
+      },
+      {
+        "name": "Windows",
+        "kind": "Native desktop app",
+        "url": "https://dbeaver.io/download/"
+      },
+      {
+        "name": "macOS",
+        "kind": "Native desktop app",
+        "url": "https://dbeaver.io/download/"
+      }
+    ],
+    "note": "Choose the official package for your OS version and processor. This does not imply a phone app or identical features on every platform."
+  },
+  "tools/flameshot": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Native desktop app",
+        "url": "https://flameshot.org/docs/installation/installation-linux/"
+      },
+      {
+        "name": "Windows",
+        "kind": "Native desktop app",
+        "url": "https://flameshot.org/docs/installation/installation-windows/"
+      },
+      {
+        "name": "macOS",
+        "kind": "Native desktop app",
+        "url": "https://flameshot.org/docs/installation/installation-osx/"
+      }
+    ],
+    "note": "Choose the official package for your OS version and processor. This does not imply a phone app or identical features on every platform."
+  },
+  "tools/kopia": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Backup CLI and GUI",
+        "url": "https://kopia.io/docs/installation/"
+      },
+      {
+        "name": "Windows",
+        "kind": "Backup CLI and GUI",
+        "url": "https://kopia.io/docs/installation/"
+      },
+      {
+        "name": "macOS",
+        "kind": "Backup CLI and GUI",
+        "url": "https://kopia.io/docs/installation/"
+      }
+    ],
+    "note": "Choose the official package for your OS version and processor. This does not imply a phone app or identical features on every platform."
+  },
+  "tools/restic": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Command-line backup tool",
+        "url": "https://restic.readthedocs.io/en/stable/020_installation.html"
+      },
+      {
+        "name": "Windows",
+        "kind": "Command-line backup tool",
+        "url": "https://restic.readthedocs.io/en/stable/020_installation.html"
+      },
+      {
+        "name": "macOS",
+        "kind": "Command-line backup tool",
+        "url": "https://restic.readthedocs.io/en/stable/020_installation.html"
+      }
+    ],
+    "note": "Choose the official package for your OS version and processor. This does not imply a phone app or identical features on every platform."
+  },
+  "tools/hledger": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Command-line accounting tools",
+        "url": "https://hledger.org/install.html"
+      },
+      {
+        "name": "Windows",
+        "kind": "Command-line accounting tools",
+        "url": "https://hledger.org/install.html"
+      },
+      {
+        "name": "macOS",
+        "kind": "Command-line accounting tools",
+        "url": "https://hledger.org/install.html"
+      }
+    ],
+    "note": "Choose the official package for your OS version and processor. This does not imply a phone app or identical features on every platform."
+  },
+  "tools/beancount": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Command-line accounting library/tools",
+        "url": "https://beancount.github.io/docs/installing_beancount/"
+      },
+      {
+        "name": "Windows",
+        "kind": "Command-line accounting library/tools",
+        "url": "https://beancount.github.io/docs/installing_beancount/"
+      },
+      {
+        "name": "macOS",
+        "kind": "Command-line accounting library/tools",
+        "url": "https://beancount.github.io/docs/installing_beancount/"
+      }
+    ],
+    "note": "The official installation guide covers Python packages and platform-specific dependencies, including Windows caveats. This is a command-line/library workflow, not a native phone bookkeeping app."
+  },
+  "tools/fava": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Locally hosted browser application",
+        "url": "https://beancount.github.io/fava/usage.html"
+      },
+      {
+        "name": "Windows",
+        "kind": "Locally hosted browser application",
+        "url": "https://beancount.github.io/fava/usage.html"
+      },
+      {
+        "name": "macOS",
+        "kind": "Locally hosted browser application",
+        "url": "https://beancount.github.io/fava/usage.html"
+      },
+      {
+        "name": "Web",
+        "kind": "Browser interface to a Fava server",
+        "url": "https://beancount.github.io/fava/usage.html"
+      }
+    ],
+    "note": "The project documents running its Python server on Linux, Windows and macOS. You use Fava through a browser; this is not a separate native desktop or phone client. A remotely reachable server needs its own security plan."
+  },
+  "tools/trilium-notes": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Native desktop app",
+        "url": "https://github.com/TriliumNext/Trilium"
+      },
+      {
+        "name": "Windows",
+        "kind": "Native desktop app",
+        "url": "https://github.com/TriliumNext/Trilium"
+      },
+      {
+        "name": "macOS",
+        "kind": "Native desktop app",
+        "url": "https://github.com/TriliumNext/Trilium"
+      },
+      {
+        "name": "Web",
+        "kind": "Browser interface to a Trilium server",
+        "url": "https://github.com/TriliumNext/Trilium"
+      }
+    ],
+    "note": "Official desktop apps are available for Linux, Windows and macOS. A server installation has a mobile browser interface. Native Android/iOS clients linked by the project are separate community projects, not the desktop source/version shown here."
+  },
+  "tools/syncthing": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "File-sync service with browser UI",
+        "url": "https://syncthing.net/downloads/"
+      },
+      {
+        "name": "Windows",
+        "kind": "File-sync service with browser UI",
+        "url": "https://syncthing.net/downloads/"
+      },
+      {
+        "name": "macOS",
+        "kind": "File-sync service with browser UI",
+        "url": "https://syncthing.net/downloads/"
+      }
+    ],
+    "note": "These are supported core downloads, not identical desktop GUI packages. OS integrations are separate projects. Do not treat a third-party phone client or the discontinued official Android wrapper as current core mobile support."
+  },
+  "tools/taskwarrior": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Command-line task manager",
+        "url": "https://taskwarrior.org/download/"
+      },
+      {
+        "name": "macOS",
+        "kind": "Command-line task manager",
+        "url": "https://taskwarrior.org/download/"
+      },
+      {
+        "name": "Windows",
+        "kind": "Through WSL, not native Windows",
+        "url": "https://taskwarrior.org/download/"
+      }
+    ],
+    "note": "The current project page says Cygwin is no longer supported and recommends Windows Subsystem for Linux. Phone clients are separate projects and are not counted here."
+  },
+  "tools/ventoy": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "USB installation utility",
+        "url": "https://www.ventoy.net/en/doc_start.html"
+      },
+      {
+        "name": "Windows",
+        "kind": "USB installation utility",
+        "url": "https://www.ventoy.net/en/doc_start.html"
+      }
+    ],
+    "note": "These labels describe the host used to prepare a bootable USB, not every operating system an ISO can boot. Installing Ventoy can erase the selected drive. The page does not assert a native macOS installer."
+  },
+  "tools/kitchenowl": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Native client",
+        "url": "https://github.com/TomBursch/kitchenowl/releases/tag/v0.8.1"
+      },
+      {
+        "name": "Windows",
+        "kind": "Native client",
+        "url": "https://github.com/TomBursch/kitchenowl/releases/tag/v0.8.1"
+      },
+      {
+        "name": "Android",
+        "kind": "Native client",
+        "url": "https://github.com/TomBursch/kitchenowl/releases/tag/v0.8.1"
+      },
+      {
+        "name": "iOS",
+        "kind": "Native mobile client",
+        "url": "https://kitchenowl.org/features/"
+      },
+      {
+        "name": "Web",
+        "kind": "Browser client",
+        "url": "https://kitchenowl.org/features/"
+      }
+    ],
+    "note": "These are clients for the KitchenOwl service. The current release has Linux, Windows, Android and Web artifacts, and the project documents iOS. A generic Desktop claim alone is not enough to add a macOS download."
+  },
+  "tools/logseq": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Beta desktop app",
+        "url": "https://github.com/logseq/logseq/releases/tag/2.0.2"
+      },
+      {
+        "name": "Windows",
+        "kind": "Beta desktop app",
+        "url": "https://github.com/logseq/logseq/releases/tag/2.0.2"
+      },
+      {
+        "name": "macOS",
+        "kind": "Beta desktop app",
+        "url": "https://github.com/logseq/logseq/releases/tag/2.0.2"
+      },
+      {
+        "name": "Android",
+        "kind": "Beta mobile app",
+        "url": "https://github.com/logseq/logseq/releases/tag/2.0.2"
+      },
+      {
+        "name": "Web",
+        "kind": "DB browser app",
+        "url": "https://github.com/logseq/logseq/releases/tag/2.0.2"
+      }
+    ],
+    "note": "The 2.0.2 DB beta has desktop and Android artifacts and links a browser app. File-graph 0.10.x and DB graphs are different workflows; do not assume interchangeable data or sync. The 2.0.2 release says iOS is under App Store review via TestFlight, so no general available-iOS assertion is made here."
+  },
+  "tools/silverbullet": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Web",
+        "kind": "Browser interface",
+        "url": "https://silverbullet.md/faq"
+      }
+    ],
+    "note": "This listing is scoped to the open-source MIT SilverBullet Server and its browser/PWA interface. SilverBullet Desktop is explicitly not open source according to the project FAQ and is excluded from native Linux/Windows/macOS FOSS app counts. A PWA on a phone is not a separate native mobile app."
+  },
+  "tools/beszel": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Web",
+        "kind": "Browser interface",
+        "url": "https://beszel.dev/guide/getting-started"
+      }
+    ],
+    "note": "The browser connects to a Beszel hub. Monitored hosts run a separate agent. A Web label is not a claim that the hub or agent runs on a phone."
+  },
+  "tools/forgejo": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Web",
+        "kind": "Browser interface",
+        "url": "https://forgejo.org/docs/latest/admin/installation/"
+      }
+    ],
+    "note": "Use the browser interface of a Forgejo server. Mobile browsers do not run the server; Git clients are a separate tool choice."
+  },
+  "tools/freshrss": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Web",
+        "kind": "Browser interface",
+        "url": "https://freshrss.github.io/FreshRSS/en/users/06_Mobile_access.html"
+      }
+    ],
+    "note": "FreshRSS documents a responsive browser interface. Its API-compatible native feed-reader apps are separate projects with their own source, licenses and features; they are not listed as native FreshRSS platforms."
+  },
+  "tools/gotify": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Web",
+        "kind": "Browser interface",
+        "url": "https://github.com/gotify/server"
+      },
+      {
+        "name": "Android",
+        "kind": "Separate official notification client",
+        "url": "https://github.com/gotify/android"
+      }
+    ],
+    "note": "The server includes a web UI. The official Android client has separate source and releases; an iOS client is not asserted."
+  },
+  "tools/grafana": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Web",
+        "kind": "Browser interface",
+        "url": "https://grafana.com/docs/grafana/latest/"
+      }
+    ],
+    "note": "Grafana dashboards run in a browser connected to a Grafana server. Server packaging and plugins have separate requirements; this does not assert a native phone client."
+  },
+  "tools/homepage": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Web",
+        "kind": "Browser interface",
+        "url": "https://github.com/gethomepage/homepage"
+      }
+    ],
+    "note": "This is the web dashboard served by a Homepage installation, not a native app for each browser operating system."
+  },
+  "tools/lubelogger": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Web",
+        "kind": "Browser interface",
+        "url": "https://github.com/hargata/lubelog"
+      },
+      {
+        "name": "Windows",
+        "kind": "Standalone server executable",
+        "url": "https://github.com/hargata/lubelog"
+      }
+    ],
+    "note": "LubeLogger is web-based. Its Windows standalone executable hosts the service, not a separate native phone app."
+  },
+  "tools/omni-tools": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Web",
+        "kind": "Browser interface",
+        "url": "https://github.com/iib0011/omni-tools"
+      }
+    ],
+    "note": "Self-hosted web utilities used through a browser. This does not imply native phone apps or identical behavior for every browser file format."
+  },
+  "tools/paperless-ngx": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Web",
+        "kind": "Browser interface",
+        "url": "https://docs.paperless-ngx.com/"
+      }
+    ],
+    "note": "The project provides a browser document-management interface. Third-party mobile clients are separate projects; the document server does not run on your phone merely because a client exists."
+  },
+  "tools/penpot": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Web",
+        "kind": "Browser interface",
+        "url": "https://github.com/penpot/penpot"
+      }
+    ],
+    "note": "The design editor runs in a browser against a hosted or self-hosted service. This is not a native iOS/Android app claim or a promise of full phone editing."
+  },
+  "tools/plausible": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Web",
+        "kind": "Browser interface",
+        "url": "https://plausible.io/"
+      }
+    ],
+    "note": "Plausible has a browser analytics dashboard. Self-hosted Community Edition versus the hosted service has separate setup and feature scope; this is not a native phone app."
+  },
+  "tools/privacyidea": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Web",
+        "kind": "Browser interface",
+        "url": "https://privacyidea.readthedocs.io/en/latest/firststeps/"
+      }
+    ],
+    "note": "This is the management web UI for the authentication server. Token/authenticator apps and system integrations are separate projects; do not label them as the server running on iOS or Android."
+  },
+  "tools/radicale": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Web",
+        "kind": "Browser interface",
+        "url": "https://radicale.org/master.html"
+      }
+    ],
+    "note": "Radicale is a CalDAV/CardDAV server. Its browser page is a limited management interface, not a full calendar/contact app. Compatible clients on phones/desktops are separate projects."
+  },
+  "tools/umami": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Web",
+        "kind": "Browser interface",
+        "url": "https://umami.is/"
+      }
+    ],
+    "note": "The analytics dashboard is a browser application. The analytics server, tracking script and hosted service have different roles; this is not a native phone client."
+  },
+  "tools/uptime-kuma": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Web",
+        "kind": "Browser interface",
+        "url": "https://github.com/louislam/uptime-kuma"
+      }
+    ],
+    "note": "The monitoring dashboard is used in a browser; the service must run elsewhere or on a supported host. No native phone app is asserted."
+  },
+  "tools/vaultwarden": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Web",
+        "kind": "Browser interface",
+        "url": "https://github.com/dani-garcia/vaultwarden"
+      }
+    ],
+    "note": "Vaultwarden is an independent server with a web vault, not the official Bitwarden mobile/desktop project. Compatible Bitwarden clients have separate sources/licenses/releases. The project says to report Vaultwarden issues to its own maintainers, not Bitwarden support."
+  },
+  "tools/victoriametrics": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Web",
+        "kind": "Browser interface",
+        "url": "https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/"
+      }
+    ],
+    "note": "VMUI is a browser interface to a VictoriaMetrics server. This does not assert a native mobile client or that the database service runs on the phone."
+  },
+  "tools/vikunja": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Web",
+        "kind": "Browser interface",
+        "url": "https://vikunja.io/features/"
+      }
+    ],
+    "note": "The task interface is browser-based. Server installation targets and any third-party mobile clients are separate compatibility questions."
+  },
+  "tools/pi-hole": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Web",
+        "kind": "Browser interface",
+        "url": "https://docs.pi-hole.net/main/post-install/"
+      }
+    ],
+    "note": "This is the browser administration interface for a Pi-hole host. The phone is not running the DNS service merely because it opens the dashboard."
+  },
+  "tools/adguard-home": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "DNS service host",
+        "url": "https://adguard-dns.io/kb/adguard-home/getting-started/"
+      },
+      {
+        "name": "Windows",
+        "kind": "DNS service host",
+        "url": "https://adguard-dns.io/kb/adguard-home/getting-started/"
+      },
+      {
+        "name": "macOS",
+        "kind": "DNS service host",
+        "url": "https://adguard-dns.io/kb/adguard-home/getting-started/"
+      },
+      {
+        "name": "Web",
+        "kind": "Administration interface",
+        "url": "https://adguard-dns.io/kb/adguard-home/getting-started/"
+      }
+    ],
+    "note": "AdGuard Home is the self-hosted DNS service, not the separate AdGuard Android/iOS content-blocking apps. Browser administration does not make a phone a supported server host."
+  },
+  "tools/caddy": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Web server binary",
+        "url": "https://caddyserver.com/docs/install"
+      },
+      {
+        "name": "Windows",
+        "kind": "Web server binary",
+        "url": "https://caddyserver.com/docs/install"
+      },
+      {
+        "name": "macOS",
+        "kind": "Web server binary",
+        "url": "https://caddyserver.com/docs/install"
+      }
+    ],
+    "note": "These are server host targets, not graphical desktop clients or native phone apps. Hosting and exposing a service requires a separate configuration and security plan."
+  },
+  "tools/postgresql": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Database server and command-line client",
+        "url": "https://www.postgresql.org/download/"
+      },
+      {
+        "name": "Windows",
+        "kind": "Database server and command-line client",
+        "url": "https://www.postgresql.org/download/"
+      },
+      {
+        "name": "macOS",
+        "kind": "Database server and command-line client",
+        "url": "https://www.postgresql.org/download/"
+      }
+    ],
+    "note": "Official download choices include these host platforms. PostgreSQL is a database server, not a native iPhone/Android graphical app. Optional database GUIs and remote clients are separate projects."
+  },
+  "tools/percona-server": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "MySQL-compatible database server",
+        "url": "https://docs.percona.com/percona-server/8.4/installation.html"
+      }
+    ],
+    "note": "The official repository installation documentation covers Debian/Ubuntu and RHEL families. This is a server-host statement, not a mobile or desktop GUI client claim."
+  },
+  "tools/ledger": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Command-line accounting tool",
+        "url": "https://github.com/ledger/ledger"
+      },
+      {
+        "name": "macOS",
+        "kind": "Command-line accounting tool",
+        "url": "https://github.com/ledger/ledger"
+      }
+    ],
+    "note": "The owning build documentation covers Linux and macOS workflows. A source reference to Windows/Python output is not enough to claim a normal supported Windows distribution. Other clients and wrappers are separate projects."
+  },
+  "tools/ublock-origin": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Web",
+        "kind": "Firefox desktop browser extension",
+        "url": "https://github.com/gorhill/uBlock/"
+      },
+      {
+        "name": "Android",
+        "kind": "Firefox browser extension, not a standalone app",
+        "url": "https://github.com/gorhill/uBlock/"
+      }
+    ],
+    "note": "uBlock Origin documents Firefox desktop and Android support. Chrome removed the Manifest V2 listing on August 31, 2026; do not confuse uBlock Origin Lite with this project or promise Safari/iOS support."
+  },
+  "tools/debian": {
+    "checkedOn": "2026-11-12",
+    "role": "operating-system",
+    "platforms": [],
+    "compatibilityUrl": "https://www.debian.org/ports/",
+    "note": "Debian is an operating system, not an app for Windows, macOS, Android or iOS. Match the supported architecture and installation image to your hardware; the ports page distinguishes release architectures and other ports."
+  },
+  "tools/fedora": {
+    "checkedOn": "2026-11-12",
+    "role": "operating-system",
+    "platforms": [],
+    "compatibilityUrl": "https://fedoraproject.org/workstation/",
+    "note": "Fedora Workstation is an operating system, not an app-platform download. Check the current edition, architecture and hardware requirements before choosing an image."
+  },
+  "tools/freebsd": {
+    "checkedOn": "2026-11-12",
+    "role": "operating-system",
+    "platforms": [],
+    "compatibilityUrl": "https://www.freebsd.org/platforms/",
+    "note": "FreeBSD is an operating system. Its platform list distinguishes support tiers; a port existing is not identical support for every architecture or device. It is not an iPhone or Android replacement."
+  },
+  "tools/kali-linux": {
+    "checkedOn": "2026-11-12",
+    "role": "operating-system",
+    "platforms": [],
+    "compatibilityUrl": "https://www.kali.org/get-kali/",
+    "note": "Kali offers distinct installation, VM and other deployment routes. Match the route and hardware to the owning instructions. Its NetHunter phone offerings are device-specific separate installation paths, not evidence Kali replaces iOS or runs natively on every Android phone."
+  },
+  "tools/linux-mint": {
+    "checkedOn": "2026-11-12",
+    "role": "operating-system",
+    "platforms": [],
+    "compatibilityUrl": "https://linuxmint.com/download.php",
+    "note": "Linux Mint is a desktop operating system. Choose its supported edition and image for compatible hardware, not an Android/iOS app or a Windows/macOS application."
+  },
+  "tools/nixos": {
+    "checkedOn": "2026-11-12",
+    "role": "operating-system",
+    "platforms": [],
+    "compatibilityUrl": "https://nixos.org/download/",
+    "note": "NixOS is the Linux operating system; Nix the package manager is a related but different install choice. Installing Nix on macOS does not mean macOS is running NixOS. Match the NixOS image and architecture to the machine."
+  },
+  "tools/opensuse": {
+    "checkedOn": "2026-11-12",
+    "role": "operating-system",
+    "platforms": [],
+    "compatibilityUrl": "https://get.opensuse.org/",
+    "note": "openSUSE has different operating-system editions and install images. Choose the edition, architecture and hardware requirements explicitly; do not treat the OS as a Windows/macOS or phone app."
+  },
+  "tools/pop-os": {
+    "checkedOn": "2026-11-12",
+    "role": "operating-system",
+    "platforms": [],
+    "compatibilityUrl": "https://system76.com/pop/download",
+    "note": "Pop!_OS is a desktop operating system. Choose the appropriate current image and compatible hardware using the official requirements, not a phone-app platform badge."
+  },
+  "tools/ubuntu": {
+    "checkedOn": "2026-11-12",
+    "role": "operating-system",
+    "platforms": [],
+    "compatibilityUrl": "https://ubuntu.com/download/desktop",
+    "note": "Ubuntu Desktop is an operating system, not an application for the other desktop or phone OSes. The official image and hardware requirements apply to the specific edition and architecture."
+  },
+  "tools/opnsense": {
+    "checkedOn": "2026-11-12",
+    "role": "operating-system",
+    "platforms": [],
+    "compatibilityUrl": "https://docs.opnsense.org/manual/hardware.html",
+    "note": "OPNsense is a firewall/router operating system for supported hardware. Its web administration interface is not the OS running on your phone. Confirm hardware, network layout and recovery access before any installation or router cutover."
+  },
+  "tools/grapheneos": {
+    "checkedOn": "2026-11-12",
+    "role": "operating-system",
+    "platforms": [],
+    "compatibilityUrl": "https://grapheneos.org/faq",
+    "note": "Match the exact supported model/variant, unlock eligibility, maintained status and firmware-support lifetime. This replaces the OS on compatible Android hardware; it is not an Android app or an iPhone OS replacement. Installation can erase all phone data."
+  },
+  "tools/calyxos": {
+    "checkedOn": "2026-11-12",
+    "role": "operating-system",
+    "platforms": [],
+    "compatibilityUrl": "https://calyxos.org/docs/guide/device-support/",
+    "note": "Match the exact supported model/variant, unlock eligibility, maintained status and firmware-support lifetime. This replaces the OS on compatible Android hardware; it is not an Android app or an iPhone OS replacement. Installation can erase all phone data."
+  },
+  "tools/lineageos": {
+    "checkedOn": "2026-11-12",
+    "role": "operating-system",
+    "platforms": [],
+    "compatibilityUrl": "https://wiki.lineageos.org/devices/",
+    "note": "Match the exact supported model/variant, unlock eligibility, maintained status and firmware-support lifetime. This replaces the OS on compatible Android hardware; it is not an Android app or an iPhone OS replacement. Installation can erase all phone data."
+  },
+  "tools/parrot": {
+    "checkedOn": "2026-11-12",
+    "role": "operating-system",
+    "platforms": [],
+    "compatibilityUrl": "https://www.parrotsec.org/download/",
+    "note": "Parrot OS is an operating system for AMD64 or ARM64 hardware and VMs, with WSL and Docker images; it is not an app for Windows, macOS, Android or iOS. Match the edition and architecture to your machine: the Security edition asks for 4 GB RAM minimum and 40 GB storage."
+  },
+  "tools/almalinux": {
+    "checkedOn": "2026-11-12",
+    "role": "operating-system",
+    "platforms": [],
+    "compatibilityUrl": "https://almalinux.org/get-almalinux/",
+    "note": "AlmaLinux OS is an operating system for x86_64 (including v2), aarch64, ppc64le and s390x, with live, cloud, container, Raspberry Pi and WSL images; it is not an app for another platform. Choose the 10 or 9 branch and the right architecture."
+  },
+  "tools/tails": {
+    "checkedOn": "2026-11-12",
+    "role": "operating-system",
+    "platforms": [],
+    "compatibilityUrl": "https://tails.net/install/",
+    "note": "Tails runs live from a USB stick on PC or Mac hardware; it is not an app install and, per the project's install page, does not work on smartphones or tablets."
+  },
+  "tools/qubes": {
+    "checkedOn": "2026-11-12",
+    "role": "operating-system",
+    "platforms": [],
+    "compatibilityUrl": "https://doc.qubes-os.org/en/latest/user/hardware/system-requirements.html",
+    "note": "Qubes OS needs 64-bit x86 hardware with VT-x/EPT and VT-d (or AMD equivalents): minimum 6 GB RAM and 32 GB storage, 16 GB RAM, SSD and Intel graphics recommended. Consult the HCL before choosing hardware."
+  },
+  "tools/blackarch": {
+    "checkedOn": "2026-11-12",
+    "role": "operating-system",
+    "platforms": [],
+    "compatibilityUrl": "https://blackarch.org/downloads.html",
+    "note": "BlackArch is a 64-bit Arch-based distribution, or a repository layer on an existing Arch install; it is not an app for another platform. The project recommends the netinstall or slim ISO over the full ISO."
+  },
+  "tools/omarchy": {
+    "checkedOn": "2026-11-12",
+    "role": "operating-system",
+    "platforms": [],
+    "compatibilityUrl": "https://omarchy.org/",
+    "note": "Omarchy is an installable operating system: x86 and ARM64 ISOs plus a native Apple Silicon installer, with preliminary support for specific ARM hardware named on the site. It is not an app for another platform."
+  },
+  "tools/technitium": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Self-hosted server (install script, tar.gz or Docker)",
+        "url": "https://technitium.com/dns/"
+      },
+      {
+        "name": "Windows",
+        "kind": "Self-hosted server (setup or portable)",
+        "url": "https://technitium.com/dns/"
+      },
+      {
+        "name": "macOS",
+        "kind": "Self-hosted server (tar.gz or Docker)",
+        "url": "https://technitium.com/dns/"
+      },
+      {
+        "name": "Web",
+        "kind": "Browser admin console",
+        "url": "https://technitium.com/dns/"
+      }
+    ],
+    "compatibilityUrl": "https://github.com/TechnitiumSoftware/DnsServer",
+    "note": "Cross-platform .NET server administered through its web console on port 5380; free port 53 from any existing resolver first."
+  },
+  "tools/scrutiny": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Self-hosted server (omnibus Docker image or hub-and-spoke collectors)",
+        "url": "https://github.com/AnalogJ/scrutiny"
+      },
+      {
+        "name": "Web",
+        "kind": "Browser dashboard",
+        "url": "https://github.com/AnalogJ/scrutiny"
+      }
+    ],
+    "compatibilityUrl": "https://github.com/AnalogJ/scrutiny",
+    "note": "Collectors need device access (SYS_RAWIO, drive devices) to read S.M.A.R.T. data; remote machines report to one web server."
+  },
+  "tools/cryptpad": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Self-hosted web app (official Docker setup)",
+        "url": "https://docs.cryptpad.org/en/admin_guide/installation.html"
+      },
+      {
+        "name": "Web",
+        "kind": "Browser interface",
+        "url": "https://cryptpad.org/"
+      }
+    ],
+    "compatibilityUrl": "https://docs.cryptpad.org/en/admin_guide/",
+    "note": "Requires two separate domains (main and sandbox origin) served over HTTPS before browsers will load pads correctly."
+  },
+  "tools/ollama": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Native app",
+        "url": "https://ollama.com/download/linux"
+      },
+      {
+        "name": "macOS",
+        "kind": "Native app",
+        "url": "https://ollama.com/download/mac"
+      },
+      {
+        "name": "Windows",
+        "kind": "Native app",
+        "url": "https://ollama.com/download/windows"
+      }
+    ],
+    "compatibilityUrl": "https://ollama.com/download",
+    "note": "Native installers for the three desktop platforms plus a Docker image; serves a local API on port 11434 with no browser UI of its own. Match model size to your RAM/VRAM before pulling."
+  },
+  "tools/copyparty": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Single-file Python server (also PyPI and Docker)",
+        "url": "https://github.com/9001/copyparty"
+      },
+      {
+        "name": "macOS",
+        "kind": "Single-file Python server",
+        "url": "https://github.com/9001/copyparty"
+      },
+      {
+        "name": "Windows",
+        "kind": "Single-file Python server",
+        "url": "https://github.com/9001/copyparty"
+      },
+      {
+        "name": "Web",
+        "kind": "Browser interface",
+        "url": "https://github.com/9001/copyparty"
+      }
+    ],
+    "compatibilityUrl": "https://github.com/9001/copyparty",
+    "note": "Runs anywhere Python 3 does; web UI on port 3923 by default. Shares are reachable by anyone who can reach the port until you add accounts."
+  },
+  "tools/warpgate": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Self-hosted bastion (binary release or Docker)",
+        "url": "https://github.com/warp-tech/warpgate/releases"
+      },
+      {
+        "name": "Web",
+        "kind": "Browser admin UI",
+        "url": "https://warpgate.null.page/"
+      }
+    ],
+    "compatibilityUrl": "https://warpgate.null.page/",
+    "note": "SSH on port 2222 and the web admin/HTTPS on 8888 by default; keep the admin UI on a trusted network."
+  },
+  "tools/mealie": {
+    "checkedOn": "2026-11-12",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Self-hosted server (official Docker image)",
+        "url": "https://docs.mealie.io/documentation/getting-started/installation/installation-checklist/"
+      },
+      {
+        "name": "Web",
+        "kind": "Browser interface",
+        "url": "https://mealie.io/"
+      }
+    ],
+    "compatibilityUrl": "https://docs.mealie.io/",
+    "note": "Distributed as a Docker image (compose is the documented route); the web app works in any modern browser including phones. No native desktop or mobile apps."
+  }
+}

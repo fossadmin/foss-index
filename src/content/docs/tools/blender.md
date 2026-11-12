@@ -45,6 +45,16 @@ Homebrew has a cask for it. That is Homebrew's packaging, not the project's own:
 brew install --cask blender
 ```
 
+### NixOS
+
+nixpkgs packages Blender as `blender` (source: [pkgs/by-name/bl/blender/package.nix](https://github.com/NixOS/nixpkgs/blob/8e246c66fe7112839781b2200b017f0a587d25d3/pkgs/by-name/bl/blender/package.nix)):
+
+```nix
+environment.systemPackages = [ pkgs.blender ];
+```
+
+Rebuild with `sudo nixos-rebuild switch`, then launch Blender from the application menu.
+
 ## First steps
 
 - Start Blender. The splash screen's **New File** option starts a project from a template. To skip it, click outside the splash or press **Esc**. The Blender icon in the top bar reopens it.

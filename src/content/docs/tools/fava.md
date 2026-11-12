@@ -44,6 +44,16 @@ Debian and Ubuntu have a `fava` package, and Homebrew has a `fava` formula. Thes
 brew install fava
 ```
 
+### NixOS
+
+nixpkgs packages Fava as `fava` (source: [pkgs/development/python-modules/fava/default.nix](https://github.com/NixOS/nixpkgs/blob/8e246c66fe7112839781b2200b017f0a587d25d3/pkgs/development/python-modules/fava/default.nix)):
+
+```nix
+environment.systemPackages = [ pkgs.fava ];
+```
+
+Rebuild with `sudo nixos-rebuild switch`, then run `fava` on your Beancount file and open http://localhost:5000 in a browser.
+
 ## First steps
 
 Point Fava at a Beancount file (you can use the one from the [Beancount](/tools/beancount/) first steps):

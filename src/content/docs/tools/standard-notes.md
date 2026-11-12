@@ -46,6 +46,16 @@ brew install --cask standard-notes
 
 The [Docker guide](https://standardnotes.com/help/self-hosting/docker) is the only supported self-hosting route and needs a Linux server with Docker. The first steps are: make a working folder, fetch `.env.sample` to `.env`, generate each key with `openssl rand -hex 32`, fetch the LocalStack bootstrap script and the example `docker-compose.yml` from the project's `server` repository, and change the database password. The guide has the exact commands and the remaining steps. The server doesn't include the web app, which is a separate project.
 
+### NixOS
+
+nixpkgs packages Standard Notes as `standardnotes` (source: [pkgs/by-name/st/standardnotes/package.nix](https://github.com/NixOS/nixpkgs/blob/8e246c66fe7112839781b2200b017f0a587d25d3/pkgs/by-name/st/standardnotes/package.nix)):
+
+```nix
+environment.systemPackages = [ pkgs.standardnotes ];
+```
+
+Rebuild with `sudo nixos-rebuild switch`, then launch Standard Notes from the application menu.
+
 ## First steps
 
 - Create an account on the hosted service, or on your own server by pointing the app's sign-in at its address.

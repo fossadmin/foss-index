@@ -7,6 +7,7 @@ mark: FG
 repository: https://codeberg.org/forgejo/forgejo
 license: GPL-3.0-or-later
 managedHosting: false
+nixosModule: services.forgejo
 screenshot:
   src: forgejo.webp
   alt: "A Forgejo repository page in light mode with the file list and commit history"
@@ -58,6 +59,22 @@ Then run `docker compose up -d`. The folder you mount must be owned by the UID a
 ### Other routes
 
 The project also documents Podman, binary and package installs under [installation](https://forgejo.org/docs/latest/admin/installation/). Docker is the route we checked most closely.
+
+### NixOS
+
+nixpkgs carries a full module (source: [nixos/modules/services/misc/forgejo.nix](https://github.com/NixOS/nixpkgs/blob/master/nixos/modules/services/misc/forgejo.nix)). A minimal host:
+
+```nix
+services.forgejo = {
+  enable = true;
+  settings.server = {
+    DOMAIN = "git.example.com";
+    HTTP_PORT = 3000;
+  };
+};
+```
+
+Apply with `sudo nixos-rebuild switch`. State lives in `/var/lib/forgejo` and the module defaults to SQLite, so a small instance needs no database setup. Git over SSH is exposed through the host's own `services.openssh` when enabled.
 
 ## First steps
 

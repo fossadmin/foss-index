@@ -1,0 +1,6 @@
+---
+import Catalog from '../../components/Catalog.astro';
+import { catalog } from '../../lib/catalog';
+export async function getStaticPaths() { const { platforms } = await catalog(); return platforms.map(platform => ({ params: { platform: platform.slug } })); }
+---
+<Catalog platform={Astro.params.platform} />

@@ -45,6 +45,16 @@ Homebrew has a cask for it. That is Homebrew's packaging, not the project's own:
 brew install --cask prusaslicer
 ```
 
+### NixOS
+
+nixpkgs packages PrusaSlicer as `prusa-slicer` (source: [pkgs/by-name/pr/prusa-slicer/package.nix](https://github.com/NixOS/nixpkgs/blob/8e246c66fe7112839781b2200b017f0a587d25d3/pkgs/by-name/pr/prusa-slicer/package.nix)):
+
+```nix
+environment.systemPackages = [ pkgs.prusa-slicer ];
+```
+
+Rebuild with `sudo nixos-rebuild switch`, then launch PrusaSlicer from the application menu.
+
 ## First steps
 
 - The first launch opens the **Configuration Wizard**. Pick your printer and filament there. You can reopen it later from the **Configuration** menu.

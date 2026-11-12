@@ -51,6 +51,16 @@ Homebrew has a cask for it. That is Homebrew's packaging, not the project's own:
 brew install --cask gimp
 ```
 
+### NixOS
+
+nixpkgs packages GIMP as `gimp` (source: [pkgs/applications/graphics/gimp/default.nix](https://github.com/NixOS/nixpkgs/blob/8e246c66fe7112839781b2200b017f0a587d25d3/pkgs/applications/graphics/gimp/default.nix)):
+
+```nix
+environment.systemPackages = [ pkgs.gimp ];
+```
+
+Rebuild with `sudo nixos-rebuild switch`, then launch GIMP from the application menu.
+
 ## First steps
 
 - Open an image with **File > Open** (Ctrl+O), or start a blank one with **File > New** (Ctrl+N).

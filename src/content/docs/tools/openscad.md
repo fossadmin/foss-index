@@ -44,6 +44,16 @@ Installers (exe, zip, dmg) are on [openscad.org/downloads](https://openscad.org/
 brew install openscad@snapshot
 ```
 
+### NixOS
+
+nixpkgs packages OpenSCAD as `openscad` (source: [pkgs/by-name/op/openscad/package.nix](https://github.com/NixOS/nixpkgs/blob/8e246c66fe7112839781b2200b017f0a587d25d3/pkgs/by-name/op/openscad/package.nix)):
+
+```nix
+environment.systemPackages = [ pkgs.openscad ];
+```
+
+Rebuild with `sudo nixos-rebuild switch`, then launch OpenSCAD from the application menu.
+
 ## First steps
 
 OpenSCAD models are code. Type this in the editor:

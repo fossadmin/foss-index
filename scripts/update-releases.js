@@ -10,6 +10,8 @@ export async function checkReleases({ tools, baseline, fetcher }) {
   for (const { repo, license, unsupportedHost, url, file } of tools) {
     // Listings hosted outside GitHub are not queried. Their curated data in releases.json is kept as is.
     if (unsupportedHost) { skipped.push({ file, host: unsupportedHost, url, reason: 'host not supported by this check; curated data kept' }); continue; }
+    // Device/build-matrix snapshots must not become a manifest repository release.
+    if (baseline[repo]?.manualOnly) { skipped.push({ file: file ?? repo, host: 'github.com', url: baseline[repo].url, reason: 'manual-only scoped snapshot; check the official device/build source' }); continue; }
     try {
       const metadata = await fetcher(`https://api.github.com/repos/${repo}`);
       if (!metadata.ok) throw new Error(`repository HTTP ${metadata.status}`);
@@ -45,13 +47,13 @@ export async function checkReleases({ tools, baseline, fetcher }) {
   return { candidate, changes, errors, skipped };
 }
 
-function listedTools() {
-  return fs.readdirSync('src/content/docs/tools').sort().filter(f => f.endsWith('.md')).map(file => {
-    const text = fs.readFileSync(path.join('src/content/docs/tools', file), 'utf8');
+export function listedTools(directory = 'src/content/docs/tools') {
+  return fs.readdirSync(directory).sort().filter(f => f.endsWith('.md')).map(file => {
+    const text = fs.readFileSync(path.join(directory, file), 'utf8');
     const front = text.match(/^---\r?\n([\s\S]*?)\r?\n---/)?.[1];
     const repo = front?.match(/^repository:\s*https:\/\/github\.com\/([^\s]+)\s*$/m)?.[1]?.replace(/\/+$/, '');
     const license = front?.match(/^license:\s*(.+)$/m)?.[1]?.trim().replace(/^["']|["']$/g, '');
-    const other = front?.match(/^repository:\s*(https:\/\/([^\/\s]+)\/[^\s]+)\s*$/m);
+    const other = front?.match(/^repository:\s*(https:\/\/([^\/\s]+)(?:\/[^\s]*)?)\s*$/m);
     if (!repo && other && other[2] !== 'github.com' && license) return { unsupportedHost: other[2], url: other[1], file, license };
     if (!repo || !license) throw new Error(`Missing GitHub repository/license in ${file}`);
     return { repo, license };

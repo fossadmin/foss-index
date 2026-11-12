@@ -7,6 +7,7 @@ mark: RS
 repository: https://github.com/restic/restic
 license: BSD-2-Clause
 managedHosting: false
+nixosModule: services.restic
 screenshot:
   src: restic.webp
   alt: "Terminal output of restic init, backup and snapshots on a small sample folder"
@@ -51,6 +52,24 @@ winget install --exact --id restic.restic --scope Machine
 ```
 
 The docs recommend `--scope Machine` with WinGet for system-wide backups.
+
+### NixOS
+
+nixpkgs carries a module (source: [nixos/modules/services/backup/restic.nix](https://github.com/NixOS/nixpkgs/blob/master/nixos/modules/services/backup/restic.nix)) that runs restic backups as systemd services with timers. One named job per backup set:
+
+```nix
+services.restic.backups.home = {
+  repository = "s3:https://s3.example.com/backups/home";
+  passwordFile = "/run/secrets/restic-password"; # keep outside the Nix store
+  paths = [ "/home" ];
+  timerConfig = {
+    OnCalendar = "daily";
+    Persistent = true;
+  };
+};
+```
+
+Apply with `sudo nixos-rebuild switch`. The first run initializes the repository; afterwards `systemctl start restic-backups-home` runs it by hand and the timer runs it daily. Credentials such as S3 keys go in `environmentFile`, also kept outside the Nix store.
 
 ## First steps
 

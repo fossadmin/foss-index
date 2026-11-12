@@ -48,7 +48,17 @@ This needs Flatpak set up on your system first (see [flatpak.org/setup](https://
 
 ### Windows and macOS
 
-The project has an install page for each: [Windows](https://flameshot.org/docs/installation/installation-windows/) and [macOS](https://flameshot.org/docs/installation/installation-macos/). Follow the route it gives. On Windows, the command-line tool is called `flameshot-cli` instead of `flameshot`.
+The project has an install page for each: [Windows](https://flameshot.org/docs/installation/installation-windows/) and [macOS](https://flameshot.org/docs/installation/installation-osx/). Follow the route it gives. On Windows, the command-line tool is called `flameshot-cli` instead of `flameshot`.
+
+### NixOS
+
+nixpkgs packages Flameshot as `flameshot` (source: [pkgs/by-name/fl/flameshot/package.nix](https://github.com/NixOS/nixpkgs/blob/8e246c66fe7112839781b2200b017f0a587d25d3/pkgs/by-name/fl/flameshot/package.nix)):
+
+```nix
+environment.systemPackages = [ pkgs.flameshot ];
+```
+
+Rebuild with `sudo nixos-rebuild switch`, then launch Flameshot from the application menu; `flameshot gui` starts a capture.
 
 ## First steps
 

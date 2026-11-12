@@ -43,6 +43,16 @@ Homebrew has a cask for it. That is Homebrew's packaging, not the project's own:
 brew install --cask gnucash
 ```
 
+### NixOS
+
+nixpkgs packages GnuCash as `gnucash` (source: [pkgs/by-name/gn/gnucash/package.nix](https://github.com/NixOS/nixpkgs/blob/8e246c66fe7112839781b2200b017f0a587d25d3/pkgs/by-name/gn/gnucash/package.nix)):
+
+```nix
+environment.systemPackages = [ pkgs.gnucash ];
+```
+
+Rebuild with `sudo nixos-rebuild switch`, then launch GnuCash from the application menu.
+
 ## First steps
 
 - On first start choose **File > New File**. The assistant asks for a currency and lets you pick a starter set of accounts.

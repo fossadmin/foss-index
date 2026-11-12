@@ -52,6 +52,16 @@ Homebrew has a cask for it. That is Homebrew's packaging, not the project's own:
 brew install --cask obs
 ```
 
+### NixOS
+
+nixpkgs packages OBS Studio as `obs-studio` (source: [pkgs/applications/video/obs-studio/default.nix](https://github.com/NixOS/nixpkgs/blob/8e246c66fe7112839781b2200b017f0a587d25d3/pkgs/applications/video/obs-studio/default.nix)):
+
+```nix
+environment.systemPackages = [ pkgs.obs-studio ];
+```
+
+Rebuild with `sudo nixos-rebuild switch`, then launch OBS Studio from the application menu.
+
 ## First steps
 
 - Run the **Auto-Configuration Wizard** when OBS offers it. It picks settings for recording or streaming.

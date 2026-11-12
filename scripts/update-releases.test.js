@@ -1,6 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { checkReleases } from './update-releases.js';
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
+import { checkReleases, listedTools } from './update-releases.js';
 const tools = [{ repo: 'owner/project', license: 'MIT / Apache-2.0' }];
 const baseline = { 'owner/project': { version: 'v1', license: 'MIT / Apache-2.0', url: 'old', changelog: 'old' } };
 const response = (status, body) => ({ ok: status === 200, status, json: async () => body });
@@ -19,3 +22,33 @@ test('new repo gets curated frontmatter license, not detection', async () => {co
 test('malformed release rejected', async()=>{const r=await check('MIT',{tag_name:'v2',html_url:'http://bad.invalid'});assert.equal(r.errors.length,1);assert.deepEqual(r.candidate,baseline);});
 test('throttling stops subsequent repository requests', async()=>{let calls=0;const r=await checkReleases({tools:[...tools,{repo:'owner/second',license:'MIT'}],baseline,fetcher:async()=>{calls++;return response(429,null)}});assert.equal(calls,1);assert.equal(r.errors.length,2);});
 test('non-GitHub host is skipped explicitly, curated data kept, not an error', async()=>{let calls=0;const kept={'git/forgejo':{license:'GPL-3.0-or-later',version:'v1'}};const r=await checkReleases({tools:[{unsupportedHost:'codeberg.org',url:'https://codeberg.org/forgejo/forgejo',file:'forgejo.md',license:'GPL-3.0-or-later'}],baseline:kept,fetcher:async()=>{calls++;return response(200,{})}});assert.equal(calls,0);assert.equal(r.errors.length,0);assert.equal(r.skipped.length,1);assert.equal(r.skipped[0].host,'codeberg.org');assert.deepEqual(r.candidate,kept);});
+
+function withListing(repository, fn) {
+ const directory = fs.mkdtempSync(path.join(os.tmpdir(), 'foss-release-listing-'));
+ try {
+  fs.writeFileSync(path.join(directory, 'example.md'), `---
+repository: ${repository}
+license: MIT
+---
+`);
+  return fn(listedTools(directory));
+ } finally { fs.rmSync(directory, {recursive:true, force:true}); }
+}
+test('bare non-GitHub hosts and optional root slash are explicitly skipped', async()=>{
+ for (const repository of ['https://sources.debian.org','https://sources.debian.org/','https://src.fedoraproject.org']) {
+  await withListing(repository, async listings=>{
+   assert.equal(listings[0].unsupportedHost,new URL(repository).hostname);
+   assert.equal(listings[0].url,repository);
+   let calls=0; const kept = {[new URL(repository).hostname]: {version:'curated',license:'MIT'}};
+   const r=await checkReleases({tools:listings,baseline:kept,fetcher:async()=>{calls++;throw Error('must not fetch')}});
+   assert.equal(calls,0);assert.equal(r.errors.length,0);assert.equal(r.skipped.length,1);assert.deepEqual(r.candidate,kept);
+  });
+ }
+});
+test('listing discovery still recognizes non-GitHub repository paths and GitHub repos',()=>{
+ withListing('https://codeberg.org/forgejo/forgejo', rows=>assert.equal(rows[0].unsupportedHost,'codeberg.org'));
+ withListing('https://github.com/owner/project', rows=>assert.equal(rows[0].repo,'owner/project'));
+});
+test('bare GitHub host is not accepted as a non-GitHub skip',()=>{
+ assert.throws(()=>withListing('https://github.com',()=>{}),/Missing GitHub repository\/license/);
+});

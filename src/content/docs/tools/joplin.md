@@ -2,6 +2,7 @@
 title: "Joplin"
 description: "Note-taking apps with sync, in Markdown."
 category: Notes
+icon: joplin.svg
 mark: JP
 repository: https://github.com/laurent22/joplin
 license: AGPL-3.0-or-later
@@ -51,6 +52,16 @@ Homebrew has a cask for it. That is Homebrew's packaging, not the project's own:
 ```bash
 brew install --cask joplin
 ```
+
+### NixOS
+
+nixpkgs packages Joplin as `joplin-desktop` (source: [pkgs/by-name/jo/joplin-desktop/package.nix](https://github.com/NixOS/nixpkgs/blob/8e246c66fe7112839781b2200b017f0a587d25d3/pkgs/by-name/jo/joplin-desktop/package.nix)):
+
+```nix
+environment.systemPackages = [ pkgs.joplin-desktop ];
+```
+
+Rebuild with `sudo nixos-rebuild switch`, then launch Joplin from the application menu.
 
 ## First steps
 

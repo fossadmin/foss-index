@@ -7,6 +7,7 @@ mark: KX
 repository: https://github.com/keepassxreboot/keepassxc
 license: "GPL-2.0 / GPL-3.0"
 funding:
+  githubSponsors: https://github.com/sponsors/droidmonkey
   openCollective: https://opencollective.com/keepassxc
   liberapay: https://liberapay.com/keepassxc
   custom:
@@ -56,6 +57,16 @@ Download the installer from [keepassxc.org/download](https://keepassxc.org/downl
 ```bash
 brew install --cask keepassxc
 ```
+
+### NixOS
+
+nixpkgs packages KeePassXC as `keepassxc` (source: [pkgs/by-name/ke/keepassxc/package.nix](https://github.com/NixOS/nixpkgs/blob/8e246c66fe7112839781b2200b017f0a587d25d3/pkgs/by-name/ke/keepassxc/package.nix)):
+
+```nix
+environment.systemPackages = [ pkgs.keepassxc ];
+```
+
+Rebuild with `sudo nixos-rebuild switch`, then launch KeePassXC from the application menu.
 
 ## First steps
 

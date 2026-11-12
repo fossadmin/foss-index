@@ -1,0 +1,16 @@
+---
+import { slugify } from "../lib/catalog";
+const { record } = Astro.props;
+---
+<section class="platform-support" aria-label={record.role === "operating-system" ? "Device compatibility" : "Platforms and clients"}>
+  <p class="eyebrow">{record.role === "operating-system" ? "Device compatibility" : "Platforms"}</p>
+  {record.compatibilityUrl && <p class="privacy-note"><a href={record.compatibilityUrl}>Official hardware and installation choices ↗</a></p>}
+  <div class="detail-meta">{record.platforms.map(row => <a class="source-link" href={`${import.meta.env.BASE_URL}platform/${slugify(row.name)}/`}>{row.name}</a>)}</div>
+  <p class="privacy-note">{record.note}</p>
+  <details class="privacy-note"><summary>Compatibility details and official sources</summary>
+    <ul>{record.platforms.map(row => <li><a href={row.url}>{row.name}</a> - {row.kind}</li>)}</ul>
+    <p>Official availability checked {record.checkedOn}. Availability is not feature parity. The recorded release and license refer to the linked source project; separate clients can differ. No install or compatibility test was run.</p>
+  </details>
+</section>
+
+<style>.platform-support { margin: 1.25rem 0; }</style>

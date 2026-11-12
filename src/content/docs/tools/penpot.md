@@ -41,6 +41,18 @@ It listens on http://localhost:9001. To pin a version, set `PENPOT_VERSION`, for
 
 If you'd rather not run a server, Penpot also runs a hosted service at [penpot.app](https://penpot.app/). That is the project's service, with its own terms, and not what this listing's self-hosting steps cover.
 
+### NixOS
+
+nixpkgs packages the Penpot desktop client as `penpot-desktop` (source: [pkgs/by-name/pe/penpot-desktop/package.nix](https://github.com/NixOS/nixpkgs/blob/8e246c66fe7112839781b2200b017f0a587d25d3/pkgs/by-name/pe/penpot-desktop/package.nix)):
+
+```nix
+environment.systemPackages = [ pkgs.penpot-desktop ];
+```
+
+Rebuild with `sudo nixos-rebuild switch`, then launch Penpot from the application menu.
+
+Self-hosting the Penpot server on NixOS uses the Docker Compose route above; nixpkgs has no Penpot service module.
+
 ## First steps
 
 - Open http://localhost:9001 and register an account. If public registration is off, the guide describes a command to create a user inside the backend container.

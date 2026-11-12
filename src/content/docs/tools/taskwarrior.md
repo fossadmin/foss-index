@@ -9,6 +9,7 @@ license: MIT
 funding:
   githubSponsors: https://github.com/sponsors/GothenburgBitFactory
 managedHosting: false
+nixosModule: services.taskchampion-sync-server
 screenshot:
   src: taskwarrior.webp
   alt: "Terminal output of task add, task done and task list on sample tasks"
@@ -49,6 +50,20 @@ The `task` program must be on your `PATH`.
 ### Windows
 
 Taskwarrior no longer supports Cygwin. The project's download page says to use the Windows Subsystem for Linux, then install it the Linux way inside WSL.
+
+### NixOS
+
+On NixOS the client installs with `nix profile install nixpkgs#taskwarrior3`. nixpkgs also carries a module for Taskwarrior 3's own sync server (source: [nixos/modules/services/misc/taskchampion-sync-server.nix](https://github.com/NixOS/nixpkgs/blob/master/nixos/modules/services/misc/taskchampion-sync-server.nix)):
+
+```nix
+services.taskchampion-sync-server = {
+  enable = true;
+  host = "0.0.0.0"; # default serves 127.0.0.1 only
+  port = 10222;
+};
+```
+
+Apply with `sudo nixos-rebuild switch`, then point clients at it with `task config sync.server.url http://your-host:10222` and create a client ID per the module's documentation. The older `services.taskserver` module is for the deprecated Taskwarrior 2 protocol and does not apply to Taskwarrior 3.
 
 ## First steps
 

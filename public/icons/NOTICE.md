@@ -10,14 +10,26 @@ is used under Creative Commons Attribution-ShareAlike 4.0; its full text
 is in `licenses/` next to this file.
 
 Files ending in `-dark` are shown only in dark mode. Changes made here are
-limited to what each entry lists: resizing PNGs for the web, and recoloring
-Umami's monochrome mark so it stays legible on this site's backgrounds.
-Nothing was redrawn or substituted.
+limited to what each entry lists: resizing PNGs for the web, recoloring
+Umami's monochrome mark so it stays legible on this site's backgrounds,
+and stripping the decorative CSS animation from Parrot's site SVG so the
+mark renders statically. Nothing was redrawn or substituted.
 
 ## actual-budget.png
 - Project: Actual Budget
 - Source: https://github.com/actualbudget/actual/blob/3519dcb7f6e9b12035a4b2f36b0a073023d6e673/packages/desktop-client/public/favicon-32x32.png
 - Repository license: MIT; mark belongs to the project
+- Changes: none
+## almalinux.png
+- Project: AlmaLinux OS
+- Source: https://almalinux.org/fav/apple-touch-icon.png linked by https://almalinux.org/
+- Website asset; mark belongs to the AlmaLinux OS Foundation. Identification only, no endorsement.
+- Changes: none
+
+## adguard-home.png
+- Project: AdGuard Home
+- Source: the project's GitHub organization avatar (https://avatars.githubusercontent.com/AdguardTeam), the same AdGuard check mark used on https://adguard.com/en/adguard-home/overview.html
+- Terms: no separate logo license published; shown as nominative use like the other project marks. The AdGuard Home repository license is GPL-3.0 (licenses/adguardhome-GPL-3.0.txt).
 - Changes: none
 ## audacity.svg
 - Project: Audacity
@@ -39,6 +51,12 @@ Nothing was redrawn or substituted.
 - Source: https://github.com/henrygd/beszel/blob/3392dcc6f0c9e3b7858a0c377577a4b8a40b8b8d/internal/site/public/static/icon.svg
 - Repository license: MIT; mark belongs to the project
 - Changes: none
+## blackarch.png
+- Project: BlackArch
+- Source: https://github.com/BlackArch/blackarch-artwork/blob/master/logo/ba-logo-transp.png
+- No license file detected in that artwork repository; mark belongs to the project. Identification only, no endorsement.
+- Changes: resized to 256px for the web
+
 ## blender.svg
 - Project: Blender
 - Source: https://github.com/blender/blender/blob/11b2683fe1400d77428aa4c86d130f54fee4863b/release/freedesktop/icons/scalable/apps/blender.svg
@@ -49,11 +67,23 @@ Nothing was redrawn or substituted.
 - Source: https://github.com/caddyserver/website/blob/6b06285cb94fbd415df864dbd1ed12a984963582/src/resources/images/favicon.png
 - Changes: none
 - Used only to identify Caddy in this directory's editorial description. No explicit license for this current website asset was found; this is not presented as a license grant. The Caddy mark belongs to its owner. No endorsement is implied.
+## copyparty.svg
+- Project: copyparty
+- Source: https://github.com/9001/copyparty/blob/hovudstraum/docs/logo.svg
+- Repository license: MIT; mark belongs to the project
+- Changes: none
+
 ## cryptomator.svg
 - Project: Cryptomator
 - Source: https://github.com/cryptomator/cryptomator/blob/2820306d889cd4cb347ea76a44e85883db100e9f/dist/linux/common/org.cryptomator.Cryptomator.svg
 - Repository license: GPL-3.0; a code license does not grant rights in the mark, which belongs to the project
 - Changes: none
+## cryptpad.svg
+- Project: CryptPad
+- Source: https://cryptpad.org/images/CryptPad_logo.svg
+- Website asset; mark belongs to the project. Identification only, no endorsement.
+- Changes: none
+
 ## darktable.svg
 - Project: darktable
 - Source: https://github.com/darktable-org/darktable/blob/6fc8201a1c44767272c65496b3dac23e89159f4f/data/pixmaps/scalable/darktable.svg
@@ -88,6 +118,11 @@ Nothing was redrawn or substituted.
 - Project: Forgejo
 - Source: https://codeberg.org/forgejo/forgejo/src/commit/1520459a202feb2be7643cbf2ff38ff811ed8607/assets/logo.svg
 - Logo license: CC BY-SA 4.0, by Caesar Schinas, as stated on https://commons.wikimedia.org/wiki/File:Forgejo_logo.svg (source file listed there: https://codeberg.org/forgejo/governance/src/branch/main/branding). The project's own branding page would not load for us, so the Wikimedia statement is our evidence. License: https://creativecommons.org/licenses/by-sa/4.0/
+- Changes: none
+## freebsd.png
+- Project: FreeBSD
+- Source: the project's GitHub organization avatar (https://avatars.githubusercontent.com/freebsd), the FreeBSD orb and wordmark
+- Terms: the FreeBSD marks belong to the FreeBSD Foundation (https://freebsdfoundation.org/legal/trademark-usage-terms-and-conditions/); shown unchanged as nominative use like the other project marks
 - Changes: none
 ## freshrss.svg
 - Project: FreshRSS
@@ -155,6 +190,11 @@ Nothing was redrawn or substituted.
 - Source: https://github.com/karakeep-app/karakeep/blob/8b2c2bac09ccaf24eea4740c87990887b0a20aec/apps/landing/public/icons/logo-icon.svg and logo-icon-dark.svg
 - Repository license: AGPL-3.0; mark belongs to the project
 - Changes: none; the project ships both variants and the dark one is shown in dark mode
+## joplin.svg
+- Project: Joplin
+- Source: https://github.com/laurent22/joplin/blob/dev/Assets/JoplinIcon.svg
+- License: AGPL-3.0-or-later repository license covering the asset (licenses/laurent22-joplin.txt)
+- Changes: none
 ## kdenlive.svg
 - Project: Kdenlive
 - Source: https://github.com/KDE/kdenlive/blob/19da23183a3990c421ec6892ee6ee4ed284ee071/data/icons/sc-apps-kdenlive.svg
@@ -180,6 +220,11 @@ Nothing was redrawn or substituted.
 - Source: https://github.com/KDE/krita/blob/752a6e0df79b2b78664a69689149b22da5de1294/pics/krita.png
 - Repository license: GPL-3.0; the repository is a GitHub mirror of the project's official source; a code license does not grant rights in the mark, which belongs to the project
 - Changes: none
+## ledger.png
+- Project: Ledger
+- Source: the project's GitHub organization avatar (https://avatars.githubusercontent.com/ledger), the red monogram mark of https://ledger-cli.org/
+- Terms: no separate logo license published; shown as nominative use like the other project marks
+- Changes: none
 ## libreoffice.png
 - Project: LibreOffice
 - Source: https://github.com/LibreOffice/core/blob/16a47d7b5665746debecfbad8d0f5c908961b0da/sysui/desktop/icons/hicolor/128x128/apps/main.png
@@ -200,6 +245,12 @@ Nothing was redrawn or substituted.
 - Source: https://github.com/hargata/lubelog (wwwroot/defaults/lubelogger_icon_192.png in the same MIT repository)
 - Repository license: MIT; a code license does not grant rights in the mark, which belongs to the project
 - Changes: none
+## mealie.png
+- Project: Mealie
+- Source: https://github.com/mealie-recipes/mealie/blob/mealie-next/frontend/public/icon.png
+- Repository license: AGPL-3.0; mark belongs to the project
+- Changes: none
+
 ## mixxx.svg
 - Project: Mixxx
 - Source: https://github.com/mixxxdj/mixxx/blob/489b47a99d7841a27da9c5b7292907bbd1bda3c5/res/images/icons/scalable/apps/mixxx.svg
@@ -225,6 +276,18 @@ Nothing was redrawn or substituted.
 - Source: https://github.com/obsproject/obs-studio/blob/ab5c0b9114eddb3fad788cbd37906c89abc58e56/frontend/cmake/linux/icons/obs-logo-scalable.svg
 - Repository license: GPL-2.0; a code license does not grant rights in the mark, which belongs to the project
 - Changes: none
+## omarchy.svg
+- Project: Omarchy
+- Source: https://omarchy.org/brand/omarchy-logo.svg
+- Site brand asset; the project source repository is MIT-licensed, which does not itself grant rights in the mark. "Omarchy" is a project mark. Identification only, no endorsement.
+- Changes: none
+
+## ollama.png
+- Project: Ollama
+- Source: https://github.com/ollama/ollama/blob/main/docs/ollama.png
+- Repository license: MIT; mark belongs to the project
+- Changes: none
+
 ## omni-tools.svg
 - Project: Omni Tools
 - Source: https://github.com/iib0011/omni-tools/blob/9244e02923d99cde143ddd5b8d761d9ed0997da4/public/favicon.svg
@@ -240,11 +303,22 @@ Nothing was redrawn or substituted.
 - Source: https://github.com/paperless-ngx/paperless-ngx/blob/32bc5522e914f1e5f3a36eb60de6988611ca310f/docs/assets/logo_leaf.svg and logo_leaf_white.svg
 - Repository license: GPL-3.0; mark belongs to the project
 - Changes: none; the project ships both variants and the white one is shown in dark mode
+## parrot.svg
+- Project: Parrot OS
+- Source: the site logo inline SVG at https://www.parrotsec.org/
+- Website asset; mark belongs to the Parrot Project. Identification only, no endorsement.
+- Changes: the site's decorative CSS animation rules were removed so the mark renders statically; nothing redrawn
+
 ## penpot.svg, penpot-dark.svg
 - Project: Penpot
 - Source: https://github.com/penpot/penpot/blob/cd1ece4beb55391a428c632b1fe609dc4748cb4e/docs/img/favicon.svg
 - Repository license: MPL-2.0; a code license does not grant rights in the mark, which belongs to the project
 - Changes: the source picks black or white through a `prefers-color-scheme` rule that follows the operating system, not this site's theme; the two copies here only fix the fill to black or white so the mark matches the site theme
+## pihole.svg
+- Project: Pi-hole
+- Source: https://github.com/pi-hole/graphics/blob/master/Vortex/Vortex.svg
+- License: MIT (licenses/pi-hole-graphics.txt), the license of the project's dedicated graphics repository
+- Changes: none
 ## pinta.svg
 - Project: Pinta
 - Source: https://github.com/PintaProject/Pinta/blob/b7f527a3d5f716b4f81903c39d5ea02579a5bd3b/Pinta.Resources/icons/hicolor/scalable/apps/com.github.PintaProject.Pinta.svg
@@ -265,6 +339,12 @@ Nothing was redrawn or substituted.
 - Source: https://github.com/prusa3d/PrusaSlicer/blob/e6c85c50dcc56f9968a61dfdd7a3b695e1004037/resources/icons/PrusaSlicer.svg
 - Repository license: AGPL-3.0; a code license does not grant rights in the mark, which belongs to the project
 - Changes: none
+## qubes.png
+- Project: Qubes OS
+- Source: https://www.qubes-os.org/attachment/icons/512x512/apps/qubes-logo-icon.png linked as the site icon by https://www.qubes-os.org/
+- Website asset; mark belongs to the Qubes OS Project. Identification only, no endorsement.
+- Changes: resized to 256px for the web
+
 ## radicale.svg
 - Project: Radicale
 - Source: https://github.com/Kozea/Radicale/blob/d4d5b5d348b659fff46d38b27ba132573b1c4591/radicale/web/internal_data/css/logo.svg
@@ -275,6 +355,18 @@ Nothing was redrawn or substituted.
 - Source: https://github.com/restic/restic/blob/c734245fd3ae9bcac8ab3aaafb4482d4b5d0ae92/doc/logo/logo.png
 - Repository license: BSD-2-Clause; a code license does not grant rights in the mark, which belongs to the project
 - Changes: resized from 400 px to 256 px
+## scrutiny-dark.svg
+- Project: Scrutiny
+- Source: https://github.com/AnalogJ/scrutiny/blob/master/webapp/frontend/src/assets/images/logo/scrutiny-logo-white.svg
+- Repository license: MIT; mark belongs to the project. The project's own white variant, shown only in dark mode.
+- Changes: none
+
+## scrutiny.svg
+- Project: Scrutiny
+- Source: https://github.com/AnalogJ/scrutiny/blob/master/webapp/frontend/src/assets/images/logo/scrutiny-logo-dark.svg
+- Repository license: MIT; mark belongs to the project
+- Changes: none
+
 ## signal-desktop.svg
 - Project: Signal Desktop
 - Source: https://github.com/signalapp/Signal-Desktop/blob/5d1bbb7ee231b35cb9cc8cc449ffb819c528efc8/images/signal-logo.svg
@@ -305,11 +397,23 @@ Nothing was redrawn or substituted.
 - Source: https://github.com/syncthing/syncthing/blob/b34734376128492fa4e1b01412193de033e20613/assets/logo-only.svg
 - Repository license: MPL-2.0; mark belongs to the project
 - Changes: none
+## tails.svg
+- Project: Tails
+- Source: https://commons.wikimedia.org/wiki/File:Tails-logo-flat-notagline.svg
+- Commons states GPLv3; the GPL-3.0 text is in licenses/LICENSE-GPL-3.0.txt. Tails is a registered trademark of The Tor Project, Inc. Identification only, no endorsement.
+- Changes: none
+
 ## taskwarrior.png
 - Project: Taskwarrior
 - Source: the project's own mark, taken from the taskwarrior.org favicon (https://taskwarrior.org/favicon.ico) and the matching 460 px avatar of the project's GitHub organization (https://github.com/GothenburgBitFactory); both carry the same helmet mark
 - Terms: no separate logo license published; shown as nominative use like the other project marks
 - Changes: resized to 256 px only
+## technitium.png
+- Project: Technitium DNS Server
+- Source: the project's GitHub organization avatar (https://avatars.githubusercontent.com/TechnitiumSoftware), the same maze mark as https://technitium.com/img/logo.png linked in the project README
+- Website asset; mark belongs to Technitium. Identification only, no endorsement.
+- Changes: none
+
 ## trilium-notes.svg
 - Project: Trilium Notes
 - Source: https://github.com/TriliumNext/Trilium/blob/849f6042766c23b2804716f3da80aebb422ea242/apps/client/src/assets/icon-color.svg
@@ -360,6 +464,12 @@ Nothing was redrawn or substituted.
 - Source: https://github.com/videolan/vlc/blob/c3002b8be928ab02c7eb6f03cef297b663203464/extras/package/macosx/asset_sources/vlc_app_icon.svg
 - Repository license: GPL-2.0; a code license does not grant rights in the mark, which belongs to the project
 - Changes: none
+## warpgate.svg
+- Project: Warpgate
+- Source: https://github.com/warp-tech/warpgate/blob/main/warpgate-web/public/assets/favicon.svg
+- Repository license: Apache-2.0; mark belongs to the project
+- Changes: none
+
 ## zotero.png
 - Project: Zotero
 - Source: https://github.com/zotero/zotero/blob/52048d4e7ad54a4c1986af9cc8b0c1f331a02442/app/linux/icons/icon128.png
@@ -369,3 +479,82 @@ Nothing was redrawn or substituted.
 ## License texts
 
 Repository license texts are shipped under licenses/ with project-specific filenames. These record the source licensing and do not imply a separate trademark grant. Logos are used only as secondary identifiers in editorial descriptions, not as this site's own marks or as evidence of project endorsement.
+
+## thunderbird.png
+- Project: Thunderbird
+- Source: https://www.thunderbird.net/media/img/thunderbird/favicon-196.png
+- Terms: Unmodified official project mark; editorial identification, no endorsement. Mozilla trademark policy: https://www.mozilla.org/en-US/foundation/trademarks/policy/
+- Changes: none; rendered at catalog icon size.
+
+## dbeaver.png
+- Project: DBeaver Community
+- Source: https://github.com/dbeaver/dbeaver/blob/3638229a5347c360ce2e61aab1d76990618b8724/product/community/icons/dbeaver.png
+- Terms: Repository code license Apache-2.0; mark remains the project trademark. Unmodified editorial identification, not a claim that the code license grants trademark rights.
+- Changes: none; rendered at catalog icon size.
+
+## postgresql.png
+- Project: PostgreSQL
+- Source: https://www.postgresql.org/media/img/about/press/elephant.png
+- Terms: Unmodified official Slonik logo for identification in an independent software listing. Postgres, PostgreSQL and the Slonik Logo are trademarks or registered trademarks of the PostgreSQL Community Association of Canada. Policy: https://www.postgresql.org/about/policies/trademarks/
+- Changes: none; rendered at catalog icon size.
+
+## opensuse.svg
+- Project: openSUSE
+- Source: https://static.opensuse.org/favicon.svg
+- Terms: Unmodified official Geeko mark. The catalog logo links to opensuse.org, not to this site's listing, as required by https://en.opensuse.org/openSUSE:Trademark_guidelines . It is not used as this site's favicon; no endorsement implied.
+- Changes: none; rendered at catalog icon size.
+
+## opnsense.png
+- Project: OPNsense
+- Source: https://opnsense.org/wp-content/themes/template/assets/images/favicon/android-icon-192x192.png
+- Terms: Unmodified official project mark. The catalog logo links to opnsense.org as required by https://opnsense.org/legal-guidelines/ . OPNsense is a registered trademark of Deciso B.V.; no endorsement implied.
+- Changes: none; rendered at catalog icon size.
+
+## privacyidea.png
+- Project: privacyIDEA
+- Source: https://www.privacyidea.org/wp-content/uploads/2016/06/cropped-only-logo-white-background-192x192.png
+- Terms: Official logo page expressly welcomes use when writing about or referring to privacyIDEA: https://www.privacyidea.org/logos/ . Code license AGPL-3.0 is retained under licenses/ and does not grant trademark rights.
+- Changes: none; displayed at catalog size. Independent identification, no endorsement.
+
+## victoriametrics.svg
+- Project: VictoriaMetrics Community
+- Source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/0c3f0919a4c3d104355ec12979c30d2359909ad6/app/vmselect/vmui/assets/favicon.svg
+- Terms: Apache-2.0 source repository; full license under licenses/. Project mark used only as a secondary identifier, not site branding or evidence of affiliation. The code license does not grant trademark rights.
+- Changes: none.
+
+## percona.png
+- Project: Percona Server for MySQL
+- Source: https://www.percona.com/wp-content/uploads/2026/03/cropped-Favicon-4-192x192.png
+- Terms: Official unmodified Percona mark for a nominative reference to its genuine product, within the stated exception at https://www.percona.com/trademark-policy/ . No affiliation or endorsement. Code license does not grant separate trademark rights.
+- Changes: none; displayed at catalog size.
+
+## fedora.ico
+- Project: Fedora
+- Source: https://fedoraproject.org/favicon.ico
+- Terms: Fedora and the Infinity design logo are trademarks of Red Hat, Inc. Business-site use is described at https://docs.fedoraproject.org/en-US/legal/trademarks/ . The catalog icon links to https://fedoraproject.org/; FOSSadmin remains the site's primary brand and there is no endorsement claim. Artwork appearance guidelines: https://fedoraproject.org/wiki/Logo/UsageGuidelines .
+- Changes: none.
+
+## Held standalone marks
+Pi-hole and FreeBSD standalone marks are intentionally absent while their commercial/marketing logo-use questions remain open. A text fallback and a screenshot containing an application's own UI do not establish separate logo permission. Policies: https://pi-hole.net/trademark-rules-and-brand-guidelines/ and https://freebsdfoundation.org/legal/trademark-usage-terms-and-conditions/ .
+
+## AdGuard Home mark held
+The official writing-about page asks for advance contact for logos and other visual elements: https://adguard.com/kb/miscellaneous/contribute/writing-about-adguard/ . The Home mark is omitted pending permission or a clearer supported basis. No request has been sent.
+
+## grapheneos.svg
+- Project: GrapheneOS
+- Source and author: https://commons.wikimedia.org/wiki/File:GrapheneOS_Logo.svg identifies Daniel Micay and the GrapheneOS branding repository. The distributed SVG was obtained from this Commons file.
+- License: the file page explicitly grants MIT/Expat. Author credit, source reference and the full permission notice are retained in licenses/grapheneos-logo-Expat.txt. This is an image-specific grant, not an inference from the GrapheneOS website license.
+- Changes: none; mark used only to identify the independent project listing, no endorsement.
+
+## calyxos.png
+- Project: CalyxOS
+- Source: https://calyxos.org/assets/images/favicon/apple-touch-icon.png linked by https://calyxos.org/
+- Website content license: the site's LICENSE names Creative Commons Attribution 4.0 but links BY-SA 4.0. We follow the stricter attribution/share-alike obligations, with Calyx Institute credit and a license copy in the screenshot licenses directory.
+- Terms: https://gitlab.com/CalyxOS/calyxos.org/-/blob/3c52a4cd0eb3e4bf1a6b617f11e599b638329f47/LICENSE and website footer https://calyxos.org/ links https://creativecommons.org/licenses/by-sa/4.0/
+- Changes: none. CalyxOS is a registered Calyx Institute trademark; identification only, no endorsement.
+
+## lineageos.svg
+- Project: LineageOS
+- Source: https://commons.wikimedia.org/wiki/File:LineageOS_Logo.svg
+- Copyright basis: Commons marks this simple geometric logo PD-textlogo; trademark/non-copyright restrictions still apply.
+- Changes: none. Identification of the independent project listing only, no endorsement.

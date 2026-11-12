@@ -26,6 +26,18 @@ screenshot is not a production review of it.
 - License: MIT (licenses/LICENSE-MIT-actual-budget.txt); repository license covering the published image
 - Changes: resized and recompressed to WebP only
 - Project-published demo image, not our install. Screenshot version not recorded.
+## adguard-home-source.webp
+- Project: AdGuard Home
+- Source: https://cdn.adtidy.org/public/Adguard/Common/adguard_home.gif (the dashboard demo GIF published in the project's README at https://github.com/AdguardTeam/AdGuardHome)
+- Terms: Published in the project README and on the official AdGuard CDN. No reuse terms are stated. We did not infer a license from the code license.
+- Changes: a single frame (the dashboard view) extracted from the 205-frame GIF and recompressed to WebP; no cropping or compositing.
+- What it shows: the AdGuard Home dashboard with query totals, blocked counts and top clients, from an old release (v0.1-era interface). The current interface differs. Not our install.
+## almalinux-source.webp
+- Project: AlmaLinux OS
+- Source: https://commons.wikimedia.org/wiki/File:AlmaLinux_9.3_GNOME_default_desktop_-_English.png
+- Credit: AlmaLinux OS Foundation. Commons states GPL; the existing GPL license text is in licenses/. The screenshot shows the AlmaLinux 9.3 default GNOME desktop from early 2024, not the current recorded 10.2/9.8 releases or our install.
+- Changes: recompressed to WebP only, no cropping or compositing.
+
 ## audacity.webp
 - Project: Audacity
 - Source: https://commons.wikimedia.org/wiki/File:Audacity_version_4.0.png
@@ -46,6 +58,12 @@ screenshot is not a production review of it.
 - License: MIT (licenses/LICENSE-MIT-beszel.txt); repository license covering the published image
 - Changes: resized and recompressed to WebP only
 - Project-published demo image, not our install. Screenshot version not recorded.
+## blackarch-source.webp
+- Project: BlackArch
+- Source: https://commons.wikimedia.org/wiki/File:BlackArch_Linux_2020.12.01_screenshot.png
+- Credit: BlackArch developers. Commons states GPL; the existing GPL license text is in licenses/. The screenshot shows BlackArch 2020.12.01 from 2020; current ISOs are 2023 snapshots and the tool repository is rolling. Not our install.
+- Changes: resized to 1920px wide and recompressed to WebP, no cropping or compositing.
+
 ## blender.webp
 - Project: Blender
 - Source: https://commons.wikimedia.org/wiki/File:Blender_4.3.2_screenshot.png
@@ -55,18 +73,37 @@ screenshot is not a production review of it.
 ## caddy.webp
 - Our own capture (2026-11-08): caddy v2.11.9 serving its own default welcome page (the page
   shipped in the official caddyserver/dist packages)
+## copyparty-source.webp
+- Project: copyparty
+- Source: the README screenshot at https://github.com/9001/copyparty (copyparty-browser-fs8)
+- Repository license: MIT
+- The screenshot shows the copyparty web UI browsing a music folder; it is an older UI capture from the README, not our install.
+- Changes: recompressed to WebP only, no cropping or compositing.
+
 ## cryptomator.webp
 - Project: Cryptomator
 - Source: https://commons.wikimedia.org/wiki/File:Cryptomator-Linux-Desktop.png
 - Author: Kinetic2352, 2025-01-21. License stated on the Commons file page: CC0 (https://creativecommons.org/publicdomain/zero/1.0/). The license applies to this image only and was not inferred from the code license.
 - Changes: recompressed to WebP only
 - What it shows: Linux desktop, January 2025, taken by a community contributor. Version not stated; the interface may differ from the current release.
+## cryptpad-source.webp
+- Project: CryptPad
+- Source: https://github.com/cryptpad/documentation/blob/main/images/drive-grid.png (cryptpad/documentation repository)
+- Credit: CryptPad team. The documentation repository is licensed CC BY 4.0 (its LICENSE file); the license text is in licenses/LICENSE-CC-BY-4.0.txt. The screenshot shows a CryptDrive with shared documents from the user docs, not our install.
+- Changes: recompressed to WebP only, no cropping or compositing.
+
 ## darktable.webp
 - Project: darktable
 - Source: https://commons.wikimedia.org/wiki/File:Darktable_2.4.4_screenshot.png
 - Author: VulcanSphere (software: Johannes Hanika), 2018-11-27. License stated on the Commons file page: GPL-3.0 (https://www.gnu.org/licenses/gpl-3.0.html). The license applies to this image only and was not inferred from the code license.
 - Changes: resized to 1280 px wide and recompressed to WebP only
 - What it shows: darktable 2.4.4 from 2018, an old release. The current interface looks different. The shown photo is part of the Commons upload.
+## dbeaver-source.webp
+- Project: DBeaver Community
+- Source: https://commons.wikimedia.org/wiki/File:DBeaver_22.0.0_screenshot.png by Wikimedia Commons contributor VulcanSphere (uploaded 2022-03-19)
+- License: Apache License 2.0, stated on the Commons file page (licenses/LICENSE-Apache-2.0.txt)
+- Changes: recompressed to WebP only
+- Shows version 22.0.0; the caption on the page says so.
 ## debian-13-gnome.webp
 - Project: Debian
 - Source: https://commons.wikimedia.org/wiki/File:Debian_13_(Trixie)_screenshot_-_using_GNOME_desktop.png
@@ -214,6 +251,12 @@ screenshot is not a production review of it.
 - Terms: Published on the project product page. The page states no reuse terms. We did not infer a license from the code license.
 - Changes: recompressed to WebP only
 - What it shows: Image from the LibreOffice product page showing Writer. The release is not stated.
+## mealie-source.webp
+- Project: Mealie
+- Source: https://github.com/mealie-recipes/mealie/blob/mealie-next/docs/docs/assets/img/home_screenshot.png
+- Repository license: AGPL-3.0. The project's own docs image showing the recipe grid across device mockups, not our install.
+- Changes: recompressed to WebP only, no cropping or compositing.
+
 ## mint-22.3-cinnamon.webp
 - Project: Linux Mint
 - Source: https://linuxmint.com/pictures/screenshots/zena/cinnamon.png
@@ -261,6 +304,18 @@ screenshot is not a production review of it.
 - Terms: Published on the project home page. The page states no reuse terms. We did not infer a license from the code license.
 - Changes: resized to 1280 px wide and recompressed to WebP only
 - What it shows: Marketing image from the OBS home page showing the OBS Studio window. The preview shows the OBS website. Its title bar reads OBS 32.1.1.
+## omarchy-source.webp
+- Project: Omarchy
+- Source: https://omarchy.org/themes/ (Tokyo Night OLED theme preview image)
+- Credit: Omarchy. Official project site preview, shown to identify the OS; no separate license grant was found for the image. The preview shows a themed desktop with editor and system monitors; it is a project promotional image, not our install.
+- Changes: recompressed to WebP only, no cropping or compositing.
+
+## ollama-source.webp
+- Project: Ollama
+- Source: https://commons.wikimedia.org/wiki/File:Ollama-running-llama3-in-linux.png
+- Credit: MGeog2022. Commons states CC BY 4.0; the license text is in licenses/LICENSE-CC-BY-4.0.txt. The capture shows Ollama running Llama 3 in a Linux terminal, an older model version, not our install.
+- Changes: recompressed to WebP only, no cropping or compositing.
+
 ## omni-tools.webp
 - Project: Omni Tools
 - Source: https://github.com/iib0011/omni-tools/blob/9244e02923d99cde143ddd5b8d761d9ed0997da4/docs-images/img.png
@@ -278,12 +333,29 @@ screenshot is not a production review of it.
 - Source: https://github.com/paperless-ngx/paperless-ngx/blob/32bc552/docs/assets/screenshots/documents-smallcards.png
 - License: GNU General Public License v3.0 (licenses/LICENSE-GPL-3.0.txt), the license of the repository that publishes this documentation image; original source file available at the pinned URL above
 - Changes: resized and recompressed only; documents shown are the project's fictional samples
+## parrot-source.webp
+- Project: Parrot OS
+- Source: https://commons.wikimedia.org/wiki/File:Parrot_OS_5.0.1-Electro_Ara-04-05-2022.png
+- Credit: VARGUX. Commons states GPL; the existing GPL license text is in licenses/. The screenshot shows the Parrot OS 5.0.1 live desktop from 2022, not the current recorded 7.4 release or our install.
+- Changes: recompressed to WebP only, no cropping or compositing.
+
 ## penpot.webp
 - Project: Penpot
 - Source: https://penpot.app/ (home page image served through the site's optimizer)
 - Terms: Published on the project's own site. The page states no reuse terms. We did not infer a license from the code license.
 - Changes: resized to 1280 px wide and recompressed to WebP only
 - What it shows: the Penpot app with a sample design project (design tokens panel and canvas).
+## percona-source.webp
+- Project: Percona Server for MySQL
+- Source: https://github.com/percona/psmysql-docs/blob/9.7/docs/_static/audit-log-filter-arch.png
+- License: CC BY 4.0 (licenses/LICENSE-CC-BY-4.0.txt); the psmysql-docs README licenses the documentation under CC BY 4.0
+- Changes: resized to 1920 px wide and recompressed to WebP only
+- Architecture diagram, not a screen capture; the page caption says so.
+## pi-hole-source.webp
+- Project: Pi-hole
+- Source: https://github.com/pi-hole/graphics/blob/master/Screenshots/v6/v6_dashboard.png
+- License: MIT (licenses/LICENSE-MIT-pi-hole-graphics.txt), the license of the project's dedicated graphics repository
+- Changes: recompressed to WebP only
 ## pinta.webp
 - Project: Pinta
 - Source: our own capture of Pinta 2.1.2, built from the release source (PintaProject/Pinta tag 2.1.2), opening the project's own benchmark test photo (tests/PintaBenchmarks/Assets/2000px-test.png). The recorded release is 3.1.2; this environment cannot run the GTK4-based 3.x
@@ -301,12 +373,24 @@ screenshot is not a production review of it.
 - Author: System76, 2025-12-11. License stated on the Commons file page: GPL-3.0-or-later (https://www.gnu.org/licenses/gpl-3.0.html). The license applies to this image only and was not inferred from the code license.
 - Changes: resized to 1280 px wide and recompressed to WebP only
 - What it shows: Pop!_OS 24.04 LTS default COSMIC desktop. Not our install.
+## privacyidea-source.webp
+- Project: privacyIDEA
+- Source: https://commons.wikimedia.org/wiki/File:PrivacyIDEA-token.png, uploaded by the project's author Cornelius Kölbel (2016-07-04)
+- License: AGPL, stated on the Commons file page (licenses/LICENSE-AGPL-3.0.txt)
+- Changes: recompressed to WebP only
+- Shows a 2.x token list from 2016; the page caption says so.
 ## prusaslicer.webp
 - Project: PrusaSlicer
 - Source: https://commons.wikimedia.org/wiki/File:PrusaSlicer.png
 - Author: Majkluss, 2025-03-03. License stated on the Commons file page: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). The license applies to this image only and was not inferred from the code license.
 - Changes: resized to 1280 px wide and recompressed to WebP only
 - What it shows: PrusaSlicer 2.9.0 with a Czech interface, March 2025. The model shown is part of the Commons upload.
+## qubes-source.webp
+- Project: Qubes OS
+- Source: https://commons.wikimedia.org/wiki/File:Qubes_OS_ws_4-1-2.png
+- Credit: The Qubes OS Project, Invisible Things Labs, Joanna Rutkowska. Commons states GPL; the existing GPL license text is in licenses/. The screenshot shows a Qubes OS 4.1.2 workspace from 2023, not the current recorded 4.3.2 release or our install.
+- Changes: recompressed to WebP only, no cropping or compositing.
+
 ## radicale.webp
 - Our own capture (2026-11-08): radicale 3.9.0 signed-in collection management view, populated with clearly fictional sample events and contacts
 ## restic.webp
@@ -315,6 +399,12 @@ screenshot is not a production review of it.
 - License: BSD-2-Clause (restic repository license); our own command output
 - Changes: the terminal text was drawn into an image by us, with the host name set to demo and the timezone to UTC. Output text is unedited.
 - Rendered terminal output, not a literal screen capture. A local test. Not a production assessment.
+## scrutiny-source.webp
+- Project: Scrutiny
+- Source: https://github.com/AnalogJ/scrutiny/blob/master/docs/dashboard.png
+- Repository license: MIT. The screenshot shows the Scrutiny dashboard with six drives' health status, not our install.
+- Changes: resized to 1920px wide and recompressed to WebP, no cropping or compositing.
+
 ## signal-desktop.webp
 - Project: Signal Desktop
 - Source: https://signal.org/download/ (file /assets/images/screenshots/download-desktop-mac.png)
@@ -327,6 +417,11 @@ screenshot is not a production review of it.
 - License: MIT (licenses/LICENSE-MIT-silverbullet.txt); repository license covering the published image
 - Changes: resized and recompressed to WebP only
 - Project-published demo image, not our install. Screenshot version not recorded.
+## simplex-chat-source.webp
+- Project: SimpleX Chat
+- Source: https://github.com/simplex-chat/simplex-chat/blob/master/images/conversation.png
+- License: AGPL-3.0 repository license covering the published image (licenses/LICENSE-AGPL-3.0.txt)
+- Changes: recompressed to WebP only
 ## standard-notes.webp
 - Project: Standard Notes
 - Source: https://standardnotes.com/press (kit: https://github.com/standardnotes/assets/releases/download/0.0.1/Press.Kit.Standard.Notes.zip)
@@ -341,12 +436,24 @@ screenshot is not a production review of it.
 - What it shows: From the project press kit, which offers its product screenshots for press coverage and walkthroughs. Sample tasks. The release is not stated.
 ## syncthing.webp
 - Our own capture (2026-11-08): syncthing v2.1.7 web GUI with three folders holding fictional sample files (generated documents, images and tones); Documents folder expanded
+## tails-source.webp
+- Project: Tails
+- Source: https://commons.wikimedia.org/wiki/File:Tails_screenshot_6.x.png
+- Credit: OS: The Tails Project; Tor Browser: Tor Project; screenshot: Paowee. Commons states GPLv3; the GPL-3.0 text is in licenses/. The screenshot shows the Tails 6.13 desktop from 2025, not the current recorded 7.17 release or our install.
+- Changes: recompressed to WebP only, no cropping or compositing.
+
 ## taskwarrior.webp
 - Project: Taskwarrior
 - Source: our own run of task 3.5.0, built from the v3.5.0 release source, on sample tasks we wrote, drawn into an image as rendered terminal output, not a literal screen capture
 - Terms: our own output render; no project image reused
 - Changes: environment override notices (TASKRC/TASKDATA lines) and the post-upgrade hint left out; the rest unedited, long lines wrapped
 - What it shows: adding three tasks, completing one, and the task list table.
+## technitium-source.webp
+- Project: Technitium DNS Server
+- Source: https://technitium.com/dns/ScreenShot1.png linked from the project README
+- Repository license: GPL-3.0; the GPL-3.0 text is in licenses/. The screenshot shows the server's web dashboard, not our install.
+- Changes: recompressed to WebP only, no cropping or compositing.
+
 ## trilium-notes.webp
 - Project: Trilium Notes
 - Source: https://github.com/TriliumNext/Trilium/blob/849f6042766c23b2804716f3da80aebb422ea242/apps/website/public/screenshot_desktop_linux_light.webp
@@ -398,9 +505,91 @@ screenshot is not a production review of it.
 - Terms: Published on the VideoLAN site. The page states no reuse terms. We did not infer a license from the code license.
 - Changes: recompressed to WebP only
 - What it shows: Image from the VLC page on videolan.org, labeled 3.0.17 on Windows 11 in its file name. It is small (500 px wide).
+## warpgate-source.webp
+- Project: Warpgate
+- Source: the README screenshot at https://github.com/warp-tech/warpgate
+- Repository license: Apache-2.0. The screenshot shows an SSH session through Warpgate in a terminal, not our install.
+- Changes: recompressed to WebP only, no cropping or compositing.
+
 ## zotero.webp
 - Project: Zotero
 - Source: https://www.zotero.org/
 - Terms: Published on the project home page. The page states no reuse terms. We did not infer a license from the code license.
 - Changes: recompressed to WebP only
 - What it shows: Image from the Zotero home page, labeled Zotero 7.0 in its file name. Sample library items.
+
+## thunderbird-source.webp
+- Project: Thunderbird
+- Source: https://github.com/thunderbird/flatpak-screenshots/blob/0d6ce3118609b042a1f091eb66d0c77471a03902/image_1.png
+- Credit and terms: CC0-1.0 in the screenshot repository; licenses/thunderbird-screenshots-CC0.txt. Project-published Thunderbird 140 demo, not our install.
+- Changes: resized only where necessary and recompressed to WebP; no cropping or compositing.
+
+## opnsense-source.webp
+- Project: OPNsense
+- Source: https://github.com/opnsense/docs/blob/2cae1b4f7ecf951ba7c9e8654965ae3f49315323/source/images/OPNsense-Deciso-Screenshot.png
+- Credit and terms: Documentation repository BSD-2-Clause; licenses/opnsense-docs-BSD-2-Clause.txt. Older Insight traffic view, exact release unspecified, not our install.
+- Changes: resized only where necessary and recompressed to WebP; no cropping or compositing.
+
+## postgres-source.webp
+- Project: PostgreSQL
+- Source: https://commons.wikimedia.org/wiki/File:PostgreSQL_psql_screenshot.png
+- Credit and terms: PostgreSQL License; licenses/PostgreSQL.txt. Software: PostgreSQL Global Development Group. Screenshot: VulcanSphere, August 3, 2025, psql 17.5. Not our install.
+- Changes: resized only where necessary and recompressed to WebP; no cropping or compositing.
+
+## opensuse-source.webp
+- Project: openSUSE
+- Source: https://commons.wikimedia.org/wiki/File:KDE_Plasma_6_screenshot_(openSUSE_dark_mode).png
+- Credit and terms: GPL-2.0-or-later, existing GPL text in licenses/. Software: KDE Project and openSUSE. Screenshot: VulcanSphere, March 17, 2024. Older Tumbleweed / Plasma 6 desktop, not our install.
+- Changes: resized only where necessary and recompressed to WebP; no cropping or compositing.
+
+## victoriametrics-source.webp
+- Project: VictoriaMetrics Community
+- Source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/0c3f0919a4c3d104355ec12979c30d2359909ad6/docs/victoriametrics/keyConcepts/vmui.webp
+- Credit: VictoriaMetrics contributors. Apache-2.0 repository documentation; license text in licenses/victoriametrics-Apache-2.0.txt. No trademark rights granted.
+- What it shows: VMUI CPU-time query and graph, version unspecified. Not our install or a test of these steps.
+- Changes: none; upstream WebP retained byte-for-byte.
+
+## fedora-source.webp
+- Project: Fedora Workstation
+- Source: https://commons.wikimedia.org/wiki/File:Fedora_44_Workstation.png
+- Credit: The Fedora Project; screenshot by Daichungus. Commons states GPL-2.0-or-later; the existing GPL license text is in licenses/. The screenshot shows Fedora 44 on May 1, 2026, not the current recorded 45 release or our install.
+- Changes: recompressed to WebP only, no cropping or compositing.
+
+## freebsd-source.webp
+- Project: FreeBSD
+- Source: https://commons.wikimedia.org/wiki/File:FreeBSD_14_welcome_screen_after_login.png
+- Credit: MichiGreat. Commons records CC0-1.0, November 23, 2023. License: https://creativecommons.org/publicdomain/zero/1.0/ . This is a FreeBSD 14.0 console, not the current recorded 15.1 release or our install.
+- Changes: recompressed to WebP only, no cropping or compositing. No standalone FreeBSD logo added.
+
+## Percona Server image gap
+A genuine reusable Percona Server screenshot has not yet been verified. This page does not yet meet the full screenshot standard.
+
+## Screenshots omitted pending verified reuse basis
+DBeaver's project-homepage image, Pi-hole's official dashboard image, privacyIDEA's documentation screenshot and AdGuard Home's externally hosted README demonstration are not included in this patch. Official publication/attribution alone was not treated as a reuse grant.
+
+Explicitly licensed alternative records exist for DBeaver 22.0 and an older privacyIDEA token view, but they were not substituted because retrieval hit access errors and then throttling; their pixels remain unverified. Sources: https://commons.wikimedia.org/wiki/File:DBeaver_22.0.0_screenshot.png and https://commons.wikimedia.org/wiki/File:PrivacyIDEA-token.png .
+
+Pi-hole's screenshot still needs a supported replacement or permission. The Commons file labeled Pi-hole Screenshot has a mismatched simple-logo/public-domain tag, which is not accepted as evidence for a complete dashboard image. AdGuard Home's external GIF also remains unresolved. No permission request or software installation was made.
+
+## grapheneos-source.webp
+- Project: GrapheneOS
+- Source: https://commons.wikimedia.org/wiki/File:GrapheneOS_Screenshot.png
+- Author: Omilc; September 18, 2022; historical default home screen, not a current-version or our-install capture.
+- License: CC BY-SA 2.5; https://creativecommons.org/licenses/by-sa/2.5/ ; license text licenses/grapheneos-screenshot-CC-BY-SA-2.5.html
+- Changes: resized and converted to WebP; derivative retained under CC BY-SA 2.5. No content added, no endorsement implied.
+
+## calyxos-source.webp
+- Project: CalyxOS
+- Source: https://calyxos.org/assets/images/device/feature/communication.png , published by https://calyxos.org/
+- Creator/credit: Calyx Institute. Official promotional messaging/email composite with project sample content, not our installation or a release-specific capture.
+- Website content terms: https://gitlab.com/CalyxOS/calyxos.org/-/blob/3c52a4cd0eb3e4bf1a6b617f11e599b638329f47/LICENSE names CC BY 4.0 but links CC BY-SA 4.0; the live website footer also links BY-SA 4.0. We comply with the stricter attribution/share-alike obligations. Asset is not from the separately excepted fontawesome/app-icon directories.
+- License copy: licenses/calyxos-content-CC-BY-SA-4.0.html ; https://creativecommons.org/licenses/by-sa/4.0/
+- Changes: WebP conversion, derivative retained under CC BY-SA 4.0. Project/app marks remain their owners' marks; no endorsement.
+
+## lineageos-source.webp
+- Project: LineageOS
+- Source: https://commons.wikimedia.org/wiki/File:Lineage_OS_21_home_screen.png
+- Author: The LineageOS Project, March 1, 2024. Default home screen of LineageOS 21 on Pixel 6 Pro. Historical screenshot, not the recorded current project generation or our installation.
+- License: Apache-2.0. Copyright The LineageOS Project. The full Commons license panel was checked in a browser because the text-only extraction omitted its Apache license cell.
+- License copy: licenses/phone-os-Apache-2.0.txt ; https://www.apache.org/licenses/LICENSE-2.0
+- Changes: resized and converted to WebP. No Google-app screenshot substituted and no endorsement implied.
