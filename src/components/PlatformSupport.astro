@@ -3,7 +3,7 @@ import { slugify } from "../lib/catalog";
 const { record } = Astro.props;
 ---
 <section class="platform-support" aria-label={record.role === "operating-system" ? "Device compatibility" : "Platforms and clients"}>
-  <p class="eyebrow">{record.role === "operating-system" ? "Device compatibility" : "Platforms"}</p>
+  <p class="eyebrow">{record.role === "operating-system" ? "Device compatibility" : "Available on these platforms"}</p>
   {record.compatibilityUrl && <p class="privacy-note"><a href={record.compatibilityUrl}>Official hardware and installation choices ↗</a></p>}
   <div class="detail-meta">{record.platforms.map(row => <a class="source-link" href={`${import.meta.env.BASE_URL}platform/${slugify(row.name)}/`}>{row.name}</a>)}</div>
   <p class="privacy-note">{record.note}</p>
