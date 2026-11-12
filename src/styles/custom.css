@@ -1311,10 +1311,10 @@ main {
     background: var(--card);
     border-radius: 0 0 0 6px;
   }
-  .tool-list[data-view="detail"] .project-icon-link {
-    top: auto;
-    left: 16px;
-  }
+  /* The linked-icon overlay covers the card's inline icon, which sits below the
+     16/9 screenshot in detail cards; its height depends on card width, so the
+     view-toggle script places the overlay with measured coordinates. Hidden
+     until placed so it never lands on the Support link. */
 }
 /* Phones: one column, rows as before. Detail adds the screenshot. */
 @media (max-width: 650px) {
@@ -1358,6 +1358,21 @@ main {
   .list-heading { flex-wrap: wrap; gap: 10px; }
   .list-tools { flex-wrap: wrap; gap: 10px; }
   .view-toggle button { padding: 7px 10px; white-space: nowrap; }
+}
+
+/* Detail mode: the linked-icon overlay covers the card's inline icon, which sits
+   below the 16/9 screenshot; its height depends on card width, so the view-toggle
+   script places the overlay with measured coordinates. Keep the detail-mode
+   .tool-mark grid/margin rules off the overlay (they would rebase its abspos
+   containing block); hidden until placed so it never lands on the Support link.
+   The .tool-item segment keeps this above those rules' specificity, at all widths. */
+.tool-list[data-view="detail"] .tool-item .project-icon-link {
+  grid-area: auto;
+  margin: 0;
+  visibility: hidden;
+}
+.tool-list[data-view="detail"] .tool-item .project-icon-link[data-icon-placed] {
+  visibility: visible;
 }
 
 .tool-shot .no-shot-text {

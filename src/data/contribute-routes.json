@@ -1,0 +1,1278 @@
+{
+ "tools/actual-budget": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's funding file",
+   "href": "https://github.com/actualbudget/actual/blob/master/.github/FUNDING.yml"
+  },
+  "routes": [
+   {
+    "label": "Improve the documentation",
+    "href": "https://actualbudget.org/docs/contributing/writing-docs",
+    "note": "follow the project's end-user writing guide."
+   },
+   {
+    "label": "Help with translations",
+    "href": "https://actualbudget.org/docs/contributing/i18n",
+    "note": "use Weblate suggestions, not translation pull requests. An account with two-factor authentication is required."
+   },
+   {
+    "label": "Contribute code or discuss a change",
+    "href": "https://actualbudget.org/docs/contributing/",
+    "note": "read the expectations first; discuss larger features before building them."
+   }
+  ],
+  "aiNote": "Maintainer time is limited. Follow the <a href=\"https://actualbudget.org/docs/contributing/ai-usage-policy\">AI-use policy ↗</a>, review your own work and disclose significant AI help. Do not post unreviewed automated replies to maintainers."
+ },
+ "tools/almalinux": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's GitHub Sponsors page",
+   "href": "https://github.com/sponsors/AlmaLinux"
+  },
+  "routes": [
+   {
+    "label": "Help AlmaLinux",
+    "href": "https://wiki.almalinux.org/Contribute.html",
+    "note": "the project wiki's ways to contribute, from mirrors to packaging."
+   }
+  ]
+ },
+ "tools/blackarch": {
+  "checkedOn": "November 12, 2026",
+  "routes": [
+   {
+    "label": "Join the BlackArch community",
+    "href": "https://blackarch.org/community.html",
+    "note": "the project's community page."
+   }
+  ]
+ },
+ "tools/debian": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's donation page",
+   "href": "https://www.debian.org/donations"
+  },
+  "routes": [
+   {
+    "label": "Join Debian",
+    "href": "https://www.debian.org/devel/join/",
+    "note": "the project's page for new contributors."
+   }
+  ]
+ },
+ "tools/fedora": {
+  "checkedOn": "November 12, 2026",
+  "routes": [
+   {
+    "label": "Find a Fedora task",
+    "href": "https://whatcanidoforfedora.org/",
+    "note": "the project's matching page for new contributors."
+   }
+  ]
+ },
+ "tools/freebsd": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's donations page",
+   "href": "https://www.freebsd.org/donations/"
+  },
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/freebsd/freebsd-src/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/kali-linux": {
+  "checkedOn": "November 12, 2026",
+  "routes": [
+   {
+    "label": "Contribute to Kali",
+    "href": "https://www.kali.org/docs/community/contribute/",
+    "note": "the project's own guide covers packages, documentation and community help."
+   }
+  ]
+ },
+ "tools/linux-mint": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's donation page",
+   "href": "https://linuxmint.com/donors.php"
+  },
+  "routes": [
+   {
+    "label": "Get involved with Linux Mint",
+    "href": "https://linuxmint.com/getinvolved.php",
+    "note": "the project's own page for helping out."
+   }
+  ]
+ },
+ "tools/nixos": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "NixOS Foundation on Open Collective",
+   "href": "https://opencollective.com/nixos"
+  },
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/NixOS/nixpkgs/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/omarchy": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's patron page",
+   "href": "https://omarchy.org/patrons/"
+  },
+  "routes": [
+   {
+    "label": "Join the community discussions",
+    "href": "https://github.com/omacom/omarchy/discussions",
+    "note": "questions, ideas and help with the project."
+   }
+  ]
+ },
+ "tools/opensuse": {
+  "checkedOn": "November 12, 2026",
+  "routes": [
+   {
+    "label": "Contribute to openSUSE",
+    "href": "https://www.opensuse.org/",
+    "note": "the project's contribution portal."
+   }
+  ]
+ },
+ "tools/opnsense": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's donation page",
+   "href": "https://opnsense.org/donate/"
+  },
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/opnsense/core/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/parrot": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's donation page",
+   "href": "https://www.parrotsec.org/donate/"
+  },
+  "routes": [
+   {
+    "label": "Join the Parrot community",
+    "href": "https://www.parrotsec.org/community/",
+    "note": "the project's community page."
+   }
+  ]
+ },
+ "tools/pop-os": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's donation page",
+   "href": "https://system76.com/donate/"
+  },
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/pop-os/pop/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/qubes": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's donation page",
+   "href": "https://www.qubes-os.org/donate/"
+  },
+  "routes": [
+   {
+    "label": "Read how to contribute",
+    "href": "https://doc.qubes-os.org/en/latest/introduction/contributing.html",
+    "note": "the project's own contribution guide."
+   }
+  ]
+ },
+ "tools/tails": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "Tor Project donation page",
+   "href": "https://tails.net/donate/"
+  },
+  "routes": [
+   {
+    "label": "Contribute to Tails",
+    "href": "https://tails.net/contribute/",
+    "note": "the project's own contribution page."
+   }
+  ]
+ },
+ "tools/ubuntu": {
+  "checkedOn": "November 12, 2026",
+  "routes": [
+   {
+    "label": "Contribute to Ubuntu",
+    "href": "https://ubuntu.com/community/contribute",
+    "note": "the project's community contribution page."
+   }
+  ]
+ },
+ "tools/calyxos": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's donation page",
+   "href": "https://members.calyx.org/donate"
+  },
+  "routes": [
+   {
+    "label": "Join the Calyx community",
+    "href": "https://calyxos.org/community/",
+    "note": "the project's community page."
+   }
+  ]
+ },
+ "tools/grapheneos": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's donation page",
+   "href": "https://grapheneos.org/donate"
+  },
+  "routes": [
+   {
+    "label": "Report issues",
+    "href": "https://github.com/GrapheneOS/os-issue-tracker",
+    "note": "the project's official issue tracker."
+   }
+  ]
+ },
+ "tools/lineageos": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's Patreon",
+   "href": "https://patreon.com/LineageOS"
+  },
+  "routes": [
+   {
+    "label": "Contribute to LineageOS",
+    "href": "https://wiki.lineageos.org/contributing",
+    "note": "the project wiki's contribution guide."
+   }
+  ]
+ },
+ "tools/ventoy": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's funding file",
+   "href": "https://github.com/ventoy/Ventoy/blob/master/.github/FUNDING.yml"
+  },
+  "routes": [
+   {
+    "label": "Join the community forum",
+    "href": "https://forums.ventoy.net/",
+    "note": "the project's official forum."
+   }
+  ]
+ },
+ "tools/ublock-origin": {
+  "checkedOn": "November 12, 2026",
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/gorhill/uBlock/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/audacity": {
+  "checkedOn": "November 12, 2026",
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/audacity/audacity/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/beancount": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's recorded funding route",
+   "href": "https://github.com/sponsors/blais"
+  },
+  "routes": [
+   {
+    "label": "Join the mailing list",
+    "href": "https://groups.google.com/g/beancount",
+    "note": "the project's official discussion list."
+   }
+  ]
+ },
+ "tools/blender": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's recorded funding route",
+   "href": "https://fund.blender.org"
+  },
+  "routes": [
+   {
+    "label": "Read the developer handbook",
+    "href": "https://developer.blender.org/docs/handbook/",
+    "note": "the project's own starting point for contributors."
+   }
+  ]
+ },
+ "tools/cryptomator": {
+  "checkedOn": "November 12, 2026",
+  "routes": [
+   {
+    "label": "Join the community forum",
+    "href": "https://community.cryptomator.org/",
+    "note": "the project's official forum."
+   }
+  ]
+ },
+ "tools/cura": {
+  "checkedOn": "November 12, 2026",
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/Ultimaker/Cura/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/darktable": {
+  "checkedOn": "November 12, 2026",
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/darktable-org/darktable/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/dbeaver": {
+  "checkedOn": "November 12, 2026",
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/dbeaver/dbeaver/HEAD/.github/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/digikam": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's recorded funding route",
+   "href": "https://www.digikam.org/donate/"
+  },
+  "routes": [
+   {
+    "label": "Get involved with digiKam",
+    "href": "https://www.digikam.org/contribute/",
+    "note": "the project's own contribution page."
+   }
+  ]
+ },
+ "tools/drawio-desktop": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's recorded funding route",
+   "href": "https://github.com/sponsors/jgraph"
+  }
+ },
+ "tools/flameshot": {
+  "checkedOn": "November 12, 2026",
+  "routes": [
+   {
+    "label": "Join the community discussions",
+    "href": "https://github.com/flameshot-org/flameshot/discussions",
+    "note": "questions, ideas and help with the project."
+   }
+  ]
+ },
+ "tools/gimp": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's recorded funding route",
+   "href": "https://www.gimp.org/donating/"
+  },
+  "routes": [
+   {
+    "label": "Join GIMP development",
+    "href": "https://www.gimp.org/develop/",
+    "note": "the project's own developer page."
+   }
+  ]
+ },
+ "tools/gnucash": {
+  "checkedOn": "November 12, 2026",
+  "routes": [
+   {
+    "label": "Read the development wiki",
+    "href": "https://wiki.gnucash.org/wiki/Development",
+    "note": "the project's own starting point for contributors."
+   }
+  ]
+ },
+ "tools/handbrake": {
+  "checkedOn": "November 12, 2026",
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/HandBrake/HandBrake/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/hledger": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's recorded funding route",
+   "href": "https://github.com/sponsors/simonmichael"
+  },
+  "routes": [
+   {
+    "label": "Read the contributor guide",
+    "href": "https://hledger.org/CONTRIBUTING.html",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/joplin": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's recorded funding route",
+   "href": "https://github.com/sponsors/laurent22"
+  },
+  "routes": [
+   {
+    "label": "Join the community forum",
+    "href": "https://discourse.joplinapp.org/",
+    "note": "the project's official forum."
+   }
+  ]
+ },
+ "tools/kdenlive": {
+  "checkedOn": "November 12, 2026",
+  "routes": [
+   {
+    "label": "Get involved with KDE",
+    "href": "https://community.kde.org/Get_Involved",
+    "note": "KDE's community page covers code, docs, translation and more."
+   }
+  ]
+ },
+ "tools/keepassxc": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's recorded funding route",
+   "href": "https://github.com/sponsors/droidmonkey"
+  },
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/keepassxreboot/keepassxc/HEAD/.github/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/kopia": {
+  "checkedOn": "November 12, 2026",
+  "routes": [
+   {
+    "label": "Join the community forum",
+    "href": "https://kopia.discourse.group/",
+    "note": "the project's official forum."
+   }
+  ]
+ },
+ "tools/krita": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's recorded funding route",
+   "href": "https://github.com/sponsors/kde"
+  },
+  "routes": [
+   {
+    "label": "Get involved with KDE",
+    "href": "https://community.kde.org/Get_Involved",
+    "note": "KDE's community page covers code, docs, translation and more."
+   }
+  ]
+ },
+ "tools/ledger": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's recorded funding route",
+   "href": "https://github.com/sponsors/jwiegley"
+  },
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/ledger/ledger/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/libreoffice": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's recorded funding route",
+   "href": "https://www.libreoffice.org/donate/"
+  },
+  "routes": [
+   {
+    "label": "Get involved with LibreOffice",
+    "href": "https://www.libreoffice.org/community/get-involved/",
+    "note": "the project's community page for contributors."
+   }
+  ]
+ },
+ "tools/logseq": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's recorded funding route",
+   "href": "https://opencollective.com/logseq"
+  },
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/logseq/logseq/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/mixxx": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's recorded funding route",
+   "href": "https://mixxx.org/donate"
+  },
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/mixxxdj/mixxx/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/obs-studio": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's recorded funding route",
+   "href": "https://opencollective.com/obsproject"
+  },
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/obsproject/obs-studio/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/openscad": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's recorded funding route",
+   "href": "https://github.com/sponsors/openscad"
+  },
+  "routes": [
+   {
+    "label": "Join the community",
+    "href": "https://openscad.org/community.html",
+    "note": "the project's community page lists forums, chat and contribution routes."
+   }
+  ]
+ },
+ "tools/pinta": {
+  "checkedOn": "November 12, 2026",
+  "routes": [
+   {
+    "label": "Read the patch guidelines",
+    "href": "https://github.com/PintaProject/Pinta/blob/master/patch-guidelines.md",
+    "note": "the project's own rules for contributing code."
+   }
+  ]
+ },
+ "tools/prusaslicer": {
+  "checkedOn": "November 12, 2026",
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/prusa3d/PrusaSlicer/HEAD/.github/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/restic": {
+  "checkedOn": "November 12, 2026",
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/restic/restic/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/signal-desktop": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's recorded funding route",
+   "href": "https://signal.org/donate/"
+  },
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/signalapp/Signal-Desktop/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/simplex-chat": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's recorded funding route",
+   "href": "https://github.com/sponsors/simplex-chat"
+  },
+  "routes": [
+   {
+    "label": "Help with translations",
+    "href": "https://simplex.chat/docs/translations",
+    "note": "the project's own translation contribution page."
+   }
+  ]
+ },
+ "tools/standard-notes": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's recorded funding route",
+   "href": "https://github.com/sponsors/standardnotes"
+  },
+  "routes": [
+   {
+    "label": "Join the community discussions",
+    "href": "https://github.com/standardnotes/forum",
+    "note": "questions, ideas and help with the project."
+   }
+  ]
+ },
+ "tools/super-productivity": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's recorded funding route",
+   "href": "https://github.com/sponsors/johannesjo"
+  },
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/super-productivity/super-productivity/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/taskwarrior": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's recorded funding route",
+   "href": "https://github.com/sponsors/GothenburgBitFactory"
+  },
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/GothenburgBitFactory/taskwarrior/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/thunderbird": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's recorded funding route",
+   "href": "https://www.thunderbird.net/en-US/donate"
+  },
+  "routes": [
+   {
+    "label": "Get involved with Thunderbird",
+    "href": "https://www.thunderbird.net/en-US/get-involved/",
+    "note": "the project's own contribution page."
+   }
+  ]
+ },
+ "tools/vlc": {
+  "checkedOn": "November 12, 2026",
+  "routes": [
+   {
+    "label": "Contribute to VideoLAN",
+    "href": "https://www.videolan.org/contribute/",
+    "note": "the project's own contribution page."
+   }
+  ]
+ },
+ "tools/zotero": {
+  "checkedOn": "November 12, 2026",
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/zotero/zotero/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/adguard-home": {
+  "checkedOn": "November 12, 2026",
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/AdguardTeam/AdGuardHome/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/audiobookshelf": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's GitHub Sponsors page",
+   "href": "https://github.com/sponsors/advplyr"
+  },
+  "routes": [
+   {
+    "label": "Join the community discussions",
+    "href": "https://github.com/advplyr/audiobookshelf/discussions",
+    "note": "questions, ideas and help with the project."
+   }
+  ]
+ },
+ "tools/beszel": {
+  "checkedOn": "November 12, 2026",
+  "routes": [
+   {
+    "label": "Join the community discussions",
+    "href": "https://github.com/henrygd/beszel/discussions",
+    "note": "questions, ideas and help with the project."
+   }
+  ]
+ },
+ "tools/caddy": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's GitHub Sponsors page",
+   "href": "https://github.com/sponsors/mholt"
+  },
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/caddyserver/caddy/HEAD/.github/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/copyparty": {
+  "checkedOn": "November 12, 2026",
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/9001/copyparty/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/cryptpad": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's OpenCollective page",
+   "href": "https://opencollective.com/cryptpad"
+  },
+  "routes": [
+   {
+    "label": "Read how to contribute",
+    "href": "https://docs.cryptpad.org/en/how_to_contribute.html",
+    "note": "the project's own contribution guide."
+   }
+  ]
+ },
+ "tools/fava": {
+  "checkedOn": "November 12, 2026",
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/beancount/fava/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/forgejo": {
+  "checkedOn": "November 12, 2026",
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://codeberg.org/forgejo/forgejo/raw/branch/forgejo/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/freshrss": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's Liberapay page",
+   "href": "https://liberapay.com/FreshRSS"
+  },
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/FreshRSS/FreshRSS/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/gotify": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "developer's donation page",
+   "href": "https://jmattheis.de/donate"
+  },
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/gotify/server/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/grafana": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "vendor's pricing page",
+   "href": "https://grafana.com/pricing/"
+  },
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/grafana/grafana/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/home-assistant": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "Open Home Foundation page",
+   "href": "https://www.openhomefoundation.org/structure/"
+  },
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/home-assistant/core/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/homepage": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's GitHub Sponsors page",
+   "href": "https://github.com/sponsors/gethomepage"
+  },
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/gethomepage/homepage/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/immich": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's purchase page",
+   "href": "https://buy.immich.app"
+  },
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/immich-app/immich/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/jellyfin": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's OpenCollective page",
+   "href": "https://opencollective.com/jellyfin"
+  },
+  "routes": [
+   {
+    "label": "Read how to contribute",
+    "href": "https://jellyfin.org/contribute/",
+    "note": "the project's own contribution page."
+   }
+  ]
+ },
+ "tools/karakeep": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's GitHub Sponsors page",
+   "href": "https://github.com/sponsors/MohamedBassem"
+  },
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/karakeep-app/karakeep/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/kitchenowl": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's GitHub Sponsors page",
+   "href": "https://github.com/sponsors/tombursch"
+  },
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/TomBursch/kitchenowl/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/lubelogger": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's Patreon page",
+   "href": "https://patreon.com/lubelogger"
+  },
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/hargata/lubelog/HEAD/.github/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/mealie": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's GitHub Sponsors page",
+   "href": "https://github.com/sponsors/hay-kot"
+  },
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/mealie-recipes/mealie/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/netbird": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's GitHub Sponsors page",
+   "href": "https://github.com/sponsors/netbirdio"
+  },
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/netbirdio/netbird/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/nextcloud": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "vendor's enterprise page",
+   "href": "https://nextcloud.com/enterprise/"
+  },
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/nextcloud/server/HEAD/.github/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/ollama": {
+  "checkedOn": "November 12, 2026",
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/ollama/ollama/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/omni-tools": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's GitHub Sponsors page",
+   "href": "https://github.com/sponsors/iib0011"
+  },
+  "routes": [
+   {
+    "label": "Join the community discussions",
+    "href": "https://github.com/iib0011/omni-tools/discussions",
+    "note": "questions, ideas and help with the project."
+   }
+  ]
+ },
+ "tools/paperless-ngx": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's GitHub Sponsors page",
+   "href": "https://github.com/sponsors/shamoon"
+  },
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/paperless-ngx/paperless-ngx/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/penpot": {
+  "checkedOn": "November 12, 2026",
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/penpot/penpot/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/percona-server": {
+  "checkedOn": "November 12, 2026",
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/percona/percona-server/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/pi-hole": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's donation page",
+   "href": "https://pi-hole.net/donate/#donate"
+  },
+  "routes": [
+   {
+    "label": "Join the community forum",
+    "href": "https://discourse.pi-hole.net/",
+    "note": "the project's official userspace forum."
+   }
+  ]
+ },
+ "tools/plausible": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's GitHub Sponsors page",
+   "href": "https://github.com/sponsors/plausible"
+  },
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/plausible/analytics/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/postgresql": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's donation page",
+   "href": "https://www.postgresql.org/about/donate/"
+  },
+  "routes": [
+   {
+    "label": "Join the developer community",
+    "href": "https://www.postgresql.org/developer/",
+    "note": "the project's developer hub: lists, patches and events."
+   }
+  ]
+ },
+ "tools/privacyidea": {
+  "checkedOn": "November 12, 2026",
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/privacyidea/privacyidea/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/radicale": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's donation page",
+   "href": "https://github.com/Kozea/Radicale/wiki/Donations"
+  },
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/Kozea/Radicale/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/scrutiny": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's GitHub Sponsors page",
+   "href": "https://github.com/sponsors/AnalogJ"
+  },
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/AnalogJ/scrutiny/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/silverbullet": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's GitHub Sponsors page",
+   "href": "https://github.com/sponsors/silverbulletmd"
+  },
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/silverbulletmd/silverbullet/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/syncthing": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's donation page",
+   "href": "https://syncthing.net/donations/"
+  },
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/syncthing/syncthing/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/technitium": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's Patreon page",
+   "href": "https://www.patreon.com/technitium"
+  },
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/TechnitiumSoftware/DnsServer/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/trilium-notes": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's GitHub Sponsors page",
+   "href": "https://github.com/sponsors/eliandoran"
+  },
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/TriliumNext/Trilium/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/umami": {
+  "checkedOn": "November 12, 2026",
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/umami-software/umami/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/uptime-kuma": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's GitHub Sponsors page",
+   "href": "https://github.com/sponsors/louislam"
+  },
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/louislam/uptime-kuma/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/vaultwarden": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's Liberapay page",
+   "href": "https://liberapay.com/dani-garcia"
+  },
+  "routes": [
+   {
+    "label": "Join the community discussions",
+    "href": "https://github.com/dani-garcia/vaultwarden/discussions",
+    "note": "questions, ideas and help with the project."
+   }
+  ]
+ },
+ "tools/victoriametrics": {
+  "checkedOn": "November 12, 2026",
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/vikunja": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's GitHub Sponsors page",
+   "href": "https://github.com/sponsors/kolaente"
+  },
+  "routes": [
+   {
+    "label": "Read the contributing guide",
+    "href": "https://raw.githubusercontent.com/go-vikunja/vikunja/HEAD/CONTRIBUTING.md",
+    "note": "the project's own guide for getting involved."
+   }
+  ]
+ },
+ "tools/warpgate": {
+  "checkedOn": "November 12, 2026",
+  "fundingSource": {
+   "label": "project's GitHub Sponsors page",
+   "href": "https://github.com/sponsors/eugeny"
+  },
+  "routes": [
+   {
+    "label": "Join the community discussions",
+    "href": "https://github.com/warp-tech/warpgate/discussions",
+    "note": "questions, ideas and help with the project."
+   }
+  ]
+ }
+}

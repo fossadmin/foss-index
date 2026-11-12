@@ -14,13 +14,17 @@ export function mountSetupPrompts(root = document) {
     if (index >= 0) {
       const panel = root.getElementById(tabs[index].getAttribute('aria-controls'));
       if (!panel) return;
-      panel.prepend(box);
+      // End of the method's quick start: the steps come first, AI help last.
+      panel.append(box);
     } else {
-      // Progressive fallback for a single-method page with no generated tabs.
+      // Progressive fallback for a single-method page with no generated tabs:
+      // end of that method's section, before the next heading (e.g. First use).
       const headings = [...root.querySelectorAll('.prose h3')];
       const heading = headings.find(h => h.textContent.trim() === method);
       if (!heading) return; // Do not show a copy action for an unmatched method.
-      heading.after(box);
+      let next = heading.nextElementSibling;
+      while (next && !/^H[23]$/.test(next.tagName)) next = next.nextElementSibling;
+      if (next) next.before(box); else heading.parentElement.append(box);
     }
     const button = box.querySelector('[data-copy-setup]');
     const textarea = box.querySelector('[data-setup-text]');

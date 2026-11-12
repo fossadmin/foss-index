@@ -15,10 +15,10 @@ test('three phone OS pages have real icons/screenshots, not fake native mobile s
   assert.equal(support['tools/'+slug].role,'operating-system');assert.deepEqual(support['tools/'+slug].platforms,[]);
  }
 });
-test('flash/relock guidance stays project-specific and never enters generic AI prompt eligibility',()=>{
+test('flash/relock guidance stays project-specific and phone OS prompts stay planning-only',()=>{
  const g=read('src/content/docs/tools/grapheneos.md'),c=read('src/content/docs/tools/calyxos.md'),l=read('src/content/docs/tools/lineageos.md');
  assert.match(g,/locks the bootloader again/);assert.match(c,/relocking/);assert.match(l,/relocking can make a device unusable/);
- const promptPath=new URL('../src/data/setup-prompts.json',import.meta.url);const prompt=fs.existsSync(promptPath)?JSON.parse(fs.readFileSync(promptPath,'utf8')):{};for(const id of ['grapheneos','calyxos','lineageos'])assert.equal(prompt['tools/'+id],undefined);
+ const promptPath=new URL('../src/data/setup-prompts.json',import.meta.url);const prompt=fs.existsSync(promptPath)?JSON.parse(fs.readFileSync(promptPath,'utf8')):{};for(const id of ['grapheneos','calyxos','lineageos']){const rec=prompt['tools/'+id];assert.ok(rec,id+' has a prompt record');assert.equal(rec.cls,'phone-os',id+' class');assert.ok(!rec.flow,id+' embeds no recipe');assert.ok(rec.guide&&rec.guide.startsWith('https://'),id+' cites the official install guide');}
 });
 test('release scope is explicit and source checked, not a universal compatible phone build',()=>{
  assert.equal(releases['GrapheneOS/platform_manifest'].version,'2026110800');assert.match(releases['GrapheneOS/platform_manifest'].changelog,/Pixel 7/);

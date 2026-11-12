@@ -1,0 +1,21 @@
+---
+interface QA { q: string; a: string }
+interface Action { label: string; href: string }
+interface Props {
+  heading: string;
+  qas: QA[];
+  actions?: Action[];
+  checkedOn: string;
+  installSource?: string;
+}
+const { heading, qas, actions = [], checkedOn, installSource } = Astro.props;
+---
+<section class="decision-brief" aria-labelledby="before-you-install">
+  <p class="eyebrow">Before you install</p>
+  <h2 id="before-you-install">{heading}</h2>
+  <dl>
+    {qas.map(({ q, a }) => <div><dt>{q}</dt><dd>{a}</dd></div>)}
+  </dl>
+  {actions.length > 0 && <div class="pilot-actions">{actions.map(a => <a href={a.href}>{a.label} {a.href.startsWith('#') ? '↓' : '↗'}</a>)}</div>}
+  <p class="pilot-check">Advice and funding routes source-checked {checkedOn}. Researched, not an install or restore test. {installSource && <><a href={installSource}>Installation source ↗</a> · </>}<a href={`${import.meta.env.BASE_URL}submit/`}>Report a correction</a></p>
+</section>

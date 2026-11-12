@@ -1,5 +1,8 @@
 ---
-import ActualBudgetPilot from '../components/ActualBudgetPilot.astro';
+import DecisionBrief from '../components/DecisionBrief.astro';
+import ContributeRoutes from '../components/ContributeRoutes.astro';
+import decisionBriefs from '../data/decision-briefs.json';
+import contributeRoutes from '../data/contribute-routes.json';
 import PlatformSupport from '../components/PlatformSupport.astro';
 import platformSupport from '../data/platform-support.json';
 import { getCollection, render } from 'astro:content';
@@ -8,6 +11,7 @@ import { catalog, browseSlugForCategory, slugify } from '../lib/catalog';
 import licenses from '../data/licenses.json';
 import setupPrompts from '../data/setup-prompts.json';
 import SetupPrompt from '../components/SetupPrompt.astro';
+import { buildSetupPrompts } from '../lib/setup-prompt-text.js';
 export async function getStaticPaths() { return (await getCollection('docs')).map(entry => ({ params: { slug: entry.id }, props: { entry } })); }
 const { entry } = Astro.props;
 const { Content } = await render(entry);
@@ -15,7 +19,10 @@ const { tools } = await catalog();
 const tool = tools.find(t => t.id === entry.id);
 const licInfo = tool?.license ? (licenses as Record<string, { summary: string; url: string }>)[tool.license] : undefined;
 const data = entry.data;
-const setupPrompt = (setupPrompts as Record<string, { method:string; purpose:string; checkedOn:string; verification:string; text:string }>)[entry.id];
+const promptRecord = (setupPrompts as Record<string, any>)[entry.id];
+const brief = (decisionBriefs as Record<string, any>)[entry.id];
+const contribute = (contributeRoutes as Record<string, any>)[entry.id];
+const setupPromptList = promptRecord ? buildSetupPrompts({ title: data.title, body: entry.body ?? '', record: promptRecord }) : [];
 const funding = data.funding ?? {};
 const shot = data.screenshot;
 const serviceCreditHref = `${import.meta.env.BASE_URL}credits/#tool-${slugify(data.title)}`;
@@ -32,7 +39,7 @@ const links = [
       <h1>{data.title}</h1><p class="lede">{data.description}</p>
       {tool && <div class="detail-meta"><div class="license-wrap"><details class="license-info"><summary class="license">{tool.license}</summary></details><div class="license-note">{licInfo ? <><p>{licInfo.summary}</p><a href={licInfo.url}>Read the full license ↗</a></> : <p>No plain-language summary is recorded for this license yet. Check the <a href={data.repository}>source repository</a> for the full text.</p>}<p class="license-fine">Plain-language summary, not legal advice.</p></div></div><a class="source-link" href={data.repository}>Source code ↗</a><a class="source-link support-shortcut" href="#project-support">Support this project ↓</a><button class="save-toggle save-pill" data-save-toggle data-tool-id={entry.id} type="button" hidden aria-pressed="false"><svg class="bookmark" viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M6.5 3.5h11V21L12 16.4 6.5 21z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span class="save-label">Save</span></button></div>}
     </header>
-    {entry.id === "tools/actual-budget" && <ActualBudgetPilot part="brief" />}
+    {brief && <DecisionBrief {...brief} />}
     {tool && <p class="privacy-note">Tags: {tool.tags.map((tag, i) => <>{i > 0 && ", "}<a href={`${import.meta.env.BASE_URL}tag/${slugify(tag)}/`}>{tag}</a></>)}</p>}
     {(platformSupport as Record<string, any>)[entry.id] && <PlatformSupport record={(platformSupport as Record<string, any>)[entry.id]} />}
     {tool?.release?.version && (tool.release.changelog ? <details class="changelog"><summary>Release notes / {tool.release.version}</summary>
@@ -53,8 +60,8 @@ const links = [
       ? <>Our own screenshot of {shot.credit}{shot.version ? ` ${shot.version}` : ''}. {shot.captionNote ?? "Empty default state, not a production setup."}</>
       : <>Official screenshot from <a href={shot.sourceUrl}>{shot.credit} ↗</a>{shot.license ? <> ({shot.license})</> : null}. {shot.captionNote ?? 'Demo data, not our install.'}</>}{data.icon && <> The tool icon is the project's own mark.</>} <a href={serviceCreditHref}>Image credits</a>.</figcaption></figure>}
     {!shot && data.icon && <p class="privacy-note"><a href={serviceCreditHref}>Image credits</a></p>}
-    <div class="prose"><Content />{setupPrompt && <SetupPrompt {...setupPrompt} />}</div>
-    {tool && <aside class="support-panel" id="project-support" tabindex="-1"><p class="eyebrow">Keep open source going</p><h2>Support this project</h2>{links.length ? <><p>Support goes directly to the maintainers through their own channels. We do not take a cut.</p><ul>{links.map(l => <li><a href={l.url}>{l.label} ↗</a></li>)}</ul></> : <p>No direct funding link is recorded for this tool yet. Check its <a href={data.repository}>source repository</a> for ways to contribute.</p>}{entry.id === "tools/actual-budget" && <ActualBudgetPilot part="contribute" />}</aside>}
+    <div class="prose"><Content />{setupPromptList.map(p => <SetupPrompt {...p} />)}</div>
+    {tool && <aside class="support-panel" id="project-support" tabindex="-1"><p class="eyebrow">Keep open source going</p><h2>Support this project</h2>{links.length ? <><p>Support goes directly to the maintainers through their own channels. We do not take a cut.</p><ul>{links.map(l => <li><a href={l.url}>{l.label} ↗</a></li>)}</ul></> : <p>No direct funding link is recorded for this tool yet. Check its <a href={data.repository}>source repository</a> for ways to contribute.</p>}{contribute && <ContributeRoutes {...contribute} />}</aside>}
     {data.managedHosting && <p class="managed-line">Want help running it? <a href="https://fossadmin.com">Ask FOSSadmin about hosting and maintenance ↗</a></p>}
   </article>
 </CatalogLayout>

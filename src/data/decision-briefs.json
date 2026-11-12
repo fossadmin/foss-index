@@ -1,0 +1,2514 @@
+{
+ "tools/actual-budget": {
+  "heading": "Start with a budget, not a server.",
+  "qas": [
+   {
+    "q": "Server needed?",
+    "a": "Not for local budgeting in the desktop app. Device sync, bank sync and the API need a server. Mobile use is through a browser or installed web app, not a native phone app."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Actual is local-first. A sync server keeps a copy for your devices. Bank connections are optional external services; manual entries and file imports are an alternative."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "A self-hosted server needs updates, HTTPS for other devices and backups. A hosted option can reduce server work, but you still need a way to export and restore your budget."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Try the official demo",
+    "href": "https://demo.actualbudget.org/"
+   },
+   {
+    "label": "Trial and backup notes",
+    "href": "#try-it-and-keep-a-way-out"
+   },
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://actualbudget.org/docs/install/"
+ },
+ "tools/almalinux": {
+  "heading": "Choose your release line, then plan in years, not months.",
+  "qas": [
+   {
+    "q": "Which version do I install?",
+    "a": "AlmaLinux publishes two stable lines (10.x and 9.x), both compatible with RHEL and maintained for years. New installs usually take the newest line; match 9.x when the software or documentation you follow requires it."
+   },
+   {
+    "q": "Will it run on my hardware?",
+    "a": "Standard servers, PCs and virtual machines on x86-64 or ARM64. If the machine is more than about a decade old, check the release notes' CPU baseline before downloading."
+   },
+   {
+    "q": "What happens to what is on the disk?",
+    "a": "The installer can erase the disk, use free space, or share it with another system. It preserves nothing you do not partition around, so back up first."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://almalinux.org/get-almalinux/"
+ },
+ "tools/blackarch": {
+  "heading": "Decide: a full system, or a tool layer on Arch.",
+  "qas": [
+   {
+    "q": "Full install or repository layer?",
+    "a": "Two routes: the full BlackArch system image, or adding its repository to an existing Arch install and pulling only the tools you need. The layer keeps your current system; the full install replaces it."
+   },
+   {
+    "q": "Is it a daily driver?",
+    "a": "It is a penetration-testing toolkit, not a general desktop. Its 2,800+ tools assume you know why you need them, and they are only for systems you own or have explicit permission to test."
+   },
+   {
+    "q": "How much disk does it need?",
+    "a": "The complete tool collection needs substantial space. Installing by category, or the slim image, keeps it lean."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://blackarch.org/downloads.html"
+ },
+ "tools/debian": {
+  "heading": "Try it live, then let stable be boring.",
+  "qas": [
+   {
+    "q": "Live image or installer?",
+    "a": "The live images (GNOME, KDE or Xfce) run from a USB stick without touching the disk - the easiest hardware check. The installer images go straight to installing."
+   },
+   {
+    "q": "Which release track?",
+    "a": "Stable is the default for a reason: reliability over novelty, with years of security updates. Testing and unstable exist for people who accept breakage."
+   },
+   {
+    "q": "Will my hardware work?",
+    "a": "Standard 64-bit PCs are the target, but Wi-Fi cards and very new graphics hardware are the usual exceptions. Official images can include non-free firmware for hardware that needs it; the live image is the cheapest way to check your machine."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://www.debian.org/CD/live/"
+ },
+ "tools/fedora": {
+  "heading": "Workstation first; the other editions are different downloads.",
+  "qas": [
+   {
+    "q": "Which edition?",
+    "a": "Workstation is the GNOME desktop and the right first trial. Server, KDE Plasma, IoT and CoreOS are separate images for separate goals, not options inside one installer."
+   },
+   {
+    "q": "How fast does it move?",
+    "a": "A new release about every six months, each supported for roughly thirteen. Upgrading between releases is a normal, supported path."
+   },
+   {
+    "q": "What about my existing system?",
+    "a": "The live image boots from USB for a no-risk look; the installer can reclaim a disk or share it. Back up whatever you keep before partitioning."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://fedoraproject.org/workstation/download/"
+ },
+ "tools/freebsd": {
+  "heading": "A complete Unix system, not a Linux distribution.",
+  "qas": [
+   {
+    "q": "Is FreeBSD right for my goal?",
+    "a": "It suits servers, storage and network appliances, and people who want an integrated base system. Desktop use is possible but more hands-on than a Linux desktop."
+   },
+   {
+    "q": "Where does it run?",
+    "a": "Standard 64-bit PCs and virtual machines; other architectures have their own support tiers. A VM or spare machine is the sensible first install."
+   },
+   {
+    "q": "Packages or ports?",
+    "a": "Prebuilt packages cover most needs; the ports collection builds from source when you need compile-time options changed. Both are normal, documented routes."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://www.freebsd.org/where/"
+ },
+ "tools/kali-linux": {
+  "heading": "A workbench for authorized security testing, not a daily desktop.",
+  "qas": [
+   {
+    "q": "Should this be my main OS?",
+    "a": "OffSec itself recommends against Kali as a general-purpose desktop for people unfamiliar with Linux. A VM or live image keeps your main system untouched."
+   },
+   {
+    "q": "Installer, VM or live?",
+    "a": "Pre-built virtual machines are the fastest safe start; live images run from USB with optional persistence; the installer is for dedicated machines."
+   },
+   {
+    "q": "What may I test?",
+    "a": "Only systems you own or have explicit permission to test. The tools are dual-use, and this listing assumes lawful, authorized work."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://www.kali.org/docs/introduction/download-official-kali-linux-images/"
+ },
+ "tools/linux-mint": {
+  "heading": "A familiar desktop first; codecs and drivers stay your choice.",
+  "qas": [
+   {
+    "q": "Which edition?",
+    "a": "Cinnamon is Mint's flagship and the familiar-layout choice; MATE and Xfce are lighter alternatives. All three are free downloads from the same page."
+   },
+   {
+    "q": "Will it feel familiar?",
+    "a": "The start-style menu, taskbar and tray are deliberately traditional. Update and driver tools are Mint's own, and proprietary drivers are an opt-in, not a default."
+   },
+   {
+    "q": "What about media playback?",
+    "a": "Multimedia codecs are an install-time checkbox, not bundled by default - tick the box if you want them."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://linuxmint.com/download.php"
+ },
+ "tools/nixos": {
+  "heading": "Your whole system becomes one editable file.",
+  "qas": [
+   {
+    "q": "What makes NixOS different?",
+    "a": "Packages, services, users and settings live in /etc/nixos/configuration.nix. Rebuilding applies changes atomically, and every generation stays in the boot menu."
+   },
+   {
+    "q": "What if an upgrade breaks something?",
+    "a": "Pick the previous generation at boot and you are back. Rollback is the core design, not a recovery hack."
+   },
+   {
+    "q": "Is the learning curve real?",
+    "a": "Yes: daily use means editing Nix expressions. The graphical installer gets you a desktop, but comfort with configuration files is the price of admission."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://nixos.org/download/"
+ },
+ "tools/omarchy": {
+  "heading": "One opinionated desktop, installed as a finished system.",
+  "qas": [
+   {
+    "q": "What exactly am I installing?",
+    "a": "An Arch base with a curated Hyprland desktop, fixed defaults and themed tools - one person's choices applied as a complete system, not assembled piece by piece."
+   },
+   {
+    "q": "Can I keep my current setup?",
+    "a": "No: it installs as its own OS (x86, ARM64 and Apple Silicon images). Treat it as a dedicated system, not a layer over what you have."
+   },
+   {
+    "q": "What if I want to change things?",
+    "a": "It is Arch underneath, so anything is changeable - but the point is the curated defaults. Heavy customization fights the project's grain."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://omarchy.org/"
+ },
+ "tools/opensuse": {
+  "heading": "Rolling or regular release - pick the identity first.",
+  "qas": [
+   {
+    "q": "Tumbleweed or Leap?",
+    "a": "Tumbleweed is the rolling release: always current, tested before publishing. Leap follows regular releases aligned with SUSE's enterprise line. They are different systems, not versions of each other."
+   },
+   {
+    "q": "What if a rolling update goes wrong?",
+    "a": "The default Btrfs layout takes automatic snapshots; boot the previous snapshot and roll back."
+   },
+   {
+    "q": "Hardware support?",
+    "a": "Standard 64-bit PCs and VMs, with live images to check hardware before you commit."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://get.opensuse.org/tumbleweed/"
+ },
+ "tools/opnsense": {
+  "heading": "A dedicated router, not an app on your desktop.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "A spare x86 machine with two network ports, an appliance, or a virtual machine. It becomes your network's gateway; it is not software you add to a PC you keep using."
+   },
+   {
+    "q": "Community or Business?",
+    "a": "This listing covers the free Community edition. The Business Edition is Deciso's commercial line with its own terms."
+   },
+   {
+    "q": "How risky is the install?",
+    "a": "The installer erases the target device. Test in a VM first, and keep the existing router until the replacement passes traffic."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://docs.opnsense.org/manual/install.html"
+ },
+ "tools/parrot": {
+  "heading": "Home edition for daily use, Security for the lab.",
+  "qas": [
+   {
+    "q": "Which edition?",
+    "a": "Home is a privacy-minded daily desktop with no attack tooling. Security is the penetration-testing and forensics platform. HTB, IoT and cloud editions serve narrower uses."
+   },
+   {
+    "q": "Daily driver material?",
+    "a": "The Home edition, yes. The Security edition assumes lab use: tools you run only against systems you own or may test."
+   },
+   {
+    "q": "Hardware needs?",
+    "a": "A standard 64-bit PC, run live from USB, in a VM, or installed. Security tooling appreciates RAM; the desktop itself is Debian-modest."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://www.parrotsec.org/download/"
+ },
+ "tools/pop-os": {
+  "heading": "Two images: standard, or NVIDIA-ready.",
+  "qas": [
+   {
+    "q": "Which image?",
+    "a": "The NVIDIA image bundles the driver for newer GeForce cards; the standard image covers everything else. Picking right at download saves a driver detour."
+   },
+   {
+    "q": "What is COSMIC?",
+    "a": "System76's own desktop environment with optional auto-tiling - not GNOME, despite the Ubuntu base. It is the default, not an add-on."
+   },
+   {
+    "q": "Will my hardware work?",
+    "a": "Standard 64-bit PCs, and naturally System76's own machines. A live session from the USB stick checks compatibility before you install."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://system76.com/pop/download"
+ },
+ "tools/qubes": {
+  "heading": "Security by isolation - check the hardware before anything else.",
+  "qas": [
+   {
+    "q": "Will it run on my machine?",
+    "a": "Qubes has unusually strict requirements: hardware virtualization (VT-x/VT-d or AMD-V/IOMMU) enabled in firmware, generous RAM, and a compatible network card. Read the system requirements first."
+   },
+   {
+    "q": "What is daily use like?",
+    "a": "Work happens in separate virtual machines called qubes: one for banking, one for random browsing, disposable ones for risky files. It is a deliberate workflow change, not a themed Linux."
+   },
+   {
+    "q": "Can I try before committing?",
+    "a": "A live USB session gives a basic look, but real evaluation needs an install. Use Qubes' own backup tool before migrating anything into it."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://doc.qubes-os.org/en/latest/user/hardware/system-requirements.html"
+ },
+ "tools/tails": {
+  "heading": "You do not install it - you carry it.",
+  "qas": [
+   {
+    "q": "Install or live USB?",
+    "a": "Tails runs from a USB stick and leaves no trace on the computer by default. There is no installer in the usual sense: the stick is the system."
+   },
+   {
+    "q": "Where does my data go?",
+    "a": "Nowhere, unless you set up the encrypted persistent storage on the stick. Everything else vanishes on shutdown, by design."
+   },
+   {
+    "q": "What are the limits?",
+    "a": "Tor protects connections, not identity mistakes: logging into personal accounts can still identify you, and closed-source firmware is included so more hardware works."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://tails.net/install/"
+ },
+ "tools/ubuntu": {
+  "heading": "Pick the track first: LTS for stability, interim for currency.",
+  "qas": [
+   {
+    "q": "Which release?",
+    "a": "LTS releases arrive every two years with five years of free security updates, extendable with Ubuntu Pro (free for personal use on up to five machines). Interim releases suit people who enjoy upgrading often."
+   },
+   {
+    "q": "What is in the installer?",
+    "a": "A live desktop to try first, then a guided install. The optional third-party software box adds proprietary graphics drivers and extra media formats - your choice, ticked or not."
+   },
+   {
+    "q": "Upgrade or reinstall later?",
+    "a": "LTS-to-LTS upgrades are a supported path. Back up first, as with any OS upgrade."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://ubuntu.com/download/desktop"
+ },
+ "tools/calyxos": {
+  "heading": "Pixel-first privacy with gentler defaults.",
+  "qas": [
+   {
+    "q": "Is my phone supported?",
+    "a": "CalyxOS supports specific Google Pixel models plus a small set of others on its device list. The official install page is the only authority - check it before anything else."
+   },
+   {
+    "q": "What happens to the phone?",
+    "a": "The installer unlocks the bootloader and flashes the system; unlocking wipes the device. Whether relocking is safe depends on the device, so follow the official guide exactly."
+   },
+   {
+    "q": "What about Google apps?",
+    "a": "microG provides compatibility for apps that expect Google services. It is a compatibility choice, not full Google Play; banking and integrity-checked apps vary."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://calyxos.org/install/"
+ },
+ "tools/grapheneos": {
+  "heading": "Only Pixels, and only supported ones.",
+  "qas": [
+   {
+    "q": "Is my phone supported?",
+    "a": "GrapheneOS supports current Google Pixel models only, chosen for their hardware security and update support. Check the official device list first; an old or unsupported Pixel is a no."
+   },
+   {
+    "q": "What happens to the phone?",
+    "a": "The official web installer unlocks the bootloader, flashes GrapheneOS, and locks the bootloader again. Unlocking and locking wipe the phone - everything on it is gone."
+   },
+   {
+    "q": "Can I go back?",
+    "a": "Returning to stock Android means flashing Google's factory images through a similar process. Possible, but plan the install, not the rescue."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://grapheneos.org/install/web"
+ },
+ "tools/lineageos": {
+  "heading": "New life for older phones, model by model.",
+  "qas": [
+   {
+    "q": "Is my phone supported?",
+    "a": "LineageOS builds are per-device: the wiki's device list says exactly which models, which build, and which instructions. A similar model does not count."
+   },
+   {
+    "q": "What happens to the phone?",
+    "a": "An unlock, a custom recovery, then the LineageOS image - and the unlock wipes the phone. Relocking can make a device unusable, so leave the bootloader as the official instructions say."
+   },
+   {
+    "q": "What about Google apps?",
+    "a": "Not included. A separate add-on package provides them if you want it; the wrong package or version causes boot problems, so follow the device wiki page."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://wiki.lineageos.org/devices/"
+ },
+ "tools/ventoy": {
+  "heading": "One stick, many installers.",
+  "qas": [
+   {
+    "q": "What does Ventoy actually do?",
+    "a": "You install Ventoy onto a USB stick once, then copy ISO files onto it like regular files. Boot the stick and pick from a menu of everything it holds - no re-imaging between systems."
+   },
+   {
+    "q": "What gets erased?",
+    "a": "The target USB stick, completely, during setup. The computers you later boot are untouched until you choose something inside a booted installer."
+   },
+   {
+    "q": "Which computers boot it?",
+    "a": "Most PCs with UEFI or legacy BIOS; Secure Boot needs the enrollment step the documentation describes. ISOs can be copied on from Linux, Windows or macOS."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://www.ventoy.net/en/doc_start.html"
+ },
+ "tools/ublock-origin": {
+  "heading": "Check your browser's extension rules first.",
+  "qas": [
+   {
+    "q": "Which browser?",
+    "a": "Firefox is the project's own recommendation. Chrome's store no longer carries full uBlock Origin - the separate uBlock Origin Lite is the official Manifest V3 option there."
+   },
+   {
+    "q": "Is the store listing the real one?",
+    "a": "Install only through the links in the project's README, and check the developer identity and store entry ID. Lookalike extensions trade on the name."
+   },
+   {
+    "q": "What does it change?",
+    "a": "It filters what pages load: ads, trackers, malware domains. It is not an antivirus, and an over-aggressive list can break sites - the per-site power button is the first fix."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://github.com/gorhill/uBlock"
+ },
+ "tools/audacity": {
+  "heading": "Install once, edit locally; nothing leaves the machine.",
+  "qas": [
+   {
+    "q": "Which package do I install?",
+    "a": "The project's download page names the supported package for each distribution; Windows and macOS have the project's own installers."
+   },
+   {
+    "q": "Where does my work live?",
+    "a": "In files you choose: .aup3 project files and whatever you export. Editing never uploads anything."
+   },
+   {
+    "q": "Does it need an account?",
+    "a": "No. Recording, editing and exporting are fully offline."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://www.audacityteam.org/download/linux/"
+ },
+ "tools/beancount": {
+  "heading": "Your ledger is a text file you own.",
+  "qas": [
+   {
+    "q": "Which piece do I install?",
+    "a": "Beancount is the engine: a Python package with the bean-check command. Add Fava when you want a web view over the same files."
+   },
+   {
+    "q": "Where does my data live?",
+    "a": "In plain-text ledger files. They work with Git, any editor, and whatever backup tool you already trust."
+   },
+   {
+    "q": "Who can read my books?",
+    "a": "Nobody but you: it runs locally with no account or service. Fava reads the same local files."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://beancount.github.io/docs/installing_beancount/"
+ },
+ "tools/blender": {
+  "heading": "One big download; no account, no cloud.",
+  "qas": [
+   {
+    "q": "Which package?",
+    "a": "The project's own builds from blender.org can sit side by side, so you can keep several versions. Distribution packages work too but may lag."
+   },
+   {
+    "q": "Where do projects live?",
+    "a": "In .blend files wherever you save them. Renders and caches go where you point them."
+   },
+   {
+    "q": "What hardware does it want?",
+    "a": "Any reasonably modern 64-bit machine; heavier scenes want a supported GPU. Check the requirements page before a big project."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://docs.blender.org/manual/en/latest/getting_started/installing/linux.html"
+ },
+ "tools/cryptomator": {
+  "heading": "Encrypt first, then let any cloud sync it.",
+  "qas": [
+   {
+    "q": "What does it actually do?",
+    "a": "It encrypts files into a vault before they sync. It works alongside Nextcloud, Syncthing or any cloud folder - it is not a sync service itself."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "The vault is an ordinary folder of encrypted files. Your password unlocks it; lose the password and the files are unrecoverable."
+   },
+   {
+    "q": "What about mobile?",
+    "a": "This listing covers the desktop app. The mobile apps are separate products with their own terms."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://cryptomator.org/downloads/"
+ },
+ "tools/cura": {
+  "heading": "Slicing is local; the cloud extras are optional.",
+  "qas": [
+   {
+    "q": "Which package?",
+    "a": "The AppImage on Linux, or the project's installers for Windows and macOS. UltiMaker's cloud account features are optional, not required for slicing."
+   },
+   {
+    "q": "Will it know my printer?",
+    "a": "Profiles exist for many printer brands, not just UltiMaker. Check your model in the printer list before committing."
+   },
+   {
+    "q": "Cura or PrusaSlicer?",
+    "a": "Both are listed and both are free; trying the same model in each is normal."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://ultimaker.com/software/ultimaker-cura/"
+ },
+ "tools/darktable": {
+  "heading": "Your originals stay untouched.",
+  "qas": [
+   {
+    "q": "Which package?",
+    "a": "The install page's AppImage covers x86-64 and aarch64; the Flatpak exists but lacks the AI features, per the project's own note."
+   },
+   {
+    "q": "Where do my edits go?",
+    "a": "Into sidecar files next to your photos; the originals are never altered. Back up the sidecars with the photos."
+   },
+   {
+    "q": "darktable or Immich?",
+    "a": "darktable develops RAW photos; Immich stores and browses the library. They pair well and answer different questions."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://www.darktable.org/install/"
+ },
+ "tools/dbeaver": {
+  "heading": "A client for databases you already have.",
+  "qas": [
+   {
+    "q": "Which edition?",
+    "a": "DBeaver Community is the free Apache-2.0 edition from dbeaver.io. PRO features are separate commercial products; this listing covers Community."
+   },
+   {
+    "q": "Do I need a server?",
+    "a": "No server of its own: it connects to databases you point it at. A sample SQLite file is enough to explore."
+   },
+   {
+    "q": "Where do my connections live?",
+    "a": "In the workspace on your machine. Saved database credentials stay local - treat them like passwords."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://dbeaver.io/download/"
+ },
+ "tools/digikam": {
+  "heading": "A librarian for big photo collections, on your disk.",
+  "qas": [
+   {
+    "q": "Which package?",
+    "a": "The download page's AppImage (needs glibc 2.31 or newer) is the direct route on Linux; installers cover Windows and macOS."
+   },
+   {
+    "q": "Where does my data live?",
+    "a": "Your photos stay where they are; digiKam catalogs them in its own database files. Tags can be written into file metadata if you choose."
+   },
+   {
+    "q": "digiKam or darktable?",
+    "a": "digiKam organizes; darktable develops RAW files. Many people point both at the same folders."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://www.digikam.org/download/"
+ },
+ "tools/drawio-desktop": {
+  "heading": "Diagrams as files, offline by default.",
+  "qas": [
+   {
+    "q": "Which package?",
+    "a": "The installer for your system on the releases page; Homebrew's cask is Homebrew's packaging, not the project's."
+   },
+   {
+    "q": "Where do diagrams live?",
+    "a": "As .drawio files (or embedded in PNG/SVG) wherever you put them - easy to keep in Git or sync yourself."
+   },
+   {
+    "q": "Desktop or web?",
+    "a": "This is the GPL-3.0 desktop build. The draw.io web editor is a separate repository under Apache-2.0."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://github.com/jgraph/drawio-desktop/releases"
+ },
+ "tools/flameshot": {
+  "heading": "Screenshots with markup, straight from the keyboard.",
+  "qas": [
+   {
+    "q": "Which package?",
+    "a": "One command per distribution on the install page - run only the one for yours. Windows and macOS have their own packages."
+   },
+   {
+    "q": "Anything special on Wayland?",
+    "a": "Screenshot permissions differ by compositor; check the project's notes if captures come out blank."
+   },
+   {
+    "q": "Where do captures go?",
+    "a": "To files or the clipboard. Nothing is uploaded unless you ask."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://flameshot.org/docs/installation/installation-linux/"
+ },
+ "tools/gimp": {
+  "heading": "The veteran image editor, free as in freedom.",
+  "qas": [
+   {
+    "q": "Which package?",
+    "a": "AppImage, Flatpak or Snap on Linux (the Flathub listing is publisher-verified); installers for Windows and macOS."
+   },
+   {
+    "q": "GIMP, Krita or darktable?",
+    "a": "GIMP covers retouching, compositing and painting. Krita leans toward painting, darktable toward RAW photos - pick per job."
+   },
+   {
+    "q": "How do files work?",
+    "a": "Work saves as .xcf to keep layers; export to PNG or JPEG for sharing. Install plug-ins only from sources you trust."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://www.gimp.org/downloads/"
+ },
+ "tools/gnucash": {
+  "heading": "Ledger accounting in a file on your computer.",
+  "qas": [
+   {
+    "q": "Is it the same as Actual Budget?",
+    "a": "No: GnuCash is double-entry accounting; Actual is envelope budgeting. Pick by how you think about money."
+   },
+   {
+    "q": "Where are my books?",
+    "a": "In one file (or a database you configure). That file is the whole history - back it up."
+   },
+   {
+    "q": "Can I import my bank's exports?",
+    "a": "It imports QIF and OFX files from banks and other tools. Test a small import before moving years of history."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://www.gnucash.org/download.phtml"
+ },
+ "tools/handbrake": {
+  "heading": "Convert video locally; nothing gets uploaded.",
+  "qas": [
+   {
+    "q": "Anything odd about the license?",
+    "a": "Official builds skip the fdk-aac library because its license is GPL-incompatible, per the project's LICENSE notes."
+   },
+   {
+    "q": "Which package?",
+    "a": "Installers for Windows and macOS from the project; on Linux the distribution package or the Flatpak the documentation names."
+   },
+   {
+    "q": "Where do I start?",
+    "a": "Pick a built-in preset for your target device and run a short test clip before tweaking settings."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://handbrake.fr/docs/en/latest/get-handbrake/download-and-install.html"
+ },
+ "tools/hledger": {
+  "heading": "Accounting in plain text, three interfaces deep.",
+  "qas": [
+   {
+    "q": "What do I get?",
+    "a": "A single binary: the command line, hledger-ui in the terminal, and hledger-web in a browser. It reads Ledger-format journals too."
+   },
+   {
+    "q": "Where does my data live?",
+    "a": "In a plain-text journal file - Git-friendly, editor-friendly, future-proof."
+   },
+   {
+    "q": "hledger, Ledger or Beancount?",
+    "a": "Ledger is the C++ original; Beancount is the Python take with Fava's web view. All three are listed, and the formats differ."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://hledger.org/install.html"
+ },
+ "tools/joplin": {
+  "heading": "Notes with sync you choose, end to end.",
+  "qas": [
+   {
+    "q": "What does this listing cover?",
+    "a": "The apps, under AGPL-3.0. Joplin Server carries a Personal Use License that is not open source, so it is not part of this listing."
+   },
+   {
+    "q": "Where do my notes live?",
+    "a": "Locally first; sync goes to a service you pick (Nextcloud, WebDAV, Dropbox, Joplin Cloud). End-to-end encryption is a setting worth turning on."
+   },
+   {
+    "q": "How do I add devices?",
+    "a": "Set sync up on one device and let it finish before adding the next; the same account covers the mobile apps."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://raw.githubusercontent.com/laurent22/joplin/dev/Joplin_install_and_update.sh"
+ },
+ "tools/kdenlive": {
+  "heading": "Multi-track video editing without a subscription.",
+  "qas": [
+   {
+    "q": "Which package?",
+    "a": "Distribution packages, the project's AppImage, or the Windows and macOS builds. The GitHub repository is a mirror of KDE's own."
+   },
+   {
+    "q": "Where does my work live?",
+    "a": "Projects are files on your disk and source footage stays where you keep it. Rendering happens locally."
+   },
+   {
+    "q": "Will it run on my machine?",
+    "a": "Timeline playback likes a decent CPU and GPU; proxy clips let slower machines edit big footage."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://kdenlive.org/download/"
+ },
+ "tools/keepassxc": {
+  "heading": "A password vault that is just a file.",
+  "qas": [
+   {
+    "q": "Where do my passwords live?",
+    "a": "In one encrypted database file - no account, no server. You can sync that file with whatever you trust (Syncthing, Nextcloud, a USB stick); resolve sync conflicts when two devices edit at once, and keep backups."
+   },
+   {
+    "q": "What must I never lose?",
+    "a": "The database file and its credentials: a master password, optionally combined with a key file or a hardware key. There is no recovery email; back the file up."
+   },
+   {
+    "q": "KeePassXC or Vaultwarden?",
+    "a": "KeePassXC is the local-file route; Vaultwarden is the self-hosted vault with sharing. Both are listed."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://keepassxc.org/download/"
+ },
+ "tools/kopia": {
+  "heading": "Encrypted, deduplicated backups with a GUI or a CLI.",
+  "qas": [
+   {
+    "q": "What does it do?",
+    "a": "Incremental snapshots to local disks, network storage or cloud storage. The same repository works from the command line or the desktop app."
+   },
+   {
+    "q": "What should I do on day one?",
+    "a": "A trial restore of one folder. A backup you have never restored from is a hope, not a backup."
+   },
+   {
+    "q": "Kopia or restic?",
+    "a": "restic is the command-line-first alternative; Kopia adds the desktop app."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://kopia.io/docs/installation/"
+ },
+ "tools/krita": {
+  "heading": "Built by and for people who paint.",
+  "qas": [
+   {
+    "q": "Krita or GIMP?",
+    "a": "Krita is for digital painting and illustration; GIMP for retouching and compositing. Both are free - try both."
+   },
+   {
+    "q": "Which package?",
+    "a": "Distribution packages, the AppImage, or the Windows and macOS builds. The GitHub repository is a mirror of KDE's infrastructure."
+   },
+   {
+    "q": "How do files work?",
+    "a": "Native .kra files keep layers; export for sharing. It opens PSD files with caveats on exotic features."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://krita.org/en/download/"
+ },
+ "tools/ledger": {
+  "heading": "The original plain-text accounting tool.",
+  "qas": [
+   {
+    "q": "Why choose Ledger?",
+    "a": "It is the 2003 command-line original that inspired hledger and Beancount. Pick it if you want the classic."
+   },
+   {
+    "q": "Where does my data live?",
+    "a": "In a text file of transactions; reports come from running ledger against it. Nothing leaves your machine."
+   },
+   {
+    "q": "How do I install it?",
+    "a": "Distribution packages on Linux, Homebrew on macOS."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://github.com/ledger/ledger/blob/master/README.md"
+ },
+ "tools/libreoffice": {
+  "heading": "The office suite that needs no account.",
+  "qas": [
+   {
+    "q": "Which package?",
+    "a": "Distribution packages on Linux; direct installers for Windows and macOS from libreoffice.org."
+   },
+   {
+    "q": "What is the license?",
+    "a": "MPL-2.0 per the project's own licenses page. GitHub's mirror label says GPL-3.0, which does not match; the project's statement wins."
+   },
+   {
+    "q": "Will it open my documents?",
+    "a": "It reads and writes Microsoft formats with occasional layout drift on complex documents; its native format is ODF."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://www.libreoffice.org/download/download-libreoffice/"
+ },
+ "tools/logseq": {
+  "heading": "Local-first notes, with a beta worth treating as beta.",
+  "qas": [
+   {
+    "q": "Which version?",
+    "a": "The file-based version is the established one. The newer Database version is beta with a data-loss warning from the project itself - automated backups are your job either way."
+   },
+   {
+    "q": "Where do my notes live?",
+    "a": "As local Markdown or Org files linked into a graph, readable by any editor."
+   },
+   {
+    "q": "What about sync and mobile?",
+    "a": "Real-time collaboration and its mobile sync are alpha. Local files plus your own sync (Syncthing, Git) is the stable route."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://logseq.com/downloads"
+ },
+ "tools/mixxx": {
+  "heading": "Free DJ software that drives real hardware.",
+  "qas": [
+   {
+    "q": "What does it do?",
+    "a": "DJ sets from your music library: controllers, effects, beat matching and recording."
+   },
+   {
+    "q": "Will my controller work?",
+    "a": "Check the controller compatibility list before buying hardware; many popular controllers work out of the box."
+   },
+   {
+    "q": "Where does my library live?",
+    "a": "On your machine. Music files stay wherever they are; Mixxx keeps its own library database."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://mixxx.org/download/"
+ },
+ "tools/obs-studio": {
+  "heading": "Record or stream, straight from your desktop.",
+  "qas": [
+   {
+    "q": "Which package?",
+    "a": "Officially distributed as a Flatpak on Flathub and a PPA for Ubuntu 26.04 and newer; Windows and macOS builds come from the project."
+   },
+   {
+    "q": "What should I do before the real recording?",
+    "a": "A short test: check audio sources, encoder settings and where the files land."
+   },
+   {
+    "q": "Do I need an account?",
+    "a": "Recording to file needs nothing but disk space. Streaming needs a stream key from whatever platform you stream to."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://obsproject.com/download"
+ },
+ "tools/openscad": {
+  "heading": "3D models as code.",
+  "qas": [
+   {
+    "q": "When is OpenSCAD the right tool?",
+    "a": "When you want exact, parametric models - mechanical parts and 3D printing - rather than sculpting. For sculpting, see Blender."
+   },
+   {
+    "q": "Which package?",
+    "a": "Distribution packages on Linux; downloads for Windows and macOS from the project."
+   },
+   {
+    "q": "How do files work?",
+    "a": "Models are .scad text files - version them in Git like code. Export STL or 3MF for the slicer."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://openscad.org/downloads.html"
+ },
+ "tools/pinta": {
+  "heading": "Simple image editing without the cockpit.",
+  "qas": [
+   {
+    "q": "When Pinta over GIMP?",
+    "a": "For quick edits and drawing: layers, selections, effects, done. GIMP is there when you outgrow it."
+   },
+   {
+    "q": "Which package?",
+    "a": "Distribution packages or Flatpak on Linux; installers for Windows and macOS."
+   },
+   {
+    "q": "What is the license?",
+    "a": "Original Pinta code is MIT, and it includes Paint.NET 3.36 code under that project's MIT terms."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://www.pinta-project.com/"
+ },
+ "tools/prusaslicer": {
+  "heading": "From model to print instructions, Prusa or not.",
+  "qas": [
+   {
+    "q": "Will it know my printer?",
+    "a": "Profiles cover Prusa printers and many other makes, with multi-material and resin support. Cura is the other big free slicer; both are listed."
+   },
+   {
+    "q": "Which package?",
+    "a": "Distribution packages or the project's own builds; an AppImage covers Linux."
+   },
+   {
+    "q": "How do I trust a profile?",
+    "a": "Slice a known-good test model first before trusting a long print."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://help.prusa3d.com/article/install-prusaslicer_1903"
+ },
+ "tools/restic": {
+  "heading": "Scriptable, encrypted, deduplicated backups.",
+  "qas": [
+   {
+    "q": "When restic?",
+    "a": "A single binary for cron jobs and scripts: encrypted, deduplicated snapshots to local or remote backends. Choose Kopia if you want a graphical app."
+   },
+   {
+    "q": "What should I do on day one?",
+    "a": "Run restic restore on one snapshot early. Backups that were never restored are hopes, not backups."
+   },
+   {
+    "q": "What must I protect?",
+    "a": "The repository password - the only key to your data. Store it somewhere separate from the machine being backed up."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://restic.readthedocs.io/en/stable/020_installation.html"
+ },
+ "tools/signal-desktop": {
+  "heading": "The desktop app is a companion to your phone.",
+  "qas": [
+   {
+    "q": "Do I need the phone app?",
+    "a": "Yes: Signal Desktop links to the Signal account on your phone. It is not a standalone account, so set up the phone app first."
+   },
+   {
+    "q": "What is open source here?",
+    "a": "The client code. The messaging service it connects to is run by Signal - using the app means using their service."
+   },
+   {
+    "q": "Where do messages live?",
+    "a": "On your devices. They sync from the phone at link time, and disappearing messages still disappear."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://signal.org/download/linux/"
+ },
+ "tools/simplex-chat": {
+  "heading": "Messaging with no user identifiers at all.",
+  "qas": [
+   {
+    "q": "How do people find me?",
+    "a": "They do not, by default: contacts connect through one-time links or QR codes. No user IDs exist to look up."
+   },
+   {
+    "q": "Should I trust it for sensitive talk?",
+    "a": "Read the linked Trail of Bits security assessment and the project's documentation first, then decide."
+   },
+   {
+    "q": "What is the license?",
+    "a": "The code is AGPL-3.0 and the protocols are described as open and public domain; the SimpleX names and logos are not covered by that license."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://simplex.chat/downloads/"
+ },
+ "tools/standard-notes": {
+  "heading": "Encrypted notes, with a clear line between free and paid.",
+  "qas": [
+   {
+    "q": "Is everything free?",
+    "a": "The app and server code are public (AGPL-3.0 and GPL-3.0), but not every feature is free: the plans page lists paid tiers, and self-hosted premium features need a subscription or offline plan."
+   },
+   {
+    "q": "Should I self-host the server?",
+    "a": "Only if you will maintain it - the project documents the route, and it is real work. Decide before your notes pile up."
+   },
+   {
+    "q": "What if I lose my password?",
+    "a": "Notes are encrypted end to end with it. Lose it and the notes are gone."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://standardnotes.com/download"
+ },
+ "tools/super-productivity": {
+  "heading": "Tasks, time tracking and planning - offline first.",
+  "qas": [
+   {
+    "q": "Does it need an account?",
+    "a": "No: the README says it collects no data and you decide where data lives. Local files are the default."
+   },
+   {
+    "q": "Can it sync?",
+    "a": "Optionally, through Dropbox, WebDAV or the project's SuperSync service. It can also import tasks from tools like GitHub and Jira."
+   },
+   {
+    "q": "Which package?",
+    "a": "Desktop apps for Linux, Windows and macOS, plus a web app; the quick start covers each route."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://github.com/super-productivity/super-productivity"
+ },
+ "tools/taskwarrior": {
+  "heading": "To-do lists at the speed of the terminal.",
+  "qas": [
+   {
+    "q": "Is it for me?",
+    "a": "If you prefer the keyboard: tags, priorities, due dates and filters. For a web interface with sharing, see Vikunja."
+   },
+   {
+    "q": "Which package?",
+    "a": "Your distribution packages it (task or taskwarrior3 depending on the distro); Homebrew on macOS."
+   },
+   {
+    "q": "Where do my tasks live?",
+    "a": "In local files - easy to back up or sync yourself. A separate sync server exists but is optional."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://taskwarrior.org/download/"
+ },
+ "tools/thunderbird": {
+  "heading": "Your email, calendar and RSS in one free client.",
+  "qas": [
+   {
+    "q": "Does it provide email?",
+    "a": "No: Thunderbird is a client that connects to accounts you already have. It is not mail hosting or a mail server."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Mail stores locally (and on your server per account settings). Everything lives in the profile folder - back it up."
+   },
+   {
+    "q": "What is the license?",
+    "a": "The desktop code is MPL-2.0. The Thunderbird name and logo are Mozilla Foundation trademarks."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://www.thunderbird.net/en-US/download/linux/"
+ },
+ "tools/vlc": {
+  "heading": "Plays nearly anything, anywhere.",
+  "qas": [
+   {
+    "q": "Which package?",
+    "a": "Distribution packages, or VideoLAN's own downloads. The GitHub repository is a mirror of VideoLAN's own."
+   },
+   {
+    "q": "Who makes it?",
+    "a": "VideoLAN, a non-profit; the code is GPL-2.0 or LGPL per its legal page."
+   },
+   {
+    "q": "Does it need an account?",
+    "a": "No: files, discs and network streams on your own computer - no cloud involved."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://www.videolan.org/vlc/download-ubuntu.html"
+ },
+ "tools/zotero": {
+  "heading": "A research library that lives on your machine.",
+  "qas": [
+   {
+    "q": "What does this listing cover?",
+    "a": "The AGPL-3.0 desktop client. The optional sync and storage service is run by the project and is a separate matter."
+   },
+   {
+    "q": "Where is my library?",
+    "a": "Locally: PDFs, notes and metadata on your disk. Sync is optional and tied to a free zotero.org account with storage limits."
+   },
+   {
+    "q": "What should I install after the app?",
+    "a": "The browser connector for capturing sources, and the word-processor plugin for citations."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://www.zotero.org/download/"
+ },
+ "tools/adguard-home": {
+  "heading": "DNS filtering for the whole network, one small service.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "A single machine on your network that stays on: a Raspberry Pi, a small server or a Docker host. Devices point at it for DNS."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Filter rules, blocklists and query logs live on your AdGuard Home machine, not with AdGuard's company. The listing is the self-hosted server, separate from AdGuard's paid apps and hosted AdGuard DNS."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "Updates, blocklist choices and the DHCP/DNS settings on your router. DNS filtering blocks domain lookups; it cannot remove every ad inside an allowed website or app."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://adguard-dns.io/kb/adguard-home/getting-started/"
+ },
+ "tools/audiobookshelf": {
+  "heading": "Your audiobooks, your hardware, every device in sync.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "A server you run - Docker, the Debian/Ubuntu package or a NixOS module - plus the web player and the project's own Android and iOS apps."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Libraries, listening progress and stats stay on your hardware. Nothing routes through a third-party service."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "Updates and storage for the audio files, and a backup of the library metadata if losing progress would hurt. It covers audio; Jellyfin is the usual video partner."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://github.com/advplyr/audiobookshelf-ppa"
+ },
+ "tools/beszel": {
+  "heading": "Lightweight monitoring: one hub, small agents.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "A web hub (Docker or a binary) plus a small agent on each system you want to watch. The hub alone collects no host metrics."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "CPU, memory, disk, network and container stats with history live on your hub. Nothing leaves your machines for a hosted service."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "The hub and one agent per machine, kept updated together. It gives charts and alerts without replacing a full metrics stack such as VictoriaMetrics plus Grafana."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://beszel.dev/guide/getting-started"
+ },
+ "tools/caddy": {
+  "heading": "A web server whose HTTPS just works.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "Any Linux server, a Docker container or a package repo install. Its headline feature is automatic HTTPS: it obtains and renews Let's Encrypt certificates without configuration."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Your sites and the Caddyfile live on your server. Certificates come from Let's Encrypt; no account with a vendor is required."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "A short Caddyfile, updates, and the usual web-server care. It serves static files, reverse-proxies to apps and handles TLS renewal for you."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://caddyserver.com/docs/install"
+ },
+ "tools/copyparty": {
+  "heading": "A file server in a single Python file.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "Almost anywhere Python runs - one file, no database, no build step. Also available as Docker images and packages."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Whatever folder you point it at stays yours. Uploads, downloads, thumbnails and search run from that one process on your machine."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "Almost nothing to start; more if you expose it. WebDAV, FTP, SFTP and SMB come from the same process, so plan access rules before opening ports."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://github.com/9001/copyparty"
+ },
+ "tools/cryptpad": {
+  "heading": "A collaborative office suite the host cannot read.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "A Node.js server you host, or the project's own flagship instance. Documents, spreadsheets, slides, forms and boards are encrypted in the browser."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "The server stores only encrypted content - the host cannot read your documents. Keys live in the links you share."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "A real production service: updates, storage, and backup of the encrypted blobs. Developed by XWiki SAS; the hosted cryptpad.fr is run by the same team."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://docs.cryptpad.org/en/admin_guide/"
+ },
+ "tools/fava": {
+  "heading": "A browser window onto your Beancount ledger.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "Runs locally against your own Beancount text files - it is not a hosted service. Beancount itself is listed separately."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Your ledger stays plain text files on your machine. Fava only reads and edits them."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "Very little: keep Fava and Beancount updated and your files backed up. Reports and charts regenerate from the files every time."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://beancount.github.io/fava/usage.html"
+ },
+ "tools/forgejo": {
+  "heading": "Your own Git forge, community-governed.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "A server you run - Docker, binaries or a NixOS module - hosting Git repositories with issues, pull requests and a web interface."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Repositories, issues and user accounts live on your server. Nothing depends on a hosted forge."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "Updates, storage, backups and user administration. The project describes itself as community-governed; from v9.0 it is GPL v3-or-later."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://forgejo.org/docs/latest/admin/installation/"
+ },
+ "tools/freshrss": {
+  "heading": "Your feeds, one reader you host.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "A small PHP web app - Docker or a classic web-server install - plus any compatible reader app on your devices."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Your subscriptions and read state live in your own database. Per its README it supports WebSub push from compatible sources."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "Updates and a database backup. Pair it with a mobile reader app for reading away from the browser."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://freshrss.github.io/FreshRSS/en/admins/03_Installation.html"
+ },
+ "tools/gotify": {
+  "heading": "Push notifications without a commercial middleman.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "A small server (Docker or a binary) with a web interface and an Android app. Other services send messages through its HTTP API."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Messages pass through your server only - no commercial push service sees their contents. Each application gets its own revocable token."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "The server, its tokens and updates. Keep it reachable from the services that alert you; it is simple by design."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://gotify.net/docs/install"
+ },
+ "tools/grafana": {
+  "heading": "Dashboards on top of the data you already have.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "A server - Docker, packages or a NixOS module - that reads from sources such as Prometheus, Loki and InfluxDB rather than storing everything itself."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Dashboard definitions and alerts live on your Grafana server; the underlying metrics stay in whichever database you connect."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "The Grafana server, its data-source connections and dashboard upkeep. Dashboards survive swapping the database behind them. Grafana Labs sells cloud and enterprise offerings separately."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://grafana.com/docs/grafana/latest/setup-grafana/installation/"
+ },
+ "tools/home-assistant": {
+  "heading": "Local-first home automation.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "A dedicated device (a Raspberry Pi or similar), a container, or a VM. It connects compatible devices and services into dashboards and automations."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Configuration, history and automations live on your device. It favors local control, but some integrations still depend on vendor clouds - check each device rather than assuming offline operation."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "Updates, occasional breaking-change notes, and the devices themselves. Start with a few integrations and grow deliberately."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://www.home-assistant.io/installation/linux"
+ },
+ "tools/homepage": {
+  "heading": "A front door for your server.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "A Docker container or a Node.js service next to the things it links to. Everything is configured in a few readable YAML files."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Only configuration lives in Homepage; it pulls live status and widgets from over a hundred self-hosted apps without holding their data."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "A YAML file and container updates. Widgets need API tokens for the apps they show - treat those tokens as secrets."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://github.com/gethomepage/homepage"
+ },
+ "tools/immich": {
+  "heading": "A self-hosted alternative to Google Photos.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "A Docker Compose stack on a server with real storage, plus the mobile apps that upload straight from your phone."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Originals, albums, facial-recognition data and search indexes live on your server. Automatic backup runs from your phone to your machine, not a vendor cloud."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "A multi-container stack: updates, storage growth and tested backups of both the files and the database. Budget real time for it."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://immich.app/docs/install/docker-compose"
+ },
+ "tools/jellyfin": {
+  "heading": "Your media collection, streamed everywhere.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "A server you run - packages, Docker or the official install script - plus apps on phones, TVs and browsers."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Your library and watch state live on your server. It is a fully community-run fork of Emby with no premium tier and no tracking."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "Server updates, library organization and transcoding horsepower if your clients need it. Everything is free; support goes to the project."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://jellyfin.org/downloads/"
+ },
+ "tools/karakeep": {
+  "heading": "Bookmark everything, keep it searchable.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "A Docker Compose stack: the app, a Meilisearch index for full-text search, and optional AI tagging."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Saved links, notes, images and PDFs are crawled and stored on your server - search still works when the original page disappears."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "The Compose stack, storage for archived pages, and updates. Automatic AI tagging is optional and needs a model provider you choose."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://karakeep.app"
+ },
+ "tools/kitchenowl": {
+  "heading": "Shopping lists and recipes for a household.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "A server you host with web and mobile clients against it. Built for a household, not a team wiki."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Lists, recipes and meal plans live on your server."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "Updates and a backup. Note that upstream still labels the project public alpha, not production-ready - expect rough edges."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://docs.kitchenowl.org/latest/self-hosting/"
+ },
+ "tools/lubelogger": {
+  "heading": "Vehicle records without a spreadsheet.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "A small web app you host - Docker is the common route."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Service visits, repairs, fuel fill-ups and odometer history stay on your own machine."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "Very little: updates and a backup of its data. Try the project's demo first if you are unsure the workflow fits."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Try the official demo",
+    "href": "https://demo.lubelogger.com"
+   },
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://github.com/hargata/lubelog"
+ },
+ "tools/mealie": {
+  "heading": "Recipes in, meal plans out.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "A server you run - Docker is standard - with web access for the household."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Recipes, tags, cookbooks, meal plans and shopping lists live on your server. Importing from a URL parses the page into ingredients, steps and a photo."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "Updates and a database backup. AGPLv3-licensed."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://docs.mealie.io/"
+ },
+ "tools/netbird": {
+  "heading": "A private network over WireGuard, no open ports.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "A management server you host (or the project's hosted service) plus a small client on each machine. Peers reach each other directly by name, wherever they are."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Peer registry, groups, access rules and DNS live on your management server; traffic flows directly between your machines over WireGuard."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "The management stack and client updates. The admin dashboard handles peers, groups, access rules and routes - plan those before inviting a fleet."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://docs.netbird.io/selfhosted/selfhosted-quickstart"
+ },
+ "tools/nextcloud": {
+  "heading": "A collaboration hub on your own server.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "A full server stack - the All-in-One Docker image is the documented easy route, classic installs and a NixOS module exist too."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Files, calendars, contacts and mail live on your server and sync to desktop and mobile clients. Link sharing, co-editing and calls stay inside your account."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "A full stack rather than one container: updates across it, storage, backups and app compatibility at upgrade time. Nextcloud GmbH sells enterprise support separately."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://docs.nextcloud.com/server/latest/admin_manual/installation/index.html"
+ },
+ "tools/ollama": {
+  "heading": "Open-weight models with one command.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "Your own machine - Linux, macOS or Windows - with enough memory for the models you pick. GPU use is handled for you when available."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Models and chats stay on your machine. A local API on port 11434 serves them to other apps; many local-AI frontends expect exactly this backend."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "Model storage grows fast - watch disk space. Updates are a single binary or service restart. MIT-licensed."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://github.com/ollama/ollama"
+ },
+ "tools/omni-tools": {
+  "heading": "Everyday file jobs without online converters.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "A Docker container or a build from source, serving one browser interface for PDF operations, image conversion and text jobs."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "The project says file processing happens on the client - your files are not sent to a server for the work itself."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "A container and its updates. A good first self-host: low risk, immediate use."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://github.com/iib0011/omni-tools"
+ },
+ "tools/paperless-ngx": {
+  "heading": "Paper in, searchable archive out.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "A Docker Compose stack: the app, a database and a document queue. Drop files into its consumption folder and it OCRs, tags and files them."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Scans, OCR text, tags and the full-text index live on your server."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "The stack, storage growth and backups of both documents and database. Worth the setup if paper keeps piling up."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://docs.paperless-ngx.com/"
+ },
+ "tools/penpot": {
+  "heading": "Design and prototype in the browser, self-hostable.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "Your browser against the project's hosted service, or a Docker stack you run yourself. MPL-2.0 licensed."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "On penpot.app, files live on the project's hosted service (run by the project, separate from this listing's focus). Self-hosted, they live on your server."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "Self-hosting means the Docker stack, updates and backups. Designers and developers work in the same files either way."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://help.penpot.app/technical-guide/getting-started/docker/"
+ },
+ "tools/percona-server": {
+  "heading": "MySQL-compatible, fully open source.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "A database server - packages, Docker or a NixOS module. This listing covers the 8.4 series, not the cluster, monitoring or paid-support products."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Your databases live on your server. GPLv2 with included components under their own notices."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "A production database: updates, backups, replication if you need it. Check the documented telemetry settings during setup."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://docs.percona.com/percona-server/8.4/index.html"
+ },
+ "tools/pi-hole": {
+  "heading": "Network-wide DNS filtering from one small box.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "A Raspberry Pi, a small Linux server or a Docker container that your devices use for DNS - including devices that cannot run browser extensions."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Blocklists, rules and query logs live on your Pi-hole. Nothing routes through an outside filter service."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "Updates, blocklist choices and router DNS settings. It is not a firewall or VPN: DNS filtering cannot remove every ad inside an allowed site or app."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://docs.pi-hole.net/main/basic-install/"
+ },
+ "tools/plausible": {
+  "heading": "Analytics without cookies or consent banners.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "The Community Edition you self-host (Docker), or the project's paid hosted service. Sites add a small script."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Traffic data lives in your own database; it collects no personal data, so sites can skip the consent banner."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "The Community Edition stack and its updates. Self-hosting is free; the hosted version is a separate paid offering."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://github.com/plausible/community-edition"
+ },
+ "tools/postgresql": {
+  "heading": "A relational database with a decades-long track record.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "A server, a container or your development machine - packages for every platform, plus the psql terminal client."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Your databases live on your server. The core uses the permissive PostgreSQL License; extensions carry their own licenses."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "A serious database if it holds real data: updates, backups and storage. For a graphical client, pair it with a tool such as DBeaver."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://www.postgresql.org/download/"
+ },
+ "tools/privacyidea": {
+  "heading": "Multi-factor authentication under your control.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "A Python server you run - packages, Docker or source - that manages authentication tokens and policies for applications and networks."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Tokens, policies and user assignments live in your own database. It works with existing user directories rather than replacing them."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "An authentication service people depend on: updates, backups and recovery planning. AGPLv3; NetKnights sells enterprise packages and support separately."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://privacyidea.readthedocs.io/en/latest/installation/"
+ },
+ "tools/radicale": {
+  "heading": "CalDAV and CardDAV without the groupware.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "A small Python server you run. Keep using your compatible calendar and address-book apps on your devices - its web interface only manages collections."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Calendars and contacts live on your server and sync to your clients over CalDAV and CardDAV."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "Very little: updates and a backup of its storage folder. Deliberately focused - not a mail or full groupware suite."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://radicale.org/master.html"
+ },
+ "tools/scrutiny": {
+  "heading": "See a dying disk before it takes data with it.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "A web dashboard (Docker or binary) plus small collector agents on machines with drives you care about. It wraps smartd/smartctl data."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "S.M.A.R.T. history, temperatures and wear data live on your Scrutiny server."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "The dashboard, the collectors and alert settings. MIT-licensed; pairs naturally with a notification service such as Gotify."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://github.com/AnalogJ/scrutiny/tree/master/docs"
+ },
+ "tools/silverbullet": {
+  "heading": "A knowledge base that stays plain Markdown.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "A server you run - Docker, Deno or a NixOS module - used through the browser. Notes are Markdown files with links and queries."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "The underlying files remain yours to edit, back up or move elsewhere; the extension and scripting system builds on top of them."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "Updates and your own file backups. It rewards people who like shaping their own workflows."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://docs.silverbullet.md/Install"
+ },
+ "tools/syncthing": {
+  "heading": "Folders in sync, no third-party cloud.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "Runs on each device you want to sync - laptop, phone, server. Devices pair by exchanging keys; traffic is encrypted end to end."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Your files exist only on your devices - nothing is stored on a third party's servers. File versioning options protect against accidental deletes and overwrites."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "Client updates on each device and occasional conflict resolution. No central server to maintain unless you add one as another peer."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://syncthing.net/downloads/"
+ },
+ "tools/technitium": {
+  "heading": "A full DNS server with a web console.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "A .NET application on a Linux or Windows machine, managed through its web console. Handles recursive and authoritative DNS."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Zones, blocklists and query logs live on your server. It speaks DNS-over-HTTPS, DNS-over-TLS and DNS-over-QUIC."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "Updates, blocklist choices and router DNS settings. GPLv3; can run primary and secondary zones with clustering if you outgrow one box."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://technitium.com/dns/"
+ },
+ "tools/trilium-notes": {
+  "heading": "A large knowledge base, structured as a tree.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "A desktop app, a self-hosted server for sync and web access, or both - desktop apps can sync with your server."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Notes, links, attributes and revisions live in your own database. A note can appear in more than one place without duplication."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "Updates and database backups. This is a structured, power-user tool - richer than plain-Markdown notes."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://docs.triliumnotes.org/user-guide/setup/server/installation/docker"
+ },
+ "tools/umami": {
+  "heading": "Simple analytics, no cookies.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "A Node.js app with a PostgreSQL database, self-hosted - Docker is the documented route."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Traffic, referrers and events live in your own database, with no cookies and no personal data collection."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "The app, its database and updates. Focused on simplicity: one clean dashboard rather than a maze of reports."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://umami.is/docs/install"
+ },
+ "tools/uptime-kuma": {
+  "heading": "Know when things go down, before others tell you.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "A Docker container or Node.js app that checks websites, ports and services on a schedule."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Monitor definitions, response-time history and status pages live on your server. Status pages give others a place to check without dashboard access."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "The container, its alert channels (services such as Gotify) and updates. An availability monitor, not a replacement for full metrics."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://uptime.kuma.pet/docs/How-to-Install/"
+ },
+ "tools/vaultwarden": {
+  "heading": "Bitwarden apps, a server you can carry.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "A single Rust server - far lighter than the official Bitwarden server - that runs comfortably on a small VPS or home server, with the official Bitwarden apps and extensions as clients."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Your vault lives on your server, encrypted the same way the official clients expect. This is a community implementation of the API, not a Bitwarden product."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "Your vault is the crown jewels: HTTPS is effectively required, updates matter, and backups of the database and attachments are non-negotiable."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://github.com/dani-garcia/vaultwarden"
+ },
+ "tools/victoriametrics": {
+  "heading": "Fast time-series storage that pairs with Grafana.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "A single-node server (binary, Docker or packages). This page covers the open-source single-node server, not the enterprise features or VictoriaMetrics Cloud."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Metrics live on your server; query it with its API or point Grafana at it for dashboards."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "The server, storage growth and retention settings. Apache-2.0 community code; enterprise and cloud are separate offerings."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/"
+ },
+ "tools/vikunja": {
+  "heading": "Tasks and projects, list or board.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "A server you self-host (Docker documented) or the project's hosted service, used through its web app."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Tasks, due dates, labels and assignments live on your server. Several views let the same plan work as a task list or a project board."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "The server stack, updates and a database backup. Core server and web app are AGPL-3.0-or-later."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://vikunja.io/docs/installing/"
+ },
+ "tools/warpgate": {
+  "heading": "One door for SSH, databases and web admin.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "A bastion host you run: point SSH, HTTPS, MySQL and PostgreSQL clients at Warpgate instead of handing every admin credentials for every server."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "User roles, target definitions and session recordings live on your Warpgate host - which makes it a high-value system to protect."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "A security-critical service: updates, hardening and careful role management. Session recording and access rules are the payoff."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 12, 2026",
+  "installSource": "https://warpgate.null.page/"
+ }
+}

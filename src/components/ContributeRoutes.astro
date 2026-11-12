@@ -1,0 +1,20 @@
+---
+interface Route { label: string; href: string; note: string }
+interface Props {
+  checkedOn: string;
+  fundingSource?: { label: string; href: string };
+  routes?: Route[];
+  aiNote?: string;
+}
+const { checkedOn, fundingSource, routes = [], aiNote } = Astro.props;
+---
+<div class="pilot-contribute">
+  <p class="pilot-check">Funding routes checked {checkedOn}{fundingSource && <> against the <a href={fundingSource.href}>{fundingSource.label} ↗</a></>}. Support goes to the project, not the Index.</p>
+  {routes.length > 0 && <>
+    <h3>Support without money</h3>
+    <ul>
+      {routes.map(r => <li><a href={r.href}>{r.label} ↗</a>: {r.note}</li>)}
+    </ul>
+  </>}
+  {aiNote && <p set:html={aiNote} />}
+</div>

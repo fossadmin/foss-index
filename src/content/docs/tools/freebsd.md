@@ -8,6 +8,10 @@ icon: freebsd.png
 mark: FB
 repository: https://github.com/freebsd/freebsd-src
 license: BSD-2-Clause
+funding:
+  custom:
+    - label: "Donate to FreeBSD"
+      url: https://www.freebsd.org/donations/
 screenshot:
   src: freebsd-source.webp
   alt: FreeBSD 14 text console after login, showing release details, documentation

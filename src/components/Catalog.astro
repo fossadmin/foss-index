@@ -77,9 +77,29 @@ const active = selectedGroup?.slug ?? (selectedCategory ? browseSlugForCategory(
   const toggle = document.querySelector<HTMLElement>('[data-view-toggle]');
   if (list && toggle) {
     const options = [...toggle.querySelectorAll<HTMLButtonElement>('[data-view-option]')];
+    const iconOverlays = [...document.querySelectorAll<HTMLElement>('.project-icon-link')];
+    const syncIconOverlays = () => {
+      const detail = list.dataset.view === 'detail';
+      for (const overlay of iconOverlays) {
+        const item = overlay.closest<HTMLElement>('.tool-item');
+        const inner = item?.querySelector<HTMLElement>('.tool-row .tool-mark');
+        if (!detail || !item || !inner || item.hidden) {
+          overlay.style.top = '';
+          overlay.style.left = '';
+          overlay.removeAttribute('data-icon-placed');
+          continue;
+        }
+        const r = inner.getBoundingClientRect();
+        const c = item.getBoundingClientRect();
+        overlay.style.top = `${r.top - c.top - item.clientTop}px`;
+        overlay.style.left = `${r.left - c.left - item.clientLeft}px`;
+        overlay.setAttribute('data-icon-placed', '');
+      }
+    };
     const setView = (view: string, save: boolean) => {
       list.dataset.view = view;
       options.forEach(o => o.setAttribute('aria-pressed', String(o.dataset.viewOption === view)));
+      syncIconOverlays();
       if (save) { try { localStorage.setItem('foss-index:view', view); } catch {} }
     };
     let stored = 'compact';
@@ -87,6 +107,8 @@ const active = selectedGroup?.slug ?? (selectedCategory ? browseSlugForCategory(
     setView(stored, false);
     toggle.hidden = false;
     options.forEach(o => o.addEventListener('click', () => setView(o.dataset.viewOption!, true)));
+    new ResizeObserver(syncIconOverlays).observe(list);
+    window.addEventListener('load', syncIconOverlays);
   }
 </script>
 <script>
