@@ -90,6 +90,16 @@ input {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
 }
+[id] {
+  /* Clear the pinned header on section jumps; !important overrides per-section rules such as #project-support below */
+  scroll-margin-top: 92px !important;
+}
+@media (max-width: 650px) {
+  [id] {
+    /* The pinned mobile rail is taller than the desktop bar */
+    scroll-margin-top: 108px !important;
+  }
+}
 .skip-link {
   position: fixed;
   top: -100px;
@@ -289,6 +299,10 @@ input {
   padding: 0 44px;
   font: 11px var(--mono);
   color: var(--moss);
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: var(--cream);
 }
 .breadcrumb {
   text-decoration: none;
@@ -1184,7 +1198,7 @@ main {
 .rail-menu[aria-expanded="true"] .menu-open { display: none; }
 .rail-menu[aria-expanded="true"] .menu-close { display: block; }
 @media (max-width:650px) {
- .rail { position: relative; padding: 16px 20px; min-height:76px; }
+ .rail { position: sticky; top: 0; z-index: 3; padding: 16px 20px; min-height:76px; }
  .rail .brand { min-height:44px; max-width:calc(100% - 108px); }
  .rail-menu { position:absolute; top:16px; right:12px; width:44px; height:44px; min-height:44px; padding:10px; margin:0; border:0; justify-content:center; }
  .topbar { position:absolute; top:16px; right:68px; width:44px; height:44px; padding:0; border:0; z-index:2; }
