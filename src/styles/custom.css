@@ -1201,7 +1201,7 @@ main {
  .rail { position: sticky; top: 0; z-index: 3; padding: 16px 20px; min-height:76px; }
  .rail .brand { min-height:44px; max-width:calc(100% - 108px); }
  .rail-menu { position:absolute; top:16px; right:12px; width:44px; height:44px; min-height:44px; padding:10px; margin:0; border:0; justify-content:center; }
- .topbar { position:absolute; top:16px; right:68px; width:44px; height:44px; padding:0; border:0; z-index:2; }
+ .topbar { position:absolute; top:16px; right:68px; width:44px; height:44px; padding:0; border:0; z-index:4; /* above the sticky .rail (z-index:3) so the theme toggle stays visible and tappable */ }
  .topbar .breadcrumb,.topbar .edition { display:none; }
  .topbar .theme-switcher { margin:0 auto; }
  .rail-collapse { padding-top:8px; }
