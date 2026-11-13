@@ -15,7 +15,7 @@ test('six tool pages have icons, screenshots and researched-not-installed scopin
   assert.match(text,/## Documentation/);
   assert.match(text,/independent\s+listing|independent listing/);
   assert.ok(support['tools/'+slug],slug);
-  assert.ok(support['tools/'+slug].platforms.length>0,slug);
+  const rec=support['tools/'+slug];assert.ok((rec.platforms??rec.clients??[]).length>0,slug);
  }
 });
 test('funding fields match verified routes only',()=>{
@@ -28,6 +28,14 @@ test('funding fields match verified routes only',()=>{
  assert.match(w,/githubSponsors: https:\/\/github\.com\/sponsors\/eugeny/);
  assert.match(w,/openCollective: https:\/\/opencollective\.com\/tabby/);
  assert.match(w,/FUNDING\.yml directs support to[\s\S]*?Tabby Open Collective/);
+ // Unenrolled GitHub Sponsors URLs redirect to plain profiles: never link them.
+ const bean=read('src/content/docs/tools/beancount.md');
+ assert.match(bean,/url: https:\/\/www\.paypal\.com\/paypalme\/misislavski/);
+ assert.ok(!bean.includes('sponsors/blais'));
+ assert.ok(!read('src/content/docs/tools/drawio-desktop.md').includes('funding:'));
+ const routes=read('src/data/contribute-routes.json');
+ assert.ok(!routes.includes('sponsors/blais'));
+ assert.ok(!routes.includes('sponsors/jgraph'));
 });
 test('nixos coverage is accurate: five modules, copyparty package-only',()=>{
  forconst: for(const slug of ['technitium','scrutiny','cryptpad','ollama','warpgate']){

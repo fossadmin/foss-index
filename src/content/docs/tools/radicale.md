@@ -2,6 +2,8 @@
 title: Radicale
 description: A small CalDAV and CardDAV server for calendars, tasks and address books you control.
 category: Calendar & Contacts
+tags:
+- Self-hosted
 icon: radicale.svg
 mark: RA
 repository: https://github.com/Kozea/Radicale

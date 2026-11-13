@@ -4,6 +4,8 @@ title: PostgreSQL
 description: Open-source relational database server for applications and structured
   data.
 category: Infrastructure
+tags:
+- Self-hosted
 icon: postgresql.png
 mark: PG
 repository: https://git.postgresql.org/gitweb/?p=postgresql.git

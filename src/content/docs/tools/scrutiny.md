@@ -2,6 +2,8 @@
 title: Scrutiny
 description: Self-hosted S.M.A.R.T. hard-drive health monitoring with a web dashboard, collector agents and alerting.
 category: Monitoring
+tags:
+- Self-hosted
 icon: scrutiny.svg
 iconDark: scrutiny-dark.svg
 iconLink: https://github.com/AnalogJ/scrutiny

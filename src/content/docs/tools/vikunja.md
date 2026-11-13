@@ -2,6 +2,8 @@
 title: Vikunja
 description: Tasks, projects and shared plans, with list, kanban, table and Gantt views.
 category: Productivity
+tags:
+- Self-hosted
 icon: vikunja.svg
 mark: VI
 repository: https://github.com/go-vikunja/vikunja

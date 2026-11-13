@@ -19,6 +19,8 @@ screenshot:
   credit: NetBird
   sourceUrl: https://github.com/netbirdio/docs/blob/995c90990139ba39eac9a49c344f76dc2cf468af/public/docs-static/img/manage/peers/add-machines-to-your-network/peer-list.png
   license: BSD-3-Clause / AGPL-3.0
+tags:
+- Self-hosted
 ---
 
 NetBird builds a private network between your machines over WireGuard.

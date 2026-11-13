@@ -28,7 +28,11 @@
         "url": "https://joplinapp.org/download/"
       }
     ],
-    "note": "Desktop and mobile apps share the Joplin project. Choose the download for your device; sync services are a separate choice."
+    "note": "Desktop and mobile apps share the Joplin project. Choose the download for your device; sync services are a separate choice.",
+    "selfHost": {
+      "label": "Joplin Server (official Docker image)",
+      "url": "https://hub.docker.com/r/joplin/server"
+    }
   },
   "tools/simplex-chat": {
     "checkedOn": "2026-11-12",
@@ -161,7 +165,17 @@
   },
   "tools/nextcloud": {
     "checkedOn": "2026-11-12",
-    "platforms": [
+    "server": {
+      "label": "a Nextcloud server",
+      "platforms": [
+        {
+          "name": "Linux",
+          "kind": "All-in-One, Snap or manual packages",
+          "url": "https://docs.nextcloud.com/server/latest/admin_manual/installation/index.html"
+        }
+      ]
+    },
+    "clients": [
       {
         "name": "Linux",
         "kind": "Client app",
@@ -193,7 +207,8 @@
         "url": "https://nextcloud.com/install/"
       }
     ],
-    "note": "These are ways to use a Nextcloud server, not platforms that run the full Nextcloud server. Mobile Files and Talk are separate apps; calendar and contact integration has its own setup. The recorded source and release describe the server."
+    "note": "These are ways to use a Nextcloud server, not platforms that run the full Nextcloud server.",
+    "details": "Mobile Files and Talk are separate apps; calendar and contact integration has its own setup. The recorded source and release describe the server."
   },
   "tools/vlc": {
     "checkedOn": "2026-11-12",
@@ -253,9 +268,14 @@
         "name": "iOS",
         "kind": "Native app",
         "url": "https://www.zotero.org/support/ios"
+      },
+      {
+        "name": "Web",
+        "kind": "Web library: view your synced library in a browser (zotero.org account)",
+        "url": "https://www.zotero.org/mylibrary"
       }
     ],
-    "note": "Official iOS and Android apps work with your research library. iOS includes iPhone and iPad. Desktop browser connectors and word-processor integration are not promises of identical mobile features."
+    "note": "Official iOS and Android apps work with your research library; the sync docs describe viewing your library online on zotero.org from any computer. iOS includes iPhone and iPad. Desktop browser connectors and word-processor integration are not promises of identical mobile features."
   },
   "tools/thunderbird": {
     "checkedOn": "2026-11-12",
@@ -285,51 +305,98 @@
   },
   "tools/immich": {
     "checkedOn": "2026-11-12",
-    "platforms": [
+    "server": {
+      "label": "a self-hosted Immich server",
+      "platforms": [
+        {
+          "name": "Linux",
+          "kind": "Docker (the officially supported route)",
+          "url": "https://immich.app/docs/install"
+        }
+      ]
+    },
+    "clients": [
+      {
+        "name": "Web",
+        "kind": "Browser app, included with the server",
+        "url": "https://immich.app/docs/"
+      },
       {
         "name": "Android",
-        "kind": "Mobile client",
-        "url": "https://immich.app/download"
+        "kind": "Mobile app",
+        "url": "https://immich.app/download/"
       },
       {
         "name": "iOS",
-        "kind": "Mobile client",
-        "url": "https://immich.app/download"
+        "kind": "Mobile app",
+        "url": "https://immich.app/download/"
       }
     ],
-    "note": "The phone apps back up to an Immich server. They do not run the server on your phone; the source and recorded release describe the server project."
+    "note": "The web app and the mobile apps connect to your Immich server. The recorded source and release describe the server project."
   },
   "tools/home-assistant": {
     "checkedOn": "2026-11-12",
-    "platforms": [
+    "server": {
+      "label": "a Home Assistant server (Home Assistant OS, Container or Core)",
+      "platforms": [
+        {
+          "name": "Linux",
+          "kind": "Home Assistant OS, Container or Core install",
+          "url": "https://www.home-assistant.io/installation/linux"
+        }
+      ]
+    },
+    "clients": [
+      {
+        "name": "Web",
+        "kind": "Browser interface, built into the server",
+        "url": "https://www.home-assistant.io/docs/"
+      },
       {
         "name": "Android",
-        "kind": "Companion client",
+        "kind": "Companion app",
         "url": "https://companion.home-assistant.io/docs/getting_started/"
       },
       {
         "name": "iOS",
-        "kind": "Companion client",
+        "kind": "Companion app",
         "url": "https://companion.home-assistant.io/docs/getting_started/"
       }
     ],
-    "note": "These companion apps connect to Home Assistant. They do not replace the server or imply identical sensors, permissions or background behavior across phones."
+    "note": "The browser interface is built into Home Assistant.",
+    "details": "The companion apps connect to it; they do not replace the server or imply identical sensors, permissions or background behavior across phones."
   },
   "tools/karakeep": {
     "checkedOn": "2026-11-12",
-    "platforms": [
+    "server": {
+      "label": "a Karakeep server (self-hosted or Karakeep Cloud)",
+      "platforms": [
+        {
+          "name": "Linux",
+          "kind": "Docker (documented self-hosting route)",
+          "url": "https://docs.karakeep.app/"
+        }
+      ]
+    },
+    "clients": [
+      {
+        "name": "Web",
+        "kind": "Browser app, included with the server",
+        "url": "https://docs.karakeep.app/"
+      },
       {
         "name": "Android",
-        "kind": "Mobile client",
+        "kind": "Mobile app",
         "url": "https://karakeep.com/apps/"
       },
       {
         "name": "iOS",
-        "kind": "Mobile client",
+        "kind": "Mobile app",
         "url": "https://karakeep.com/apps/"
       }
     ],
-    "note": "The mobile apps connect to a Karakeep server. Browser extensions and the web interface are separate ways to use it; Android and iOS are not server-hosting targets."
+    "note": "The web app is included with the server.",
+    "details": "The mobile apps connect to a Karakeep server, self-hosted or Karakeep Cloud. Browser extensions are separate add-ons, not server-hosting targets."
   },
   "tools/netbird": {
     "checkedOn": "2026-11-12",
@@ -360,34 +427,80 @@
         "url": "https://docs.netbird.io/get-started/install/mobile"
       }
     ],
-    "note": "Mobile VPN clients join a NetBird network. This is not a claim that the management server runs on iOS or Android; mobile features and routing behavior can differ."
+    "note": "Mobile VPN clients join a NetBird network. This is not a claim that the management server runs on iOS or Android; mobile features and routing behavior can differ.",
+    "selfHost": {
+      "label": "Self-hosted NetBird (official guide)",
+      "url": "https://docs.netbird.io/selfhosted/selfhosted-guide"
+    }
   },
   "tools/jellyfin": {
     "checkedOn": "2026-11-12",
-    "platforms": [
+    "server": {
+      "label": "a self-hosted Jellyfin server",
+      "platforms": [
+        {
+          "name": "Linux",
+          "kind": "Official server packages and Docker",
+          "url": "https://jellyfin.org/downloads/"
+        },
+        {
+          "name": "Windows",
+          "kind": "Official server packages",
+          "url": "https://jellyfin.org/downloads/"
+        },
+        {
+          "name": "macOS",
+          "kind": "Official server packages",
+          "url": "https://jellyfin.org/downloads/"
+        }
+      ]
+    },
+    "clients": [
+      {
+        "name": "Web",
+        "kind": "Browser client, served by the server itself",
+        "url": "https://jellyfin.org/downloads/clients/"
+      },
       {
         "name": "Android",
-        "kind": "Mobile client",
+        "kind": "Mobile app",
         "url": "https://jellyfin.org/downloads/clients/"
       },
       {
         "name": "iOS",
-        "kind": "Mobile client",
+        "kind": "Mobile app",
         "url": "https://jellyfin.org/downloads/clients/"
       }
     ],
-    "note": "The official Jellyfin mobile apps connect to a Jellyfin server. Other clients on the download page can be third-party projects with separate source and support. Mobile support is not server support."
+    "note": "The web client is served by the Jellyfin server itself; the official mobile apps connect to a server too.",
+    "details": "Other clients on the download page can be third-party projects with separate source and support. Mobile support is not server support."
   },
   "tools/audiobookshelf": {
     "checkedOn": "2026-11-12",
-    "platforms": [
+    "server": {
+      "label": "a self-hosted Audiobookshelf server",
+      "platforms": [
+        {
+          "name": "Linux",
+          "kind": "Docker or official Debian/Ubuntu package",
+          "url": "https://www.audiobookshelf.org/docs"
+        }
+      ]
+    },
+    "clients": [
+      {
+        "name": "Web",
+        "kind": "Browser client (PWA), served by your own server",
+        "url": "https://audiobookshelf.org/"
+      },
       {
         "name": "Android",
         "kind": "Beta mobile client",
         "url": "https://github.com/advplyr/audiobookshelf-app"
       }
     ],
-    "note": "The official Android app is beta. The project also has an early iOS beta, but its README currently says TestFlight is full, so it is not listed as an available iOS download here. The mobile client connects to an Audiobookshelf server; third-party players are separate projects."
+    "note": "The server includes the web app, so any browser is a client.",
+    "details": "The official Android app is beta. The project also has an early iOS beta, but its README currently says TestFlight is full, so it is not listed as an available iOS download here. Clients connect to an Audiobookshelf server; third-party players are separate projects."
   },
   "tools/krita": {
     "checkedOn": "2026-11-12",
@@ -832,7 +945,11 @@
         "url": "https://actualbudget.org/docs/install/"
       }
     ],
-    "note": "Desktop apps are available for Linux, Windows and macOS. Mobile access uses the web app/PWA, not a native iOS or Android app. A personal server provides sync; local-only browser use has separate data-loss and backup limits."
+    "note": "Desktop apps are available for Linux, Windows and macOS. Mobile access uses the web app/PWA, not a native iOS or Android app. A personal server provides sync; local-only browser use has separate data-loss and backup limits.",
+    "selfHost": {
+      "label": "Run your own Actual server (official Docker guide)",
+      "url": "https://actualbudget.org/docs/install/docker"
+    }
   },
   "tools/dbeaver": {
     "checkedOn": "2026-11-12",
@@ -1010,7 +1127,11 @@
         "url": "https://github.com/TriliumNext/Trilium"
       }
     ],
-    "note": "Official desktop apps are available for Linux, Windows and macOS. A server installation has a mobile browser interface. Native Android/iOS clients linked by the project are separate community projects, not the desktop source/version shown here."
+    "note": "Official desktop apps are available for Linux, Windows and macOS. A server installation has a mobile browser interface. Native Android/iOS clients linked by the project are separate community projects, not the desktop source/version shown here.",
+    "selfHost": {
+      "label": "Trilium server installation (official docs)",
+      "url": "https://triliumnext.github.io/Docs/Wiki/server-installation.html"
+    }
   },
   "tools/syncthing": {
     "checkedOn": "2026-11-12",
@@ -1072,7 +1193,17 @@
   },
   "tools/kitchenowl": {
     "checkedOn": "2026-11-12",
-    "platforms": [
+    "server": {
+      "label": "a self-hosted KitchenOwl server",
+      "platforms": [
+        {
+          "name": "Linux",
+          "kind": "Docker (documented self-hosting route)",
+          "url": "https://docs.kitchenowl.org/latest/self-hosting/"
+        }
+      ]
+    },
+    "clients": [
       {
         "name": "Linux",
         "kind": "Native client",
@@ -1080,6 +1211,11 @@
       },
       {
         "name": "Windows",
+        "kind": "Native client",
+        "url": "https://github.com/TomBursch/kitchenowl/releases/tag/v0.8.1"
+      },
+      {
+        "name": "macOS",
         "kind": "Native client",
         "url": "https://github.com/TomBursch/kitchenowl/releases/tag/v0.8.1"
       },
@@ -1099,7 +1235,8 @@
         "url": "https://kitchenowl.org/features/"
       }
     ],
-    "note": "These are clients for the KitchenOwl service. The current release has Linux, Windows, Android and Web artifacts, and the project documents iOS. A generic Desktop claim alone is not enough to add a macOS download."
+    "note": "These are clients for the KitchenOwl service.",
+    "details": "The current release has Linux, Windows, macOS, Android and Web artifacts, and the project documents iOS."
   },
   "tools/logseq": {
     "checkedOn": "2026-11-12",
@@ -1128,24 +1265,50 @@
         "name": "Web",
         "kind": "DB browser app",
         "url": "https://github.com/logseq/logseq/releases/tag/2.0.2"
+      },
+      {
+        "name": "iOS",
+        "kind": "Mobile app (App Store)",
+        "url": "https://apps.apple.com/us/app/logseq/id1601013908"
       }
     ],
-    "note": "The 2.0.2 DB beta has desktop and Android artifacts and links a browser app. File-graph 0.10.x and DB graphs are different workflows; do not assume interchangeable data or sync. The 2.0.2 release says iOS is under App Store review via TestFlight, so no general available-iOS assertion is made here."
+    "note": "The 2.0.2 DB beta has desktop and Android artifacts and links a browser app; the official downloads page also offers an iOS app on the App Store. The DB version's own iOS app is in TestFlight review per the release notes, so it is not the App Store listing recorded here. File-graph 0.10.x and DB graphs are different workflows; do not assume interchangeable data or sync."
   },
   "tools/silverbullet": {
     "checkedOn": "2026-11-12",
-    "platforms": [
+    "server": {
+      "label": "a self-hosted Silverbullet server",
+      "platforms": [
+        {
+          "name": "Linux",
+          "kind": "Deno or Docker",
+          "url": "https://docs.silverbullet.md/Install"
+        }
+      ]
+    },
+    "clients": [
       {
         "name": "Web",
         "kind": "Browser interface",
         "url": "https://silverbullet.md/faq"
       }
     ],
-    "note": "This listing is scoped to the open-source MIT SilverBullet Server and its browser/PWA interface. SilverBullet Desktop is explicitly not open source according to the project FAQ and is excluded from native Linux/Windows/macOS FOSS app counts. A PWA on a phone is not a separate native mobile app."
+    "note": "This listing is scoped to the open-source MIT SilverBullet Server and its browser/PWA interface.",
+    "details": "SilverBullet Desktop is explicitly not open source according to the project FAQ and is excluded from native Linux/Windows/macOS FOSS app counts. A PWA on a phone is not a separate native mobile app."
   },
   "tools/beszel": {
     "checkedOn": "2026-11-12",
-    "platforms": [
+    "server": {
+      "label": "a self-hosted Beszel hub",
+      "platforms": [
+        {
+          "name": "Linux",
+          "kind": "Hub binary or Docker; agents on monitored machines",
+          "url": "https://beszel.dev/guide/hub-installation"
+        }
+      ]
+    },
+    "clients": [
       {
         "name": "Web",
         "kind": "Browser interface",
@@ -1156,37 +1319,68 @@
   },
   "tools/forgejo": {
     "checkedOn": "2026-11-12",
-    "platforms": [
+    "server": {
+      "label": "a self-hosted Forgejo server",
+      "platforms": [
+        {
+          "name": "Linux",
+          "kind": "Binary or Docker",
+          "url": "https://forgejo.org/docs/latest/admin/installation/"
+        }
+      ]
+    },
+    "clients": [
       {
         "name": "Web",
         "kind": "Browser interface",
-        "url": "https://forgejo.org/docs/latest/admin/installation/"
+        "url": "https://forgejo.org/"
       }
     ],
     "note": "Use the browser interface of a Forgejo server. Mobile browsers do not run the server; Git clients are a separate tool choice."
   },
   "tools/freshrss": {
     "checkedOn": "2026-11-12",
-    "platforms": [
+    "server": {
+      "label": "a self-hosted FreshRSS server",
+      "platforms": [
+        {
+          "name": "Linux",
+          "kind": "Apache/PHP install or Docker",
+          "url": "https://freshrss.github.io/FreshRSS/en/admins/03_Installation.html"
+        }
+      ]
+    },
+    "clients": [
       {
         "name": "Web",
-        "kind": "Browser interface",
-        "url": "https://freshrss.github.io/FreshRSS/en/users/06_Mobile_access.html"
+        "kind": "Browser interface (responsive)",
+        "url": "https://freshrss.github.io/FreshRSS/en/"
       }
     ],
-    "note": "FreshRSS documents a responsive browser interface. Its API-compatible native feed-reader apps are separate projects with their own source, licenses and features; they are not listed as native FreshRSS platforms."
+    "note": "FreshRSS documents a responsive browser interface.",
+    "details": "Its API-compatible native feed-reader apps are separate projects with their own source, licenses and features; they are not listed as native FreshRSS platforms."
   },
   "tools/gotify": {
     "checkedOn": "2026-11-12",
-    "platforms": [
+    "server": {
+      "label": "a self-hosted Gotify server",
+      "platforms": [
+        {
+          "name": "Linux",
+          "kind": "Docker or standalone binary",
+          "url": "https://gotify.net/docs/install"
+        }
+      ]
+    },
+    "clients": [
       {
         "name": "Web",
-        "kind": "Browser interface",
-        "url": "https://github.com/gotify/server"
+        "kind": "Browser UI, included with the server",
+        "url": "https://gotify.net/docs/first-login"
       },
       {
         "name": "Android",
-        "kind": "Separate official notification client",
+        "kind": "Mobile app (separate project)",
         "url": "https://github.com/gotify/android"
       }
     ],
@@ -1194,7 +1388,27 @@
   },
   "tools/grafana": {
     "checkedOn": "2026-11-12",
-    "platforms": [
+    "server": {
+      "label": "a self-hosted Grafana server",
+      "platforms": [
+        {
+          "name": "Linux",
+          "kind": "Official packages and Docker",
+          "url": "https://grafana.com/grafana/download"
+        },
+        {
+          "name": "Windows",
+          "kind": "Official packages",
+          "url": "https://grafana.com/grafana/download"
+        },
+        {
+          "name": "macOS",
+          "kind": "Official packages",
+          "url": "https://grafana.com/grafana/download"
+        }
+      ]
+    },
+    "clients": [
       {
         "name": "Web",
         "kind": "Browser interface",
@@ -1205,7 +1419,17 @@
   },
   "tools/homepage": {
     "checkedOn": "2026-11-12",
-    "platforms": [
+    "server": {
+      "label": "a self-hosted Homepage installation",
+      "platforms": [
+        {
+          "name": "Linux",
+          "kind": "Docker or Node.js",
+          "url": "https://gethomepage.dev/"
+        }
+      ]
+    },
+    "clients": [
       {
         "name": "Web",
         "kind": "Browser interface",
@@ -1216,15 +1440,25 @@
   },
   "tools/lubelogger": {
     "checkedOn": "2026-11-12",
-    "platforms": [
+    "server": {
+      "label": "a self-hosted LubeLogger server",
+      "platforms": [
+        {
+          "name": "Linux",
+          "kind": "Docker (docs call it the most reliable channel)",
+          "url": "https://github.com/hargata/lubelog"
+        },
+        {
+          "name": "Windows",
+          "kind": "Standalone server executable",
+          "url": "https://github.com/hargata/lubelog"
+        }
+      ]
+    },
+    "clients": [
       {
         "name": "Web",
         "kind": "Browser interface",
-        "url": "https://github.com/hargata/lubelog"
-      },
-      {
-        "name": "Windows",
-        "kind": "Standalone server executable",
         "url": "https://github.com/hargata/lubelog"
       }
     ],
@@ -1243,14 +1477,25 @@
   },
   "tools/paperless-ngx": {
     "checkedOn": "2026-11-12",
-    "platforms": [
+    "server": {
+      "label": "a self-hosted Paperless-ngx server",
+      "platforms": [
+        {
+          "name": "Linux",
+          "kind": "Docker (documented route)",
+          "url": "https://docs.paperless-ngx.com/"
+        }
+      ]
+    },
+    "clients": [
       {
         "name": "Web",
         "kind": "Browser interface",
         "url": "https://docs.paperless-ngx.com/"
       }
     ],
-    "note": "The project provides a browser document-management interface. Third-party mobile clients are separate projects; the document server does not run on your phone merely because a client exists."
+    "note": "The project provides a browser document-management interface.",
+    "details": "Third-party mobile clients are separate projects; the document server does not run on your phone merely because a client exists."
   },
   "tools/penpot": {
     "checkedOn": "2026-11-12",
@@ -1261,11 +1506,25 @@
         "url": "https://github.com/penpot/penpot"
       }
     ],
-    "note": "The design editor runs in a browser against a hosted or self-hosted service. This is not a native iOS/Android app claim or a promise of full phone editing."
+    "note": "The design editor runs in a browser against a hosted or self-hosted service. This is not a native iOS/Android app claim or a promise of full phone editing.",
+    "selfHost": {
+      "label": "Self-host Penpot (official Docker guide)",
+      "url": "https://help.penpot.app/technical-guide/getting-started/#install-with-docker"
+    }
   },
   "tools/plausible": {
     "checkedOn": "2026-11-12",
-    "platforms": [
+    "server": {
+      "label": "a self-hosted Plausible Community Edition server",
+      "platforms": [
+        {
+          "name": "Linux",
+          "kind": "Docker (Community Edition)",
+          "url": "https://github.com/plausible/community-edition/wiki"
+        }
+      ]
+    },
+    "clients": [
       {
         "name": "Web",
         "kind": "Browser interface",
@@ -1276,29 +1535,61 @@
   },
   "tools/privacyidea": {
     "checkedOn": "2026-11-12",
-    "platforms": [
+    "server": {
+      "label": "a self-hosted privacyIDEA server",
+      "platforms": [
+        {
+          "name": "Linux",
+          "kind": "Ubuntu/Debian packages or Docker",
+          "url": "https://privacyidea.readthedocs.io/en/latest/installation/"
+        }
+      ]
+    },
+    "clients": [
       {
         "name": "Web",
         "kind": "Browser interface",
         "url": "https://privacyidea.readthedocs.io/en/latest/firststeps/"
       }
     ],
-    "note": "This is the management web UI for the authentication server. Token/authenticator apps and system integrations are separate projects; do not label them as the server running on iOS or Android."
+    "note": "This is the management web UI for the authentication server.",
+    "details": "Token/authenticator apps and system integrations are separate projects; do not label them as the server running on iOS or Android."
   },
   "tools/radicale": {
     "checkedOn": "2026-11-12",
-    "platforms": [
+    "server": {
+      "label": "a self-hosted Radicale server",
+      "platforms": [
+        {
+          "name": "Linux",
+          "kind": "Python package or Docker",
+          "url": "https://radicale.org/v3.html"
+        }
+      ]
+    },
+    "clients": [
       {
         "name": "Web",
         "kind": "Browser interface",
         "url": "https://radicale.org/master.html"
       }
     ],
-    "note": "Radicale is a CalDAV/CardDAV server. Its browser page is a limited management interface, not a full calendar/contact app. Compatible clients on phones/desktops are separate projects."
+    "note": "Radicale is a CalDAV/CardDAV server.",
+    "details": "Its browser page is a limited management interface, not a full calendar/contact app. Compatible clients on phones/desktops are separate projects."
   },
   "tools/umami": {
     "checkedOn": "2026-11-12",
-    "platforms": [
+    "server": {
+      "label": "a self-hosted Umami server",
+      "platforms": [
+        {
+          "name": "Linux",
+          "kind": "Docker or Node.js",
+          "url": "https://umami.is/docs"
+        }
+      ]
+    },
+    "clients": [
       {
         "name": "Web",
         "kind": "Browser interface",
@@ -1309,7 +1600,17 @@
   },
   "tools/uptime-kuma": {
     "checkedOn": "2026-11-12",
-    "platforms": [
+    "server": {
+      "label": "a self-hosted Uptime Kuma server",
+      "platforms": [
+        {
+          "name": "Linux",
+          "kind": "Docker or Node.js",
+          "url": "https://uptime.kuma.pet/docs/How-to-Install/"
+        }
+      ]
+    },
+    "clients": [
       {
         "name": "Web",
         "kind": "Browser interface",
@@ -1320,18 +1621,39 @@
   },
   "tools/vaultwarden": {
     "checkedOn": "2026-11-12",
-    "platforms": [
+    "server": {
+      "label": "a self-hosted Vaultwarden server",
+      "platforms": [
+        {
+          "name": "Linux",
+          "kind": "Docker (documented route)",
+          "url": "https://github.com/dani-garcia/vaultwarden"
+        }
+      ]
+    },
+    "clients": [
       {
         "name": "Web",
         "kind": "Browser interface",
         "url": "https://github.com/dani-garcia/vaultwarden"
       }
     ],
-    "note": "Vaultwarden is an independent server with a web vault, not the official Bitwarden mobile/desktop project. Compatible Bitwarden clients have separate sources/licenses/releases. The project says to report Vaultwarden issues to its own maintainers, not Bitwarden support."
+    "note": "Vaultwarden is an independent server with a web vault, not the official Bitwarden mobile/desktop project.",
+    "details": "Compatible Bitwarden clients have separate sources/licenses/releases. The project says to report Vaultwarden issues to its own maintainers, not Bitwarden support."
   },
   "tools/victoriametrics": {
     "checkedOn": "2026-11-12",
-    "platforms": [
+    "server": {
+      "label": "a self-hosted VictoriaMetrics server",
+      "platforms": [
+        {
+          "name": "Linux",
+          "kind": "Binary or Docker",
+          "url": "https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/"
+        }
+      ]
+    },
+    "clients": [
       {
         "name": "Web",
         "kind": "Browser interface",
@@ -1342,7 +1664,17 @@
   },
   "tools/vikunja": {
     "checkedOn": "2026-11-12",
-    "platforms": [
+    "server": {
+      "label": "a self-hosted Vikunja server",
+      "platforms": [
+        {
+          "name": "Linux",
+          "kind": "Docker or binary",
+          "url": "https://vikunja.io/docs/installing/"
+        }
+      ]
+    },
+    "clients": [
       {
         "name": "Web",
         "kind": "Browser interface",
@@ -1353,40 +1685,56 @@
   },
   "tools/pi-hole": {
     "checkedOn": "2026-11-12",
-    "platforms": [
+    "server": {
+      "label": "a self-hosted Pi-hole server",
+      "platforms": [
+        {
+          "name": "Linux",
+          "kind": "Bare-metal install script or Docker",
+          "url": "https://docs.pi-hole.net/main/basic-install/"
+        }
+      ]
+    },
+    "clients": [
       {
         "name": "Web",
-        "kind": "Browser interface",
-        "url": "https://docs.pi-hole.net/main/post-install/"
+        "kind": "Browser admin console",
+        "url": "https://docs.pi-hole.net/"
       }
     ],
     "note": "This is the browser administration interface for a Pi-hole host. The phone is not running the DNS service merely because it opens the dashboard."
   },
   "tools/adguard-home": {
     "checkedOn": "2026-11-12",
-    "platforms": [
-      {
-        "name": "Linux",
-        "kind": "DNS service host",
-        "url": "https://adguard-dns.io/kb/adguard-home/getting-started/"
-      },
-      {
-        "name": "Windows",
-        "kind": "DNS service host",
-        "url": "https://adguard-dns.io/kb/adguard-home/getting-started/"
-      },
-      {
-        "name": "macOS",
-        "kind": "DNS service host",
-        "url": "https://adguard-dns.io/kb/adguard-home/getting-started/"
-      },
+    "server": {
+      "label": "a self-hosted AdGuard Home server",
+      "platforms": [
+        {
+          "name": "Linux",
+          "kind": "Official binaries and Docker",
+          "url": "https://adguard-dns.io/kb/adguard-home/getting-started/"
+        },
+        {
+          "name": "Windows",
+          "kind": "Official binaries",
+          "url": "https://adguard-dns.io/kb/adguard-home/getting-started/"
+        },
+        {
+          "name": "macOS",
+          "kind": "Official binaries",
+          "url": "https://adguard-dns.io/kb/adguard-home/getting-started/"
+        }
+      ]
+    },
+    "clients": [
       {
         "name": "Web",
-        "kind": "Administration interface",
+        "kind": "Browser admin console",
         "url": "https://adguard-dns.io/kb/adguard-home/getting-started/"
       }
     ],
-    "note": "AdGuard Home is the self-hosted DNS service, not the separate AdGuard Android/iOS content-blocking apps. Browser administration does not make a phone a supported server host."
+    "note": "AdGuard Home is the self-hosted DNS service, not the separate AdGuard Android/iOS content-blocking apps.",
+    "details": "Browser administration does not make a phone a supported server host."
   },
   "tools/caddy": {
     "checkedOn": "2026-11-12",
@@ -1608,22 +1956,27 @@
   },
   "tools/technitium": {
     "checkedOn": "2026-11-12",
-    "platforms": [
-      {
-        "name": "Linux",
-        "kind": "Self-hosted server (install script, tar.gz or Docker)",
-        "url": "https://technitium.com/dns/"
-      },
-      {
-        "name": "Windows",
-        "kind": "Self-hosted server (setup or portable)",
-        "url": "https://technitium.com/dns/"
-      },
-      {
-        "name": "macOS",
-        "kind": "Self-hosted server (tar.gz or Docker)",
-        "url": "https://technitium.com/dns/"
-      },
+    "server": {
+      "label": "a self-hosted Technitium DNS server",
+      "platforms": [
+        {
+          "name": "Linux",
+          "kind": "Install script, tar.gz or Docker",
+          "url": "https://technitium.com/dns/"
+        },
+        {
+          "name": "Windows",
+          "kind": "Setup or portable",
+          "url": "https://technitium.com/dns/"
+        },
+        {
+          "name": "macOS",
+          "kind": "tar.gz or Docker",
+          "url": "https://technitium.com/dns/"
+        }
+      ]
+    },
+    "clients": [
       {
         "name": "Web",
         "kind": "Browser admin console",
@@ -1635,7 +1988,17 @@
   },
   "tools/scrutiny": {
     "checkedOn": "2026-11-12",
-    "platforms": [
+    "server": {
+      "label": "a self-hosted Scrutiny server",
+      "platforms": [
+        {
+          "name": "Linux",
+          "kind": "Docker (documented route)",
+          "url": "https://github.com/AnalogJ/scrutiny"
+        }
+      ]
+    },
+    "clients": [
       {
         "name": "Linux",
         "kind": "Self-hosted server (omnibus Docker image or hub-and-spoke collectors)",
@@ -1691,22 +2054,27 @@
   },
   "tools/copyparty": {
     "checkedOn": "2026-11-12",
-    "platforms": [
-      {
-        "name": "Linux",
-        "kind": "Single-file Python server (also PyPI and Docker)",
-        "url": "https://github.com/9001/copyparty"
-      },
-      {
-        "name": "macOS",
-        "kind": "Single-file Python server",
-        "url": "https://github.com/9001/copyparty"
-      },
-      {
-        "name": "Windows",
-        "kind": "Single-file Python server",
-        "url": "https://github.com/9001/copyparty"
-      },
+    "server": {
+      "label": "a copyparty server (a single file is enough)",
+      "platforms": [
+        {
+          "name": "Linux",
+          "kind": "Single-file Python server (also PyPI and Docker)",
+          "url": "https://github.com/9001/copyparty"
+        },
+        {
+          "name": "Windows",
+          "kind": "Single-file Python server",
+          "url": "https://github.com/9001/copyparty"
+        },
+        {
+          "name": "macOS",
+          "kind": "Single-file Python server",
+          "url": "https://github.com/9001/copyparty"
+        }
+      ]
+    },
+    "clients": [
       {
         "name": "Web",
         "kind": "Browser interface",
@@ -1718,7 +2086,17 @@
   },
   "tools/warpgate": {
     "checkedOn": "2026-11-12",
-    "platforms": [
+    "server": {
+      "label": "a self-hosted Warpgate server",
+      "platforms": [
+        {
+          "name": "Linux",
+          "kind": "Binary or Docker",
+          "url": "https://warpgate.null.page/"
+        }
+      ]
+    },
+    "clients": [
       {
         "name": "Linux",
         "kind": "Self-hosted bastion (binary release or Docker)",
@@ -1735,12 +2113,17 @@
   },
   "tools/mealie": {
     "checkedOn": "2026-11-12",
-    "platforms": [
-      {
-        "name": "Linux",
-        "kind": "Self-hosted server (official Docker image)",
-        "url": "https://docs.mealie.io/documentation/getting-started/installation/installation-checklist/"
-      },
+    "server": {
+      "label": "a self-hosted Mealie server",
+      "platforms": [
+        {
+          "name": "Linux",
+          "kind": "Official Docker image (compose is the documented route)",
+          "url": "https://docs.mealie.io/documentation/getting-started/installation/installation-checklist/"
+        }
+      ]
+    },
+    "clients": [
       {
         "name": "Web",
         "kind": "Browser interface",

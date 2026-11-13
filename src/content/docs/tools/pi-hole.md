@@ -4,6 +4,8 @@ title: Pi-hole
 description: Network-wide DNS filtering for ads and trackers, with a local administration
   dashboard.
 category: Networking
+tags:
+- Self-hosted
 icon: pihole.svg
 mark: PH
 repository: https://github.com/pi-hole/pi-hole

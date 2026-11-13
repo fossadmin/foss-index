@@ -7,7 +7,9 @@ mark: BC
 repository: https://github.com/beancount/beancount
 license: GPL-2.0
 funding:
-  githubSponsors: https://github.com/sponsors/blais
+  custom:
+    - label: "PayPal"
+      url: https://www.paypal.com/paypalme/misislavski
 managedHosting: false
 screenshot:
   src: beancount.webp

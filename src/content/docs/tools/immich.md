@@ -2,6 +2,8 @@
 title: Immich
 description: High performance self-hosted photo and video backup. A Google Photos alternative on your own hardware.
 category: Photos
+tags:
+- Self-hosted
 icon: immich.svg
 mark: IM
 repository: https://github.com/immich-app/immich

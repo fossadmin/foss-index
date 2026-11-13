@@ -4,6 +4,8 @@ title: AdGuard Home
 description: Self-hosted network-wide DNS filtering for ads, trackers and unwanted
   domains.
 category: Infrastructure
+tags:
+- Self-hosted
 icon: adguard-home.png
 mark: AG
 repository: https://github.com/AdguardTeam/AdGuardHome

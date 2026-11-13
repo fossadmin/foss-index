@@ -21,6 +21,8 @@ screenshot:
   sourceUrl: https://github.com/actualbudget/actual/blob/3519dcb7f6e9b12035a4b2f36b0a073023d6e673/packages/desktop-client/public/screenshot_wide.png
   license: MIT
   captionNote: "Project-published demo image, not our install. Screenshot version not recorded."
+tags:
+- Self-hosted
 ---
 
 Actual uses envelope budgeting: give money a job, track transactions and see

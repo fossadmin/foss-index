@@ -2,6 +2,8 @@
 title: Audiobookshelf
 description: Self-hosted audiobook and podcast server with web, Android, and iOS apps and per-device progress.
 category: Media
+tags:
+- Self-hosted
 icon: audiobookshelf.svg
 mark: AB
 repository: https://github.com/advplyr/audiobookshelf

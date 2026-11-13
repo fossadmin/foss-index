@@ -2,6 +2,8 @@
 title: Nextcloud
 description: File sync and sharing plus calendars, contacts, mail, chat and office documents in one self-hosted hub.
 category: Collaboration
+tags:
+- Self-hosted
 icon: nextcloud.svg
 mark: NC
 repository: https://github.com/nextcloud/server

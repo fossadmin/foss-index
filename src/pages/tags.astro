@@ -1,0 +1,24 @@
+---
+import CatalogLayout from '../layouts/CatalogLayout.astro';
+import { catalog } from '../lib/catalog';
+const { tags } = await catalog();
+const base = import.meta.env.BASE_URL;
+---
+<CatalogLayout title="Browse tags" description="Every tag in the FOSS Index, with the number of tools that carry it." active="tags">
+  <article class="detail">
+    <header class="detail-head">
+      <p class="eyebrow">The directory / Browse tags</p>
+      <h1>Browse tags</h1>
+      <p class="lede">Every tag in the directory and how many tools carry it. Tags cut across the sidebar categories - "Self-hosted" collects the tools you can run on your own server - required for some, an option for others - wherever they are filed.</p>
+    </header>
+    <ul class="tag-index">
+      {tags.map(tag => <li><a href={`${base}tag/${tag.slug}/`}>{tag.name}</a><span class="count">{tag.count} {tag.count === 1 ? 'tool' : 'tools'}</span></li>)}
+    </ul>
+  </article>
+</CatalogLayout>
+
+<style>
+  .tag-index { list-style: none; padding: 0; margin: 1.5rem 0; display: grid; gap: 0.35rem; }
+  .tag-index li { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; border-bottom: 1px solid var(--line, #c9c5b6); padding: 0.4rem 0; }
+  .tag-index .count { opacity: 0.7; font-size: 0.84rem; white-space: nowrap; }
+</style>

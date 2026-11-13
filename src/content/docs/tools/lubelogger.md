@@ -2,6 +2,8 @@
 title: LubeLogger
 description: Vehicle maintenance records and fuel-mileage tracking for your household.
 category: Home
+tags:
+- Self-hosted
 icon: lubelogger.png
 mark: LL
 repository: https://github.com/hargata/lubelog

@@ -10,7 +10,10 @@
     "preview": "astro preview",
     "update-releases": "node scripts/update-releases.js",
     "test:releases": "node --test scripts/update-releases.test.js",
-    "test:setup-prompts": "node --test scripts/setup-prompt.test.js"
+    "test:setup-prompts": "node --test scripts/setup-prompt.test.js",
+    "test": "node --test scripts/*.test.*",
+    "prebuild": "npm test",
+    "postbuild": "node scripts/verify-rendered.mjs"
   },
   "dependencies": {
     "astro": "^7.4.1",

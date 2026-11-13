@@ -16,6 +16,8 @@ screenshot:
   credit: "the Penpot website"
   sourceUrl: https://penpot.app/
   captionNote: "Image published on the Penpot home page, showing the app with a sample design project. The page states no reuse terms."
+tags:
+- Self-hosted
 ---
 
 Penpot is a browser-based design tool for interfaces and prototypes. Designers and developers work in the same files, and the project documents how to host it yourself.

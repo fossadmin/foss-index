@@ -23,6 +23,8 @@ screenshot:
   version: "3.7.22"
   captionNote: "The official 3.7.22 AppImage on first run, showing the built-in welcome notes; the first-run notice bar at the bottom is cropped out."
 managedHosting: false
+tags:
+- Self-hosted
 ---
 
 Joplin is a privacy-focused note-taking app for Windows, macOS, Linux and mobile, with sync to a service you choose.

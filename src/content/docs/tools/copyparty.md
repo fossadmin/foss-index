@@ -2,6 +2,8 @@
 title: Copyparty
 description: Portable single-file file server with a web UI - uploads, downloads, search, media players and sharing over HTTP, WebDAV, FTP, SFTP and SMB.
 category: File Sync
+tags:
+- Self-hosted
 icon: copyparty.svg
 iconLink: https://github.com/9001/copyparty
 mark: CY

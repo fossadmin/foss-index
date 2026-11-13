@@ -2,6 +2,8 @@
 title: Home Assistant
 description: Connect devices and automate your home through one locally controlled hub.
 category: Home automation
+tags:
+- Self-hosted
 icon: home-assistant.png
 mark: HA
 repository: https://github.com/home-assistant/core

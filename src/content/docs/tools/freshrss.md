@@ -2,6 +2,8 @@
 title: "FreshRSS"
 description: "Self-hosted RSS feed aggregator."
 category: Reading
+tags:
+- Self-hosted
 icon: freshrss.svg
 mark: FR
 repository: https://github.com/FreshRSS/FreshRSS

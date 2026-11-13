@@ -2,6 +2,8 @@
 title: Homepage
 description: A fast, self-hosted start page for your services, with live widgets for over a hundred apps.
 category: Dashboard
+tags:
+- Self-hosted
 icon: homepage.png
 mark: HP
 repository: https://github.com/gethomepage/homepage

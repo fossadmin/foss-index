@@ -38,7 +38,7 @@ export async function catalog() {
         ...entry,
         tags: tagsFor(entry.data),
         broadCategory: broadCategory(entry.data.category!),
-        platformRecord: (platformSupport as Record<string, {checkedOn:string; note:string; platforms:{name:string; kind:string; url:string}[]}>)[entry.id],
+        platformRecord: (platformSupport as Record<string, {checkedOn:string; note:string; details?:string; platforms?:{name:string; kind:string; url:string}[]; server?:{label:string; platforms:{name:string; kind:string; url:string}[]}; clients?:{name:string; kind:string; url:string}[]; selfHost?:{label:string; url:string}}>)[entry.id],
         href: `${import.meta.env.BASE_URL}${entry.id}/`,
         release,
         license: release?.license ?? entry.data.license,
@@ -60,6 +60,7 @@ export async function catalog() {
   // New categories need a deliberate placement instead of disappearing from Browse.
   tools.forEach((tool) => browseSlugForCategory(tool.data.category!));
   const tags = [...new Set(tools.flatMap(tool => tool.tags))].sort().map(name => ({ name, slug: slugify(name), count: tools.filter(tool => tool.tags.includes(name)).length }));
-  const platforms = [...new Set(tools.flatMap(tool => tool.platformRecord?.platforms.map(row => row.name) ?? []))].sort().map(name => ({ name, slug: slugify(name), count: tools.filter(tool => tool.platformRecord?.platforms.some(row => row.name === name)).length }));
+  const toolPlatforms = (tool: (typeof tools)[number]) => [...(tool.platformRecord?.platforms ?? []), ...(tool.platformRecord?.server?.platforms ?? []), ...(tool.platformRecord?.clients ?? [])];
+  const platforms = [...new Set(tools.flatMap(tool => toolPlatforms(tool).map(row => row.name)))].sort().map(name => ({ name, slug: slugify(name), count: tools.filter(tool => toolPlatforms(tool).some(row => row.name === name)).length }));
   return { tools, categories, groups, tags, platforms };
 }

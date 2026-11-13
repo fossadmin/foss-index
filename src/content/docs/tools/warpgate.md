@@ -2,6 +2,8 @@
 title: Warpgate
 description: Self-hosted smart bastion for SSH, HTTPS, MySQL and PostgreSQL - record sessions and stop handing out target credentials.
 category: Security
+tags:
+- Self-hosted
 icon: warpgate.svg
 iconLink: https://warpgate.null.page/
 mark: WG

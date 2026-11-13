@@ -4,6 +4,8 @@ title: privacyIDEA
 description: Self-hosted multi-factor authentication server for managing tokens and
   authentication policies.
 category: Infrastructure
+tags:
+- Self-hosted
 mark: PI
 repository: https://github.com/privacyidea/privacyidea
 license: AGPL-3.0

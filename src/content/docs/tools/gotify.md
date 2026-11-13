@@ -2,6 +2,8 @@
 title: Gotify
 description: A private notification server for alerts from your own scripts and services.
 category: Notifications
+tags:
+- Self-hosted
 icon: gotify.png
 mark: GO
 repository: https://github.com/gotify/server

@@ -2,6 +2,8 @@
 title: Uptime Kuma
 description: Self-hosted uptime monitoring and status pages, with alerts when a service stops responding.
 category: Monitoring
+tags:
+- Self-hosted
 icon: uptime-kuma.svg
 mark: UK
 repository: https://github.com/louislam/uptime-kuma

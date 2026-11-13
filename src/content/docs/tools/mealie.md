@@ -2,6 +2,8 @@
 title: Mealie
 description: Self-hosted recipe manager and meal planner - import recipes from a URL, organize them, plan the week and build shopping lists.
 category: Home
+tags:
+- Self-hosted
 icon: mealie.png
 iconLink: https://mealie.io/
 mark: ME

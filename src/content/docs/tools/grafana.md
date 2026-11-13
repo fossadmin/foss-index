@@ -2,6 +2,8 @@
 title: Grafana
 description: Dashboards and alerts for metrics, logs and traces from your own data sources.
 category: Monitoring
+tags:
+- Self-hosted
 icon: grafana.svg
 mark: GR
 repository: https://github.com/grafana/grafana

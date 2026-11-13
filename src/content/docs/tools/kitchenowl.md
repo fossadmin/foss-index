@@ -2,6 +2,8 @@
 title: KitchenOwl
 description: Shared grocery lists, recipes and meal planning for a household.
 category: Home
+tags:
+- Self-hosted
 icon: kitchenowl.svg
 mark: KO
 repository: https://github.com/TomBursch/kitchenowl

@@ -6,8 +6,6 @@ icon: drawio-desktop.svg
 mark: DW
 repository: https://github.com/jgraph/drawio-desktop
 license: GPL-3.0
-funding:
-  githubSponsors: https://github.com/sponsors/jgraph
 managedHosting: false
 screenshot:
   src: drawio-desktop.webp

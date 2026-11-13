@@ -16,5 +16,6 @@ export function broadCategory(category) {
   return group.name;
 }
 export function platformSearch(record) {
-  return (record?.platforms ?? []).flatMap(row => [row.name, row.kind, row.name === 'iOS' ? 'iPhone' : row.name === 'macOS' ? 'Mac' : '']).join(' ');
+  const rows = [...(record?.platforms ?? []), ...(record?.server?.platforms ?? []), ...(record?.clients ?? [])];
+  return rows.flatMap(row => [row.name, row.kind, row.name === 'iOS' ? 'iPhone' : row.name === 'macOS' ? 'Mac' : '']).join(' ');
 }

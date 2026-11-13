@@ -2,6 +2,8 @@
 title: SilverBullet
 description: A programmable Markdown knowledge base backed by files you can keep and move.
 category: Notes
+tags:
+- Self-hosted
 icon: silverbullet.png
 mark: SB
 repository: https://github.com/silverbulletmd/silverbullet

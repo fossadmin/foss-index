@@ -2,6 +2,8 @@
 title: Syncthing
 description: Continuous file synchronization between your devices, with no cloud copy in the middle.
 category: File Sync
+tags:
+- Self-hosted
 icon: syncthing.svg
 mark: SY
 repository: https://github.com/syncthing/syncthing

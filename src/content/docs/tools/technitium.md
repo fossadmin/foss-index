@@ -2,6 +2,8 @@
 title: Technitium DNS Server
 description: Self-hosted recursive DNS server with ad blocking, DNS-over-HTTPS and DNS-over-TLS, a web console and clustering support.
 category: Infrastructure
+tags:
+- Self-hosted
 icon: technitium.png
 iconLink: https://technitium.com/dns/
 mark: TE

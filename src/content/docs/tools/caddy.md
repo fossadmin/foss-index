@@ -2,6 +2,8 @@
 title: Caddy
 description: Fast, extensible web server with automatic HTTPS. No manual certificate handling.
 category: Infrastructure
+tags:
+- Self-hosted
 icon: caddy.png
 mark: CD
 repository: https://github.com/caddyserver/caddy

@@ -2,6 +2,8 @@
 title: Ollama
 description: Run large language models locally with one command - a CLI and local API for downloading and serving open-weight models.
 category: Development
+tags:
+- Self-hosted
 icon: ollama.png
 iconLink: https://ollama.com/
 mark: OL

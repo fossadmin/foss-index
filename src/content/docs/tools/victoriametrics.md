@@ -4,6 +4,8 @@ title: VictoriaMetrics Community
 description: Open-source time-series database and monitoring backend, with a built-in
   query UI.
 category: Infrastructure
+tags:
+- Self-hosted
 mark: VM
 repository: https://github.com/VictoriaMetrics/VictoriaMetrics
 license: Apache-2.0

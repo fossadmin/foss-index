@@ -2,6 +2,8 @@
 title: Beszel
 description: A lightweight hub and agent for server metrics, containers and resource alerts.
 category: Monitoring
+tags:
+- Self-hosted
 icon: beszel.svg
 mark: BE
 repository: https://github.com/henrygd/beszel

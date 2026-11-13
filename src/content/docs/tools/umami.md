@@ -2,6 +2,8 @@
 title: Umami
 description: Simple, privacy-first web analytics you can self-host. No cookies, no personal data collection.
 category: Analytics
+tags:
+- Self-hosted
 icon: umami.svg
 iconDark: umami-dark.svg
 mark: UM

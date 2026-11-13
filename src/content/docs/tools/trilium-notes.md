@@ -20,6 +20,8 @@ screenshot:
   sourceUrl: https://github.com/TriliumNext/Trilium/blob/849f6042766c23b2804716f3da80aebb422ea242/apps/website/public/screenshot_desktop_linux_light.webp
   license: AGPL-3.0
   captionNote: "Project-published demo image, not our install. Screenshot version not recorded."
+tags:
+- Self-hosted
 ---
 
 Trilium Notes organizes a large personal knowledge base as a tree of rich-text

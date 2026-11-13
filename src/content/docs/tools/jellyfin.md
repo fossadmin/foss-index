@@ -2,6 +2,8 @@
 title: Jellyfin
 description: The free software media system. Stream your own movies, shows, and music to any device.
 category: Media
+tags:
+- Self-hosted
 icon: jellyfin.svg
 mark: JF
 repository: https://github.com/jellyfin/jellyfin

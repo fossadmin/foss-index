@@ -304,6 +304,142 @@ main {
 .catalog-heading {
   margin-bottom: 34px;
 }
+.tour-line {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+.tour-open {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font: 10px var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: var(--card);
+  color: var(--moss);
+  cursor: pointer;
+}
+.tour-open:hover {
+  color: var(--rust);
+  border-color: var(--moss);
+}
+.tour-open svg {
+  width: 13px;
+  height: 13px;
+  flex: none;
+}
+.tour-note {
+  font-size: 12px;
+  color: var(--moss);
+  opacity: 0.8;
+}
+.tour-modal {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--card);
+  color: inherit;
+  padding: 0;
+  width: min(920px, calc(100vw - 32px));
+}
+.tour-modal::backdrop {
+  background: rgba(20, 20, 16, 0.55);
+}
+.tour-modal .tour-bar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--line);
+}
+.tour-modal .tour-title {
+  margin: 0;
+  font: 10px var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--moss);
+  flex: 1;
+}
+.tour-modal .tour-share {
+  font-size: 12px;
+  color: var(--moss);
+  text-decoration: none;
+}
+.tour-modal .tour-share:hover {
+  color: var(--rust);
+}
+.tour-modal .tour-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: transparent;
+  color: var(--moss);
+  cursor: pointer;
+}
+.tour-modal .tour-close:hover {
+  color: var(--rust);
+  border-color: var(--moss);
+}
+.tour-modal video {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: calc(100dvh - 150px);
+  margin: 0 auto;
+  background: #000;
+}
+.tour-modal:has(video[src*="tour-mobile"]) {
+  width: auto;
+  max-width: calc(100vw - 32px);
+}
+.tour-modal .tour-share {
+  white-space: nowrap;
+}
+@media (max-width: 650px) {
+  .tour-modal .tour-title {
+    display: none;
+  }
+  .tour-modal .tour-bar {
+    gap: 8px;
+    padding: 8px 10px;
+  }
+  .tour-modal .tour-cut button {
+    padding: 6px 8px;
+  }
+}
+.tour-cut {
+  display: inline-flex;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  overflow: hidden;
+  background: var(--card);
+}
+.tour-cut button {
+  font: 10px var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 10px;
+  border: 0;
+  background: transparent;
+  color: var(--moss);
+  cursor: pointer;
+}
+.tour-cut button + button {
+  border-left: 1px solid var(--line);
+}
+.tour-cut button[aria-pressed="true"] {
+  background: var(--tint);
+  color: var(--olive);
+}
 .catalog-heading .eyebrow {
   margin-bottom: 17px;
 }

@@ -308,7 +308,7 @@
   "checkedOn": "November 12, 2026",
   "fundingSource": {
    "label": "project's recorded funding route",
-   "href": "https://github.com/sponsors/blais"
+   "href": "https://www.paypal.com/paypalme/misislavski"
   },
   "routes": [
    {
@@ -387,11 +387,7 @@
   ]
  },
  "tools/drawio-desktop": {
-  "checkedOn": "November 12, 2026",
-  "fundingSource": {
-   "label": "project's recorded funding route",
-   "href": "https://github.com/sponsors/jgraph"
-  }
+  "checkedOn": "November 12, 2026"
  },
  "tools/flameshot": {
   "checkedOn": "November 12, 2026",

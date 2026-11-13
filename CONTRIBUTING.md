@@ -17,10 +17,31 @@ screenshot of what looks wrong helps.
 
 ## Work on the site
 
-The README covers running it locally, adding a listing and how the release
-and license data is checked. Keep changes small and reviewable, and do not
-add tracking, accounts or third-party scripts: those are deliberate absences,
-not gaps.
+The README covers running it locally and how the release and license data is
+checked. Keep changes small and reviewable, and do not add tracking, accounts
+or third-party scripts: those are deliberate absences, not gaps.
+
+## Adding a listing
+
+Start from `templates/new-listing.md`: it is the annotated skeleton every
+listing follows, with the required frontmatter, the section order (Quick
+start with method tabs, Docker first and NixOS last, then First steps) and
+the checklist for the four data records each listing needs in `src/data/`.
+
+Two guards enforce the contract, and both are wired into `npm run build`,
+which fails if either one does:
+
+- `scripts/listing-structure.test.mjs` (runs before the build) fails when a
+  listing is missing a frontmatter field, an icon or screenshot file, one of
+  the four data records, a required section, or when sections or method tabs
+  are out of order.
+- `scripts/verify-rendered.mjs` (runs after the build) checks the built
+  pages: the release block, platform-support section, decision brief,
+  support panel, setup prompts and tag links are present and in the right
+  order on all 100 listings, matching their data records.
+
+Run `npm run build` before proposing a listing; a green build means both
+guards passed.
 
 ## Images and marks
 

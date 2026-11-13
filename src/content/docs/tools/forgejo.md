@@ -2,6 +2,8 @@
 title: "Forgejo"
 description: "Self-hosted software forge for Git repositories, issues and pull requests."
 category: Development
+tags:
+- Self-hosted
 icon: forgejo.svg
 mark: FG
 repository: https://codeberg.org/forgejo/forgejo
