@@ -19,7 +19,7 @@ const base = import.meta.env.BASE_URL;
     </header>
     <div class="tour-page-video">
       <video controls preload="none" playsinline data-tour-video poster={`${base}media/tour-poster.jpg`} src={`${base}media/tour.mp4`} data-src-mobile={`${base}media/tour-mobile.mp4`} data-src-desktop={`${base}media/tour.mp4`} data-poster-mobile={`${base}media/tour-poster-mobile.jpg`} data-poster-desktop={`${base}media/tour-poster.jpg`}>
-        <track kind="captions" srclang="en" label="English" src={`${base}media/tour.vtt`} default />
+        <track kind="captions" srclang="en" label="English" src={`${base}media/tour.vtt`} />
       </video>
       <div class="tour-cut tour-cut-page" role="group" aria-label="Video format"><button type="button" data-tour-cut="mobile" aria-pressed="false">Mobile</button><button type="button" data-tour-cut="desktop" aria-pressed="true">Desktop</button></div>
     </div>

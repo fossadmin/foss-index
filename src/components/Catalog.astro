@@ -25,7 +25,7 @@ const active = selectedGroup?.slug ?? (selectedCategory ? browseSlugForCategory(
   {!selected && <dialog class="tour-modal" data-tour-modal aria-label="FOSS Index tour video">
     <div class="tour-bar"><p class="tour-title">FOSS Index tour</p><div class="tour-cut" role="group" aria-label="Video format"><button type="button" data-tour-cut="mobile" aria-pressed="false">Mobile</button><button type="button" data-tour-cut="desktop" aria-pressed="true">Desktop</button></div><a class="tour-share" href={`${import.meta.env.BASE_URL}tour/`}>Shareable page <span aria-hidden="true">↗</span></a><button class="tour-close" type="button" data-tour-close aria-label="Close the tour video"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button></div>
     <video controls preload="none" playsinline data-tour-video poster={`${import.meta.env.BASE_URL}media/tour-poster.jpg`} src={`${import.meta.env.BASE_URL}media/tour.mp4`} data-src-mobile={`${import.meta.env.BASE_URL}media/tour-mobile.mp4`} data-src-desktop={`${import.meta.env.BASE_URL}media/tour.mp4`} data-poster-mobile={`${import.meta.env.BASE_URL}media/tour-poster-mobile.jpg`} data-poster-desktop={`${import.meta.env.BASE_URL}media/tour-poster.jpg`}>
-      <track kind="captions" srclang="en" label="English" src={`${import.meta.env.BASE_URL}media/tour.vtt`} default />
+      <track kind="captions" srclang="en" label="English" src={`${import.meta.env.BASE_URL}media/tour.vtt`} />
     </video>
   </dialog>}
   <section aria-label="Tools" data-catalog>
