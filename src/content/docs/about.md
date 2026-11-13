@@ -81,9 +81,24 @@ managed hosting is available.
 
 ## What about privacy here?
 
-No analytics, no external scripts, no accounts. The bookmark feature
-keeps your shortlist in this browser's local storage only; nothing is
-sent anywhere.
+No accounts. The bookmark feature keeps your shortlist in this browser's
+local storage only; nothing is sent anywhere from it.
+
+We do run minimal, cookie-free analytics (hosted [Umami](https://umami.is))
+to count visits in aggregate, mainly so potential sponsors can see the
+index is used. For each page view it records the page address with query
+strings and fragments stripped, the referring site stripped the same way,
+browser, operating system, device type, screen size, language, and an
+approximate location (country, region or city derived from your IP
+address; the IP itself is not stored in the analytics records). An
+anonymous session ID with a monthly-rotating salt groups page views
+without cookies. If your browser sends Do Not Track, nothing is counted.
+
+It does not follow you across other sites, no advertising or cross-site
+profiles are built, and it never sees your saved tools; those live only in
+your browser. Records are kept for 6 months on Umami's hosted service
+(US region) and are used only as aggregate counts. Nothing is
+sold, and no per-person data is shared.
 
 ## Source code and license
 

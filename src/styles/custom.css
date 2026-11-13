@@ -378,13 +378,9 @@ main {
   text-transform: uppercase;
   color: var(--moss);
   flex: 1;
-}
-.tour-modal .tour-share {
-  font-size: 12px;
-  color: var(--moss);
   text-decoration: none;
 }
-.tour-modal .tour-share:hover {
+.tour-modal .tour-title:hover {
   color: var(--rust);
 }
 .tour-modal .tour-close {
@@ -414,9 +410,6 @@ main {
 .tour-modal:has(video[src*="tour-mobile"]) {
   width: auto;
   max-width: calc(100vw - 32px);
-}
-.tour-modal .tour-share {
-  white-space: nowrap;
 }
 @media (max-width: 650px) {
   .tour-modal .tour-title {
@@ -469,6 +462,10 @@ main {
   line-height: 1.7;
   max-width: 640px;
   margin-top: 18px;
+}
+html:not(.js) .search-row,
+html:not(.js) .view-toggle {
+  display: none;
 }
 .search-row {
   display: flex;

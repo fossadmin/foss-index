@@ -89,11 +89,15 @@ else {
  if (!home.includes('preload="none"')) fails.push('homepage: tour video must not preload');
  if (!home.includes('media/tour.vtt')) fails.push('homepage: captions track missing');
  if (/data-tour-open[^>]*autoplay|autoplay[^>]*data-tour-modal/.test(home)) fails.push('homepage: autoplay attribute found');
- if (!home.includes('href="/tour/"')) fails.push('homepage: modal shareable-page link missing');
+ if (/class="tour-share"/.test(home)) fails.push('homepage: modal shareable-page link present (removed Nov 13 per Chris: share the site, not the video)');
+if (!/tour-title" href="\/tour\/"/.test(home)) fails.push('homepage: modal title link to /tour/ missing');
  if (!home.includes('data-src-mobile="media/tour-mobile.mp4"') && !home.includes('data-src-mobile="/media/tour-mobile.mp4"')) fails.push('homepage: modal mobile cut source missing');
  if (!home.includes('data-src-desktop')) fails.push('homepage: modal desktop cut source missing');
  if (!home.includes('data-poster-mobile="media/tour-poster-mobile.jpg"') && !home.includes('data-poster-mobile="/media/tour-poster-mobile.jpg"')) fails.push('homepage: modal mobile poster missing');
  if (!home.includes('data-tour-cut="mobile"')) fails.push('homepage: modal Mobile/Desktop switch missing');
+if (/class="search-row" hidden/.test(home)) fails.push('homepage: search row must render at first paint (hidden attr reintroduced)');
+if (/data-view-toggle[^>]*hidden/.test(home)) fails.push('homepage: view toggle must render at first paint (hidden attr reintroduced)');
+if ((home.match(/rel="preload"[^>]*font\/woff2/g) || []).length < 3) fails.push('homepage: all three fonts must be preloaded');
 }
 // Detail-card regression pin (Nov 13 wide-desktop report): at 651px and up,
 // the card's icon column must fit the 40px icon plus its 16px inset (56px).
@@ -116,7 +120,44 @@ else {
  if (!tour.includes('data-src-mobile')) fails.push('tour page: mobile cut source missing');
  if (!tour.includes('data-src-desktop')) fails.push('tour page: desktop cut source missing');
  if (!tour.includes('data-tour-cut="mobile"')) fails.push('tour page: Mobile/Desktop switch missing');
+ if (!tour.includes('76 seconds')) fails.push('tour page: lede must name the current 76-second cut');
 }
+
+// Tour media pairing pins (V10, Nov 13): captions and labels must match the
+// current video files, so stale captions or an old label can never ship
+// paired with new cuts.
+const vtt = fs.existsSync(new URL('../dist/media/tour.vtt', import.meta.url)) ? read('dist/media/tour.vtt') : '';
+if (!vtt) fails.push('tour captions file missing from dist');
+else {
+ const saveAt = vtt.indexOf('Save tools for later');
+ const supportAt = vtt.indexOf('Support this project');
+ if (saveAt < 0 || supportAt < 0 || saveAt > supportAt) fails.push('tour captions: Save cue must come before the Support cue (V10 order)');
+}
+const sizes = { 'dist/media/tour.mp4': 4657133, 'dist/media/tour-mobile.mp4': 12287317 };
+for (const [f, want] of Object.entries(sizes)) {
+ try { const got = fs.statSync(new URL('../'+f, import.meta.url)).size; if (got !== want) fails.push(f+': size '+got+' != expected '+want+' (V10 cut) - stale or mismatched media'); }
+ catch { fails.push(f+': missing from dist'); }
+}
+if (!home.includes('76 seconds')) fails.push('homepage: tour note must name the current 76-second cut');
+
+// Analytics pins (Umami integration): the tracker must load on every page
+// with query strings and URL fragments stripped, restricted to the production
+// hostname; the About privacy answer must carry the real disclosure (region,
+// retention) and the footer must link to it.
+const scriptRe = /<script defer src="https:\/\/cloud\.umami\.is\/script\.js" data-website-id="0b53e35a-33df-477d-a489-f81c79aa0277" data-domains="index\.fossadmin\.com" data-exclude-search="true" data-exclude-hash="true" data-do-not-track="true"><\/script>/;
+for (const page of ['dist/index.html', 'dist/about/index.html']) {
+ if (!fs.existsSync(new URL('../'+page, import.meta.url))) { fails.push(page+': missing from dist'); continue; }
+ const html = read(page);
+ if (!scriptRe.test(html)) fails.push(page+': Umami script tag missing or config drifted (website-id, data-domains, exclude-search/hash, do-not-track must stay pinned)');
+}
+const about = fs.existsSync(new URL('../dist/about/index.html', import.meta.url)) ? read('dist/about/index.html') : '';
+if (about) {
+ if (about.includes('No analytics, no external scripts')) fails.push('about page: stale "no analytics" claim contradicts the Umami integration');
+ if (!about.includes('cookie-free analytics')) fails.push('about page: analytics disclosure missing');
+ if (!about.includes('6 months')) fails.push('about page: retention period missing from disclosure');
+ if (!about.includes('US region')) fails.push('about page: data region missing from disclosure');
+}
+if (!home.includes('Minimal, cookie-free analytics')) fails.push('homepage footer: short analytics notice link missing');
 
 const total = Object.keys(support).length;
 if (fails.length) {

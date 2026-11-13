@@ -1,6 +1,8 @@
 ---
 import '../styles/custom.css';
 import interRegular from '../assets/fonts/inter-latin-400-normal.woff2?url';
+import interSemibold from '../assets/fonts/inter-latin-600-normal.woff2?url';
+import loraMedium from '../assets/fonts/lora-latin-500-normal.woff2?url';
 import { catalog } from '../lib/catalog';
 const { groups, tools, tags } = await catalog();
 const { title = 'Discover open source.', description = 'Discover open source. Support the projects.', active = 'all', canonical, ogImage = 'https://index.fossadmin.com/og-image.png', ogImageWidth = '1200', ogImageHeight = '630', ogImageType = 'image/png' } = Astro.props;
@@ -23,6 +25,7 @@ const base = import.meta.env.BASE_URL;
     {canonical && <link rel="canonical" href={canonical} />}
     <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
     <script is:inline>
+      document.documentElement.classList.add('js');
       (function () {
         try {
           var t = localStorage.getItem('theme');
@@ -31,6 +34,8 @@ const base = import.meta.env.BASE_URL;
       })();
     </script>
     <link rel="preload" href={interRegular} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={interSemibold} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={loraMedium} as="font" type="font/woff2" crossorigin />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -67,7 +72,7 @@ const base = import.meta.env.BASE_URL;
           </label>
         </div></header>
         <main id="main" tabindex="-1"><slot /></main>
-        <footer class="page-footer"><span>Choose the tool. Keep control.</span><a href={`${base}funding/`}>Support the people who build it <span aria-hidden="true">↗</span></a></footer>
+        <footer class="page-footer"><span>Choose the tool. Keep control.</span><a href={`${base}funding/`}>Support the people who build it <span aria-hidden="true">↗</span></a><a href={`${base}about/#what-about-privacy-here`}>Minimal, cookie-free analytics</a></footer>
       </div>
     </div>
     <script is:inline>
@@ -163,5 +168,6 @@ const base = import.meta.env.BASE_URL;
         });
       })();
     </script>
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="0b53e35a-33df-477d-a489-f81c79aa0277" data-domains="index.fossadmin.com" data-exclude-search="true" data-exclude-hash="true" data-do-not-track="true"></script>
   </body>
 </html>
