@@ -134,6 +134,23 @@ else {
  if (saveAt < 0 || supportAt < 0 || saveAt > supportAt) fails.push('tour captions: Save cue must come before the Support cue (V10 order)');
 }
 const sizes = { 'dist/media/tour.mp4': 4573900, 'dist/media/tour-mobile.mp4': 12119955 };
+
+// Canonical-domain guard: the public origin is https://index.fossadmin.com
+// everywhere. On CI, CI_PAGES_URL is the gitlab.io Pages domain and must never
+// leak into canonical links or the sitemap (regression: 2026-11-13 deploy
+// 3f57ef2 canonicalized every page to foss-index-d1c2ba.gitlab.io).
+{
+  const home = read('dist/index.html');
+  const canonical = (home.match(/<link rel="canonical" href="([^"]+)"/)||[])[1];
+  if (canonical !== 'https://index.fossadmin.com/') fails.push('homepage canonical must be https://index.fossadmin.com/, got '+canonical);
+  const smPath = new URL('../dist/sitemap-0.xml', import.meta.url);
+  if (!fs.existsSync(smPath)) { fails.push('sitemap-0.xml missing from dist (sitemap integration dropped?)'); }
+  else {
+    const sitemap = fs.readFileSync(smPath, 'utf8');
+    if (sitemap.includes('gitlab.io')) fails.push('sitemap URLs must use index.fossadmin.com, found gitlab.io');
+    if (!sitemap.includes('<loc>https://index.fossadmin.com/</loc>')) fails.push('sitemap must list the custom-domain homepage');
+  }
+}
 for (const [f, want] of Object.entries(sizes)) {
  try { const got = fs.statSync(new URL('../'+f, import.meta.url)).size; if (got !== want) fails.push(f+': size '+got+' != expected '+want+' (V10 cut) - stale or mismatched media'); }
  catch { fails.push(f+': missing from dist'); }
