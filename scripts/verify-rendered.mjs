@@ -120,7 +120,7 @@ else {
  if (!tour.includes('data-src-mobile')) fails.push('tour page: mobile cut source missing');
  if (!tour.includes('data-src-desktop')) fails.push('tour page: desktop cut source missing');
  if (!tour.includes('data-tour-cut="mobile"')) fails.push('tour page: Mobile/Desktop switch missing');
- if (!tour.includes('76 seconds')) fails.push('tour page: lede must name the current 76-second cut');
+ if (!tour.includes('Quick tour around the Index')) fails.push('tour page: lede must open with the current quick-tour phrasing');
 }
 
 // Tour media pairing pins (V10, Nov 13): captions and labels must match the
