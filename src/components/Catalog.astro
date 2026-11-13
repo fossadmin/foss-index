@@ -87,7 +87,7 @@ const active = selectedGroup?.slug ?? (selectedCategory ? browseSlugForCategory(
   if (tourModal && tourOpen) {
     const video = tourModal.querySelector('video');
     const tour = initTourPlayer(tourModal);
-    tourOpen.addEventListener('click', () => { tour?.pickAuto(); tourModal.showModal(); });
+    tourOpen.addEventListener('click', () => { tour?.pickAuto(); tourModal.showModal(); video?.play().catch(() => {}); });
     tourModal.querySelector('[data-tour-close]')?.addEventListener('click', () => tourModal.close());
     tourModal.addEventListener('click', e => { if (e.target === tourModal) tourModal.close(); });
     tourModal.addEventListener('close', () => { video?.pause(); tourOpen.focus(); });

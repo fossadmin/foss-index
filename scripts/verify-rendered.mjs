@@ -95,6 +95,16 @@ else {
  if (!home.includes('data-poster-mobile="media/tour-poster-mobile.jpg"') && !home.includes('data-poster-mobile="/media/tour-poster-mobile.jpg"')) fails.push('homepage: modal mobile poster missing');
  if (!home.includes('data-tour-cut="mobile"')) fails.push('homepage: modal Mobile/Desktop switch missing');
 }
+// Detail-card regression pin (Nov 13 wide-desktop report): at 651px and up,
+// the card's icon column must fit the 40px icon plus its 16px inset (56px).
+// A 40px column let the icon overlap the tool name in detail view.
+const cssHref = (home.match(/href="(\/_astro\/[^"]+\.css)"/)||[])[1];
+if (!cssHref) fails.push('homepage: built stylesheet link missing');
+else {
+ const builtCss = read('dist'+cssHref);
+ if (!/\[data-view="?detail"?\][^{]*\{[^}]*grid-template-columns:56px/.test(builtCss)) fails.push('built css: detail card icon column must be 56px so the icon cannot overlap the tool name');
+}
+
 const tour = fs.existsSync(new URL('../dist/tour/index.html', import.meta.url)) ? read('dist/tour/index.html') : '';
 if (!tour) fails.push('tour page missing from dist');
 else {
