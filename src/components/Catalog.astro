@@ -3,6 +3,7 @@ import platformSupport from '../data/platform-support.json';
 import { platformSearch } from '../lib/taxonomy.mjs';
 import alternativeSearch from '../data/search-alternatives.json';
 import CatalogLayout from '../layouts/CatalogLayout.astro';
+import featuredData from '../data/featured.json';
 import { catalog, browseSlugForCategory, exploreLede } from '../lib/catalog';
 const { category, group, tag, platform } = Astro.props;
 const { tools, categories, groups, tags, platforms } = await catalog();
@@ -14,6 +15,25 @@ const selected = selectedPlatform ?? selectedTag ?? selectedGroup ?? selectedCat
 const toolPlatforms = (t: (typeof tools)[number]) => [...(t.platformRecord?.platforms ?? []), ...(t.platformRecord?.server?.platforms ?? []), ...(t.platformRecord?.clients ?? [])];
 const visible = selectedPlatform ? tools.filter(t => toolPlatforms(t).some(row => row.name === selectedPlatform.name)) : selectedTag ? tools.filter(t => t.tags.includes(selectedTag.name)) : selectedGroup ? tools.filter(t => selectedGroup.categories.includes(t.data.category!)) : selectedCategory ? tools.filter(t => t.data.category === selectedCategory.name) : tools;
 const active = selectedGroup?.slug ?? (selectedCategory ? browseSlugForCategory(selectedCategory.name) : 'all');
+// Featured projects: free editorial picks listed first in the all-tools view,
+// labeled FEATURED on their regular card. SPONSORED is reserved for future paid
+// placements, which always list before FEATURED entries.
+const featuredIds = [...featuredData.picks, featuredData.random];
+for (const id of featuredIds) {
+  if (!tools.some(t => t.id === id)) throw new Error(`featured.json: unknown listing id "${id}"`);
+}
+const featuredRank = new Map(featuredIds.map((id, i) => [id, i]));
+const ordered = !selected ? [...visible].sort((a, b) => (featuredRank.get(a.id) ?? 1e9) - (featuredRank.get(b.id) ?? 1e9)) : visible;
+// Card measurement: this week's featured tools plus the previous week's
+// cohort after it returns to normal positions, compared week over week.
+const previousIds = (featuredData.previous ?? []).filter((id: string) => !featuredRank.has(id));
+const nextIds = (featuredData.next ?? []).filter((id: string) => !featuredRank.has(id));
+for (const id of [...previousIds, ...nextIds]) {
+  if (!tools.some(t => t.id === id)) throw new Error(`featured.json: unknown listing id "${id}"`);
+}
+const cardPlacement = new Map<string, string>(featuredIds.map(id => [id, 'featured']));
+for (const id of [...previousIds, ...nextIds]) cardPlacement.set(id, 'regular');
+const measureAttrs = (id: string) => !selected && cardPlacement.has(id) ? { 'data-card-placement': cardPlacement.get(id) } : {};
 ---
 <CatalogLayout title={selected?.name ?? 'Discover open source.'} active={active}>
   <section class="catalog-heading">
@@ -22,6 +42,34 @@ const active = selectedGroup?.slug ?? (selectedCategory ? browseSlugForCategory(
     <p class="lede">{selectedPlatform ? `Explore listings with checked ${selectedPlatform.name} apps, clients or tools. Check each listing for browser-only, service-host and compatibility limits. Client support does not mean the server runs on that platform.` : selected ? (exploreLede[selected.name] ?? `Explore ${selected.name.toLowerCase()} open-source software.`) : 'Explore open-source software, with setup guides and project-support links.'}</p>
     {!selected && <p class="tour-line"><button class="tour-open" type="button" data-tour-open><svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M10 8.5v7l5.5-3.5z" fill="currentColor"/></svg>New here? Watch the tour</button><span class="tour-note">76 seconds, captions available.</span></p>}
   </section>
+  {!selected && <script is:inline>
+    document.addEventListener('DOMContentLoaded', function () {
+      var cards = document.querySelectorAll('[data-card-placement]');
+      if (!cards.length) return;
+      var viewed = new Set(), timers = new Map();
+      function send(name, el) {
+        if (typeof window.umami === 'undefined' || typeof window.umami.track !== 'function') return;
+        window.umami.track(name, { placement: el.getAttribute('data-card-placement'), tool: el.getAttribute('data-tool-id') });
+      }
+      function clearTimer(el) { var t = timers.get(el); if (t) { clearTimeout(t); timers.delete(el); } }
+      document.addEventListener('visibilitychange', function () { if (document.hidden) { timers.forEach(function (t) { clearTimeout(t); }); timers.clear(); } });
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          var el = entry.target, k = el.getAttribute('data-tool-id');
+          if (viewed.has(k)) { clearTimer(el); return; }
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+            if (timers.has(el)) return;
+            timers.set(el, setTimeout(function () {
+              timers.delete(el);
+              if (document.hidden || viewed.has(k)) return;
+              viewed.add(k); send('card-view', el); io.unobserve(el);
+            }, 1000));
+          } else { clearTimer(el); }
+        });
+      }, { threshold: [0, 0.5] });
+      cards.forEach(function (el) { io.observe(el); });
+    });
+  </script>}
   {!selected && <dialog class="tour-modal" data-tour-modal aria-label="FOSS Index tour video">
     <div class="tour-bar"><a class="tour-title" href={`${import.meta.env.BASE_URL}tour/`}>FOSS Index tour</a><div class="tour-cut" role="group" aria-label="Video format"><button type="button" data-tour-cut="mobile" aria-pressed="false">Mobile</button><button type="button" data-tour-cut="desktop" aria-pressed="true">Desktop</button></div><button class="tour-close" type="button" data-tour-close aria-label="Close the tour video"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button></div>
     <video controls preload="none" playsinline data-tour-video poster={`${import.meta.env.BASE_URL}media/tour-poster.jpg`} src={`${import.meta.env.BASE_URL}media/tour.mp4`} data-src-mobile={`${import.meta.env.BASE_URL}media/tour-mobile.mp4`} data-src-desktop={`${import.meta.env.BASE_URL}media/tour.mp4`} data-poster-mobile={`${import.meta.env.BASE_URL}media/tour-poster-mobile.jpg`} data-poster-desktop={`${import.meta.env.BASE_URL}media/tour-poster.jpg`}>
@@ -36,8 +84,8 @@ const active = selectedGroup?.slug ?? (selectedCategory ? browseSlugForCategory(
     <p class="privacy-note" hidden data-alternative-note role="status" aria-live="polite"></p>
     <div class="list-heading"><h2 data-list-heading>{selected?.name ?? 'All tools'}</h2><div class="list-tools"><div class="view-toggle" role="group" aria-label="Listing layout" data-view-toggle><button type="button" data-view-option="compact" aria-pressed="true"><svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>Compact</button><button type="button" data-view-option="detail" aria-pressed="false"><svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="13" y="4" width="7" height="7" rx="1" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="4" y="13" width="7" height="7" rx="1" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="13" y="13" width="7" height="7" rx="1" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>Detail</button></div><button class="random-pick" data-random type="button" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="16 3 21 3 21 8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><line x1="4" y1="20" x2="21" y2="3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><polyline points="21 16 21 21 16 21" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><line x1="15" y1="15" x2="21" y2="21" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><line x1="4" y1="4" x2="9" y2="9" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>Surprise me</button><p role="status" aria-live="polite" data-result-count>{visible.length} {visible.length === 1 ? 'tool' : 'tools'}</p></div></div>
     <ul class="tool-list" data-view="compact" data-tool-list>
-      {visible.map((tool, toolIndex) => <li class="tool-item" data-tool data-tool-id={tool.id} data-alternative-names={JSON.stringify((alternativeSearch as Record<string, { names: string[] }>)[tool.id]?.names ?? [])} data-search-text={`${tool.data.title} ${tool.data.description} ${tool.broadCategory} ${tool.tags.join(" ")} ${platformSearch((platformSupport as Record<string, any>)[tool.id])} ${tool.license}`.toLowerCase()}>
-        <a class="tool-row" href={tool.href}>
+      {ordered.map((tool, toolIndex) => <li class="tool-item" data-tool data-tool-id={tool.id} {...measureAttrs(tool.id)} data-alternative-names={JSON.stringify((alternativeSearch as Record<string, { names: string[] }>)[tool.id]?.names ?? [])} data-search-text={`${tool.data.title} ${tool.data.description} ${tool.broadCategory} ${tool.tags.join(" ")} ${platformSearch((platformSupport as Record<string, any>)[tool.id])} ${tool.license}`.toLowerCase()}>
+        <a class="tool-row" href={tool.href} data-umami-event="card-click" data-umami-event-tool={tool.id} data-umami-event-placement={featuredRank.has(tool.id) ? 'featured' : 'regular'}>
           <span class:list={["tool-shot", {"no-shot": !tool.data.screenshot}]} aria-hidden="true">{tool.data.screenshot ? <img src={`${import.meta.env.BASE_URL}screenshots/${tool.data.screenshot.src}`} alt="" width={tool.data.screenshot.width} height={tool.data.screenshot.height} loading="lazy" decoding="async" /> : <span class="no-shot-text">No screenshot yet</span>}</span>
           {tool.data.icon && !tool.data.iconLink ? (
             <span class="tool-mark tool-icon" aria-hidden="true">
@@ -47,11 +95,11 @@ const active = selectedGroup?.slug ?? (selectedCategory ? browseSlugForCategory(
           ) : (
             <span class:list={["tool-mark", {"linked-icon-placeholder": tool.data.iconLink}]} aria-hidden="true">{tool.data.iconLink ? "" : tool.data.mark}</span>
           )}
-          <span class="tool-copy"><span class="tool-name">{tool.data.title}</span><span class="tool-purpose">{tool.data.description}</span><span class="tool-category">{tool.broadCategory}{tool.tags.some(tag => tag !== tool.broadCategory) && <> · {tool.tags.filter(tag => tag !== tool.broadCategory).join(", ")}</>}</span></span>
+          <span class="tool-copy"><span class="tool-name">{tool.data.title}{featuredRank.has(tool.id) && <span class="tool-flag">Featured</span>}</span><span class="tool-purpose">{tool.data.description}</span><span class="tool-category">{tool.broadCategory}{tool.tags.some(tag => tag !== tool.broadCategory) && <> · {tool.tags.filter(tag => tag !== tool.broadCategory).join(", ")}</>}</span></span>
           <span class="tool-meta"><span class="license">{tool.license}</span><span class="version">{tool.release?.version ?? 'Release not recorded'}{tool.release?.date && <span class="version-date" title="Recorded release date"> · {tool.release.date.slice(0, 10)}</span>}</span></span>
           <span class="row-arrow" aria-hidden="true">↗</span>
         </a>
-        {tool.data.iconLink && tool.data.icon && <a class="tool-mark tool-icon project-icon-link" href={tool.data.iconLink} aria-label={`${tool.data.title} official project website`}><img src={`${import.meta.env.BASE_URL}icons/${tool.data.icon}`} alt="" width="40" height="40" loading="lazy" decoding="async" /></a>}
+        {tool.data.iconLink && tool.data.icon && <a class="tool-mark tool-icon project-icon-link" href={tool.data.iconLink} aria-label={`${tool.data.title} official project website`} data-umami-event="outbound-click" data-umami-event-link="website" data-umami-event-tool={tool.id}><img src={`${import.meta.env.BASE_URL}icons/${tool.data.icon}`} alt="" width="40" height="40" loading="lazy" decoding="async" /></a>}
         <a class="catalog-support" href={`${tool.href}#project-support`} aria-label={`Support ${tool.data.title}`}>Support project <span aria-hidden="true">↗</span></a>
         <button class="save-toggle" data-save-toggle data-tool-id={tool.id} type="button" hidden aria-pressed="false" aria-label={`Save ${tool.data.title}`}>
           <svg class="bookmark" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M6.5 3.5h11V21L12 16.4 6.5 21z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>

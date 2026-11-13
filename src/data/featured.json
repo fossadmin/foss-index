@@ -1,0 +1,11 @@
+{
+  "week": "2026-W46",
+  "picks": [
+    "tools/beszel",
+    "tools/actual-budget"
+  ],
+  "random": "tools/jellyfin",
+  "draw": "Deterministic weekly draw: sha256('foss-index-featured:'+week) over eligible listing ids (all tools minus that week's picks), first 8 hex digits modulo count, sorted id list. Re-run each week, excluding recent features.",
+  "previous": [],
+  "next": []
+}

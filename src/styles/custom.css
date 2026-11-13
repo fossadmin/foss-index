@@ -215,6 +215,14 @@ input {
 :root[data-theme="dark"] .theme-switcher .moon {
   opacity: 1;
 }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-switcher .sun {
+    opacity: 0;
+  }
+  :root:not([data-theme="light"]) .theme-switcher .moon {
+    opacity: 1;
+  }
+}
 .theme-switcher input:focus-visible + label {
   outline: 3px solid var(--rust);
   outline-offset: 2px;
@@ -1198,7 +1206,7 @@ html:not(.js) .view-toggle {
  .rail { position: sticky; top: 0; z-index: 3; padding: 16px 20px; min-height:76px; }
  .rail .brand { min-height:44px; max-width:calc(100% - 108px); }
  .rail-menu { position:absolute; top:16px; right:12px; width:44px; height:44px; min-height:44px; padding:10px; margin:0; border:0; justify-content:center; }
- .topbar { position:absolute; top:16px; right:68px; width:44px; height:44px; padding:0; border:0; z-index:4; /* above the sticky .rail (z-index:3) so the theme toggle stays visible and tappable */ }
+ .topbar { position:fixed; top:16px; right:68px; width:44px; height:44px; padding:0; border:0; background:transparent; z-index:4; /* above the sticky .rail (z-index:3) so the theme toggle stays visible and tappable */ }
  .topbar .breadcrumb,.topbar .edition { display:none; }
  .topbar .theme-switcher { margin:0 auto; }
  .rail-collapse { padding-top:8px; }
@@ -1465,8 +1473,12 @@ html:not(.js) .view-toggle {
      view-toggle script places the overlay with measured coordinates. Hidden
      until placed so it never lands on the Support link. */
 }
-/* Phones: one column, rows as before. Detail adds the screenshot. */
+/* Phones: one column, rows as before. Compact hides the tag line, matching
+   desktop Compact; Detail keeps it and adds the screenshot. */
 @media (max-width: 650px) {
+  .tool-list[data-view="compact"] .tool-category {
+    display: none;
+  }
   .tool-list[data-view="detail"] .tool-shot {
     display: block;
     grid-column: 1 / -1;
@@ -1588,4 +1600,17 @@ html:not(.js) .view-toggle {
   .tool-list[data-view] .save-toggle { grid-column: 2; grid-row: 1; border-bottom: 0; }
   .tool-list[data-view] .catalog-support { grid-row: 2; margin-bottom: 16px; }
   .tool-list[data-view] .tool-item { border-bottom: 1px solid var(--line); }
+}
+
+/* Featured projects: free editorial picks listed first in the all-tools view
+   (preview, 2026-11-13). FEATURED is the free label; SPONSORED is reserved for
+   future paid placements, which always list before FEATURED entries. */
+.tool-flag {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--rust);
+  margin-left: 8px;
+  vertical-align: 2px;
 }

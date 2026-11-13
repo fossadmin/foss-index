@@ -133,7 +133,7 @@ else {
  const supportAt = vtt.indexOf('Support this project');
  if (saveAt < 0 || supportAt < 0 || saveAt > supportAt) fails.push('tour captions: Save cue must come before the Support cue (V10 order)');
 }
-const sizes = { 'dist/media/tour.mp4': 4585631, 'dist/media/tour-mobile.mp4': 12268256 };
+const sizes = { 'dist/media/tour.mp4': 4573900, 'dist/media/tour-mobile.mp4': 12119955 };
 for (const [f, want] of Object.entries(sizes)) {
  try { const got = fs.statSync(new URL('../'+f, import.meta.url)).size; if (got !== want) fails.push(f+': size '+got+' != expected '+want+' (V10 cut) - stale or mismatched media'); }
  catch { fails.push(f+': missing from dist'); }
@@ -164,6 +164,50 @@ if (!home.includes('Minimal, cookie-free analytics')) fails.push('homepage foote
 function walkHtml(dir){ const out=[]; for (const e of fs.readdirSync(new URL('../'+dir, import.meta.url), { withFileTypes: true })) { const p = dir+'/'+e.name; if (e.isDirectory()) out.push(...walkHtml(p)); else if (e.name === 'index.html') out.push(p); } return out; }
 for (const page of walkHtml('dist')) {
  if (/no external scripts/i.test(read(page))) fails.push(page+': stale "no analytics / no external scripts" claim contradicts the Umami integration');
+}
+
+// Outbound-click analytics: every tool page's Source-code anchor must be
+// tagged link="project", and every funding-link anchor (the support list
+// renders them as <li><a ...>Label ↗</a></li>, unlike contributing-route
+// anchors, which render </a>:) must be tagged link="support", both with the
+// tool slug - the About privacy note promises exactly this scope.
+for (const page of walkHtml('dist/tools')) {
+ const html = read(page);
+ const src = html.match(/<a class="source-link" href="[^"]*"([^>]*)>/);
+ if (!src || !src[1].includes('data-umami-event="outbound-click"') || !src[1].includes('data-umami-event-link="source"') || !src[1].includes('data-umami-event-tool="')) fails.push(page+': Source code anchor lost its outbound-click event attributes');
+ for (const m of html.matchAll(/<a href="https?:\/\/[^"]*"([^>]*)>[^<]*↗<\/a><\/li>/g)) {
+  if (!m[1].includes('data-umami-event="outbound-click"') || !m[1].includes('data-umami-event-link="support"') || !m[1].includes('data-umami-event-tool="')) fails.push(page+': funding link lost its outbound-click event attributes');
+ }
+}
+for (const page of walkHtml('dist')) {
+ const html = read(page);
+ for (const m of html.matchAll(/<a class="tool-mark tool-icon project-icon-link" href="[^"]*"([^>]*)>/g)) {
+  if (!m[1].includes('data-umami-event="outbound-click"') || !m[1].includes('data-umami-event-link="website"') || !m[1].includes('data-umami-event-tool="')) fails.push(page+': project website icon link lost its outbound-click event attributes');
+ }
+}
+
+// Featured-card measurement: the homepage marks exactly the featured.json
+// cohort (this week's featured tools as featured, the previous week's as
+// regular after they return to normal positions), and every directory card
+// row on every page carries card-click attributes - the About privacy note
+// promises exactly this scope.
+{
+ const featured = JSON.parse(read('src/data/featured.json'));
+ const featuredIds = [...featured.picks, featured.random];
+ const previousIds = [...(featured.previous ?? []), ...(featured.next ?? [])].filter(id => !featuredIds.includes(id));
+ const home = read('dist/index.html');
+ const marked = [...home.matchAll(/<li class="tool-item" data-tool data-tool-id="([^"]+)" data-card-placement="(featured|regular)"/g)];
+ const got = pl => marked.filter(m => m[2] === pl).map(m => m[1]).sort().join(',');
+ const want = ids => ids.slice().sort().join(',');
+ if (got('featured') !== want(featuredIds)) fails.push('homepage: measured featured cards ' + (got('featured') || '(none)') + ' != featured.json ' + want(featuredIds));
+ if (got('regular') !== want(previousIds)) fails.push('homepage: measured regular cards ' + (got('regular') || '(none)') + ' != featured.json previous+next ' + (want(previousIds) || '(empty until rotation)'));
+ for (const page of walkHtml('dist')) {
+  const html = read(page);
+  for (const m of html.matchAll(/<a class="tool-row" href="[^"]*"([^>]*)>/g)) {
+   if (!m[1].includes('data-umami-event="card-click"') || !m[1].includes('data-umami-event-tool="') || !m[1].includes('data-umami-event-placement="')) fails.push(page+': tool row lost its card-click event attributes');
+  }
+  if (page !== 'dist/index.html' && html.includes('data-card-placement')) fails.push(page+': card measurement marks leaked off the homepage');
+ }
 }
 
 const total = Object.keys(support).length;

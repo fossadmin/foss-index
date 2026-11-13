@@ -105,6 +105,22 @@ address; the IP itself is not stored in the analytics records). An
 anonymous session ID with a monthly-rotating salt groups page views
 without cookies. If your browser sends Do Not Track, nothing is counted.
 
+It also counts clicks on links that leave the index for a project's
+website, source code page or funding page. Each of those records which
+tool the link was for and the kind of link (website, source code or
+funding), never the destination address, and the same Do Not Track
+rule applies.
+
+It also counts clicks on the directory cards that open a tool's page,
+recording the tool and whether it is currently featured or sponsored.
+For this week's three featured projects, the three chosen for next
+week, and the previous week's three, it also counts when their list
+cards become visible on screen.
+
+We use these counts to understand how people browse the index and
+compare project visibility and clicks before, during and after a
+featured placement. This helps us evaluate future sponsorship options.
+
 It does not follow you across other sites, no advertising or cross-site
 profiles are built, and it never sees your saved tools; those live only in
 your browser. Records are kept for 6 months on Umami's hosted service
