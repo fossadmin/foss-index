@@ -54,9 +54,20 @@ own docs before committing to anything.
 
 ## Do you use AI on this project?
 
-AI assistants do much of the coding, research and writing on this project,
-under our direction. We remain responsible for what we publish, including
-correcting mistakes.
+Yes, and we're glad to say how. The index began as a personal project: a
+way to keep track of the open-source tools we use and the ones we want to
+try, and to make it easier to support those projects when we can. We
+built it for ourselves first, and published it so others can find and
+support open-source projects too.
+
+AI assistants made building it possible. They do much of the coding,
+research and writing, under our direction. The idea was ours, not the
+AI's: it helped bring the vision to life, it didn't come up with it. We
+remain responsible for what we publish, including correcting mistakes.
+
+AI can help you use the index too: every tool page carries a setup
+prompt you can paste into your own AI assistant. It may only be able to
+guide you, so review its suggestions before running anything.
 
 A listing is a starting point, not an audit or a claim that we've
 personally tested the tool. Screenshot captions identify their sources,

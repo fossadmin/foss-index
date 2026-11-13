@@ -133,7 +133,7 @@ else {
  const supportAt = vtt.indexOf('Support this project');
  if (saveAt < 0 || supportAt < 0 || saveAt > supportAt) fails.push('tour captions: Save cue must come before the Support cue (V10 order)');
 }
-const sizes = { 'dist/media/tour.mp4': 4657133, 'dist/media/tour-mobile.mp4': 12287317 };
+const sizes = { 'dist/media/tour.mp4': 4585631, 'dist/media/tour-mobile.mp4': 12268256 };
 for (const [f, want] of Object.entries(sizes)) {
  try { const got = fs.statSync(new URL('../'+f, import.meta.url)).size; if (got !== want) fails.push(f+': size '+got+' != expected '+want+' (V10 cut) - stale or mismatched media'); }
  catch { fails.push(f+': missing from dist'); }
@@ -158,6 +158,13 @@ if (about) {
  if (!about.includes('US region')) fails.push('about page: data region missing from disclosure');
 }
 if (!home.includes('Minimal, cookie-free analytics')) fails.push('homepage footer: short analytics notice link missing');
+
+// The stale pre-analytics claim must appear on NO rendered page, not just
+// About: sweep every generated index.html for its distinctive wording.
+function walkHtml(dir){ const out=[]; for (const e of fs.readdirSync(new URL('../'+dir, import.meta.url), { withFileTypes: true })) { const p = dir+'/'+e.name; if (e.isDirectory()) out.push(...walkHtml(p)); else if (e.name === 'index.html') out.push(p); } return out; }
+for (const page of walkHtml('dist')) {
+ if (/no external scripts/i.test(read(page))) fails.push(page+': stale "no analytics / no external scripts" claim contradicts the Umami integration');
+}
 
 const total = Object.keys(support).length;
 if (fails.length) {
