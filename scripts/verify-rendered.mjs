@@ -227,6 +227,25 @@ for (const page of walkHtml('dist')) {
  }
 }
 
+// Search snippets: taxonomy pages (browse/category/tag/platform) must carry
+// their own meta description, not the homepage tagline, and tag page titles
+// must differ from same-named category pages. Credits pages intentionally
+// share a title because they canonical to /credits/.
+{
+ const DEFAULT_DESC = 'Discover open source. Support the projects.';
+ for (const section of ['dist/browse', 'dist/category', 'dist/tag', 'dist/platform']) {
+  for (const page of walkHtml(section)) {
+   const html = read(page);
+   const m = html.match(/<meta name="description" content="([^"]*)"/);
+   if (!m || m[1] === DEFAULT_DESC) fails.push(page+': taxonomy page lost its own meta description');
+  }
+ }
+ for (const page of walkHtml('dist/tag')) {
+  const t = read(page).match(/<title>([^<]*)<\/title>/);
+  if (!t || !t[1].startsWith('Tools tagged ')) fails.push(page+': tag page title no longer distinct from its category page');
+ }
+}
+
 const total = Object.keys(support).length;
 if (fails.length) {
  console.error('Rendered-layout check: '+fails.length+' failure(s) across '+total+' pages');

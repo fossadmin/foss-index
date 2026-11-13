@@ -15,6 +15,23 @@ const selected = selectedPlatform ?? selectedTag ?? selectedGroup ?? selectedCat
 const toolPlatforms = (t: (typeof tools)[number]) => [...(t.platformRecord?.platforms ?? []), ...(t.platformRecord?.server?.platforms ?? []), ...(t.platformRecord?.clients ?? [])];
 const visible = selectedPlatform ? tools.filter(t => toolPlatforms(t).some(row => row.name === selectedPlatform.name)) : selectedTag ? tools.filter(t => t.tags.includes(selectedTag.name)) : selectedGroup ? tools.filter(t => selectedGroup.categories.includes(t.data.category!)) : selectedCategory ? tools.filter(t => t.data.category === selectedCategory.name) : tools;
 const active = selectedGroup?.slug ?? (selectedCategory ? browseSlugForCategory(selectedCategory.name) : 'all');
+// Search snippets: each taxonomy page describes itself instead of sharing the
+// homepage tagline, and tag pages get titles distinct from same-named
+// category pages. Text mirrors the on-page lede and card facts.
+const pageTitle = selectedTag
+  ? `Tools tagged ${selectedTag.name}`
+  : selectedGroup
+    ? `Browse ${selectedGroup.name}`
+    : (selected?.name ?? 'Discover open source.');
+const pageDescription = selectedPlatform
+  ? `Explore listings with checked ${selectedPlatform.name} apps, clients or tools. Check each listing for browser-only, service-host and compatibility limits.`
+  : selectedTag
+    ? `Open-source tools tagged ${selectedTag.name.toLowerCase()}, with licenses, platform support and project-support links.`
+    : selectedGroup
+      ? `Browse open-source software for ${selectedGroup.name.toLowerCase()}, with licenses, platform support and project-support links.`
+      : selectedCategory
+        ? (exploreLede[selectedCategory.name] ?? `Explore ${selectedCategory.name.toLowerCase()} open-source software, with licenses, platform support and project-support links.`)
+        : `Explore ${tools.length} open-source tools, with setup guides and project-support links.`;
 // Featured projects: free editorial picks listed first in the all-tools view,
 // labeled FEATURED on their regular card. SPONSORED is reserved for future paid
 // placements, which always list before FEATURED entries.
@@ -35,7 +52,7 @@ const cardPlacement = new Map<string, string>(featuredIds.map(id => [id, 'featur
 for (const id of [...previousIds, ...nextIds]) cardPlacement.set(id, 'regular');
 const measureAttrs = (id: string) => !selected && cardPlacement.has(id) ? { 'data-card-placement': cardPlacement.get(id) } : {};
 ---
-<CatalogLayout title={selected?.name ?? 'Discover open source.'} active={active}>
+<CatalogLayout title={pageTitle} description={pageDescription} active={active}>
   <section class="catalog-heading">
     <p class="eyebrow">The directory / {selected?.name ?? 'All tools'}</p>
     <h1>{selected?.name ?? <>Discover open source.<br /><span>Support the projects.</span></>}</h1>
