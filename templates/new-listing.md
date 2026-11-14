@@ -14,6 +14,9 @@ tags:
 - <tag>
 icon: <slug.svg-or-png>        # file must exist in public/icons/
 mark: <Two letters>            # fallback monogram
+# Restricted assets: if the project requires logo permission we do not have,
+# omit BOTH icon and mark - a real icon or nothing, never a substitute - and
+# add the listing to NO_ICON in scripts/listing-structure.test.mjs.
 repository: <https://... official source repo>
 license: <SPDX id, verified against the repo's license file>
 funding:

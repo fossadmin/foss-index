@@ -197,7 +197,7 @@ screenshot is not a production review of it.
 ## joplin.webp
 - Project: Joplin
 - Source: our own capture of the official Joplin 3.7.22 AppImage (laurent22/joplin release v3.7.22), first run, showing the built-in welcome notes
-- Terms: our own capture of the running app; the repository's Assets/LICENSE covers the project's own asset files, not a capture we made ourselves
+- Terms: our own capture of the running app, taken from the official release's first run. The project's asset license restricts its logo and icon files, so the listing shows no icon; our permission request of November 10, 2026 is unanswered.
 - Changes: window captured as-is, the first-run notice bar at the bottom cropped out
 - What it shows: the welcome notebook with the importing/exporting note.
 ## kali-2021-2-xfce.webp

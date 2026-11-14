@@ -47,7 +47,7 @@ export const collections = {
       })
       .superRefine((data, ctx) => {
         if (data.repository)
-          for (const field of ["category", "mark", "license"] as const)
+          for (const field of ["category", "license"] as const)
             if (!data[field])
               ctx.addIssue({
                 code: "custom",

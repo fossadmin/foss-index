@@ -1589,6 +1589,47 @@ html:not(.js) .view-toggle {
   .decision-brief dl > div { grid-template-columns: 1fr; gap: 4px; margin: 18px 0; }
   .decision-brief h2 { font-size: 21px; }
 }
+/* Iconless listings (a restricted mark under an explicit NO_ICON exception in
+   the listing-structure test): no icon slot renders, so the row grid drops the
+   icon column and the copy, meta and Support link use the full width. */
+@media (min-width: 651px) {
+  .tool-list[data-view] .tool-item.no-mark .tool-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .tool-list[data-view] .tool-item.no-mark .tool-meta {
+    grid-column: 1;
+  }
+  .tool-list[data-view="detail"] .tool-item.no-mark .tool-copy {
+    grid-column: 1;
+    margin-left: 16px;
+  }
+}
+@media (max-width: 650px) {
+  .tool-item.no-mark .tool-row {
+    grid-template-columns: minmax(0, 1fr) 12px;
+  }
+  .tool-item.no-mark .tool-meta {
+    grid-column: 1;
+  }
+  .tool-list[data-view="detail"] .tool-item.no-mark .tool-copy {
+    grid-column: 1;
+  }
+  .tool-list[data-view="detail"] .tool-item.no-mark .tool-meta {
+    grid-column: 1;
+  }
+  .tool-list[data-view="detail"] .tool-item.no-mark .row-arrow {
+    grid-column: 2;
+  }
+}
+.tool-list[data-view="compact"] .tool-item.no-mark .catalog-support {
+  margin-left: 0;
+}
+@media (max-width: 650px) {
+  .tool-list[data-view] .tool-item.no-mark .catalog-support {
+    margin-left: 0;
+  }
+}
+
 .tool-list[data-view="compact"] .tool-row { border-bottom: 0; padding-bottom: 10px; }
 .tool-list[data-view="compact"] .tool-item { border-bottom: 1px solid var(--line); }
 .tool-list[data-view="compact"] .catalog-support { margin-left: 54px; margin-bottom: 16px; }

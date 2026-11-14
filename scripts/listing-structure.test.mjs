@@ -9,6 +9,10 @@ const briefs = JSON.parse(read('src/data/decision-briefs.json'));
 const routes = JSON.parse(read('src/data/contribute-routes.json'));
 const prompts = JSON.parse(read('src/data/setup-prompts.json'));
 
+// Restricted-asset exception (explicit, per listing): these projects' logo
+// terms require permission we do not have, so the listing shows NO icon and
+// no monogram - a real icon or nothing, never a substitute.
+const NO_ICON = new Set(['tools/joplin']);
 const LEAD_INS = new Set(['Try it and keep a way out', 'License and what is bundled']);
 const FOLLOW_UPS = new Set(['First steps', 'First use', "Why it's listed", 'Support and contribute']);
 
@@ -20,16 +24,19 @@ test('every listing carries the full section and data contract (templates/new-li
   const front = text.split('---')[1];
 
   // Frontmatter: required fields
-  for (const key of ['title','description','category','repository','license','icon','screenshot'])
+  for (const key of ['title','description','category','repository','license','icon','screenshot']) {
+   if (key === 'icon' && NO_ICON.has(id)) continue;
    assert.match(front, new RegExp('^'+key+':', 'm'), id+' missing frontmatter '+key);
+  }
   assert.match(front, /^repository: https:\/\//m, id+' repository must be an https URL');
   for (const sub of ['src','alt','width','height','credit'])
    assert.match(front, new RegExp('^  '+sub+':', 'm'), id+' screenshot missing '+sub);
   assert.ok(/^  own: true$/m.test(front) || /^  sourceUrl:/m.test(front) || /^  terminal: true$/m.test(front), id+' screenshot needs own:true, sourceUrl or terminal:true');
 
   // Assets on disk
-  const icon = front.match(/^icon: (.+)$/m)[1].trim();
-  assert.ok(fs.existsSync(new URL('../public/icons/'+icon, import.meta.url)), id+' icon file missing: '+icon);
+  const iconM = front.match(/^icon: (.+)$/m);
+  if (NO_ICON.has(id)) assert.ok(!iconM, id+' is in the no-icon exception but sets an icon');
+  else assert.ok(iconM && fs.existsSync(new URL('../public/icons/'+iconM[1].trim(), import.meta.url)), id+' icon file missing: '+(iconM && iconM[1].trim()));
   const shot = front.match(/^  src: (.+)$/m)[1].trim();
   assert.ok(fs.existsSync(new URL('../public/screenshots/'+shot, import.meta.url)), id+' screenshot file missing: '+shot);
 

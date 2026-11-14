@@ -13,7 +13,9 @@ Files ending in `-dark` are shown only in dark mode. Changes made here are
 limited to what each entry lists: resizing PNGs for the web, recoloring
 Umami's monochrome mark so it stays legible on this site's backgrounds,
 and stripping the decorative CSS animation from Parrot's site SVG so the
-mark renders statically. Nothing was redrawn or substituted.
+mark renders statically. Nothing was redrawn or substituted. Where a
+project restricts logo use, the listing shows no icon rather than a
+substitute (currently: Joplin, permission requested and pending).
 
 ## actual-budget.png
 - Project: Actual Budget
@@ -190,11 +192,6 @@ mark renders statically. Nothing was redrawn or substituted.
 - Source: https://github.com/karakeep-app/karakeep/blob/8b2c2bac09ccaf24eea4740c87990887b0a20aec/apps/landing/public/icons/logo-icon.svg and logo-icon-dark.svg
 - Repository license: AGPL-3.0; mark belongs to the project
 - Changes: none; the project ships both variants and the dark one is shown in dark mode
-## joplin.svg
-- Project: Joplin
-- Source: https://github.com/laurent22/joplin/blob/dev/Assets/JoplinIcon.svg
-- License: AGPL-3.0-or-later repository license covering the asset (licenses/laurent22-joplin.txt)
-- Changes: none
 ## kdenlive.svg
 - Project: Kdenlive
 - Source: https://github.com/KDE/kdenlive/blob/19da23183a3990c421ec6892ee6ee4ed284ee071/data/icons/sc-apps-kdenlive.svg
