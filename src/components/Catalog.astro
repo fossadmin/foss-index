@@ -143,7 +143,7 @@ const measureAttrs = (id: string) => !selected && cardPlacement.has(id) ? { 'dat
     <p class="empty-state" hidden data-empty>No tools match that search. Try another name, purpose, or license.</p>
     <p class="empty-state" hidden data-empty-saved>No saved tools yet. Tap the bookmark on any tool to keep it here. Saves live only in this browser: no account, nothing uploaded, and clearing browser data removes them.</p>
     <div class="catalog-note"><span class="eyebrow">A starting point, not a ranking.</span><p>Read the license. Check the release notes. If a project helps you, help it keep going.</p><a href={`${import.meta.env.BASE_URL}about/`}>How this index works <span aria-hidden="true">→</span></a></div>
-    {!selected && <p class="managed-line">Want help setting up any of these tools? <a href="https://fossadmin.com">Ask FOSSadmin ↗</a></p>}
+    {(!selected || selectedGroup || selectedCategory) && <p class="managed-line">Want help setting up any of these tools? <a href="https://fossadmin.com">Ask FOSSadmin ↗</a></p>}
   </section>
 </CatalogLayout>
 <script define:vars={{ toolHrefs: tools.map(t => t.href) }}>
