@@ -333,6 +333,10 @@ main {
   flex-wrap: wrap;
   margin-top: 18px;
 }
+.tour-open[hidden] {
+  display: none;
+}
+
 .tour-open {
   display: inline-flex;
   align-items: center;

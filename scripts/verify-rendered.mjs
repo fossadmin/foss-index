@@ -128,13 +128,19 @@ if (/class="search-row" hidden/.test(home)) fails.push('homepage: search row mus
 if (/data-view-toggle[^>]*hidden/.test(home)) fails.push('homepage: view toggle must render at first paint (hidden attr reintroduced)');
 if ((home.match(/rel="preload"[^>]*font\/woff2/g) || []).length < 3) fails.push('homepage: all three fonts must be preloaded');
 
- // Recently added: permanent button beside "Watch the tour" linking /recent/;
- // the page holds the rolling 7-day window on listing `added` dates.
+ // Recently added: button beside "Watch the tour" linking /recent/, shown only
+ // while at least one listing sits inside the rolling 7-day window (build-time
+ // hidden attr plus browser-side aging via data-latest-added, mirroring /recent/).
+ // The /recent/ page stays reachable either way and holds the same window.
  const RECENT_MS = 7*24*60*60*1000;
  const windowDates = Object.keys(support)
   .map(id => frontmatter(id.replace('tools/', '')).added)
   .filter(d => d && Date.now() - Date.parse(d+'T00:00:00Z') <= RECENT_MS);
  if (!/data-recent-link[^>]*>Recently added/.test(home)) fails.push('homepage: recently-added button missing beside the tour button');
+ if (!home.includes('data-latest-added')) fails.push('homepage: recently-added button must carry data-latest-added for browser-side aging');
+ const recentHidden = /data-recent-link[^>]*\shidden[ >]/.test(home);
+ if (windowDates.length === 0 && !recentHidden) fails.push('homepage: recently-added button must render hidden when the window is empty');
+ if (windowDates.length > 0 && recentHidden) fails.push('homepage: recently-added button must be visible while the window has listings');
  if (home.includes('76 seconds, captions available')) fails.push('homepage: old tour duration note must be gone');
  if (home.includes('data-recent-dismiss') || home.includes('fossindex-recent-seen')) fails.push('homepage: banner/dismiss leftovers must be gone');
  const recentPage = fs.existsSync(new URL('../dist/recent/index.html', import.meta.url)) ? read('dist/recent/index.html') : '';

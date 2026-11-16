@@ -15,6 +15,14 @@ const selected = selectedPlatform ?? selectedTag ?? selectedGroup ?? selectedCat
 const toolPlatforms = (t: (typeof tools)[number]) => [...(t.platformRecord?.platforms ?? []), ...(t.platformRecord?.server?.platforms ?? []), ...(t.platformRecord?.clients ?? [])];
 const visible = selectedPlatform ? tools.filter(t => toolPlatforms(t).some(row => row.name === selectedPlatform.name)) : selectedTag ? tools.filter(t => t.tags.includes(selectedTag.name)) : selectedGroup ? tools.filter(t => selectedGroup.categories.includes(t.data.category!)) : selectedCategory ? tools.filter(t => t.data.category === selectedCategory.name) : tools;
 const active = selectedGroup?.slug ?? (selectedCategory ? browseSlugForCategory(selectedCategory.name) : 'all');
+// Recently added button: shown only while at least one listing sits inside
+// the rolling 7-day window. The hidden state below is build-time;
+// data-latest-added lets the browser hide the button as the window ages
+// between builds, mirroring /recent/.
+const RECENT_WINDOW_MS = 7 * 24 * 60 * 60 * 1000;
+const latestAdded = tools.reduce((m, t) => Math.max(m, t.data.added?.getTime() ?? 0), 0);
+const hasRecent = latestAdded > 0 && Date.now() - latestAdded <= RECENT_WINDOW_MS;
+const latestAddedDate = latestAdded ? new Date(latestAdded).toISOString().slice(0, 10) : '';
 // Search snippets: each taxonomy page describes itself instead of sharing the
 // homepage tagline, and tag pages get titles distinct from same-named
 // category pages. Text mirrors the on-page lede and card facts.
@@ -57,7 +65,15 @@ const measureAttrs = (id: string) => !selected && cardPlacement.has(id) ? { 'dat
     <p class="eyebrow">The directory / {selected?.name ?? 'All tools'}</p>
     <h1>{selected?.name ?? <>Discover open source.<br /><span>Support the projects.</span></>}</h1>
     <p class="lede">{selectedPlatform ? `Explore listings with checked ${selectedPlatform.name} apps, clients or tools. Check each listing for browser-only, service-host and compatibility limits. Client support does not mean the server runs on that platform.` : selected ? (exploreLede[selected.name] ?? `Explore ${selected.name.toLowerCase()} open-source software.`) : 'Explore open-source software, with setup guides and project-support links.'}</p>
-    {!selected && <p class="tour-line"><button class="tour-open" type="button" data-tour-open><svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M10 8.5v7l5.5-3.5z" fill="currentColor"/></svg>New here? Watch the tour</button><a class="tour-open recent-link" href={`${import.meta.env.BASE_URL}recent/`} data-recent-link>Recently added <span aria-hidden="true">&rarr;</span></a></p>}
+        {!selected && <p class="tour-line"><button class="tour-open" type="button" data-tour-open><svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M10 8.5v7l5.5-3.5z" fill="currentColor"/></svg>New here? Watch the tour</button><a class="tour-open recent-link" href={`${import.meta.env.BASE_URL}recent/`} data-recent-link data-latest-added={latestAddedDate} hidden={!hasRecent}>Recently added <span aria-hidden="true">&rarr;</span></a></p>}
+    {!selected && <script is:inline>
+      (function () {
+        var rl = document.querySelector('[data-recent-link]');
+        if (!rl) return;
+        var latest = rl.getAttribute('data-latest-added');
+        if (!latest || Date.now() - Date.parse(latest + 'T00:00:00Z') > 7 * 24 * 60 * 60 * 1000) rl.hidden = true;
+      })();
+    </script>}
   </section>
   {!selected && <script is:inline>
     document.addEventListener('DOMContentLoaded', function () {
