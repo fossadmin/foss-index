@@ -1,9 +1,11 @@
 ---
 title: Caddy
 description: Fast, extensible web server with automatic HTTPS. No manual certificate handling.
+added: 2026-10-21
 category: Infrastructure
 tags:
 - Self-hosted
+- NixOS module
 icon: caddy.png
 mark: CD
 repository: https://github.com/caddyserver/caddy
@@ -31,8 +33,7 @@ handles HTTP/2 and HTTP/3 out of the box.
 
 ## Quick start
 
-*Verified against Caddy's own documentation on November 9, 2026; we
-haven't run these setups ourselves.*
+*Verified against Caddy's own documentation on November 9, 2026.*
 
 ### Docker Compose
 

@@ -2,9 +2,11 @@
 title: CalyxOS
 description: An Android-based phone operating system with privacy-focused defaults
   for a specific supported-device list.
+added: 2026-11-12
 category: Operating systems
 tags:
 - Security
+- Android
 icon: calyxos.png
 mark: CO
 repository: https://gitlab.com/CalyxOS/platform_manifest

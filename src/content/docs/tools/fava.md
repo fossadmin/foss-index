@@ -1,7 +1,10 @@
 ---
 title: "Fava"
 description: "Web interface for Beancount plain-text accounting, run on your own computer."
+added: 2026-11-10
 category: Finance
+tags:
+- Plain text accounting
 icon: fava.svg
 mark: FV
 repository: https://github.com/beancount/fava
@@ -24,7 +27,7 @@ Fava needs Beancount, which is listed separately.
 
 ## Quick start
 
-*Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
+*Checked against the project's own documentation on November 9, 2026. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
 ### pip (Linux, Windows, macOS)
 

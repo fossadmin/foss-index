@@ -1,6 +1,7 @@
 ---
 title: "LibreOffice"
 description: "Office suite for documents, spreadsheets and presentations."
+added: 2026-11-10
 category: Documents
 icon: libreoffice.png
 mark: LO
@@ -27,7 +28,7 @@ The license is the Mozilla Public License 2.0, as stated on the project's [licen
 
 ## Quick start
 
-*Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
+*Checked against the project's own documentation on November 9, 2026. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
 ### Linux
 

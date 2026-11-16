@@ -1,6 +1,7 @@
 ---
 title: "GnuCash"
 description: "Double-entry accounting for personal and small-business books."
+added: 2026-11-10
 category: Finance
 icon: gnucash.svg
 mark: GC
@@ -23,7 +24,7 @@ The project's LICENSE file says the software is licensed under the GNU GPL versi
 
 ## Quick start
 
-*Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
+*Checked against the project's own documentation on November 9, 2026. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
 ### Linux
 

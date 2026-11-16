@@ -1,6 +1,7 @@
 ---
 title: Omni Tools
 description: Browser-based tools for PDFs, images, text and everyday file conversions.
+added: 2026-11-09
 category: Utilities
 icon: omni-tools.svg
 mark: OT
@@ -18,7 +19,7 @@ screenshot:
   credit: Omni Tools
   sourceUrl: https://github.com/iib0011/omni-tools/blob/9244e02923d99cde143ddd5b8d761d9ed0997da4/docs-images/img.png
   license: MIT
-  captionNote: "Project-published demo image, not our install. Screenshot version not recorded."
+  captionNote: "Project-published demo image. Screenshot version not recorded."
 ---
 
 Omni Tools collects small file and text utilities in one browser interface:
@@ -33,8 +34,8 @@ processing something irreplaceable or sensitive.
 
 ## Quick start
 
-*Checked against the project's README on November 9, 2026. We have not run
-this setup ourselves.*
+*Checked against the project's README on November 9, 2026.
+
 
 ### Docker Compose
 

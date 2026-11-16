@@ -1,7 +1,10 @@
 ---
 title: "Kali Linux"
 description: "Debian-based Linux distribution for penetration testing, security auditing and digital forensics."
+added: 2026-11-10
 category: Operating systems
+tags:
+- Penetration testing
 icon: kali.svg
 iconDark: kali-dark.svg
 mark: KL
@@ -42,8 +45,7 @@ is implied. See the project's [trademark policy](https://www.kali.org/docs/polic
 
 ## Quick start
 
-*Checked against the project's documentation on November 10, 2026. We have
-not run these steps or tested these images ourselves.*
+*Checked against the project's documentation on November 10, 2026.*
 
 ### Choose an image
 

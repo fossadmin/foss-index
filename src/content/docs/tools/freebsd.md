@@ -3,6 +3,7 @@ dripsEligible: false
 title: FreeBSD
 description: Unix-like operating system with an integrated base system, jails and
   a large ports collection.
+added: 2026-11-12
 category: Operating systems
 icon: freebsd.png
 mark: FB

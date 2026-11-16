@@ -1,9 +1,11 @@
 ---
 title: Beszel
 description: A lightweight hub and agent for server metrics, containers and resource alerts.
+added: 2026-11-09
 category: Monitoring
 tags:
 - Self-hosted
+- NixOS module
 icon: beszel.svg
 mark: BE
 repository: https://github.com/henrygd/beszel
@@ -19,7 +21,7 @@ screenshot:
   credit: Beszel
   sourceUrl: https://github.com/henrygd/beszel-docs/blob/0e5bc98bf12b47481012eff3c47ec35723e64fbc/public/image/dashboard.png
   license: MIT
-  captionNote: "Project-published demo image, not our install. Screenshot version not recorded."
+  captionNote: "Project-published demo image. Screenshot version not recorded."
 ---
 
 Beszel tracks server CPU, memory, disks, networks and Docker containers through
@@ -32,8 +34,7 @@ access to the Docker socket as security-sensitive.
 
 ## Quick start
 
-*Checked against the project's docs on November 9, 2026. We have not run
-these setups ourselves.*
+*Checked against the project's docs on November 9, 2026.*
 
 Docker is an upstream-supported route. The NixOS hub and agent modules are
 maintained in nixpkgs and may package a different version.

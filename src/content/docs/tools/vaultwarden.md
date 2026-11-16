@@ -1,9 +1,11 @@
 ---
 title: Vaultwarden
 description: Lightweight, self-hosted server compatible with Bitwarden clients. Written in Rust.
+added: 2026-10-21
 category: Passwords
 tags:
 - Self-hosted
+- NixOS module
 icon: vaultwarden.svg
 iconDark: vaultwarden-dark.svg
 mark: VW
@@ -33,8 +35,7 @@ small VPS or a home server.
 
 ## Quick start
 
-*Verified against Vaultwarden's own documentation on November 8, 2026; we
-haven't run these setups ourselves.*
+*Verified against Vaultwarden's own documentation on November 8, 2026.*
 
 Vaultwarden ships as a container image; there is no native Ubuntu
 package, so on Ubuntu use Docker. The NixOS module is maintained in

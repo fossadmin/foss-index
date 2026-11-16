@@ -3,7 +3,10 @@ dripsEligible: false
 title: OPNsense
 description: FreeBSD-based firewall and router with a web interface, VPNs and traffic
   reporting.
+added: 2026-11-12
 category: Networking
+tags:
+- VPN
 icon: opnsense.png
 iconLink: https://opnsense.org
 mark: OP
@@ -23,7 +26,7 @@ screenshot:
   sourceUrl: https://github.com/opnsense/docs/blob/2cae1b4f7ecf951ba7c9e8654965ae3f49315323/source/images/OPNsense-Deciso-Screenshot.png
   license: BSD-2-Clause
   captionNote: Project documentation screenshot of an older interface. Exact software
-    version is not stated; not our install.
+    version is not stated.
 ---
 
 OPNsense is a FreeBSD-based firewall and routing platform with a web interface

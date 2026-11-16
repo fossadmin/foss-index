@@ -1,6 +1,7 @@
 ---
 title: "SimpleX Chat"
 description: "Messenger with no user identifiers of any kind."
+added: 2026-11-10
 category: Communication
 icon: simplex-chat.svg
 iconDark: simplex-chat-dark.svg
@@ -27,7 +28,7 @@ The repository is licensed under the AGPL-3.0. The README adds that the SimpleX 
 
 ## Quick start
 
-*Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
+*Checked against the project's own documentation on November 9, 2026. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
 ### Linux, Windows and macOS
 

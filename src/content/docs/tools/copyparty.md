@@ -1,6 +1,7 @@
 ---
 title: Copyparty
 description: Portable single-file file server with a web UI - uploads, downloads, search, media players and sharing over HTTP, WebDAV, FTP, SFTP and SMB.
+added: 2026-11-12
 category: File Sync
 tags:
 - Self-hosted
@@ -17,7 +18,7 @@ screenshot:
   credit: copyparty (9001)
   sourceUrl: https://github.com/9001/copyparty/blob/hovudstraum/README.md
   license: MIT
-  captionNote: "Official README screenshot of the copyparty web UI; not our install."
+  captionNote: "Official README screenshot of the copyparty web UI."
 ---
 
 Copyparty is an MIT-licensed portable file server packed into a single

@@ -1,6 +1,7 @@
 ---
 title: "Ubuntu"
 description: "Popular Debian-based Linux desktop and server from Canonical, with long-term support releases."
+added: 2026-11-10
 category: Operating systems
 icon: ubuntu.svg
 mark: UB
@@ -30,8 +31,7 @@ graphics drivers and extra media formats - tick it or skip it.
 ## Quick start
 
 *Checked against the project's documentation on November 10, 2026.
-Canonical's install tutorial is being refreshed for newer releases. We
-have not run these steps ourselves.*
+Canonical's install tutorial is being refreshed for newer releases.*
 
 ### Get the image
 

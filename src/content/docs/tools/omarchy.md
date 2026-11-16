@@ -1,6 +1,7 @@
 ---
 title: "Omarchy"
 description: "Opinionated, installable Linux OS by DHH: a curated Arch and Hyprland desktop that sets up a finished system in minutes."
+added: 2026-11-12
 category: Operating systems
 icon: omarchy.svg
 iconLink: https://omarchy.org/
@@ -18,7 +19,7 @@ screenshot:
   height: 675
   credit: "Omarchy (omarchy.org theme preview)"
   sourceUrl: https://omarchy.org/themes/
-  captionNote: "Official theme preview from omarchy.org showing a themed Omarchy desktop with editor and monitors. A project promotional image, not our install."
+  captionNote: "Official theme preview from omarchy.org showing a themed Omarchy desktop with editor and monitors. A project promotional image."
 ---
 
 Omarchy is an opinionated Linux operating system from David Heinemeier

@@ -1,9 +1,11 @@
 ---
 title: Ollama
 description: Run large language models locally with one command - a CLI and local API for downloading and serving open-weight models.
+added: 2026-11-12
 category: Development
 tags:
 - Self-hosted
+- NixOS module
 icon: ollama.png
 iconLink: https://ollama.com/
 mark: OL
@@ -18,7 +20,7 @@ screenshot:
   credit: MGeog2022
   sourceUrl: https://commons.wikimedia.org/wiki/File:Ollama-running-llama3-in-linux.png
   license: CC BY 4.0
-  captionNote: "Wikimedia Commons capture of Ollama running Llama 3 in a Linux terminal; shows an older model version, not our install."
+  captionNote: "Wikimedia Commons capture of Ollama running Llama 3 in a Linux terminal; shows an older model version."
 ---
 
 Ollama is an MIT-licensed tool that runs open-weight language models on your

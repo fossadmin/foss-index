@@ -1,9 +1,11 @@
 ---
 title: Radicale
 description: A small CalDAV and CardDAV server for calendars, tasks and address books you control.
+added: 2026-11-08
 category: Calendar & Contacts
 tags:
 - Self-hosted
+- NixOS module
 icon: radicale.svg
 mark: RA
 repository: https://github.com/Kozea/Radicale
@@ -38,8 +40,7 @@ not end-to-end encryption: protect the host, backups and account passwords.
 
 ## Quick start
 
-*Verified against Radicale's own documentation on November 8, 2026; we
-haven't run these setups ourselves.*
+*Verified against Radicale's own documentation on November 8, 2026.*
 
 Upstream publishes a Docker image and Python installation instructions.
 The NixOS module is maintained in nixpkgs. Both examples below explicitly

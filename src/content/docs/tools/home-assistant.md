@@ -1,9 +1,11 @@
 ---
 title: Home Assistant
 description: Connect devices and automate your home through one locally controlled hub.
+added: 2026-11-09
 category: Home automation
 tags:
 - Self-hosted
+- NixOS module
 icon: home-assistant.png
 mark: HA
 repository: https://github.com/home-assistant/core
@@ -23,7 +25,7 @@ screenshot:
   credit: Home Assistant
   sourceUrl: https://github.com/home-assistant/core/blob/02035d3a159494266b282c8f5c5d159f1eedaf28/.github/assets/screenshot-states.png
   license: Apache-2.0
-  captionNote: "Project-published demo image, not our install. Screenshot version not recorded."
+  captionNote: "Project-published demo image. Screenshot version not recorded."
 ---
 
 Home Assistant connects compatible devices and services, then lets you build
@@ -38,8 +40,7 @@ project through Nabu Casa and the Open Home Foundation.
 
 ## Quick start
 
-*Checked against the official Linux installation guide on November 9, 2026.
-We have not run these setups ourselves.*
+*Checked against the official Linux installation guide on November 9, 2026.*
 
 Home Assistant OS is upstream's recommended install for most users. The
 Container route below is for people comfortable managing Linux and Docker;

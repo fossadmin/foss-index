@@ -2,8 +2,10 @@
 title: LineageOS
 description: An Android-based aftermarket operating system with device-specific builds
   for selected phones and tablets.
+added: 2026-11-12
 category: Operating systems
-tags: []
+tags:
+- Android
 icon: lineageos.svg
 mark: LO
 repository: https://github.com/LineageOS/android

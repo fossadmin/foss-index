@@ -1,6 +1,7 @@
 ---
 title: "Pop!_OS"
 description: "Ubuntu-based desktop Linux from System76 with its own COSMIC desktop."
+added: 2026-11-10
 category: Operating systems
 icon: pop-os.svg
 mark: PO
@@ -33,8 +34,7 @@ desktop's compositor and file manager, for example, are GPL-3.0.
 
 ## Quick start
 
-*Checked against the project's documentation on November 10, 2026. We have
-not run these steps ourselves.*
+*Checked against the project's documentation on November 10, 2026.*
 
 ### Get the image
 

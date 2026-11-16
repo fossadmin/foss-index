@@ -3,9 +3,12 @@ dripsEligible: false
 title: PostgreSQL
 description: Open-source relational database server for applications and structured
   data.
+added: 2026-11-12
 category: Infrastructure
 tags:
 - Self-hosted
+- NixOS module
+- Database
 icon: postgresql.png
 mark: PG
 repository: https://git.postgresql.org/gitweb/?p=postgresql.git

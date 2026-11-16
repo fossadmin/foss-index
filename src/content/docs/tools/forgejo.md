@@ -1,9 +1,11 @@
 ---
 title: "Forgejo"
 description: "Self-hosted software forge for Git repositories, issues and pull requests."
+added: 2026-11-10
 category: Development
 tags:
 - Self-hosted
+- NixOS module
 icon: forgejo.svg
 mark: FG
 repository: https://codeberg.org/forgejo/forgejo
@@ -28,7 +30,7 @@ Forgejo's README says it is distributed under GPL version 3 or any later version
 
 ## Quick start
 
-*Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
+*Checked against the project's own documentation on November 9, 2026. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
 ### Docker Compose
 

@@ -1,9 +1,11 @@
 ---
 title: "FreshRSS"
 description: "Self-hosted RSS feed aggregator."
+added: 2026-11-10
 category: Reading
 tags:
 - Self-hosted
+- NixOS module
 icon: freshrss.svg
 mark: FR
 repository: https://github.com/FreshRSS/FreshRSS
@@ -26,7 +28,7 @@ FreshRSS collects the feeds you follow into one reader that you host yourself. P
 
 ## Quick start
 
-*Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
+*Checked against the project's own documentation on November 9, 2026. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
 ### Docker
 

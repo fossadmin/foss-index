@@ -3,9 +3,12 @@ dripsEligible: false
 title: AdGuard Home
 description: Self-hosted network-wide DNS filtering for ads, trackers and unwanted
   domains.
+added: 2026-11-12
 category: Infrastructure
 tags:
 - Self-hosted
+- NixOS module
+- DNS
 icon: adguard-home.png
 mark: AG
 repository: https://github.com/AdguardTeam/AdGuardHome

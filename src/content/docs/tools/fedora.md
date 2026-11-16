@@ -3,6 +3,7 @@ dripsEligible: false
 title: Fedora®
 description: Community Linux distribution with Workstation, Server and other focused
   editions.
+added: 2026-11-12
 category: Operating systems
 mark: FE
 repository: https://src.fedoraproject.org

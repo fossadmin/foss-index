@@ -1,6 +1,7 @@
 ---
 title: "Flameshot"
 description: "Screenshot tool with annotations: arrows, text, blur and highlights."
+added: 2026-11-10
 category: Utilities
 icon: flameshot.svg
 mark: FL
@@ -23,7 +24,7 @@ The repository's LICENSE file is the GNU GPL version 3.
 
 ## Quick start
 
-*Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
+*Checked against the project's own documentation on November 9, 2026. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
 ### Linux
 

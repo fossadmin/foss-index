@@ -1,9 +1,11 @@
 ---
 title: SilverBullet
 description: A programmable Markdown knowledge base backed by files you can keep and move.
+added: 2026-11-09
 category: Notes
 tags:
 - Self-hosted
+- NixOS module
 icon: silverbullet.png
 mark: SB
 repository: https://github.com/silverbulletmd/silverbullet
@@ -21,7 +23,7 @@ screenshot:
   credit: SilverBullet
   sourceUrl: https://github.com/silverbulletmd/silverbullet/blob/0fbe7b51a35fe3d1ef1fe0a4063448ae98b2e052/docs/Screenshots/markdown-basics-preview.png
   license: MIT
-  captionNote: "Project-published demo image, not our install. Screenshot version not recorded."
+  captionNote: "Project-published demo image. Screenshot version not recorded."
 ---
 
 SilverBullet is a browser-based knowledge base built around Markdown files,
@@ -35,8 +37,7 @@ installed extensions and scripts as code, not harmless formatting.
 
 ## Quick start
 
-*Checked against upstream docs on November 9, 2026. We have not run these
-setups ourselves.*
+*Checked against upstream docs on November 9, 2026.*
 
 Docker is an upstream-documented route. The NixOS module is maintained in
 nixpkgs and may package a different version.

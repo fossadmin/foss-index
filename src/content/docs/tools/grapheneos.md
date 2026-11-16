@@ -2,9 +2,11 @@
 title: GrapheneOS
 description: A privacy- and security-focused Android-based operating system for specifically
   supported devices.
+added: 2026-11-12
 category: Operating systems
 tags:
 - Security
+- Android
 icon: grapheneos.svg
 iconTile: true
 mark: GO
@@ -23,7 +25,7 @@ screenshot:
   commons: true
   alt: GrapheneOS home screen with default apps on a black background
   captionNote: Historical September 2022 home screen, resized and converted to WebP.
-    Not the current release and not our installation. The image remains under CC BY-SA
+    Not the current release. The image remains under CC BY-SA
     2.5.
   src: grapheneos-source.webp
   width: 720

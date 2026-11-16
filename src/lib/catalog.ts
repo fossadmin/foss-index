@@ -13,6 +13,16 @@ export function browseSlugForCategory(category: string) {
 // interpolated group or category name reads awkwardly.
 export const exploreLede: Record<string, string> = {
   "Operating systems": "Explore open-source operating systems.",
+  "NixOS module": "Explore open-source software that ships a NixOS module for declarative setup.",
+  DNS: "Explore open-source DNS servers and network-wide filtering.",
+  VPN: "Explore open-source VPN and private-networking tools.",
+  Video: "Explore open-source video players, editors, transcoders and streaming tools.",
+  Audio: "Explore open-source audio editors, players and servers.",
+  Database: "Explore open-source database servers and clients.",
+  "Plain text accounting": "Explore open-source plain-text accounting tools.",
+  "3D printing": "Explore open-source 3D printing software.",
+  "Penetration testing": "Explore open-source penetration-testing and security-auditing distributions.",
+  Android: "Explore open-source Android-based operating systems.",
 };
 export async function catalog() {
   const entries = await getCollection("docs", ({ data }) => !!data.repository);

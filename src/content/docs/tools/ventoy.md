@@ -1,6 +1,7 @@
 ---
 title: "Ventoy"
 description: "Make one USB drive that boots many ISO, WIM, IMG, VHD and EFI files from a menu."
+added: 2026-11-10
 category: Utilities
 icon: ventoy.png
 mark: VT
@@ -30,7 +31,7 @@ Ventoy's own code is GPLv3 or later, per the project's [license file](https://gi
 
 ## Quick start
 
-*Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
+*Checked against the project's own documentation on November 9, 2026. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
 ### Linux
 

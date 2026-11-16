@@ -7,6 +7,7 @@
 # Required frontmatter (all fields, all listings):
 title: <Name>
 description: <One sentence: what it does and who it is for. Used in cards and search.>
+added: <YYYY-MM-DD the listing is added to the Index - the listing's own date, not a software release date. Drives the homepage "Recently added" strip.>
 category: <One existing sidebar category, e.g. Media>
 tags:
 # Optional discovery tags. Add "- Self-hosted" only when the tool can run on

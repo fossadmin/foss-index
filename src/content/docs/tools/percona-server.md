@@ -3,9 +3,12 @@ dripsEligible: false
 title: Percona Server for MySQL
 description: Open-source MySQL-compatible database server with added instrumentation
   and operational features.
+added: 2026-11-12
 category: Infrastructure
 tags:
 - Self-hosted
+- NixOS module
+- Database
 mark: PS
 repository: https://github.com/percona/percona-server
 license: GPL-2.0

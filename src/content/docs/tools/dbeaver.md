@@ -3,7 +3,10 @@ dripsEligible: false
 title: DBeaver Community
 description: Desktop database client for browsing tables, running SQL and exploring
   schemas.
+added: 2026-11-12
 category: Development
+tags:
+- Database
 icon: dbeaver.png
 mark: DB
 repository: https://github.com/dbeaver/dbeaver

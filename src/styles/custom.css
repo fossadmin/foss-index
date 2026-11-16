@@ -568,6 +568,18 @@ html:not(.js) .view-toggle {
 .tool-icon img.icon-dark {
   display: none;
 }
+
+/* Recently added: permanent button beside the tour button */
+.recent-link {
+  text-decoration: none;
+  margin-left: 4px;
+}
+.recent-page-list {
+  margin: 18px 0 0;
+  /* Full descriptions are long: keep the grid column inside the
+     container so rows ellipsis instead of overflowing the viewport. */
+  grid-template-columns: minmax(0, 1fr);
+}
 .rail-collapse {
   display: flex;
   flex-direction: column;
@@ -1590,46 +1602,9 @@ html:not(.js) .view-toggle {
   .decision-brief h2 { font-size: 21px; }
 }
 /* Iconless listings (a restricted mark under an explicit NO_ICON exception in
-   the listing-structure test): no icon slot renders, so the row grid drops the
-   icon column and the copy, meta and Support link use the full width. */
-@media (min-width: 651px) {
-  .tool-list[data-view] .tool-item.no-mark .tool-row {
-    grid-template-columns: minmax(0, 1fr);
-  }
-  .tool-list[data-view] .tool-item.no-mark .tool-meta {
-    grid-column: 1;
-  }
-  .tool-list[data-view="detail"] .tool-item.no-mark .tool-copy {
-    grid-column: 1;
-    margin-left: 16px;
-  }
-}
-@media (max-width: 650px) {
-  .tool-item.no-mark .tool-row {
-    grid-template-columns: minmax(0, 1fr) 12px;
-  }
-  .tool-item.no-mark .tool-meta {
-    grid-column: 1;
-  }
-  .tool-list[data-view="detail"] .tool-item.no-mark .tool-copy {
-    grid-column: 1;
-  }
-  .tool-list[data-view="detail"] .tool-item.no-mark .tool-meta {
-    grid-column: 1;
-  }
-  .tool-list[data-view="detail"] .tool-item.no-mark .row-arrow {
-    grid-column: 2;
-  }
-}
-.tool-list[data-view="compact"] .tool-item.no-mark .catalog-support {
-  margin-left: 0;
-}
-@media (max-width: 650px) {
-  .tool-list[data-view] .tool-item.no-mark .catalog-support {
-    margin-left: 0;
-  }
-}
-
+   the listing-structure test): the row renders an empty muted tile in the icon
+   slot, so copy, meta and the Support link align with icon-bearing rows using
+   the standard grid rules. */
 .tool-list[data-view="compact"] .tool-row { border-bottom: 0; padding-bottom: 10px; }
 .tool-list[data-view="compact"] .tool-item { border-bottom: 1px solid var(--line); }
 .tool-list[data-view="compact"] .catalog-support { margin-left: 54px; margin-bottom: 16px; }
@@ -1654,4 +1629,74 @@ html:not(.js) .view-toggle {
   color: var(--rust);
   margin-left: 8px;
   vertical-align: 2px;
+}
+
+/* Related tools at the foot of a detail page */
+.related {
+  margin-top: 34px;
+  border-top: 1px solid var(--line);
+  padding-top: 24px;
+}
+.related h2 {
+  font:
+    500 22px Lora,
+    Georgia,
+    serif;
+  margin: 10px 0 14px;
+}
+.related-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 6px;
+}
+.related-row {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  color: inherit;
+}
+.related-row:hover {
+  background: var(--sand);
+  color: var(--olive);
+}
+.related-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  flex: 1;
+}
+.related-name {
+  font-weight: 600;
+  font-size: 14px;
+}
+.related-purpose {
+  font-size: 12px;
+  color: var(--moss);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.related-more {
+  font-size: 13px;
+  margin: 12px 0 0;
+}
+@media (max-width: 520px) {
+  .related-purpose {
+    white-space: normal;
+  }
+}
+
+/* Preview clips on detail pages (pilot): play only on user action */
+.shot-video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  background: var(--tint);
 }

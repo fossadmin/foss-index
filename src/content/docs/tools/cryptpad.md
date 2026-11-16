@@ -1,7 +1,10 @@
 ---
 title: CryptPad
 description: End-to-end encrypted collaborative office suite - docs, sheets, slides, forms, kanban and whiteboard - you can self-host.
+added: 2026-11-12
 category: Collaboration
+tags:
+- NixOS module
 icon: cryptpad.svg
 iconLink: https://cryptpad.org/
 mark: CP
@@ -18,7 +21,7 @@ screenshot:
   credit: CryptPad team
   sourceUrl: https://github.com/cryptpad/documentation/blob/main/images/drive-grid.png
   license: CC BY 4.0
-  captionNote: "Documentation screenshot of a CryptDrive with shared documents, from the CC BY 4.0 licensed docs; not our install."
+  captionNote: "Documentation screenshot of a CryptDrive with shared documents, from the CC BY 4.0 licensed docs."
 ---
 
 CryptPad is an AGPLv3 collaborative office suite where the server stores

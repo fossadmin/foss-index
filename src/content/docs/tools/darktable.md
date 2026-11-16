@@ -1,6 +1,7 @@
 ---
 title: "darktable"
 description: "RAW photo workflow and developing application."
+added: 2026-11-10
 category: Photos
 icon: darktable.svg
 mark: DT
@@ -23,7 +24,7 @@ darktable manages and develops RAW photos on your desktop without altering the o
 
 ## Quick start
 
-*Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
+*Checked against the project's own documentation on November 9, 2026. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
 ### Linux
 

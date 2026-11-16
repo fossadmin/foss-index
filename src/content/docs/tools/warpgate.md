@@ -1,9 +1,11 @@
 ---
 title: Warpgate
 description: Self-hosted smart bastion for SSH, HTTPS, MySQL and PostgreSQL - record sessions and stop handing out target credentials.
+added: 2026-11-12
 category: Security
 tags:
 - Self-hosted
+- NixOS module
 icon: warpgate.svg
 iconLink: https://warpgate.null.page/
 mark: WG
@@ -21,7 +23,7 @@ screenshot:
   credit: Warpgate contributors
   sourceUrl: https://github.com/warp-tech/warpgate/blob/main/README.md
   license: Apache-2.0
-  captionNote: "Official README screenshot of an SSH session through Warpgate; not our install."
+  captionNote: "Official README screenshot of an SSH session through Warpgate."
 ---
 
 Warpgate is an Apache-2.0 smart bastion host: instead of handing every

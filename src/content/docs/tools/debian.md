@@ -1,6 +1,7 @@
 ---
 title: "Debian"
 description: "Community-built universal operating system, the base for many other distributions."
+added: 2026-11-10
 category: Operating systems
 icon: debian.svg
 mark: DE
@@ -19,7 +20,7 @@ screenshot:
   sourceUrl: https://commons.wikimedia.org/wiki/File:Debian_13_(Trixie)_screenshot_-_using_GNOME_desktop.png
   license: "GPL-2.0-or-later"
   commons: true
-  captionNote: "Debian 13 (trixie) GNOME overview published by the project. It was captured in a VMware virtual machine and shows a demo user session, not our install."
+  captionNote: "Debian 13 (trixie) GNOME overview published by the project. It was captured in a VMware virtual machine and shows a demo user session."
 ---
 
 Debian is one of the oldest Linux distributions and the base for many
@@ -34,8 +35,7 @@ installed only when your hardware needs it.
 
 ## Quick start
 
-*Checked against the project's documentation on November 10, 2026. We have
-not run these steps ourselves.*
+*Checked against the project's documentation on November 10, 2026.*
 
 ### Get the image
 

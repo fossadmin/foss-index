@@ -1,6 +1,7 @@
 ---
 title: "Standard Notes"
 description: "End-to-end encrypted notes app with a self-hostable sync server."
+added: 2026-11-10
 category: Notes
 mark: SN
 icon: standard-notes.png
@@ -25,7 +26,7 @@ The two repositories carry different licenses: the app repository (`standardnote
 
 ## Quick start
 
-*Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
+*Checked against the project's own documentation on November 9, 2026. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
 ### Desktop apps
 

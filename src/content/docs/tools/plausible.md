@@ -1,9 +1,11 @@
 ---
 title: Plausible Analytics
 description: Open source, privacy-first web analytics. Lightweight, cookie-free Google Analytics alternative.
+added: 2026-10-21
 category: Analytics
 tags:
 - Self-hosted
+- NixOS module
 icon: plausible.svg
 mark: PL
 repository: https://github.com/plausible/analytics
@@ -34,8 +36,7 @@ share their changes back.
 
 ## Quick start
 
-*Verified against Plausible's own documentation on November 8, 2026; we
-haven't run these setups ourselves.*
+*Verified against Plausible's own documentation on November 8, 2026.*
 
 Plausible Community Edition self-hosts with Docker; there is no native
 Ubuntu package, so on Ubuntu use Docker. The NixOS module is maintained

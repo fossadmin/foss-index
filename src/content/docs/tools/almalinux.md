@@ -1,6 +1,7 @@
 ---
 title: "AlmaLinux OS"
 description: "Community-owned, forever-free enterprise Linux distribution, compatible with RHEL and governed by its own foundation."
+added: 2026-11-12
 category: Operating systems
 icon: almalinux.png
 iconLink: https://almalinux.org/

@@ -1,9 +1,11 @@
 ---
 title: Uptime Kuma
 description: Self-hosted uptime monitoring and status pages, with alerts when a service stops responding.
+added: 2026-11-08
 category: Monitoring
 tags:
 - Self-hosted
+- NixOS module
 icon: uptime-kuma.svg
 mark: UK
 repository: https://github.com/louislam/uptime-kuma
@@ -35,8 +37,7 @@ if you want to hear about a whole-server or internet outage.
 
 ## Quick start
 
-*Verified against Uptime Kuma's own documentation on November 8, 2026; we
-haven't run these setups ourselves.*
+*Verified against Uptime Kuma's own documentation on November 8, 2026.*
 
 Docker is an upstream-supported route. The NixOS module is maintained
 in nixpkgs; its packaged version can differ from the recorded upstream

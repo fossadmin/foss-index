@@ -1,7 +1,11 @@
 ---
 title: Actual Budget
 description: Envelope budgeting with local-first data and an optional self-hosted sync server.
+added: 2026-11-09
 category: Finance
+tags:
+- Self-hosted
+- NixOS module
 icon: actual-budget.png
 mark: AB
 repository: https://github.com/actualbudget/actual
@@ -20,9 +24,7 @@ screenshot:
   credit: Actual Budget
   sourceUrl: https://github.com/actualbudget/actual/blob/3519dcb7f6e9b12035a4b2f36b0a073023d6e673/packages/desktop-client/public/screenshot_wide.png
   license: MIT
-  captionNote: "Project-published demo image, not our install. Screenshot version not recorded."
-tags:
-- Self-hosted
+  captionNote: "Project-published demo image. Screenshot version not recorded."
 ---
 
 Actual uses envelope budgeting: give money a job, track transactions and see
@@ -63,8 +65,7 @@ No migration, export or restore was performed for this listing.
 
 ## Quick start
 
-*Checked against the official installation docs on November 9, 2026.
-We have not run these setups ourselves.*
+*Checked against the official installation docs on November 9, 2026.*
 
 Docker is an upstream-supported route. The NixOS module is maintained in
 nixpkgs and may package a different version.

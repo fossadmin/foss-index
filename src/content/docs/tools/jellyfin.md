@@ -1,9 +1,12 @@
 ---
 title: Jellyfin
 description: The free software media system. Stream your own movies, shows, and music to any device.
+added: 2026-10-21
 category: Media
 tags:
 - Self-hosted
+- NixOS module
+- Video
 icon: jellyfin.svg
 mark: JF
 repository: https://github.com/jellyfin/jellyfin
@@ -30,8 +33,7 @@ and no tracking. Everything is free.
 
 ## Quick start
 
-*Verified against Jellyfin's own documentation on November 8, 2026; we
-haven't run these setups ourselves.*
+*Verified against Jellyfin's own documentation on November 8, 2026.*
 
 ### Docker Compose
 

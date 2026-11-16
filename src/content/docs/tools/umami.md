@@ -1,9 +1,11 @@
 ---
 title: Umami
 description: Simple, privacy-first web analytics you can self-host. No cookies, no personal data collection.
+added: 2026-10-21
 category: Analytics
 tags:
 - Self-hosted
+- NixOS module
 icon: umami.svg
 iconDark: umami-dark.svg
 mark: UM
@@ -29,8 +31,7 @@ database.
 
 ## Quick start
 
-*Verified against Umami's own documentation on November 8, 2026; we
-haven't run these setups ourselves.*
+*Verified against Umami's own documentation on November 8, 2026.*
 
 ### Docker Compose
 

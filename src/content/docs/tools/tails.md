@@ -1,6 +1,7 @@
 ---
 title: "Tails"
 description: "Amnesic live operating system on a USB stick: routes connections through Tor and leaves no trace on the computer by default."
+added: 2026-11-12
 category: Operating systems
 icon: tails.svg
 iconLink: https://tails.net/

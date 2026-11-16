@@ -1,9 +1,11 @@
 ---
 title: Nextcloud
 description: File sync and sharing plus calendars, contacts, mail, chat and office documents in one self-hosted hub.
+added: 2026-11-08
 category: Collaboration
 tags:
 - Self-hosted
+- NixOS module
 icon: nextcloud.svg
 mark: NC
 repository: https://github.com/nextcloud/server
@@ -46,8 +48,7 @@ internet, so plan for prompt upgrades, HTTPS and backups from the start.
 
 ## Quick start
 
-*Verified against Nextcloud's own documentation on November 8, 2026; we
-haven't run these setups ourselves.*
+*Verified against Nextcloud's own documentation on November 8, 2026.*
 
 The official installation method is Nextcloud All-in-One (AIO), a
 Docker-based setup maintained by Nextcloud GmbH that bundles the database,

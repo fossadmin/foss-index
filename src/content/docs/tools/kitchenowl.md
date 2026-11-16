@@ -1,6 +1,7 @@
 ---
 title: KitchenOwl
 description: Shared grocery lists, recipes and meal planning for a household.
+added: 2026-11-09
 category: Home
 tags:
 - Self-hosted
@@ -20,7 +21,7 @@ screenshot:
   credit: KitchenOwl
   sourceUrl: https://github.com/TomBursch/kitchenowl/blob/3cc27f41e3de3d805abd66bdac9eb283eb16e72c/metadata/en-US/images/phoneScreenshots/groceries.png
   license: AGPL-3.0
-  captionNote: "Project-published demo image, not our install. Screenshot version not recorded."
+  captionNote: "Project-published demo image. Screenshot version not recorded."
 ---
 
 KitchenOwl combines shared shopping lists, recipes and meal planning. It is
@@ -33,8 +34,7 @@ try it with a non-critical list before relying on it for the household.
 
 ## Quick start
 
-*Checked against the official single-container example on November 9, 2026.
-We have not run this setup ourselves.*
+*Checked against the official single-container example on November 9, 2026.*
 
 ### Docker Compose
 

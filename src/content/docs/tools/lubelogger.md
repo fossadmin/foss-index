@@ -1,9 +1,11 @@
 ---
 title: LubeLogger
 description: Vehicle maintenance records and fuel-mileage tracking for your household.
+added: 2026-11-10
 category: Home
 tags:
 - Self-hosted
+- NixOS module
 icon: lubelogger.png
 mark: LL
 repository: https://github.com/hargata/lubelog
@@ -30,8 +32,7 @@ web app you host yourself, so the records stay on your own machine.
 
 ## Quick start
 
-*Checked against the project's documentation on November 10, 2026. We have
-not run this setup ourselves.*
+*Checked against the project's documentation on November 10, 2026.*
 
 ### Docker Compose
 

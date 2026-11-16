@@ -1,9 +1,11 @@
 ---
 title: Syncthing
 description: Continuous file synchronization between your devices, with no cloud copy in the middle.
+added: 2026-11-08
 category: File Sync
 tags:
 - Self-hosted
+- NixOS module
 icon: syncthing.svg
 mark: SY
 repository: https://github.com/syncthing/syncthing
@@ -35,8 +37,7 @@ overwrites.
 
 ## Quick start
 
-*Verified against Syncthing's own documentation on November 8, 2026; we
-haven't run these setups ourselves.*
+*Verified against Syncthing's own documentation on November 8, 2026.*
 
 All three routes are first-class: an official Docker image, an official
 Debian/Ubuntu repository, and a nixpkgs module.

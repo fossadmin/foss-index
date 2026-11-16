@@ -48,9 +48,9 @@ No. A listing means the project looked worth a closer look, not that we
 audited the code or run it everywhere. Each screenshot caption says
 where the image comes from: our own test install (marked as such, with
 fictional demo data) or the project's official material. Quick-start
-snippets and install notes come from each project's own documentation, and the page says
-so when we have not executed them. Read the license and the project's
-own docs before committing to anything.
+snippets and install notes come from each project's own documentation.
+Read the license and the project's own docs before committing to
+anything.
 
 ## Do you use AI on this project?
 
@@ -69,9 +69,14 @@ AI can help you use the index too: every tool page carries a setup
 prompt you can paste into your own AI assistant. It may only be able to
 guide you, so review its suggestions before running anything.
 
-A listing is a starting point, not an audit or a claim that we've
-personally tested the tool. Screenshot captions identify their sources,
-and quick-start notes say when we haven't run the instructions ourselves.
+The Index helps you discover open-source tools, get started with
+installation, and support their developers. A listing is a starting
+point, not an audit or a claim that we've personally tested the tool.
+Screenshot captions identify their sources. We have not personally run
+all these setups ourselves, and tools change quickly, so a guide may
+not reflect the latest release. Use the guides as
+a starting point, check the linked documentation for your system, and
+review any AI-generated commands before running them.
 
 ## Can a listing be bought?
 
@@ -87,8 +92,7 @@ sponsor at a time. The details live on the [sponsor page](/sponsor/).
 ## Who runs the index?
 
 [FOSSadmin](https://fossadmin.com), an IT practice built on open source.
-The index is a field guide for people who run their own software, and the tool pages say when
-managed hosting is available.
+The index is a field guide for people who run their own software.
 
 ## What about privacy here?
 

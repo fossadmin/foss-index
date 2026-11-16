@@ -30,6 +30,8 @@ export const collections = {
       .object({
         title: z.string(),
         description: z.string(),
+        // When the listing was added to the Index (not a software release date).
+        added: z.coerce.date().optional(),
         category: z.string().optional(),
         tags: z.array(z.string().trim().min(1)).default([]),
         mark: z.string().optional(),

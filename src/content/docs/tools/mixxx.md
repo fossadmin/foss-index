@@ -1,7 +1,10 @@
 ---
 title: "Mixxx"
 description: "DJ software for mixing tracks with controllers or a keyboard."
+added: 2026-11-10
 category: Creative
+tags:
+- Audio
 icon: mixxx.svg
 mark: MX
 repository: https://github.com/mixxxdj/mixxx
@@ -29,7 +32,7 @@ The repository's LICENSE file says Mixxx is under the GNU GPL version 2 or any l
 
 ## Quick start
 
-*Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
+*Checked against the project's own documentation on November 9, 2026. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
 ### Linux
 

@@ -1,9 +1,11 @@
 ---
 title: Paperless-ngx
 description: Scan, index, and search your documents. OCRs paper into a searchable archive on your own hardware.
+added: 2026-11-08
 category: Documents
 tags:
 - Self-hosted
+- NixOS module
 icon: paperless-ngx.svg
 iconDark: paperless-ngx-dark.svg
 mark: PX
@@ -33,8 +35,7 @@ out of a mailbox.
 
 ## Quick start
 
-*Verified against Paperless-ngx's own documentation on November 8, 2026; we
-haven't run these setups ourselves.*
+*Verified against Paperless-ngx's own documentation on November 8, 2026.*
 
 Docker Compose is the documented install; a bare-metal route exists for
 advanced setups, so on Ubuntu use Docker. The NixOS module is maintained

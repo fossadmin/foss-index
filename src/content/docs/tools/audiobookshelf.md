@@ -1,9 +1,12 @@
 ---
 title: Audiobookshelf
 description: Self-hosted audiobook and podcast server with web, Android, and iOS apps and per-device progress.
+added: 2026-11-08
 category: Media
 tags:
 - Self-hosted
+- NixOS module
+- Audio
 icon: audiobookshelf.svg
 mark: AB
 repository: https://github.com/advplyr/audiobookshelf
@@ -32,8 +35,7 @@ handles for video.
 
 ## Quick start
 
-*Verified against Audiobookshelf's own documentation on November 8, 2026; we
-haven't run these setups ourselves.*
+*Verified against Audiobookshelf's own documentation on November 8, 2026.*
 
 The project documents Docker and an official Debian/Ubuntu package
 repository; the NixOS module is maintained in nixpkgs.

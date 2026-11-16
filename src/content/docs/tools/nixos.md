@@ -1,6 +1,7 @@
 ---
 title: "NixOS"
 description: "Declarative Linux distribution built on the Nix package manager, with atomic upgrades and rollbacks."
+added: 2026-11-10
 category: Operating systems
 icon: nixos.svg
 mark: NI
@@ -33,8 +34,7 @@ own license in its metadata.
 
 ## Quick start
 
-*Checked against the project's documentation on November 10, 2026. We have
-not run these steps ourselves.*
+*Checked against the project's documentation on November 10, 2026.*
 
 ### Get the image
 

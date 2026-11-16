@@ -1,6 +1,7 @@
 ---
 title: "Linux Mint"
 description: "Friendly, familiar desktop Linux with the Cinnamon desktop, based on Ubuntu and Debian."
+added: 2026-11-10
 category: Operating systems
 icon: linux-mint.svg
 mark: MI
@@ -31,8 +32,7 @@ installation.
 
 ## Quick start
 
-*Checked against the project's documentation on November 10, 2026. We have
-not run these steps ourselves.*
+*Checked against the project's documentation on November 10, 2026.*
 
 ### Get the image
 

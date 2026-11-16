@@ -3,6 +3,7 @@ dripsEligible: false
 title: openSUSE
 description: Community Linux distributions with rolling Tumbleweed and regular-release
   Leap choices.
+added: 2026-11-12
 category: Operating systems
 icon: opensuse.svg
 iconLink: https://www.opensuse.org/
@@ -20,7 +21,7 @@ screenshot:
   license: GPL-2.0-or-later
   commons: true
   captionNote: March 2024 Tumbleweed / Plasma 6 screenshot. An older example of one
-    desktop choice, not the current installer and not our install.
+    desktop choice, not the current installer.
 ---
 
 openSUSE is a community project with several Linux distributions. **Tumbleweed**

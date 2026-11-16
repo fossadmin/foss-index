@@ -1,6 +1,7 @@
 ---
 title: "Blender"
 description: "3D creation suite for modeling, animation, rendering, video editing and compositing."
+added: 2026-11-10
 category: Creative
 icon: blender.svg
 mark: BL
@@ -29,7 +30,7 @@ Blender's license page says its source is licensed GNU GPL version 2 or later by
 
 ## Quick start
 
-*Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
+*Checked against the project's own documentation on November 9, 2026. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
 ### Linux
 

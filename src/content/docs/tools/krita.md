@@ -1,6 +1,7 @@
 ---
 title: "Krita"
 description: "Free painting and illustration program."
+added: 2026-11-10
 category: Creative
 icon: krita.png
 mark: KR
@@ -27,7 +28,7 @@ The GitHub repository is a mirror; the project's own repository is on KDE's infr
 
 ## Quick start
 
-*Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
+*Checked against the project's own documentation on November 9, 2026. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
 ### Linux
 

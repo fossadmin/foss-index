@@ -1,9 +1,11 @@
 ---
 title: Scrutiny
 description: Self-hosted S.M.A.R.T. hard-drive health monitoring with a web dashboard, collector agents and alerting.
+added: 2026-11-12
 category: Monitoring
 tags:
 - Self-hosted
+- NixOS module
 icon: scrutiny.svg
 iconDark: scrutiny-dark.svg
 iconLink: https://github.com/AnalogJ/scrutiny
@@ -21,7 +23,7 @@ screenshot:
   credit: AnalogJ and Scrutiny contributors
   sourceUrl: https://github.com/AnalogJ/scrutiny/blob/master/docs/dashboard.png
   license: MIT
-  captionNote: "Official dashboard screenshot from the project repository; not our install."
+  captionNote: "Official dashboard screenshot from the project repository."
 ---
 
 Scrutiny is an MIT-licensed web dashboard for hard-drive and SSD health. It

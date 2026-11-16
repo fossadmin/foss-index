@@ -1,9 +1,11 @@
 ---
 title: Grafana
 description: Dashboards and alerts for metrics, logs and traces from your own data sources.
+added: 2026-11-08
 category: Monitoring
 tags:
 - Self-hosted
+- NixOS module
 icon: grafana.svg
 mark: GR
 repository: https://github.com/grafana/grafana
@@ -38,8 +40,7 @@ recorded above as a subscription rather than a donation.
 
 ## Quick start
 
-*Verified against Grafana's own documentation on November 8, 2026; we
-haven't run these setups ourselves.*
+*Verified against Grafana's own documentation on November 8, 2026.*
 
 Docker is an upstream-supported route. The NixOS module is maintained
 in nixpkgs; its packaged version can differ from the recorded upstream

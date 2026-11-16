@@ -1,9 +1,12 @@
 ---
 title: Technitium DNS Server
 description: Self-hosted recursive DNS server with ad blocking, DNS-over-HTTPS and DNS-over-TLS, a web console and clustering support.
+added: 2026-11-12
 category: Infrastructure
 tags:
 - Self-hosted
+- NixOS module
+- DNS
 icon: technitium.png
 iconLink: https://technitium.com/dns/
 mark: TE
@@ -22,7 +25,7 @@ screenshot:
   credit: Technitium
   sourceUrl: https://technitium.com/dns/ScreenShot1.png
   license: GPL-3.0
-  captionNote: "Official product screenshot linked from the project's own README; not our install."
+  captionNote: "Official product screenshot linked from the project's own README."
 ---
 
 Technitium DNS Server is a GPLv3 recursive and authoritative DNS server for

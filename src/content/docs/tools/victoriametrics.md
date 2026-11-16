@@ -3,9 +3,11 @@ dripsEligible: false
 title: VictoriaMetrics Community
 description: Open-source time-series database and monitoring backend, with a built-in
   query UI.
+added: 2026-11-12
 category: Infrastructure
 tags:
 - Self-hosted
+- NixOS module
 mark: VM
 repository: https://github.com/VictoriaMetrics/VictoriaMetrics
 license: Apache-2.0
@@ -19,8 +21,7 @@ screenshot:
   credit: VictoriaMetrics contributors
   sourceUrl: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/0c3f0919a4c3d104355ec12979c30d2359909ad6/docs/victoriametrics/keyConcepts/vmui.webp
   license: Apache-2.0
-  captionNote: Upstream documentation screenshot; UI version is not specified and
-    this is not our install.
+  captionNote: Upstream documentation screenshot; UI version is not specified.
 nixosModule: services.victoriametrics
 ---
 

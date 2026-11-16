@@ -1,9 +1,11 @@
 ---
 title: Mealie
 description: Self-hosted recipe manager and meal planner - import recipes from a URL, organize them, plan the week and build shopping lists.
+added: 2026-11-12
 category: Home
 tags:
 - Self-hosted
+- NixOS module
 icon: mealie.png
 iconLink: https://mealie.io/
 mark: ME
@@ -20,7 +22,7 @@ screenshot:
   credit: Mealie contributors
   sourceUrl: https://github.com/mealie-recipes/mealie/blob/mealie-next/docs/docs/assets/img/home_screenshot.png
   license: AGPL-3.0
-  captionNote: "The project's own docs image showing the recipe grid on several device mockups; not our install."
+  captionNote: "The project's own docs image showing the recipe grid on several device mockups."
 ---
 
 Mealie is an AGPLv3 recipe manager and meal planner for your own server. Its

@@ -1,6 +1,7 @@
 ---
 title: "Signal"
 description: "Private messaging and calls, with phone apps and a linked desktop client."
+added: 2026-11-10
 category: Communication
 icon: signal-desktop.svg
 iconTile: true
@@ -28,7 +29,7 @@ The client code is open source. The messaging service it connects to is run by S
 
 ## Quick start
 
-*Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
+*Checked against the project's own documentation on November 9, 2026. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
 ### Debian and Ubuntu
 

@@ -1,7 +1,10 @@
 ---
 title: "OBS Studio"
 description: "Free software for screen recording and live streaming."
+added: 2026-11-10
 category: Creative
+tags:
+- Video
 icon: obs-studio.svg
 mark: OB
 repository: https://github.com/obsproject/obs-studio
@@ -26,7 +29,7 @@ OBS Studio records your screen, windows and cameras to a file or streams them li
 
 ## Quick start
 
-*Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
+*Checked against the project's own documentation on November 9, 2026. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
 ### Linux
 

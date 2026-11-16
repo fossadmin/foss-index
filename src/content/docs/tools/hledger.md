@@ -1,7 +1,10 @@
 ---
 title: "hledger"
 description: "Plain-text accounting with command-line, terminal and web interfaces."
+added: 2026-11-10
 category: Finance
+tags:
+- Plain text accounting
 icon: hledger.svg
 mark: HL
 repository: https://github.com/simonmichael/hledger
@@ -31,7 +34,7 @@ The repository's README shows a GPLv3+ badge and its LICENSE file is the GPL ver
 
 ## Quick start
 
-*Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
+*Checked against the project's own documentation on November 9, 2026. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
 ### Linux and macOS
 

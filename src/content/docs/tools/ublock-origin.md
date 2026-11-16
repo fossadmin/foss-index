@@ -1,6 +1,7 @@
 ---
 title: "uBlock Origin"
 description: "Efficient content blocker for Firefox and Chromium browsers."
+added: 2026-11-10
 category: Security
 icon: ublock-origin.svg
 mark: UB
@@ -23,7 +24,7 @@ Browser vendors differ in how much extension blocking they allow; check the proj
 
 ## Quick start
 
-*Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
+*Checked against the project's own documentation on November 9, 2026. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
 ### Firefox, Edge and Opera
 

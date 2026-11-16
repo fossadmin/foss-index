@@ -2,6 +2,7 @@
 dripsEligible: false
 title: Thunderbird
 description: Email, calendars, contacts and feeds in a desktop client you control.
+added: 2026-11-12
 category: Communication
 icon: thunderbird.png
 mark: TB
@@ -20,7 +21,7 @@ screenshot:
   sourceUrl: https://github.com/thunderbird/flatpak-screenshots/blob/0d6ce3118609b042a1f091eb66d0c77471a03902/image_1.png
   license: CC0-1.0
   captionNote: Project-published Thunderbird 140 sample interface. It predates the
-    recorded release; not our install.
+    recorded release.
 ---
 
 Thunderbird brings email, calendars, contacts and RSS feeds together without

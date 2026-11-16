@@ -1,7 +1,10 @@
 ---
 title: "UltiMaker Cura"
 description: "Slicer that prepares 3D models for printing on FDM 3D printers."
+added: 2026-11-10
 category: Creative
+tags:
+- 3D printing
 icon: cura.svg
 mark: CU
 repository: https://github.com/Ultimaker/Cura
@@ -25,7 +28,7 @@ The Cura application in the repository is under the GNU LGPL version 3. UltiMake
 
 ## Quick start
 
-*Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
+*Checked against the project's own documentation on November 9, 2026. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
 ### Linux
 

@@ -1,7 +1,10 @@
 ---
 title: "Parrot OS"
 description: "Debian-based Linux distribution for cybersecurity, privacy and everyday development, in Security, Home and other editions."
+added: 2026-11-12
 category: Operating systems
+tags:
+- Penetration testing
 icon: parrot.svg
 iconLink: https://www.parrotsec.org/
 mark: PA

@@ -1,6 +1,7 @@
 ---
 title: "KeePassXC"
 description: "Offline password manager that keeps your passwords in an encrypted file you control."
+added: 2026-11-10
 category: Passwords
 icon: keepassxc.svg
 mark: KX
@@ -32,7 +33,7 @@ The project's COPYING file offers the code under GPL version 2 or version 3, and
 
 ## Quick start
 
-*Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
+*Checked against the project's own documentation on November 9, 2026. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
 ### Linux
 

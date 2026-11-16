@@ -1,7 +1,10 @@
 ---
 title: "Ledger"
 description: "The original command-line double-entry accounting system, using plain text files."
+added: 2026-11-10
 category: Finance
+tags:
+- Plain text accounting
 icon: ledger.png
 mark: LE
 repository: https://github.com/ledger/ledger
@@ -26,7 +29,7 @@ The repository's LICENSE.md is the BSD 3-clause license. GitHub labels it "Other
 
 ## Quick start
 
-*Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
+*Checked against the project's own documentation on November 9, 2026. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
 ### Linux and macOS
 

@@ -1,6 +1,7 @@
 ---
 title: "Qubes OS"
 description: "Security-focused desktop operating system that isolates your work into separately trusted virtual machines called qubes."
+added: 2026-11-12
 category: Operating systems
 icon: qubes.png
 iconLink: https://www.qubes-os.org/

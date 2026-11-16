@@ -1,7 +1,10 @@
 ---
 title: "HandBrake"
 description: "Open-source video transcoder."
+added: 2026-11-10
 category: Creative
+tags:
+- Video
 icon: handbrake.png
 mark: HB
 repository: https://github.com/HandBrake/HandBrake
@@ -25,7 +28,7 @@ The project's LICENSE file says most files are GPLv2, some are GPLv2-or-later, L
 
 ## Quick start
 
-*Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
+*Checked against the project's own documentation on November 9, 2026. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
 ### Linux
 

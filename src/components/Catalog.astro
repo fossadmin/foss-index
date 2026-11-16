@@ -26,7 +26,7 @@ const pageTitle = selectedTag
 const pageDescription = selectedPlatform
   ? `Explore listings with checked ${selectedPlatform.name} apps, clients or tools. Check each listing for browser-only, service-host and compatibility limits.`
   : selectedTag
-    ? `Open-source tools tagged ${selectedTag.name.toLowerCase()}, with licenses, platform support and project-support links.`
+    ? `Open-source tools tagged ${selectedTag.name}, with licenses, platform support and project-support links.`
     : selectedGroup
       ? `Browse open-source software for ${selectedGroup.name.toLowerCase()}, with licenses, platform support and project-support links.`
       : selectedCategory
@@ -57,7 +57,7 @@ const measureAttrs = (id: string) => !selected && cardPlacement.has(id) ? { 'dat
     <p class="eyebrow">The directory / {selected?.name ?? 'All tools'}</p>
     <h1>{selected?.name ?? <>Discover open source.<br /><span>Support the projects.</span></>}</h1>
     <p class="lede">{selectedPlatform ? `Explore listings with checked ${selectedPlatform.name} apps, clients or tools. Check each listing for browser-only, service-host and compatibility limits. Client support does not mean the server runs on that platform.` : selected ? (exploreLede[selected.name] ?? `Explore ${selected.name.toLowerCase()} open-source software.`) : 'Explore open-source software, with setup guides and project-support links.'}</p>
-    {!selected && <p class="tour-line"><button class="tour-open" type="button" data-tour-open><svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M10 8.5v7l5.5-3.5z" fill="currentColor"/></svg>New here? Watch the tour</button><span class="tour-note">76 seconds, captions available.</span></p>}
+    {!selected && <p class="tour-line"><button class="tour-open" type="button" data-tour-open><svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M10 8.5v7l5.5-3.5z" fill="currentColor"/></svg>New here? Watch the tour</button><a class="tour-open recent-link" href={`${import.meta.env.BASE_URL}recent/`} data-recent-link>Recently added <span aria-hidden="true">&rarr;</span></a></p>}
   </section>
   {!selected && <script is:inline>
     document.addEventListener('DOMContentLoaded', function () {
@@ -93,6 +93,7 @@ const measureAttrs = (id: string) => !selected && cardPlacement.has(id) ? { 'dat
       <track kind="captions" srclang="en" label="English" src={`${import.meta.env.BASE_URL}media/tour.vtt`} />
     </video>
   </dialog>}
+
   <section aria-label="Tools" data-catalog>
     <div class="search-row" data-search-ui>
       <label class="search-field"><span class="search-prompt" aria-hidden="true">&gt;</span><span class="sr-only">Search {selected?.name ?? 'all tools'}</span><input type="search" placeholder="Find a tool, platform, tag, or alternative…" data-search autocomplete="off" /></label>
@@ -111,7 +112,7 @@ const measureAttrs = (id: string) => !selected && cardPlacement.has(id) ? { 'dat
             </span>
           ) : (tool.data.iconLink || tool.data.mark) ? (
             <span class:list={["tool-mark", {"linked-icon-placeholder": tool.data.iconLink}]} aria-hidden="true">{tool.data.iconLink ? "" : tool.data.mark}</span>
-          ) : null}
+          ) : <span class="tool-mark tool-mark-blank" aria-hidden="true"></span>}
           <span class="tool-copy"><span class="tool-name">{tool.data.title}{featuredRank.has(tool.id) && <span class="tool-flag">Featured</span>}</span><span class="tool-purpose">{tool.data.description}</span><span class="tool-category">{tool.broadCategory}{tool.tags.some(tag => tag !== tool.broadCategory) && <> · {tool.tags.filter(tag => tag !== tool.broadCategory).join(", ")}</>}</span></span>
           <span class="tool-meta"><span class="license">{tool.license}</span><span class="version">{tool.release?.version ?? 'Release not recorded'}{tool.release?.date && <span class="version-date" title="Recorded release date"> · {tool.release.date.slice(0, 10)}</span>}</span></span>
           <span class="row-arrow" aria-hidden="true">↗</span>
@@ -126,6 +127,7 @@ const measureAttrs = (id: string) => !selected && cardPlacement.has(id) ? { 'dat
     <p class="empty-state" hidden data-empty>No tools match that search. Try another name, purpose, or license.</p>
     <p class="empty-state" hidden data-empty-saved>No saved tools yet. Tap the bookmark on any tool to keep it here. Saves live only in this browser: no account, nothing uploaded, and clearing browser data removes them.</p>
     <div class="catalog-note"><span class="eyebrow">A starting point, not a ranking.</span><p>Read the license. Check the release notes. If a project helps you, help it keep going.</p><a href={`${import.meta.env.BASE_URL}about/`}>How this index works <span aria-hidden="true">→</span></a></div>
+    {!selected && <p class="managed-line">Want help setting up any of these tools? <a href="https://fossadmin.com">Ask FOSSadmin ↗</a></p>}
   </section>
 </CatalogLayout>
 <script define:vars={{ toolHrefs: tools.map(t => t.href) }}>

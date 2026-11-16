@@ -3,9 +3,12 @@ dripsEligible: false
 title: Pi-hole
 description: Network-wide DNS filtering for ads and trackers, with a local administration
   dashboard.
+added: 2026-11-12
 category: Networking
 tags:
 - Self-hosted
+- NixOS module
+- DNS
 icon: pihole.svg
 mark: PH
 repository: https://github.com/pi-hole/pi-hole

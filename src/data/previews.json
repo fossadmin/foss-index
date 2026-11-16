@@ -1,0 +1,6 @@
+{
+  "tools/beszel": {
+    "src": "previews/beszel.mp4",
+    "note": "Preview clip recorded from a demo install (Beszel 0.21.2 hub plus a local agent, November 2026)."
+  }
+}

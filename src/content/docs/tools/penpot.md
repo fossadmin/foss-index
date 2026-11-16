@@ -1,6 +1,7 @@
 ---
 title: "Penpot"
 description: "Design and prototyping tool you can self-host, for teams that hand off to developers."
+added: 2026-11-10
 category: Creative
 icon: penpot.svg
 iconDark: penpot-dark.svg
@@ -26,7 +27,7 @@ The repository's LICENSE file is the Mozilla Public License 2.0. The hosted serv
 
 ## Quick start
 
-*Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
+*Checked against the project's own documentation on November 9, 2026. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
 ### Docker Compose
 

@@ -1,9 +1,11 @@
 ---
 title: Gotify
 description: A private notification server for alerts from your own scripts and services.
+added: 2026-11-08
 category: Notifications
 tags:
 - Self-hosted
+- NixOS module
 icon: gotify.png
 mark: GO
 repository: https://github.com/gotify/server
@@ -39,8 +41,7 @@ and battery settings when relying on it for time-sensitive alerts.
 
 ## Quick start
 
-*Verified against Gotify's own documentation on November 8, 2026; we
-haven't run these setups ourselves.*
+*Verified against Gotify's own documentation on November 8, 2026.*
 
 Docker and downloadable binaries are supported upstream. The NixOS
 module is maintained in nixpkgs and may package a different version.

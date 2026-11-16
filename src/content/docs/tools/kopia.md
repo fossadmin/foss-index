@@ -1,6 +1,7 @@
 ---
 title: "Kopia"
 description: "Cross-platform backup tool with fast, incremental backups and both a GUI and a command line."
+added: 2026-11-10
 category: Backup
 icon: kopia.svg
 iconDark: kopia-dark.svg
@@ -26,7 +27,7 @@ It is one of two backup listings. [restic](/tools/restic/) is a command-line-fir
 
 ## Quick start
 
-*Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
+*Checked against the project's own documentation on November 9, 2026. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
 ### Linux
 

@@ -1,7 +1,10 @@
 ---
 title: "restic"
 description: "Fast, secure command-line backup program."
+added: 2026-11-10
 category: Backup
+tags:
+- NixOS module
 icon: restic.png
 mark: RS
 repository: https://github.com/restic/restic
@@ -26,7 +29,7 @@ Choose [Kopia](/tools/kopia/) instead if you want a graphical app.
 
 ## Quick start
 
-*Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
+*Checked against the project's own documentation on November 9, 2026. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
 ### Linux and macOS
 

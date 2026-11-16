@@ -1,7 +1,12 @@
 ---
 title: NetBird
 description: WireGuard-based private network that connects your machines and self-hosted services without port forwarding.
+added: 2026-11-08
 category: Networking
+tags:
+- Self-hosted
+- NixOS module
+- VPN
 icon: netbird.svg
 mark: NB
 repository: https://github.com/netbirdio/netbird
@@ -19,8 +24,6 @@ screenshot:
   credit: NetBird
   sourceUrl: https://github.com/netbirdio/docs/blob/995c90990139ba39eac9a49c344f76dc2cf468af/public/docs-static/img/manage/peers/add-machines-to-your-network/peer-list.png
   license: BSD-3-Clause / AGPL-3.0
-tags:
-- Self-hosted
 ---
 
 NetBird builds a private network between your machines over WireGuard.
@@ -36,8 +39,7 @@ managed version for anyone who would rather not run the control plane.
 
 ## Quick start
 
-*Verified against NetBird's own documentation on November 8, 2026; we
-haven't run these setups ourselves.*
+*Verified against NetBird's own documentation on November 8, 2026.*
 
 Unlike most tools here, a NetBird control plane has to be publicly
 reachable: peers, TLS and relay traffic expect a real domain and open

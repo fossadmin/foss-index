@@ -1,7 +1,10 @@
 ---
 title: "Kdenlive"
 description: "Free video editor built on the MLT Framework and KDE Frameworks."
+added: 2026-11-10
 category: Creative
+tags:
+- Video
 icon: kdenlive.svg
 mark: KD
 repository: https://github.com/KDE/kdenlive
@@ -25,7 +28,7 @@ The repository's COPYING file is the GPL version 3. The GitHub repository is a m
 
 ## Quick start
 
-*Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
+*Checked against the project's own documentation on November 9, 2026. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
 ### Linux
 

@@ -1,9 +1,11 @@
 ---
 title: Immich
 description: High performance self-hosted photo and video backup. A Google Photos alternative on your own hardware.
+added: 2026-10-21
 category: Photos
 tags:
 - Self-hosted
+- NixOS module
 icon: immich.svg
 mark: IM
 repository: https://github.com/immich-app/immich
@@ -32,8 +34,7 @@ Photos running on hardware you own.
 
 ## Quick start
 
-*Verified against Immich's own documentation on November 8, 2026; we
-haven't run these setups ourselves.*
+*Verified against Immich's own documentation on November 8, 2026.*
 
 Immich officially supports Docker; there is no supported bare-metal
 Ubuntu install, so on Ubuntu use Docker. The NixOS module is maintained

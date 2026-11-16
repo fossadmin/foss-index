@@ -2,6 +2,7 @@
 import DecisionBrief from '../components/DecisionBrief.astro';
 import ContributeRoutes from '../components/ContributeRoutes.astro';
 import decisionBriefs from '../data/decision-briefs.json';
+import previews from '../data/previews.json';
 import contributeRoutes from '../data/contribute-routes.json';
 import PlatformSupport from '../components/PlatformSupport.astro';
 import platformSupport from '../data/platform-support.json';
@@ -15,17 +16,21 @@ import { buildSetupPrompts } from '../lib/setup-prompt-text.js';
 export async function getStaticPaths() { return (await getCollection('docs')).map(entry => ({ params: { slug: entry.id }, props: { entry } })); }
 const { entry } = Astro.props;
 const { Content } = await render(entry);
-const { tools } = await catalog();
+const { tools, groups } = await catalog();
 const tool = tools.find(t => t.id === entry.id);
 const licInfo = tool?.license ? (licenses as Record<string, { summary: string; url: string }>)[tool.license] : undefined;
 const data = entry.data;
 const promptRecord = (setupPrompts as Record<string, any>)[entry.id];
 const brief = (decisionBriefs as Record<string, any>)[entry.id];
+const preview = (previews as Record<string, { src: string; note: string }>)[entry.id];
 const contribute = (contributeRoutes as Record<string, any>)[entry.id];
 const setupPromptList = promptRecord ? buildSetupPrompts({ title: data.title, body: entry.body ?? '', record: promptRecord }) : [];
 const funding = data.funding ?? {};
 const shot = data.screenshot;
 const serviceCreditHref = `${import.meta.env.BASE_URL}credits/#tool-${slugify(data.title)}`;
+const relatedGroup = tool ? groups.find(g => g.categories.includes(data.category!)) : undefined;
+const relatedPeers = relatedGroup ? tools.filter(t => t.id !== entry.id && relatedGroup.categories.includes(t.data.category!))
+  .sort((a, b) => Number(b.data.category === data.category) - Number(a.data.category === data.category)).slice(0, 6) : [];
 const links = [
   { label: 'GitHub Sponsors', url: funding.githubSponsors }, { label: 'Open Collective', url: funding.openCollective },
   { label: 'Polar', url: funding.polar }, { label: 'Liberapay', url: funding.liberapay }, ...(funding.custom ?? []),
@@ -51,18 +56,38 @@ const links = [
     </div>)}
     {(platformSupport as Record<string, any>)[entry.id] && <PlatformSupport record={(platformSupport as Record<string, any>)[entry.id]} />}
     {brief && <DecisionBrief {...brief} />}
-    {shot && <figure class="shot" data-shot><img src={`${import.meta.env.BASE_URL}screenshots/${shot.src}`} alt={shot.alt} width={shot.width} height={shot.height} style={shot.height > shot.width ? "width:auto;max-width:100%;max-height:560px;margin-inline:auto" : undefined} decoding="async" /><figcaption>{shot.commons
+    {shot && <figure class="shot" data-shot>{preview
+      ? <video class="shot-video" controls preload="none" playsinline poster={`${import.meta.env.BASE_URL}screenshots/${shot.src}`} width={shot.width} height={shot.height} aria-label={shot.alt}><source src={`${import.meta.env.BASE_URL}${preview.src}`} type="video/mp4" />{shot.alt}</video>
+      : <img src={`${import.meta.env.BASE_URL}screenshots/${shot.src}`} alt={shot.alt} width={shot.width} height={shot.height} style={shot.height > shot.width ? "width:auto;max-width:100%;max-height:560px;margin-inline:auto" : undefined} decoding="async" />}<figcaption>{shot.commons
       ? <>Screenshot by {shot.credit} on <a href={shot.sourceUrl}>Wikimedia Commons ↗</a>{shot.license ? <> ({shot.license})</> : null}. {shot.captionNote}</>
       : shot.terminal
       ? <>Rendered terminal output of {shot.credit}{shot.version ? ` ${shot.version}` : ''}, not a literal screen capture. {shot.captionNote}</>
       : shot.own
       ? <>Our own screenshot of {shot.credit}{shot.version ? ` ${shot.version}` : ''}. {shot.captionNote ?? "Empty default state, not a production setup."}</>
-      : <>Official screenshot from <a href={shot.sourceUrl}>{shot.credit} ↗</a>{shot.license ? <> ({shot.license})</> : null}. {shot.captionNote ?? 'Demo data, not our install.'}</>}{data.icon && <> The tool icon is the project's own mark.</>} <a href={serviceCreditHref}>Image credits</a>.</figcaption></figure>}
+      : <>Official screenshot from <a href={shot.sourceUrl}>{shot.credit} ↗</a>{shot.license ? <> ({shot.license})</> : null}. {shot.captionNote ?? 'Demo data.'}</>}{data.icon && <> The tool icon is the project's own mark.</>} {preview && <>{preview.note} </>}<a href={serviceCreditHref}>Image credits</a>.</figcaption></figure>}
     {!shot && data.icon && <p class="privacy-note"><a href={serviceCreditHref}>Image credits</a></p>}
     <div class="prose"><Content />{setupPromptList.map(p => <SetupPrompt {...p} />)}</div>
     {tool && <aside class="support-panel" id="project-support" tabindex="-1"><p class="eyebrow">Keep open source going</p><h2>Support this project</h2>{links.length ? <><p>Support goes directly to the maintainers through their own channels. We do not take a cut.</p><ul>{links.map(l => <li><a href={l.url} data-umami-event="outbound-click" data-umami-event-link="support" data-umami-event-tool={entry.id}>{l.label} ↗</a></li>)}</ul></> : <p>No direct funding link is recorded for this tool yet. Check its <a href={data.repository}>source repository</a> for ways to contribute.</p>}{contribute && <ContributeRoutes {...contribute} />}</aside>}
     {tool && <p class="privacy-note">Tags: {tool.tags.map((tag, i) => <>{i > 0 && ", "}<a href={`${import.meta.env.BASE_URL}tag/${slugify(tag)}/`}>{tag}</a></>)}</p>}
-    {data.managedHosting && <p class="managed-line">Want help running it? <a href="https://fossadmin.com">Ask FOSSadmin about hosting and maintenance ↗</a></p>}
+    {tool && <p class="managed-line">Want help setting this up? <a href="https://fossadmin.com">Ask FOSSadmin ↗</a></p>}
+    {tool && relatedGroup && relatedPeers.length > 0 && <nav class="related" aria-labelledby="related-heading">
+      <p class="eyebrow">Keep exploring</p><h2 id="related-heading">More in {relatedGroup.name}</h2>
+      <ul class="related-list">
+        {relatedPeers.map(t => <li><a class="related-row" href={t.href}>
+          {t.data.icon ? (
+            <span class="tool-mark tool-icon" aria-hidden="true">
+              <img class:list={[{ 'icon-light': t.data.iconDark, 'icon-tile': t.data.iconTile }]} src={`${import.meta.env.BASE_URL}icons/${t.data.icon}`} alt="" width="40" height="40" loading="lazy" decoding="async" />
+              {t.data.iconDark && <img class="icon-dark" src={`${import.meta.env.BASE_URL}icons/${t.data.iconDark}`} alt="" width="40" height="40" loading="lazy" decoding="async" />}
+            </span>
+          ) : t.data.mark ? (
+            <span class="tool-mark" aria-hidden="true">{t.data.mark}</span>
+          ) : <span class="tool-mark tool-mark-blank" aria-hidden="true"></span>}
+          <span class="related-copy"><span class="related-name">{t.data.title}</span><span class="related-purpose">{t.data.description}</span></span>
+          <span class="row-arrow" aria-hidden="true">↗</span>
+        </a></li>)}
+      </ul>
+      <p class="related-more"><a href={`${import.meta.env.BASE_URL}browse/${relatedGroup.slug}/`}>Browse all {relatedGroup.count} in {relatedGroup.name} →</a></p>
+    </nav>}
   </article>
 </CatalogLayout>
 

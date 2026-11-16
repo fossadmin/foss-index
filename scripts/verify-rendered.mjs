@@ -4,12 +4,13 @@
 // data change that drops a section fails `npm run build`.
 // Runs as the build's postbuild hook; also runnable directly after a build.
 import fs from 'node:fs';
-import { tagsFor } from '../src/lib/taxonomy.mjs';
+import { tagsFor, browseDefinitions } from '../src/lib/taxonomy.mjs';
 
 const read = p => fs.readFileSync(new URL('../'+p, import.meta.url), 'utf8');
 const support = JSON.parse(read('src/data/platform-support.json'));
 const briefs = JSON.parse(read('src/data/decision-briefs.json'));
 const releases = JSON.parse(read('src/data/releases.json'));
+const previews = JSON.parse(read('src/data/previews.json'));
 const slugify = s => s.toLowerCase().replace(/[^a-z0-9]+/g, '-');
 const esc = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
 
@@ -19,12 +20,14 @@ const frontmatter = slug => {
  const get = k => (front.match(new RegExp('^'+k+': "?([^"\\n]+)"?$', 'm'))||[])[1];
  const tagBlock = (front.match(/^tags:\n((?:- .+\n)+)/m)||[])[1];
  return {
-  repository: get('repository'), category: get('category'),
+  repository: get('repository'), category: get('category'), added: get('added'),
   tags: tagBlock ? [...tagBlock.matchAll(/^- (.+)$/gm)].map(m => m[1].trim()) : [],
  };
 };
 
 const fails = [];
+const catById = {};
+for (const id of Object.keys(support)) catById[id] = frontmatter(id.replace('tools/', '')).category;
 for (const id of Object.keys(support)) {
  const slug = id.replace('tools/', '');
  const path = 'dist/tools/'+slug+'/index.html';
@@ -58,6 +61,17 @@ for (const id of Object.keys(support)) {
  }
  if (rec.note && !html.includes(esc(rec.note))) fails.push(slug+': platform note not rendered');
 
+ // Preview clip (pilot): explicit-play video, never autoplaying
+ const pv = previews[id];
+ if (pv) {
+  if (!html.includes('<video')) fails.push(slug+': preview video missing');
+  if (!html.includes('preload="none"')) fails.push(slug+': preview video must not preload');
+  if (/autoplay/i.test(html)) fails.push(slug+': preview video must not autoplay');
+  if (!html.includes('controls')) fails.push(slug+': preview video needs visible controls');
+  if (!html.includes(esc(pv.note))) fails.push(slug+': preview provenance note not rendered');
+  if (!fs.existsSync(new URL('../dist/'+pv.src, import.meta.url))) fails.push(slug+': preview file missing from dist: '+pv.src);
+ }
+
  // Decision brief
  const iDB = at('<section class="decision-brief"');
  if (iDB < 0) fails.push(slug+': decision brief missing');
@@ -75,6 +89,21 @@ for (const id of Object.keys(support)) {
  if (!html.includes('class="setup-prompt"')) fails.push(slug+': setup prompt missing');
  for (const tag of tagsFor({ category: fm.category, tags: fm.tags }))
   if (!html.includes('/tag/'+slugify(tag)+'/')) fails.push(slug+': tag link missing: '+tag);
+
+ // Related tools: same browse group, after the tags line, linking the group page
+ const group = browseDefinitions.find(g => g.categories.includes(fm.category));
+ const peers = Object.keys(catById).filter(k => k !== id && group.categories.includes(catById[k]));
+ const iRel = at('<nav class="related"');
+ if (peers.length > 0) {
+  if (iRel < 0) fails.push(slug+': related-tools section missing');
+  else {
+   if (iRel < at('>Tags:')) fails.push(slug+': related-tools section above tags');
+   if (!html.includes('More in '+esc(group.name))) fails.push(slug+': related-tools heading missing');
+   if (!html.includes('/browse/'+slugify(group.name)+'/')) fails.push(slug+': related-tools group link missing');
+   const peerLink = peers.find(k => html.includes('/'+k+'/'));
+   if (!peerLink) fails.push(slug+': related-tools has no peer link');
+  }
+ } else if (iRel >= 0) fails.push(slug+': related-tools section with no peers');
 }
 
 // Homepage tour button + modal, and the shareable /tour/ page
@@ -98,6 +127,24 @@ if (!/tour-title" href="\/tour\/"/.test(home)) fails.push('homepage: modal title
 if (/class="search-row" hidden/.test(home)) fails.push('homepage: search row must render at first paint (hidden attr reintroduced)');
 if (/data-view-toggle[^>]*hidden/.test(home)) fails.push('homepage: view toggle must render at first paint (hidden attr reintroduced)');
 if ((home.match(/rel="preload"[^>]*font\/woff2/g) || []).length < 3) fails.push('homepage: all three fonts must be preloaded');
+
+ // Recently added: permanent button beside "Watch the tour" linking /recent/;
+ // the page holds the rolling 7-day window on listing `added` dates.
+ const RECENT_MS = 7*24*60*60*1000;
+ const windowDates = Object.keys(support)
+  .map(id => frontmatter(id.replace('tools/', '')).added)
+  .filter(d => d && Date.now() - Date.parse(d+'T00:00:00Z') <= RECENT_MS);
+ if (!/data-recent-link[^>]*>Recently added/.test(home)) fails.push('homepage: recently-added button missing beside the tour button');
+ if (home.includes('76 seconds, captions available')) fails.push('homepage: old tour duration note must be gone');
+ if (home.includes('data-recent-dismiss') || home.includes('fossindex-recent-seen')) fails.push('homepage: banner/dismiss leftovers must be gone');
+ const recentPage = fs.existsSync(new URL('../dist/recent/index.html', import.meta.url)) ? read('dist/recent/index.html') : '';
+ if (!recentPage) fails.push('recent page: missing from dist');
+ else {
+  if (windowDates.length > 0 && !recentPage.includes('data-recent-list')) fails.push('recent page: list missing');
+  if (windowDates.length === 0 && !recentPage.includes('data-recent-empty')) fails.push('recent page: empty state missing');
+  if (windowDates.length > 0 && (recentPage.match(/data-added="/g) || []).length !== windowDates.length) fails.push('recent page: row count mismatch');
+  if (/Recently added<\/h1>[\s\S]{0,200}\d{4}-\d{2}-\d{2}/.test(recentPage)) fails.push('recent page: must not show dates in the header area');
+ }
 }
 // Detail-card regression pin (Nov 13 wide-desktop report): at 651px and up,
 // the card's icon column must fit the 40px icon plus its 16px inset (56px).
@@ -155,7 +202,7 @@ for (const [f, want] of Object.entries(sizes)) {
  try { const got = fs.statSync(new URL('../'+f, import.meta.url)).size; if (got !== want) fails.push(f+': size '+got+' != expected '+want+' (V10 cut) - stale or mismatched media'); }
  catch { fails.push(f+': missing from dist'); }
 }
-if (!home.includes('76 seconds')) fails.push('homepage: tour note must name the current 76-second cut');
+if (!home.includes('data-tour-open')) fails.push('homepage: tour button must render');
 
 // Analytics pins (Umami integration): the tracker must load on every page
 // with query strings and URL fragments stripped, restricted to the production
@@ -252,4 +299,4 @@ if (fails.length) {
  fails.forEach(f => console.error('FAIL', f));
  process.exit(1);
 }
-console.log('Rendered-layout check: all '+total+' pages pass (release, platform support, decision brief, order, support panel, setup prompts, tags) + responsive homepage tour modal and /tour/ page (mobile + desktop cuts)');
+console.log('Rendered-layout check: all '+total+' pages pass (release, platform support, decision brief, order, support panel, setup prompts, tags, related tools) + responsive homepage tour modal and /tour/ page (mobile + desktop cuts)');

@@ -1,7 +1,10 @@
 ---
 title: "Beancount"
 description: "Double-entry accounting from plain text files."
+added: 2026-11-10
 category: Finance
+tags:
+- Plain text accounting
 icon: beancount.png
 mark: BC
 repository: https://github.com/beancount/beancount
@@ -29,7 +32,7 @@ The project's pyproject.toml declares GPL-2.0-only. [Fava](/tools/fava/) adds a 
 
 ## Quick start
 
-*Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
+*Checked against the project's own documentation on November 9, 2026. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
 ### pip (Linux, Windows, macOS)
 

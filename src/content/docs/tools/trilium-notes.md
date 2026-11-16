@@ -1,7 +1,11 @@
 ---
 title: Trilium Notes
 description: Rich notes in a linked hierarchy, with search, revisions and scripting.
+added: 2026-11-09
 category: Notes
+tags:
+- Self-hosted
+- NixOS module
 icon: trilium-notes.svg
 mark: TR
 repository: https://github.com/TriliumNext/Trilium
@@ -19,9 +23,7 @@ screenshot:
   credit: Trilium Notes
   sourceUrl: https://github.com/TriliumNext/Trilium/blob/849f6042766c23b2804716f3da80aebb422ea242/apps/website/public/screenshot_desktop_linux_light.webp
   license: AGPL-3.0
-  captionNote: "Project-published demo image, not our install. Screenshot version not recorded."
-tags:
-- Self-hosted
+  captionNote: "Project-published demo image. Screenshot version not recorded."
 ---
 
 Trilium Notes organizes a large personal knowledge base as a tree of rich-text
@@ -35,8 +37,7 @@ compatibility before upgrading a server that syncs with desktop clients.
 
 ## Quick start
 
-*Checked against the official docs on November 9, 2026. We have not run
-these setups ourselves.*
+*Checked against the official docs on November 9, 2026.*
 
 Docker and the desktop app are upstream-documented routes. The NixOS module
 is maintained in nixpkgs and may package a different version than the pinned

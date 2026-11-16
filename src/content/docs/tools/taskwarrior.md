@@ -1,7 +1,10 @@
 ---
 title: "Taskwarrior"
 description: "Command-line task management."
+added: 2026-11-10
 category: Productivity
+tags:
+- NixOS module
 icon: taskwarrior.png
 mark: TW
 repository: https://github.com/GothenburgBitFactory/taskwarrior
@@ -25,7 +28,7 @@ Taskwarrior manages to-do lists from the terminal, with tags, priorities, due da
 
 ## Quick start
 
-*Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
+*Checked against the project's own documentation on November 9, 2026. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
 ### Linux and macOS
 

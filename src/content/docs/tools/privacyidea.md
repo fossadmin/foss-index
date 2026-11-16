@@ -3,6 +3,7 @@ dripsEligible: false
 title: privacyIDEA
 description: Self-hosted multi-factor authentication server for managing tokens and
   authentication policies.
+added: 2026-11-12
 category: Infrastructure
 tags:
 - Self-hosted

@@ -1,0 +1,48 @@
+---
+import CatalogLayout from "../layouts/CatalogLayout.astro";
+import { catalog } from "../lib/catalog";
+const { tools } = await catalog();
+// Rolling 7-day window over listing `added:` dates, computed at build time.
+const RECENT_WINDOW_MS = 7 * 24 * 60 * 60 * 1000;
+const buildTime = Date.now();
+const recentTools = tools
+  .filter((t) => t.data.added && buildTime - t.data.added.getTime() <= RECENT_WINDOW_MS)
+  .sort((a, b) => b.data.added!.getTime() - a.data.added!.getTime() || a.data.title.localeCompare(b.data.title));
+---
+<CatalogLayout title="Recently added" description="Listings added to the FOSS Index in the last 7 days." active="">
+  <article class="detail">
+    <a class="back-link" href={import.meta.env.BASE_URL}>&larr; All tools</a>
+    <header class="detail-heading">
+      <h1>Recently added</h1>
+      <p class="lede">Listings added to the Index in the last 7 days, newest first.</p>
+    </header>
+    <p data-recent-empty hidden={recentTools.length > 0}>Nothing new this week. <a href={import.meta.env.BASE_URL}>Browse all tools &rarr;</a></p>
+    {recentTools.length > 0 && <ul class="related-list recent-page-list" data-recent-list>
+      {recentTools.map((t) => <li data-added={t.data.added!.toISOString().slice(0, 10)}><a class="related-row" href={t.href}>
+        {t.data.icon ? (
+          <span class="tool-mark tool-icon" aria-hidden="true">
+            <img class:list={[{ 'icon-light': t.data.iconDark, 'icon-tile': t.data.iconTile }]} src={`${import.meta.env.BASE_URL}icons/${t.data.icon}`} alt="" width="40" height="40" loading="lazy" decoding="async" />
+            {t.data.iconDark && <img class="icon-dark" src={`${import.meta.env.BASE_URL}icons/${t.data.iconDark}`} alt="" width="40" height="40" loading="lazy" decoding="async" />}
+          </span>
+        ) : t.data.mark ? (
+          <span class="tool-mark" aria-hidden="true">{t.data.mark}</span>
+        ) : <span class="tool-mark tool-mark-blank" aria-hidden="true"></span>}
+        <span class="related-copy"><span class="related-name">{t.data.title}</span><span class="related-purpose">{t.data.description}</span></span>
+        <span class="row-arrow" aria-hidden="true">&rarr;</span>
+      </a></li>)}
+    </ul>}
+    <script is:inline>
+      (function () {
+        var window_ms = 7 * 24 * 60 * 60 * 1000;
+        var list = document.querySelector('[data-recent-list]');
+        var empty = document.querySelector('[data-recent-empty]');
+        if (list) {
+          list.querySelectorAll('[data-added]').forEach(function (row) {
+            if (Date.now() - Date.parse(row.getAttribute('data-added') + 'T00:00:00Z') > window_ms) row.remove();
+          });
+          if (!list.querySelector('[data-added]')) { list.hidden = true; if (empty) empty.hidden = false; }
+        }
+      })();
+    </script>
+  </article>
+</CatalogLayout>

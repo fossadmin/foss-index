@@ -1,9 +1,11 @@
 ---
 title: Karakeep
 description: Self-hosted bookmark-everything app. Saves the content, not just the link, with search and AI tagging.
+added: 2026-11-08
 category: Bookmarks
 tags:
 - Self-hosted
+- NixOS module
 icon: karakeep.svg
 iconDark: karakeep-dark.svg
 mark: KK
@@ -22,7 +24,7 @@ screenshot:
   credit: Karakeep
   sourceUrl: https://github.com/karakeep-app/karakeep/blob/main/screenshots/homepage.png
   license: AGPL-3.0
-  captionNote: "Shows the v0.23.1 interface. Demo data, not our install."
+  captionNote: "Shows the v0.23.1 interface. Demo data."
 ---
 
 Karakeep is a self-hosted "bookmark everything" app. Save links, notes,
@@ -33,8 +35,7 @@ automatic AI tagging is optional.
 
 ## Quick start
 
-*Verified against Karakeep's own documentation on November 8, 2026; we
-haven't run these setups ourselves.*
+*Verified against Karakeep's own documentation on November 8, 2026.*
 
 Docker Compose is the documented install; there is no native Ubuntu
 package, so on Ubuntu use Docker. The NixOS module is maintained in

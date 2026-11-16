@@ -1,9 +1,11 @@
 ---
 title: Vikunja
 description: Tasks, projects and shared plans, with list, kanban, table and Gantt views.
+added: 2026-11-09
 category: Productivity
 tags:
 - Self-hosted
+- NixOS module
 icon: vikunja.svg
 mark: VI
 repository: https://github.com/go-vikunja/vikunja
@@ -37,8 +39,7 @@ feature is included.
 ## Quick start
 
 *Checked against upstream docs on November 9, 2026. We ran a local v2.8.0
-binary solely to make the fictional screenshot; we have not run these setups
-ourselves.*
+binary solely to make the fictional screenshot.*
 
 Docker is the upstream-documented small-install route. The NixOS module is
 maintained in nixpkgs and may package a different version.

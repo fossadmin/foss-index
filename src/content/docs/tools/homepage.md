@@ -1,9 +1,11 @@
 ---
 title: Homepage
 description: A fast, self-hosted start page for your services, with live widgets for over a hundred apps.
+added: 2026-11-08
 category: Dashboard
 tags:
 - Self-hosted
+- NixOS module
 icon: homepage.png
 mark: HP
 repository: https://github.com/gethomepage/homepage
@@ -33,8 +35,7 @@ hundred self-hosted apps.
 
 ## Quick start
 
-*Verified against Homepage's own documentation on November 8, 2026; we
-haven't run these setups ourselves.*
+*Verified against Homepage's own documentation on November 8, 2026.*
 
 Homepage runs as a container or from source; there is no native Ubuntu
 package, so on Ubuntu use Docker. The NixOS module is maintained in

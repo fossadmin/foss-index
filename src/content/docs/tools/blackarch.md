@@ -2,7 +2,10 @@
 dripsEligible: false
 title: "BlackArch"
 description: "Arch-based penetration testing distribution with a rolling repository of more than 2,800 security tools, installable onto an existing Arch system."
+added: 2026-11-12
 category: Operating systems
+tags:
+- Penetration testing
 icon: blackarch.png
 iconLink: https://blackarch.org/
 mark: BA

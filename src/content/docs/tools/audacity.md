@@ -1,7 +1,10 @@
 ---
 title: "Audacity"
 description: "Multi-track audio editor and recorder."
+added: 2026-11-10
 category: Creative
+tags:
+- Audio
 icon: audacity.svg
 mark: AU
 repository: https://github.com/audacity/audacity
@@ -25,7 +28,7 @@ The project's LICENSE file says Audacity is released under the GNU GPL version 3
 
 ## Quick start
 
-*Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
+*Checked against the project's own documentation on November 9, 2026. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
 ### Linux
 

@@ -1,6 +1,7 @@
 ---
 title: "Super Productivity"
 description: "To-do list, time tracker and daily planner for focused personal work."
+added: 2026-11-10
 category: Productivity
 icon: super-productivity.png
 mark: SP
@@ -25,7 +26,7 @@ It can sync through Dropbox, WebDAV or the project's own SuperSync service, and 
 
 ## Quick start
 
-*Checked against the project's own documentation on November 9, 2026. We have not run these installs ourselves. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
+*Checked against the project's own documentation on November 9, 2026. Commands are copied from the project's pages, or from Flathub and Homebrew where the section says so.*
 
 ### Desktop apps
 
