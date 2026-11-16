@@ -1703,6 +1703,7 @@ html:not(.js) .view-toggle {
   height: auto;
   display: block;
   background: var(--tint);
+  object-fit: contain;
 }
 
 /* Detail page: tool icon beside the page title (same tile as catalog rows;

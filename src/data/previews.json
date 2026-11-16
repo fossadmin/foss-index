@@ -1,6 +1,9 @@
 {
   "tools/beszel": {
     "src": "previews/beszel.mp4",
-    "note": "Preview clip recorded from a demo install (Beszel 0.21.2 hub plus a local agent, November 2026)."
+    "note": "Preview clip recorded from a demo install (Beszel 0.21.2 hub plus a local agent, November 2026).",
+    "width": 1280,
+    "height": 594,
+    "poster": "previews/beszel-poster.webp"
   }
 }
