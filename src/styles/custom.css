@@ -1655,6 +1655,9 @@ html:not(.js) .view-toggle {
   display: grid;
   gap: 6px;
 }
+.related-list > li {
+  min-width: 0;
+}
 .related-row {
   display: flex;
   text-decoration: none;
