@@ -1270,5 +1270,197 @@
     "note": "questions, ideas and help with the project."
    }
   ]
+ },
+ "tools/formlander": {
+  "checkedOn": "November 15, 2026",
+  "routes": [
+   {
+    "label": "Report or follow issues",
+    "href": "https://github.com/karloscodes/formlander/issues",
+    "note": "the project's issue tracker."
+   },
+   {
+    "label": "Star or watch the project",
+    "href": "https://github.com/karloscodes/formlander",
+    "note": "a small project; visibility helps."
+   }
+  ]
+ },
+ "tools/easyappointments": {
+  "checkedOn": "November 15, 2026",
+  "routes": [
+   {
+    "label": "Report or follow issues",
+    "href": "https://github.com/alextselegidis/easyappointments/issues",
+    "note": "the project's issue tracker."
+   },
+   {
+    "label": "Join the support group",
+    "href": "https://groups.google.com/forum/#!forum/easy-appointments",
+    "note": "the project's community forum."
+   }
+  ]
+ },
+ "tools/erpnext": {
+  "checkedOn": "November 15, 2026",
+  "routes": [
+   {
+    "label": "Report reproducible issues",
+    "href": "https://github.com/frappe/erpnext/issues",
+    "note": "the project's own issue tracker."
+   },
+   {
+    "label": "Read the source and contribute",
+    "href": "https://github.com/frappe/erpnext",
+    "note": "follow the project's contribution guidance before submitting changes."
+   }
+  ]
+ },
+ "tools/frappe-books": {
+  "checkedOn": "November 15, 2026",
+  "routes": [
+   {
+    "label": "Report reproducible issues",
+    "href": "https://github.com/frappe/frappe-books/issues",
+    "note": "the project's own issue tracker."
+   },
+   {
+    "label": "Read the source and contribute",
+    "href": "https://github.com/frappe/frappe-books",
+    "note": "follow the project's contribution guidance before submitting changes."
+   }
+  ]
+ },
+ "tools/firefly-iii": {
+  "checkedOn": "November 15, 2026",
+  "routes": [
+   {
+    "label": "Report reproducible issues",
+    "href": "https://github.com/firefly-iii/firefly-iii/issues",
+    "note": "the project's own issue tracker."
+   },
+   {
+    "label": "Read the source and contribute",
+    "href": "https://github.com/firefly-iii/firefly-iii",
+    "note": "follow the project's contribution guidance before submitting changes."
+   }
+  ]
+ },
+ "tools/mautic": {
+  "checkedOn": "November 15, 2026",
+  "routes": [
+   {
+    "label": "Report reproducible issues",
+    "href": "https://github.com/mautic/mautic/issues",
+    "note": "the project's own issue tracker."
+   },
+   {
+    "label": "Read the source and contribute",
+    "href": "https://github.com/mautic/mautic",
+    "note": "follow the project's contribution guidance before submitting changes."
+   }
+  ],
+  "fundingSource": {
+   "label": "project funding declaration",
+   "href": "https://github.com/mautic/mautic/blob/7.x/.github/FUNDING.yml"
+  }
+ },
+ "tools/phplist": {
+  "checkedOn": "November 15, 2026",
+  "routes": [
+   {
+    "label": "Report reproducible issues",
+    "href": "https://github.com/phpList/phplist3/issues",
+    "note": "the project's own issue tracker."
+   },
+   {
+    "label": "Read the source and contribute",
+    "href": "https://github.com/phpList/phplist3",
+    "note": "follow the project's contribution guidance before submitting changes."
+   }
+  ],
+  "fundingSource": {
+   "label": "project funding declaration",
+   "href": "https://github.com/phpList/phplist3/blob/main/.github/FUNDING.yml"
+  }
+ },
+ "tools/sendportal": {
+  "checkedOn": "November 15, 2026",
+  "routes": [
+   {
+    "label": "Report reproducible issues",
+    "href": "https://github.com/mettle/sendportal/issues",
+    "note": "the project's own issue tracker."
+   },
+   {
+    "label": "Read the source and contribute",
+    "href": "https://github.com/mettle/sendportal",
+    "note": "follow the project's contribution guidance before submitting changes."
+   }
+  ]
+ },
+ "tools/fail2ban": {
+  "checkedOn": "November 15, 2026",
+  "routes": [
+   {
+    "label": "Report reproducible issues",
+    "href": "https://github.com/fail2ban/fail2ban/issues",
+    "note": "the project's own issue tracker."
+   },
+   {
+    "label": "Read the source and contribute",
+    "href": "https://github.com/fail2ban/fail2ban",
+    "note": "follow the project's contribution guidance before submitting changes."
+   }
+  ],
+  "fundingSource": {
+   "label": "project funding declaration",
+   "href": "https://github.com/fail2ban/fail2ban/blob/master/.github/FUNDING.yml"
+  }
+ },
+ "tools/esphome": {
+  "checkedOn": "November 15, 2026",
+  "routes": [
+   {
+    "label": "Report reproducible issues",
+    "href": "https://github.com/esphome/esphome/issues",
+    "note": "the project's own issue tracker."
+   },
+   {
+    "label": "Read the source and contribute",
+    "href": "https://github.com/esphome/esphome",
+    "note": "follow the project's contribution guidance before submitting changes."
+   }
+  ]
+ },
+ "tools/zigbee2mqtt": {
+  "checkedOn": "November 15, 2026",
+  "routes": [
+   {
+    "label": "Report reproducible issues",
+    "href": "https://github.com/Koenkk/zigbee2mqtt/issues",
+    "note": "the project's own issue tracker."
+   },
+   {
+    "label": "Read the source and contribute",
+    "href": "https://github.com/Koenkk/zigbee2mqtt",
+    "note": "follow the project's contribution guidance before submitting changes."
+   }
+  ]
+ },
+ "tools/balena-etcher": {
+  "checkedOn": "November 15, 2026",
+  "routes": [
+   {
+    "label": "Report reproducible issues",
+    "href": "https://github.com/balena-io/etcher/issues",
+    "note": "the project's own issue tracker."
+   },
+   {
+    "label": "Read the source and contribute",
+    "href": "https://github.com/balena-io/etcher",
+    "note": "follow the project's contribution guidance before submitting changes."
+   }
+  ]
  }
 }

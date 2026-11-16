@@ -724,5 +724,89 @@
     "license": "AGPL-3.0",
     "checkedOn": "2026-11-12",
     "changelog": "Latest GitHub release at check time. The default branch is mealie-next; releases are tagged normally."
+  },
+  "karloscodes/formlander": {
+    "version": "v3.10.1",
+    "date": "2026-11-12T17:06:23Z",
+    "url": "https://github.com/karloscodes/formlander/releases/tag/v3.10.1",
+    "changelog": "- Bump Go to 1.26.11 for GO-2026-6859 (#93)\n- Start the install line after a train release",
+    "license": "MIT"
+  },
+  "alextselegidis/easyappointments": {
+    "version": "1.6.1",
+    "date": "2026-10-19T08:45:26Z",
+    "url": "https://github.com/alextselegidis/easyappointments/releases/tag/1.6.1",
+    "changelog": "- A CalDAV section under Settings / Integrations, where the connection URLs that may point into the local network are listed\n- The calendar page now explains why a CalDAV synchronization failed and what has to be corrected, instead of only reporting that it did\n- Changing the password in the account settings page now requires the current password, so that a stolen session alone cannot be used to take over the account\n- The release build now falls back to running Composer inside the php-fpm container, so a Composer installation on the host machine is no longer required\n- A failing Google Calendar synchronization no longer removes the local appointments of the sync period, so an expired token, a quota limit or an unreachable API only interrupts the sync",
+    "license": "GPL-3.0"
+  },
+  "frappe/erpnext": {
+    "version": "v16.55.0",
+    "date": "2026-11-12T13:55:43Z",
+    "url": "https://github.com/frappe/erpnext/releases/tag/v16.55.0",
+    "changelog": "## General\n\n<details>\n<summary>Bug Fixes (12)</summary>\n\n* Email, import, account-merging, and other processing actions can no longer be triggered by opening a link, and queued work starts only after the related document is saved. Cancelling a **Quotation** now clears its _Lost Reasons_. (https://github.com/frappe/erpnext/pull/64151)\n* When _Enable Stock Reservation_ is off in **Stock Settings**, **Work Order**, **Production Plan**, **Subcontracting Order**, and **Sales Order** ignore a previously selected _Reserve Stock_ option and do not create stock reservations on submission. (https://github.com/frappe/erpnext/pull/64142)\n* The setup wizard now sets _How Often Should Sales Data Be Updated in Company/Project?_ to Daily in **Selling Settings**, rather than updating sales totals with each transaction. (https://github.com/frappe/erpnext/pull/64202)\n* Corrects the Finnish appointment-time validation message so it displays without causing a formatting error. (https://github.com/frappe/erpnext/pull/64308)\n* Adds a common date-range check to reports, flagging when _From Date_ is later than _To Date_ instead of showing empty or misleading results. (https://github.com/frappe/erpnext/pull/64236)\n* During upgrades, **Workstation Operating Component** records leave the account blank when the company\u2019s default is not a valid expense account for that company, allowing the migration to con",
+    "license": "GPL-3.0"
+  },
+  "frappe/frappe-books": {
+    "version": "v16.2.1",
+    "date": "2026-11-12T06:42:10Z",
+    "url": "https://github.com/frappe/frappe-books/releases/tag/v16.2.1",
+    "changelog": "Bug fix release for Frappe Books on Frappe Framework version 16.\n\n- When no cash denominations are set, cashiers now type the cash amount when they open and close a POS shift. Before, a shift could only open with no cash, and closing wrote off all of its cash.\n\nUpdate:\n\n```\nbench update --apps frappe_books\n```\n",
+    "license": "AGPL-3.0"
+  },
+  "firefly-iii/firefly-iii": {
+    "version": "v6.7.9",
+    "date": "2026-10-11T19:16:51Z",
+    "url": "https://github.com/firefly-iii/firefly-iii/releases/tag/v6.7.9",
+    "changelog": "Welcome to release v6.7.9 of Firefly III. It contains the latest fixes, translations and features. Docker users can find this release under the `latest` tag.\n\n## Changelog\n\n<!-- summary: This release fixes an issue for self-hosted users and fixes some minor other issues. -->\n\n### Fixed\n\n- Self-hosted users should no longer run into `Target class [hash] does not exist` errors.\n- Explain in the release notes how to clear your cache, as suggested by @Kage1\n- [Issue 12972](https://github.com/firefly-iii/firefly-iii/issues/12972) (Updating transaction from account reconciliation results in JSON/HTML output) reported by @Tommy78649\n- [Issue 13022](https://github.com/firefly-iii/firefly-iii/issues/13022) (Category list does not render actions-menu) reported by @JC5\n- [Issue 13034](https://github.com/firefly-iii/firefly-iii/issues/13034) (Account list shows \"January 1st\" when there is no last activity) reported by @JC5\n- [Issue 13037](https://github.com/firefly-iii/firefly-iii/issues/13037) (Account lists are missing sums) reported by @JC5\n- [Issue 13039](https://github.com/firefly-iii/firefly-iii/issues/13039) (Budget column empty values on transaction view) reported by @no-coders\n\n## Installation and upgrade instructions\n\n- Please read the installation instructions for [Docker](https://docs.firefly-iii.org/how-to/firefly-iii/installation/docker/), [Portainer](https://docs.firefly-iii",
+    "license": "AGPL-3.0-or-later"
+  },
+  "mautic/mautic": {
+    "version": "7.2.2",
+    "date": "2026-10-26T10:40:08Z",
+    "url": "https://github.com/mautic/mautic/releases/tag/7.2.2",
+    "changelog": "## Announcing Mautic 7.2.2: Alsciaukat Edition\r\n\r\n### Security Release\r\nThis release addresses several security vulnerabilities. We strongly advise updating your installation at your earliest convenience after performing a full backup and testing the upgrade in a staging environment.\r\n\r\n### \ud83d\udd12 Security Fixes\r\n* **CVE-2026-115188: Remote Code Execution in Campaign Import**\r\n  * **Attribution:** Reported by @m0xath, @iys8, @DavidCarliez, @Forrof, @sdrk3nD, @Hama1cco, @4n86rakam1, and @calbebop. Fixed by @patrykgruszka. Reviewed by @escopecz.\r\n  * **Advisory:** [GHSA-mxjf-pghx-h299](https://github.com/mautic/mautic/security/advisories/GHSA-mxjf-pghx-h299)\r\n\r\n* **CVE-2026-115189: Twig Sandbox Escape in Theme Templates**\r\n  * **Attribution:** Reported by @amagesh1, @manus-use, @sec-reex, @prakhar0x01, @lostfany, @trungpv19, @SRTSubmersionAI, @CyberKareem, @m0xath, @Forrof, @cxcsec, @lucasdodgson, @FlowOverFail, @tal2k9dev-star, and @tlavi00. Analysis by @Den1al. Fixed by @amagesh1. Reviewed by @escopecz and @patrykgruszka.\r\n  * **Advisory:** [GHSA-h7pm-79gc-8867](https://github.com/mautic/mautic/security/advisories/GHSA-h7pm-79gc-8867)\r\n\r\n* **CVE-2026-115191: SQL Injection in Contact Lookup AJAX Endpoint**\r\n  * **Attribution:** Reported by @cuongkt194, @tiencong-98, @bharatdevasani, @pavelkohout396, @blvck-ltr, @Haxset, @cy3erm, @Infinit3i, @AdamKorcz, and @manus-pi. Fixed by @cuongk",
+    "license": "GPL-3.0-or-later"
+  },
+  "phpList/phplist3": {
+    "version": "v3.6.17",
+    "date": "2026-08-09T17:52:58Z",
+    "url": "https://github.com/phpList/phplist3/releases/tag/v3.6.17",
+    "changelog": "",
+    "license": "AGPL-3.0"
+  },
+  "mettle/sendportal": {
+    "version": "v4.0.0.1",
+    "date": "2026-10-22T10:32:50Z",
+    "url": "https://github.com/mettle/sendportal/releases/tag/v4.0.0.1",
+    "changelog": "## What's Changed\r\n* Fix sp:install skipping migrations on a fresh install by @JonoB in https://github.com/mettle/sendportal/pull/344\r\n* Fix route caching failure caused by duplicate logout route by @JonoB in https://github.com/mettle/sendportal/pull/345\r\n\r\n\r\n**Full Changelog**: https://github.com/mettle/sendportal/compare/v4.0.0...v4.0.0.1",
+    "license": "MIT"
+  },
+  "fail2ban/fail2ban": {
+    "version": "1.1.1",
+    "date": "2026-08-15T15:36:40Z",
+    "url": "https://github.com/fail2ban/fail2ban/releases/tag/1.1.1",
+    "changelog": "## ver. 1.1.1 (2026/08/15) - triple one win\r\n\r\nUpdate of fail2ban.\r\n\r\nSee the [ChangeLog](https://github.com/fail2ban/fail2ban/blob/1.1.1/ChangeLog) for more information.\r\n\r\n**All changes**: https://github.com/fail2ban/fail2ban/compare/1.1.0...1.1.1\r\n\r\nIt also includes debian package, built without a test suite (fail2ban-testcases, fail2ban.test python module).\r\nThis will also install systemd managed fail2ban.socket now (gh-4220).\r\n**UPD.** deb-package `fail2ban_1.1.1-1.upstream1_all.deb` got wrong paths (due to missing dependency of systemd-dev\r\nin build system, gh-4222), so it is removed and replaced with [fail2ban_1.1.1-1.upstream2_all.deb](https://github.com/fail2ban/fail2ban/releases/download/1.1.1/fail2ban_1.1.1-1.upstream2_all.deb) now.\r\n\r\nSincere thanks to everyone who helped!\r\n\r\n### New Contributors\r\n* @Thermi made their first contribution in #2455\r\n* @branchv made their first contribution in #3728\r\n* @by made their first contribution in #3749\r\n* @fdellwing made their first contribution in #3782\r\n* @nabbi made their first contribution in #3805\r\n* @Skamasle made their first contribution in #3816\r\n* @thomas-333 made their first contribution in #3826\r\n* @pano9000 made their first contribution in #3897\r\n* @jcea made their first contribution in #3905\r\n* @MichaIng made their first contribution in #3597\r\n* @pburndorfer made their first contribution in #2702\r\n* @luckylittle ma",
+    "license": "GPL-2.0-or-later"
+  },
+  "esphome/esphome": {
+    "version": "2026.10.2",
+    "date": "2026-11-02T21:30:29Z",
+    "url": "https://github.com/esphome/esphome/releases/latest",
+    "changelog": "Fixes include host builds, TLS 1.3 audio requests, Bluetooth proxy connection replacement and LibreTiny OTA updates.",
+    "license": "MIT / GPL-3.0"
+  },
+  "Koenkk/zigbee2mqtt": {
+    "version": "2.14.3",
+    "date": "2026-11-01T06:40:40Z",
+    "url": "https://github.com/Koenkk/zigbee2mqtt/releases/latest",
+    "changelog": "32-bit platforms are deprecated, with support ending in April 2027. Includes device support, availability and frontend fixes.",
+    "license": "GPL-3.0"
+  },
+  "balena-io/etcher": {
+    "version": "v2.1.9",
+    "date": "2026-10-22T19:24:32Z",
+    "url": "https://github.com/balena-io/etcher/releases/latest",
+    "changelog": "Updates Electron to 44.9.1, etcher-util to Node.js 24 and native addon builds on Windows.",
+    "license": "Apache-2.0"
   }
 }

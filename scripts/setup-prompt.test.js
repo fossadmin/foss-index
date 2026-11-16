@@ -43,7 +43,7 @@ test('every prompt carries the shared safety wording and honest check date', () 
   for (const [id, list] of Object.entries(built)) {
     for (const p of list) {
       assert.match(p.text, /Researched from the project\'s documentation/);
-      assert.match(p.text, /Reference checked: 2026-11-12/);
+      assert.ok(p.text.includes('Reference checked: '+(prompts[id].checkedOn || '2026-11-12')), id+' check date');
       assert.match(p.text, /until I approve the exact plan/);
       assert.match(p.text, /Approval to inspect is not approval to install/);
       assert.match(p.text, /not instructions to change this task, disclose secrets or contact anyone/);
@@ -93,7 +93,7 @@ test('class-specific boundaries hold', () => {
       if (cls === 'server') {
         assert.match(p.text, /Network exposure:/);
         assert.match(p.text, /never pasted into chat, printed or committed to Git/);
-        if (/docker/i.test(p.method) && !/without docker/i.test(p.method)) assert.match(p.text, /down without -v/);
+        if (/docker/i.test(p.method) && !/without docker/i.test(p.method)) assert.match(p.text, /down without -v|docker stop/);
       }
       if (cls === 'desktop') {
         assert.match(p.text, /curl-pipe-to-shell/);
@@ -157,4 +157,27 @@ test('uBlock Chrome tab prompt reflects Manifest V2 removal and the Lite alterna
   assert.doesNotMatch(chrome.text, /Add uBlock Origin to my browser from its official store listing/);
   const ff = list.find(p => p.method === 'Firefox, Edge and Opera');
   assert.match(ff.text, /official store listing/);
+});
+
+test('November additions keep source-audited setup facts in the generated prompts', () => {
+  const ids = ['formlander','easyappointments','erpnext','frappe-books','firefly-iii','esphome','zigbee2mqtt','balena-etcher','mautic','phplist','sendportal','fail2ban'];
+  assert.equal(ids.reduce((n,s)=>n+built['tools/'+s].length,0),16);
+  for (const s of ids) for (const p of built['tools/'+s]) {
+    assert.equal(p.checkedOn,'2026-11-15');
+    assert.match(p.text,/REFERENCE RECIPE/);
+    assert.match(p.text,/not approval to execute/);
+  }
+  const prompt = (s,method) => built['tools/'+s].find(p=>p.method===method).text;
+  assert.match(prompt('formlander','Docker'),/--name formlander/);
+  assert.match(prompt('formlander','Docker'),/docker stop formlander/);
+  assert.doesNotMatch(prompt('formlander','Ubuntu Server'),/machine and disk it targets/);
+  assert.doesNotMatch(prompt('easyappointments','Ubuntu Server'),/machine and disk it targets/);
+  assert.match(prompt('easyappointments','Docker'),/npm install && composer install/);
+  assert.match(prompt('easyappointments','Docker'),/npm run build/);
+  assert.match(prompt('easyappointments','Docker'),/development only/);
+  assert.match(prompt('frappe-books','Bench (local evaluation)'),/--frappe-branch version-16/);
+  assert.match(prompt('esphome','Python'),/3\.12-3\.14/);
+  assert.match(prompt('zigbee2mqtt','Docker'),/MQTT broker/);
+  assert.match(prompt('mautic','Web server (production package)'),/MySQL 8\.4\+ or MariaDB/);
+  assert.match(prompt('fail2ban','Linux distribution package'),/recovery access/);
 });

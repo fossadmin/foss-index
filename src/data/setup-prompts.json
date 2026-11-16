@@ -952,5 +952,138 @@
       "NixOS": {}
     },
     "cls": "desktop"
+  },
+  "tools/formlander": {
+    "purpose": "Self-hosted form backend that keeps your site's form submissions on your own server",
+    "methods": {
+      "Docker": {
+        "stop": "docker stop formlander; retain the persistent host data directory when removing the container",
+        "secrets": "the session secret must persist across container recreation; generate it locally and store it safely, never pasted into chat, printed or committed to Git",
+        "exposure": "the example binds 8080 to loopback; production-mode cookies require an HTTPS reverse proxy"
+      },
+      "Ubuntu Server": {
+        "env": "my server operating system and version, whether it is a fresh server, my domain and DNS setup, existing web services, and whether I want the documented HTTPS installer"
+      }
+    },
+    "cls": "server",
+    "checkedOn": "2026-11-15"
+  },
+  "tools/easyappointments": {
+    "purpose": "Open-source appointment scheduling with a customer booking page on your own server",
+    "methods": {
+      "Docker": {
+        "stop": "docker compose down without -v (the -v flag deletes data)",
+        "exposure": "the development Compose stack publishes multiple services and public example credentials; isolate the entire stack locally and do not expose it to the internet"
+      },
+      "Ubuntu Server": {
+        "env": "my existing server operating system, PHP version, web server, database version, site URL and whether this is a new install or an upgrade"
+      }
+    },
+    "cls": "server",
+    "checkedOn": "2026-11-15"
+  },
+  "tools/erpnext": {
+    "purpose": "Accounting, sales, stock and manufacturing in one self-hosted business system",
+    "checkedOn": "2026-11-15",
+    "methods": {
+      "Docker (disposable demo)": {
+        "stop": "docker compose -f pwd.yml down without -v; -v deletes volumes"
+      }
+    },
+    "cls": "server"
+  },
+  "tools/frappe-books": {
+    "purpose": "Browser-based accounting, invoicing and stock for small teams on a Frappe server",
+    "checkedOn": "2026-11-15",
+    "methods": {
+      "Bench (local evaluation)": {
+        "env": "my operating system, whether uv and the stable v16 prerequisites are installed, database setup and whether this is a fresh local evaluation"
+      }
+    },
+    "cls": "server"
+  },
+  "tools/firefly-iii": {
+    "purpose": "Self-hosted personal finance tracking with accounts, budgets, rules and reports",
+    "checkedOn": "2026-11-15",
+    "methods": {
+      "Docker Compose": {
+        "stop": "docker compose -f docker-compose.yml down without -v; -v deletes the database and upload volumes"
+      }
+    },
+    "cls": "server"
+  },
+  "tools/mautic": {
+    "purpose": "Self-hosted marketing automation for contacts, segments, campaigns and email",
+    "checkedOn": "2026-11-15",
+    "methods": {
+      "Web server (production package)": {
+        "env": "my target Mautic version, operating system, PHP and database versions, web server, domain and mail provider"
+      }
+    },
+    "cls": "server"
+  },
+  "tools/phplist": {
+    "purpose": "Self-hosted mailing lists and newsletters with subscriber management and bounce handling",
+    "checkedOn": "2026-11-15",
+    "methods": {
+      "PHP web server": {
+        "env": "my operating system, PHP and database versions, web server, site URL, mail provider and whether this is a fresh installation"
+      }
+    },
+    "cls": "server"
+  },
+  "tools/sendportal": {
+    "purpose": "A self-hosted Laravel email-marketing app for subscribers, segments and campaigns",
+    "checkedOn": "2026-11-15",
+    "methods": {
+      "PHP and Composer": {
+        "env": "my operating system, PHP and Composer versions, database, web server, site URL, queue backend and mail provider"
+      }
+    },
+    "cls": "server"
+  },
+  "tools/fail2ban": {
+    "purpose": "Watch service logs and temporarily ban hosts that repeatedly fail authentication",
+    "checkedOn": "2026-11-15",
+    "methods": {
+      "Linux distribution package": {}
+    },
+    "cls": "server",
+    "exposure": "local control socket; jail actions modify the host firewall, so agree a recovery/allowlist plan first"
+  },
+  "tools/esphome": {
+    "purpose": "Build firmware for smart-home devices from YAML",
+    "checkedOn": "2026-11-15",
+    "methods": {
+      "Home Assistant app": {
+        "env": "my Home Assistant installation type and version, whether it supports apps, and the exact board I want to configure"
+      },
+      "Python": {
+        "env": "my operating system, Python version (3.12-3.14 for the recorded ESPHome release), USB access if needed, and exact target board"
+      }
+    },
+    "cls": "server"
+  },
+  "tools/zigbee2mqtt": {
+    "purpose": "Bridge Zigbee devices to a local MQTT broker",
+    "checkedOn": "2026-11-15",
+    "methods": {
+      "Docker": {
+        "stop": "docker stop zigbee2mqtt; if converting to Compose, use docker compose down without -v so persistent data is retained",
+        "env": "my Linux host and Docker version, MQTT broker, exact coordinator and stable device path, and any integration already using it"
+      },
+      "Home Assistant app": {
+        "env": "my Home Assistant installation type, MQTT broker, exact coordinator, adapter connection and whether another integration already owns it"
+      }
+    },
+    "cls": "server"
+  },
+  "tools/balena-etcher": {
+    "purpose": "Write verified operating-system images to removable media",
+    "checkedOn": "2026-11-15",
+    "methods": {
+      "Linux, macOS and Windows": {}
+    },
+    "cls": "media"
   }
 }

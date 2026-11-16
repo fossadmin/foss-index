@@ -5,7 +5,7 @@ import interSemibold from '../assets/fonts/inter-latin-600-normal.woff2?url';
 import loraMedium from '../assets/fonts/lora-latin-500-normal.woff2?url';
 import { catalog } from '../lib/catalog';
 const { groups, tools, tags } = await catalog();
-const { title = 'Discover open source.', description = 'Discover open source. Support the projects.', active = 'all', canonical, ogImage = 'https://index.fossadmin.com/og-image.png', ogImageWidth = '1200', ogImageHeight = '630', ogImageType = 'image/png' } = Astro.props;
+const { title = 'Discover open source.', description = 'Discover open source. Support the projects.', active = 'all', canonical, ogImage = 'https://index.fossadmin.com/og-image.png', ogImageWidth = '1200', ogImageHeight = '630', ogImageType = 'image/png', serifBody = false } = Astro.props;
 const base = import.meta.env.BASE_URL;
 const canonicalUrl = canonical ?? (Astro.site ? new URL(Astro.url.pathname, Astro.site).href : undefined);
 ---
@@ -49,7 +49,7 @@ const canonicalUrl = canonical ?? (Astro.site ? new URL(Astro.url.pathname, Astr
         <nav aria-label="Directory categories" class="category-nav">
           <p class="eyebrow">01 / Browse</p>
           <a class:list={['nav-item', { selected: active === 'all' }]} aria-current={active === 'all' ? 'page' : undefined} href={base} data-all-nav={active === 'all' ? '' : undefined}><span>All tools</span><span class="count">{tools.length}</span></a>
-          <a class="nav-item" data-saved-nav href={`${base}#saved`} hidden><span>Saved</span><span class="count" data-saved-count>0</span></a>
+          <a class="nav-item" data-saved-nav href={`${base}#saved`} hidden tabindex="-1"><span>Saved</span><span class="count" data-saved-count>0</span></a>
           {groups.map(c => <a class:list={['nav-item', { selected: active === c.slug }]} aria-current={active === c.slug ? 'page' : undefined} href={`${base}browse/${c.slug}/`}><span>{c.name}</span><span class="count">{c.count}</span></a>)}
           <a class:list={['nav-item', { selected: active === 'tags' }]} aria-current={active === 'tags' ? 'page' : undefined} href={`${base}tags/`}><span>Browse tags</span><span class="count">{tags.length}</span></a>
         </nav>
@@ -71,7 +71,7 @@ const canonicalUrl = canonical ?? (Astro.site ? new URL(Astro.url.pathname, Astr
             </span>
           </label>
         </div></header>
-        <main id="main" tabindex="-1"><slot /></main>
+        <main id="main" tabindex="-1" class:list={[{ 'serif-body': serifBody }]}><slot /></main>
         <footer class="page-footer"><span>Choose the tool. Keep control.</span><a href={`${base}funding/`}>Support the people who build it <span aria-hidden="true">↗</span></a><a href={`${base}about/#what-about-privacy-here`}>Minimal, cookie-free analytics</a><span>© 2026 FOSSadmin</span><a href={`${base}about/#source-code-and-license`}>Site code and text AGPL-3.0</a></footer>
       </div>
     </div>
@@ -117,6 +117,7 @@ const canonicalUrl = canonical ?? (Astro.site ? new URL(Astro.url.pathname, Astr
           var nav = document.querySelector('[data-saved-nav]');
           if (!nav) return;
           nav.hidden = false;
+          nav.removeAttribute('tabindex');
           var on = location.hash === '#saved';
           nav.classList.toggle('selected', on);
           if (on) nav.setAttribute('aria-current', 'page'); else nav.removeAttribute('aria-current');

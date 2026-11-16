@@ -593,3 +593,69 @@ Pi-hole's screenshot still needs a supported replacement or permission. The Comm
 - License: Apache-2.0. Copyright The LineageOS Project. The full Commons license panel was checked in a browser because the text-only extraction omitted its Apache license cell.
 - License copy: licenses/phone-os-Apache-2.0.txt ; https://www.apache.org/licenses/LICENSE-2.0
 - Changes: resized and converted to WebP. No Google-app screenshot substituted and no endorsement implied.
+
+## erpnext.webp
+- Project/credit: ERPNext.
+- Source: https://raw.githubusercontent.com/frappe/erpnext/v16.55.0/erpnext/public/images/v16/hero_image.png
+- Provenance: Project-published illustration included in the v16.55.0 release source. It shows the project's example company, not FOSSadmin financial records.
+- Changes: Resized where needed and converted to WebP. No endorsement implied.
+- Repository software license retained in licenses/erpnext-LICENSE.txt. Website illustrations remain credited to the project; no separate trademark grant is asserted.
+
+## frappe-books.webp
+- Project/credit: Frappe Books.
+- Source: https://raw.githubusercontent.com/frappe/frappe-books/v16.2.1/docs/images/desktop-dashboard.png
+- Provenance: Project-published dashboard from the current server/browser app, included in release v16.2.1. This is not the archived Electron desktop application.
+- Changes: Resized where needed and converted to WebP. No endorsement implied.
+- Repository software license retained in licenses/frappe-books-LICENSE.txt. Website illustrations remain credited to the project; no separate trademark grant is asserted.
+
+## firefly-iii.webp
+- Project/credit: Firefly III.
+- Source: https://github.com/fail2ban/fail2ban/releases/tag/1.1.1
+- Provenance: Captured on the official shared demo on November 15, 2026. The demo identifies itself as vdevelop/2026-11-14, not the stable v6.7.9 release. Example demo data, not personal financial records.
+- Changes: Resized where needed and converted to WebP. No endorsement implied.
+- Repository software license retained in licenses/firefly-iii-LICENSE.txt. Website illustrations remain credited to the project; no separate trademark grant is asserted.
+
+## mautic.webp
+- Project/credit: Mautic.
+- Source: https://docs.mautic.org/en/7.0/_images/dashboard-date-filters.png
+- Provenance: Illustration from the official Mautic 7 documentation. It shows the dashboard controls; the image does not identify the exact application release.
+- Changes: Resized where needed and converted to WebP. No endorsement implied.
+- Documentation copyright Mautic, Apache-2.0, checked in user-documentation branch 7.0 LICENSE.txt. License copy: licenses/mautic-documentation-LICENSE.txt.
+
+## phplist.webp
+- Project/credit: phpList.
+- Source: https://www.phplist.com/site/images/readme-images/panel.png
+- Provenance: Official README illustration with January 2019 example content. It is an older interface illustration, not a capture of the current v3.6.17 release.
+- Changes: Resized where needed and converted to WebP. No endorsement implied.
+- Repository software license retained in licenses/phplist-LICENSE.txt. Website illustrations remain credited to the project; no separate trademark grant is asserted.
+
+## sendportal.webp
+- Project/credit: SendPortal.
+- Source: https://sendportal.io/img/landing/campaigns.png
+- Provenance: Official project-site illustration with January 2020 example timestamps. Screenshot version is not recorded and may differ from the current v4 interface.
+- Changes: Resized where needed and converted to WebP. No endorsement implied.
+- Repository software license retained in licenses/sendportal-LICENSE.txt. Website illustrations remain credited to the project; no separate trademark grant is asserted.
+
+## fail2ban.webp
+- Project/credit: Fail2Ban.
+- Source: https://github.com/fail2ban/fail2ban/releases/tag/1.1.1
+- Provenance: Rendered from actual fail2ban-client --help output from the upstream 1.1.1 tag. No running jail, ban action or production firewall test is implied.
+- Changes: Rendered actual command output into an image, then WebP conversion. No endorsement implied.
+
+## esphome.webp
+- Project/credit: ESPHome Device Builder.
+- Source: https://github.com/esphome/device-builder
+- Provenance: Our local capture of Device Builder 1.28.1 with ESPHome 2026.10.2 and one example YAML file. No hardware, firmware install or live sensor reading. Device Builder is Apache-2.0.
+- Changes: Resized where needed and converted to WebP. No endorsement implied.
+
+## zigbee2mqtt.webp
+- Project/credit: Zigbee2MQTT frontend contributors.
+- Source: https://github.com/nurikk/zigbee2mqtt-frontend
+- Provenance: Our local capture of default frontend 0.9.21 in its own mock-data development mode. Sample devices only, no real coordinator/network/customer equipment. Frontend is GPL-3.0.
+- Changes: Resized where needed and converted to WebP. No endorsement implied.
+
+## balena-etcher.webp
+- Project/credit: balena.
+- Source: https://github.com/balena-io/etcher/releases/latest
+- Provenance: Our capture of the portable Linux balenaEtcher 2.1.9 application, cropped to the 800x480 app window. No target selected, no drive written. The anonymous-usage notice is retained. Apache-2.0 application.
+- Changes: Resized where needed and converted to WebP. No endorsement implied.

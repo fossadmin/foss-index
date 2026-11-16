@@ -323,6 +323,12 @@ main {
   flex: 1;
   outline: none;
 }
+/* Long-form project pages (About, Funding, Submit, Sponsor) read in the
+   serif already used for headings. Elements with their own font (eyebrow,
+   back link, buttons) are unaffected. */
+main.serif-body {
+  font-family: Lora, Georgia, serif;
+}
 .catalog-heading {
   margin-bottom: 34px;
 }
@@ -475,8 +481,49 @@ main {
   max-width: 640px;
   margin-top: 18px;
 }
-html:not(.js) .search-row,
 html:not(.js) .view-toggle {
+  display: none;
+}
+/* Scripts blocked: search stays visible but disabled, with an honest note. */
+.search-field input:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+html:not(.js) .search-hint {
+  display: none;
+}
+.no-js-note {
+  display: none;
+}
+html:not(.js) .no-js-note {
+  display: block;
+  margin: 10px 0 0;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--moss);
+}
+/* Scripts blocked: Saved stays listed in the sidebar, marked as needing JS. */
+html:not(.js) .nav-item[data-saved-nav] {
+  display: flex !important; /* overrides the global [hidden] reset, no-JS only */
+  opacity: 0.55;
+  pointer-events: none;
+}
+html:not(.js) .nav-item[data-saved-nav] .count {
+  display: none;
+}
+html:not(.js) .nav-item[data-saved-nav]::after {
+  content: 'needs JavaScript';
+  font: 9px var(--mono);
+  color: var(--moss);
+}
+/* No-JS quick start platform jump list (tabs replace it with JS on). */
+.qs-jump {
+  font: 11px var(--mono);
+  letter-spacing: 0.04em;
+  color: var(--moss);
+  margin: 14px 0 0;
+}
+html.js .qs-jump {
   display: none;
 }
 .search-row {

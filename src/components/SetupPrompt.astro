@@ -3,7 +3,7 @@ interface Props { method: string; purpose: string; checkedOn: string; verificati
 const { method, purpose, checkedOn, verification, text } = Astro.props;
 ---
 <section class="setup-prompt" data-setup-prompt data-method={method} aria-label={`${method} setup prompt`}>
-  <div class="setup-prompt-heading"><strong>Ask your AI to help with setup</strong><button type="button" data-copy-setup hidden>Copy setup prompt</button></div>
+  <div class="setup-prompt-heading"><strong>Ask your AI to help with setup · {method}</strong><button type="button" data-copy-setup hidden>Copy setup prompt</button></div>
   <p>{method} · {purpose}. Paste into your AI assistant. It may only be able to guide you. Review changes before running anything.</p>
   <p class="setup-prompt-check">{verification}. Checked {checkedOn}. No AI account or connection is needed here.</p>
   <details data-setup-fallback><summary>Read or copy the prompt manually</summary><label>Setup prompt for {method}<textarea readonly rows="10" spellcheck="false" data-setup-text>{text}</textarea></label></details>

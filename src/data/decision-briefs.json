@@ -2510,5 +2510,305 @@
   ],
   "checkedOn": "November 12, 2026",
   "installSource": "https://warpgate.null.page/"
+ },
+ "tools/formlander": {
+  "heading": "Forms on a static site, without a form SaaS.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "One container (or one Go binary) with a SQLite file. Your site's forms post to it; submissions show in a small admin dashboard and can be forwarded to email or webhooks."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Submissions are stored in SQLite on your server. Email, webhooks or optional anti-spam services can send data to the providers you configure."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "The container, updates, database backups and uploaded-file backups. The Chasen installer configures HTTPS and nightly updates; its database backups do not include uploads."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 15, 2026",
+  "installSource": "https://formlander.com/docs/deployment/"
+ },
+ "tools/easyappointments": {
+  "heading": "A booking page your customers use, on your server.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "A classic PHP application: Apache or Nginx, PHP 8.2+ and MySQL. Customers book from a public page; your team manages appointments in a web backend."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Appointments, customers and services stay in your MySQL database. Calendar sync to Google Calendar or CalDAV is optional and configured per provider."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "PHP/MySQL updates and backups, or pay the author's own managed hosting to run it. Email notifications need an SMTP account."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 15, 2026",
+  "installSource": "https://easyappointments.org/docs/"
+ },
+ "tools/erpnext": {
+  "heading": "An ERP when bookkeeping is only one part of the job.",
+  "qas": [
+   {
+    "q": "What does it need?",
+    "a": "Frappe Docker stack; production deployment is separate from the disposable demo"
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Your Frappe site database and attached files. Optional integrations and hosted deployments have their own data flows."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "The Frappe stack, database, backups, updates and business configuration. An ERP rollout is more work than installing the software."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 15, 2026",
+  "installSource": "https://github.com/frappe/erpnext#self-hosted"
+ },
+ "tools/frappe-books": {
+  "heading": "Small-team books, now on a shared server.",
+  "qas": [
+   {
+    "q": "What does it need?",
+    "a": "Stable Frappe v16, MariaDB 11.8, Redis, Python 3.14 and Node.js 24"
+   },
+   {
+    "q": "Where is my data?",
+    "a": "The Frappe site database, not a local .db desktop file. Users sign in through a browser with roles and permissions."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "A Frappe v16 server, MariaDB, Redis, backups, updates and access controls. The old desktop app is no longer supported."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 15, 2026",
+  "installSource": "https://docs.frappe.io/books/installation"
+ },
+ "tools/firefly-iii": {
+  "heading": "Personal money tracking, not a business accounting suite.",
+  "qas": [
+   {
+    "q": "What does it need?",
+    "a": "Docker Compose with a database and persistent uploads"
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Your own database and uploaded-file storage. Bank imports are optional and may involve external providers you configure."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "The app, database, backups and scheduled tasks; the separate Data Importer adds its own setup and updates."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 15, 2026",
+  "installSource": "https://docs.firefly-iii.org/how-to/firefly-iii/installation/docker/"
+ },
+ "tools/mautic": {
+  "heading": "Campaign automation on your own infrastructure.",
+  "qas": [
+   {
+    "q": "What does it need?",
+    "a": "PHP web application with database, cron jobs and mail transport"
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Contacts and campaign records live in your database; your configured email provider still handles delivery."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "PHP, database, application updates, cron jobs, queues, mail delivery and consent records."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 15, 2026",
+  "installSource": "https://docs.mautic.org/en/7.0/getting_started/how_to_install_mautic.html"
+ },
+ "tools/phplist": {
+  "heading": "A newsletter system you can run yourself.",
+  "qas": [
+   {
+    "q": "What does it need?",
+    "a": "PHP web application with MySQL/MariaDB and a mail transport"
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Subscribers and campaign data are in your server database; email delivery can involve the mail provider you configure."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "PHP/database updates, mail queues, bounce processing, backups and subscriber permissions."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 15, 2026",
+  "installSource": "https://github.com/phpList/phplist3"
+ },
+ "tools/sendportal": {
+  "heading": "Campaign tools around the mail service you choose.",
+  "qas": [
+   {
+    "q": "What does it need?",
+    "a": "PHP 8.3+ / Laravel 13, Composer and MySQL/PostgreSQL"
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Subscribers and campaigns live in your database; delivery and tracking callbacks involve the email service you configure."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "The Laravel app, database, queues, scheduled tasks, delivery integration and updates."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 15, 2026",
+  "installSource": "https://sendportal.io/docs/v4/getting-started/installation"
+ },
+ "tools/fail2ban": {
+  "heading": "Slow repeated login failures, without pretending to replace strong authentication.",
+  "qas": [
+   {
+    "q": "What does it need?",
+    "a": "Linux with service logs and a supported firewall action"
+   },
+   {
+    "q": "Where is my data?",
+    "a": "The service reads logs on the machine you administer; ban state and actions depend on the configured backend."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "Filters, jails, log paths, firewall actions and an allowlist/recovery plan so you do not lock yourself out."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 15, 2026",
+  "installSource": "https://github.com/fail2ban/fail2ban/wiki/How-to-install-fail2ban-packages"
+ },
+ "tools/esphome": {
+  "heading": "Local smart-device firmware, with exact hardware choices.",
+  "qas": [
+   {
+    "q": "What does it need?",
+    "a": "Home Assistant app or standalone Python Device Builder"
+   },
+   {
+    "q": "Where is my data?",
+    "a": "YAML configurations and firmware builds stay on your machine; device secrets belong in local secret files."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "Compatible boards, configurations, toolchain updates and device firmware. A dashboard alone is not a working device."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 15, 2026",
+  "installSource": "https://github.com/esphome/device-builder#standalone-pypi"
+ },
+ "tools/zigbee2mqtt": {
+  "heading": "A local bridge, not a vendor-specific hub.",
+  "qas": [
+   {
+    "q": "What does it need?",
+    "a": "Docker/app with MQTT broker and supported Zigbee coordinator"
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Coordinator/network state and device configuration live in the persistent data directory; messages go to your configured MQTT broker."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "The coordinator, app, MQTT broker, backups and device compatibility."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 15, 2026",
+  "installSource": "https://www.zigbee2mqtt.io/guide/installation/02_docker.html"
+ },
+ "tools/balena-etcher": {
+  "heading": "An image writer, with an irreversible target choice.",
+  "qas": [
+   {
+    "q": "What does it need?",
+    "a": "Choose the correct OS/architecture download. Windows installer ISOs need handling that Etcher does not provide."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "The selected image is written to the selected removable drive. The app has anonymous usage collection enabled by default with an opt-out."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "Keep the app current, verify images at their source and back up the target before every write."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 15, 2026",
+  "installSource": "https://etcher.balena.io/"
  }
 }

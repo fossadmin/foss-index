@@ -66,5 +66,9 @@
   "EUPL-1.2": {
     "summary": "A copyleft license covering the current Pi-hole core, DNS engine and web interface. Source and license obligations apply when distributing or communicating covered work; older code and bundled dependencies can have separate terms.",
     "url": "https://github.com/pi-hole/pi-hole/blob/master/LICENSE"
+  },
+  "MIT / GPL-3.0": {
+    "summary": "Split licensing by component: ESPHome Python and other non-runtime files are MIT; the C/C++ runtime is GPLv3. This is not a choice of either license for the whole project. The separate Device Builder has its own Apache-2.0 license.",
+    "url": "https://github.com/esphome/esphome/blob/dev/LICENSE"
   }
 }

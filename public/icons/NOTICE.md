@@ -555,3 +555,72 @@ The official writing-about page asks for advance contact for logos and other vis
 - Source: https://commons.wikimedia.org/wiki/File:LineageOS_Logo.svg
 - Copyright basis: Commons marks this simple geometric logo PD-textlogo; trademark/non-copyright restrictions still apply.
 - Changes: none. Identification of the independent project listing only, no endorsement.
+## formlander.svg
+- Project: Formlander
+- Source: https://github.com/karloscodes/formlander/blob/v3.10.1/web/static/favicon.svg (project logo, ships in the MIT-licensed repository; a code license does not itself grant rights in the mark)
+- Changes: none. Identification only, no endorsement.
+
+## easyappointments.png
+- Project: Easy!Appointments
+- Source: https://github.com/alextselegidis/easyappointments/blob/1.6.1/logo.png (project logo, ships in the GPL-3.0-licensed repository; a code license does not itself grant rights in the mark)
+- Changes: none. Identification only, no endorsement.
+
+## erpnext.svg
+- Project: ERPNext
+- Source: https://raw.githubusercontent.com/frappe/erpnext/develop/erpnext/public/images/v16/erpnext.svg
+- Changes: Unchanged SVG from the project repository.
+- The project's mark is used only to identify its independent listing. Code-license terms do not grant trademark rights; no endorsement is implied.
+
+## frappe-books.svg
+- Project: Frappe Books
+- Source: https://raw.githubusercontent.com/frappe/frappe-books/develop/frappe_books/public/pwa/icon.svg
+- Changes: Unchanged SVG from the current server/browser application, not the archived desktop app.
+- The project's mark is used only to identify its independent listing. Code-license terms do not grant trademark rights; no endorsement is implied.
+
+## firefly-iii.png
+- Project: Firefly III
+- Source: https://raw.githubusercontent.com/firefly-iii/firefly-iii/develop/.github/assets/img/logo-small.png
+- Changes: Resized to 128px PNG.
+- The project's mark is used only to identify its independent listing. Code-license terms do not grant trademark rights; no endorsement is implied.
+
+## esphome.svg
+- Project: ESPHome
+- Source: https://esphome.io/favicon.svg
+- Changes: Unchanged official website favicon.
+- The project's mark is used only to identify its independent listing. Code-license terms do not grant trademark rights; no endorsement is implied.
+
+## zigbee2mqtt.png
+- Project: Zigbee2MQTT
+- Source: https://www.zigbee2mqtt.io/logo.png
+- Changes: Resized from the official 5000px logo to 128px PNG.
+- The project's mark is used only to identify its independent listing. Code-license terms do not grant trademark rights; no endorsement is implied.
+
+## balena-etcher.png
+- Project: balenaEtcher
+- Source: https://raw.githubusercontent.com/balena-io/etcher/master/assets/icon.png
+- Changes: Resized to 128px PNG.
+- The project's mark is used only to identify its independent listing. Code-license terms do not grant trademark rights; no endorsement is implied.
+
+## mautic.png
+- Project: Mautic
+- Source: https://raw.githubusercontent.com/mautic/mautic/7.2.2/.github/readme_logo.png
+- Changes: Resized to 128px PNG.
+- The project's mark is used only to identify its independent listing. Code-license terms do not grant trademark rights; no endorsement is implied.
+
+## phplist.svg
+- Project: phpList
+- Source: https://www.phplist.com/site/images/readme-images/logo-icon.svg
+- Changes: Unchanged official README-linked SVG.
+- The project's mark is used only to identify its independent listing. Code-license terms do not grant trademark rights; no endorsement is implied.
+
+## sendportal.png
+- Project: SendPortal
+- Source: https://raw.githubusercontent.com/mettle/sendportal-core/master/public/img/favicons/android-icon-192x192.png
+- Changes: Resized to 128px PNG.
+- The project's mark is used only to identify its independent listing. Code-license terms do not grant trademark rights; no endorsement is implied.
+
+## fail2ban.png
+- Project: Fail2Ban
+- Source: https://avatars.githubusercontent.com/u/1087378?v=4
+- Changes: Official repository-owner avatar, verified through the repository API. Resized to 128px PNG.
+- The project's mark is used only to identify its independent listing. Code-license terms do not grant trademark rights; no endorsement is implied.

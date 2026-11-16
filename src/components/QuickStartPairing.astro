@@ -1,0 +1,9 @@
+---
+// Renders the article body, then pairs each setup-prompt box with its matching
+// Quick start platform section and adds a no-JS platform jump list. The boxes
+// still come from SetupPrompt.astro (single source of markup); this wrapper
+// only repositions them in the rendered HTML.
+import { pairQuickStart } from '../lib/pair-quick-start.js';
+const html = pairQuickStart(await Astro.slots.render('default'));
+---
+<Fragment set:html={html} />

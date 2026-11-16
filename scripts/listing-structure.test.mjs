@@ -17,7 +17,7 @@ const LEAD_INS = new Set(['Try it and keep a way out', 'License and what is bund
 const FOLLOW_UPS = new Set(['First steps', 'First use', "Why it's listed", 'Support and contribute']);
 
 test('every listing carries the full section and data contract (templates/new-listing.md)', () => {
- assert.equal(files.length, 100);
+ assert.equal(files.length, 112);
  for (const f of files) {
   const slug = f.slice(0, -3), id = 'tools/'+slug;
   const text = read('src/content/docs/tools/'+f);

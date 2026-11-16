@@ -2132,5 +2132,247 @@
     ],
     "compatibilityUrl": "https://docs.mealie.io/",
     "note": "Distributed as a Docker image (compose is the documented route); the web app works in any modern browser including phones. No native desktop or mobile apps."
+  },
+  "tools/formlander": {
+    "checkedOn": "2026-11-15",
+    "server": {
+      "label": "a self-hosted Formlander server",
+      "platforms": [
+        {
+          "name": "Linux",
+          "kind": "Docker image or one-command install script (Ubuntu/Debian)",
+          "url": "https://formlander.com/docs/deployment/"
+        }
+      ]
+    },
+    "clients": [
+      {
+        "name": "Web",
+        "kind": "Admin dashboard in the browser, included with the server",
+        "url": "https://formlander.com/docs/"
+      }
+    ],
+    "note": "Visitor forms post straight from the browser to your server; there is no client app. A hosted Formlander Cloud is announced as a waitlist only - self-host is the only route today."
+  },
+  "tools/easyappointments": {
+    "checkedOn": "2026-11-15",
+    "server": {
+      "label": "a self-hosted Easy!Appointments server",
+      "platforms": [
+        {
+          "name": "Linux",
+          "kind": "Apache or Nginx with PHP 8.2+ and MySQL; Docker for development",
+          "url": "https://easyappointments.org/docs/"
+        }
+      ]
+    },
+    "clients": [
+      {
+        "name": "Web",
+        "kind": "Booking page and admin backend in the browser",
+        "url": "https://easyappointments.org"
+      }
+    ],
+    "note": "Customers book from the browser without an account. The author sells managed hosting for the same software."
+  },
+  "tools/erpnext": {
+    "checkedOn": "2026-11-15",
+    "server": {
+      "label": "ERPNext host",
+      "platforms": [
+        {
+          "name": "Linux",
+          "kind": "Frappe Docker stack; production deployment is separate from the disposable demo",
+          "url": "https://github.com/frappe/erpnext#self-hosted"
+        }
+      ]
+    },
+    "clients": [
+      {
+        "name": "Web",
+        "kind": "Browser interface served by the host",
+        "url": "https://github.com/frappe/erpnext#self-hosted"
+      }
+    ],
+    "note": "The Frappe stack, database, backups, updates and business configuration. An ERP rollout is more work than installing the software."
+  },
+  "tools/frappe-books": {
+    "checkedOn": "2026-11-15",
+    "server": {
+      "label": "Frappe Books host",
+      "platforms": [
+        {
+          "name": "Linux",
+          "kind": "Stable Frappe v16, MariaDB 11.8, Redis, Python 3.14 and Node.js 24",
+          "url": "https://docs.frappe.io/books/installation"
+        }
+      ]
+    },
+    "clients": [
+      {
+        "name": "Web",
+        "kind": "Browser interface served by the host",
+        "url": "https://docs.frappe.io/books/installation"
+      }
+    ],
+    "note": "A Frappe v16 server, MariaDB, Redis, backups, updates and access controls. The old desktop app is no longer supported."
+  },
+  "tools/firefly-iii": {
+    "checkedOn": "2026-11-15",
+    "server": {
+      "label": "Firefly III host",
+      "platforms": [
+        {
+          "name": "Linux",
+          "kind": "Docker Compose with a database and persistent uploads",
+          "url": "https://docs.firefly-iii.org/how-to/firefly-iii/installation/docker/"
+        }
+      ]
+    },
+    "clients": [
+      {
+        "name": "Web",
+        "kind": "Browser interface served by the host",
+        "url": "https://docs.firefly-iii.org/how-to/firefly-iii/installation/docker/"
+      }
+    ],
+    "note": "The app, database, backups and scheduled tasks; the separate Data Importer adds its own setup and updates."
+  },
+  "tools/mautic": {
+    "checkedOn": "2026-11-15",
+    "server": {
+      "label": "Mautic host",
+      "platforms": [
+        {
+          "name": "Linux",
+          "kind": "PHP web application with database, cron jobs and mail transport",
+          "url": "https://docs.mautic.org/en/7.0/getting_started/how_to_install_mautic.html"
+        }
+      ]
+    },
+    "clients": [
+      {
+        "name": "Web",
+        "kind": "Browser interface served by the host",
+        "url": "https://docs.mautic.org/en/7.0/getting_started/how_to_install_mautic.html"
+      }
+    ],
+    "note": "PHP, database, application updates, cron jobs, queues, mail delivery and consent records."
+  },
+  "tools/phplist": {
+    "checkedOn": "2026-11-15",
+    "server": {
+      "label": "phpList host",
+      "platforms": [
+        {
+          "name": "Linux",
+          "kind": "PHP web application with MySQL/MariaDB and a mail transport",
+          "url": "https://github.com/phpList/phplist3"
+        }
+      ]
+    },
+    "clients": [
+      {
+        "name": "Web",
+        "kind": "Browser interface served by the host",
+        "url": "https://github.com/phpList/phplist3"
+      }
+    ],
+    "note": "PHP/database updates, mail queues, bounce processing, backups and subscriber permissions."
+  },
+  "tools/sendportal": {
+    "checkedOn": "2026-11-15",
+    "server": {
+      "label": "SendPortal host",
+      "platforms": [
+        {
+          "name": "Linux",
+          "kind": "PHP 8.3+ / Laravel 13, Composer and MySQL/PostgreSQL",
+          "url": "https://sendportal.io/docs/v4/getting-started/installation"
+        }
+      ]
+    },
+    "clients": [
+      {
+        "name": "Web",
+        "kind": "Browser interface served by the host",
+        "url": "https://sendportal.io/docs/v4/getting-started/installation"
+      }
+    ],
+    "note": "The Laravel app, database, queues, scheduled tasks, delivery integration and updates."
+  },
+  "tools/fail2ban": {
+    "checkedOn": "2026-11-15",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Distribution package; local daemon and command-line client",
+        "url": "https://github.com/fail2ban/fail2ban/wiki/How-to-install-fail2ban-packages"
+      }
+    ],
+    "note": "This is a server security daemon, not a browser app. Jail configuration and firewall/log backends vary by distribution."
+  },
+  "tools/esphome": {
+    "checkedOn": "2026-11-15",
+    "server": {
+      "label": "ESPHome host",
+      "platforms": [
+        {
+          "name": "Linux",
+          "kind": "Home Assistant app or standalone Python Device Builder",
+          "url": "https://github.com/esphome/device-builder#standalone-pypi"
+        }
+      ]
+    },
+    "clients": [
+      {
+        "name": "Web",
+        "kind": "Browser interface served by the host",
+        "url": "https://github.com/esphome/device-builder#standalone-pypi"
+      }
+    ],
+    "note": "Compatible boards, configurations, toolchain updates and device firmware. A dashboard alone is not a working device."
+  },
+  "tools/zigbee2mqtt": {
+    "checkedOn": "2026-11-15",
+    "server": {
+      "label": "Zigbee2MQTT host",
+      "platforms": [
+        {
+          "name": "Linux",
+          "kind": "Docker/app with MQTT broker and supported Zigbee coordinator",
+          "url": "https://www.zigbee2mqtt.io/guide/installation/02_docker.html"
+        }
+      ]
+    },
+    "clients": [
+      {
+        "name": "Web",
+        "kind": "Browser interface served by the host",
+        "url": "https://www.zigbee2mqtt.io/guide/installation/02_docker.html"
+      }
+    ],
+    "note": "The coordinator, app, MQTT broker, backups and device compatibility."
+  },
+  "tools/balena-etcher": {
+    "checkedOn": "2026-11-15",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Native desktop download",
+        "url": "https://etcher.balena.io/"
+      },
+      {
+        "name": "macOS",
+        "kind": "Native desktop download",
+        "url": "https://etcher.balena.io/"
+      },
+      {
+        "name": "Windows",
+        "kind": "Native desktop download",
+        "url": "https://etcher.balena.io/"
+      }
+    ],
+    "note": "Choose the correct OS/architecture download. Windows installer ISOs need handling that Etcher does not provide."
   }
 }
