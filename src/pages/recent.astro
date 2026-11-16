@@ -8,6 +8,10 @@ const buildTime = Date.now();
 const recentTools = tools
   .filter((t) => t.data.added && buildTime - t.data.added.getTime() <= RECENT_WINDOW_MS)
   .sort((a, b) => b.data.added!.getTime() - a.data.added!.getTime() || a.data.title.localeCompare(b.data.title));
+const recentGroups = Array.from(Map.groupBy(recentTools, (t) => t.data.added!.toISOString().slice(0, 10)));
+const addedDate = new Intl.DateTimeFormat("en-US", {
+  year: "numeric", month: "long", day: "numeric", timeZone: "UTC",
+});
 ---
 <CatalogLayout title="Recently added" description="Listings added to the FOSS Index in the last 7 days." active="">
   <article class="detail">
@@ -17,8 +21,11 @@ const recentTools = tools
       <p class="lede">Listings added to the Index in the last 7 days, newest first.</p>
     </header>
     <p data-recent-empty hidden={recentTools.length > 0}>Nothing new this week. <a href={import.meta.env.BASE_URL}>Browse all tools &rarr;</a></p>
-    {recentTools.length > 0 && <ul class="related-list recent-page-list" data-recent-list>
-      {recentTools.map((t) => <li data-added={t.data.added!.toISOString().slice(0, 10)}><a class="related-row" href={t.href}>
+    {recentTools.length > 0 && <div data-recent-list>
+      {recentGroups.map(([day, dayTools]) => <section class="recent-day" data-recent-group aria-labelledby={`added-${day}`}>
+        <h2 id={`added-${day}`}>Added {addedDate.format(new Date(`${day}T00:00:00Z`))}</h2>
+        <ul class="related-list recent-page-list">
+      {dayTools.map((t) => <li data-added={t.data.added!.toISOString().slice(0, 10)}><a class="related-row" href={t.href}>
         {t.data.icon ? (
           <span class="tool-mark tool-icon" aria-hidden="true">
             <img class:list={[{ 'icon-light': t.data.iconDark, 'icon-tile': t.data.iconTile }]} src={`${import.meta.env.BASE_URL}icons/${t.data.icon}`} alt="" width="40" height="40" loading="lazy" decoding="async" />
@@ -30,7 +37,9 @@ const recentTools = tools
         <span class="related-copy"><span class="related-name">{t.data.title}</span><span class="related-purpose">{t.data.description}</span></span>
         <span class="row-arrow" aria-hidden="true">&rarr;</span>
       </a></li>)}
-    </ul>}
+        </ul>
+      </section>)}
+    </div>}
     <script is:inline>
       (function () {
         var window_ms = 7 * 24 * 60 * 60 * 1000;
@@ -40,9 +49,17 @@ const recentTools = tools
           list.querySelectorAll('[data-added]').forEach(function (row) {
             if (Date.now() - Date.parse(row.getAttribute('data-added') + 'T00:00:00Z') > window_ms) row.remove();
           });
+          list.querySelectorAll('[data-recent-group]').forEach(function (group) {
+            if (!group.querySelector('[data-added]')) group.remove();
+          });
           if (!list.querySelector('[data-added]')) { list.hidden = true; if (empty) empty.hidden = false; }
         }
       })();
     </script>
   </article>
 </CatalogLayout>
+
+<style>
+  .recent-day { margin-top: 28px; }
+  .recent-day h2 { margin: 0 0 12px; font-size: 20px; }
+</style>
