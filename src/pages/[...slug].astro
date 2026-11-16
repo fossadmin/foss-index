@@ -41,7 +41,18 @@ const links = [
     <a class="back-link" href={import.meta.env.BASE_URL}>← All tools</a>
     <header class="detail-heading">
       <p class="eyebrow">{tool?.broadCategory ?? 'The project'}</p>
-      <h1>{data.title}</h1><p class="lede">{data.description}</p>
+      <div class="detail-title">
+        {data.icon ? (
+          <span class="tool-mark tool-icon" aria-hidden="true">
+            <img class:list={[{ 'icon-light': data.iconDark, 'icon-tile': data.iconTile }]} src={`${import.meta.env.BASE_URL}icons/${data.icon}`} alt="" width="40" height="40" loading="eager" decoding="async" />
+            {data.iconDark && <img class="icon-dark" src={`${import.meta.env.BASE_URL}icons/${data.iconDark}`} alt="" width="40" height="40" loading="eager" decoding="async" />}
+          </span>
+        ) : data.mark ? (
+          <span class="tool-mark" aria-hidden="true">{data.mark}</span>
+        ) : null}
+        <h1>{data.title}</h1>
+      </div>
+      <p class="lede">{data.description}</p>
       {tool && <div class="detail-meta"><div class="license-wrap"><details class="license-info"><summary class="license">{tool.license}</summary></details><div class="license-note">{licInfo ? <><p>{licInfo.summary}</p><a href={licInfo.url}>Read the full license ↗</a></> : <p>No plain-language summary is recorded for this license yet. Check the <a href={data.repository}>source repository</a> for the full text.</p>}<p class="license-fine">Plain-language summary, not legal advice.</p></div></div><a class="source-link" href={data.repository} data-umami-event="outbound-click" data-umami-event-link="source" data-umami-event-tool={entry.id}>Source code ↗</a><a class="source-link support-shortcut" href="#project-support">Support this project ↓</a><button class="save-toggle save-pill" data-save-toggle data-tool-id={entry.id} type="button" hidden aria-pressed="false"><svg class="bookmark" viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M6.5 3.5h11V21L12 16.4 6.5 21z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span class="save-label">Save</span></button></div>}
     </header>
     {tool?.release?.version && (tool.release.changelog ? <details class="changelog"><summary>Release notes / {tool.release.version}</summary>

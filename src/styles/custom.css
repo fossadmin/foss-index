@@ -1704,3 +1704,16 @@ html:not(.js) .view-toggle {
   display: block;
   background: var(--tint);
 }
+
+/* Detail page: tool icon beside the page title (same tile as catalog rows;
+   inherits the 34px mobile sizing and dark-theme swaps from .tool-mark) */
+.detail-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+@media (max-width: 650px) {
+  .detail-title {
+    gap: 10px;
+  }
+}
