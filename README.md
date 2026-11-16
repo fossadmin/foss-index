@@ -14,8 +14,10 @@ the project's license, its recorded release and changelog, and a "Support this
 project" panel. Live at **https://index.fossadmin.com**. It is a starting
 point, not a ranking.
 
-Built with Astro. The site is static: no server runtime, no accounts, no
-analytics and no third-party scripts.
+Built with Astro. The site is static: no server runtime and no accounts.
+Fonts, icons and images are served locally. Hosted
+[Umami](https://index.fossadmin.com/about/#what-about-privacy-here) provides disclosed,
+cookie-free analytics and honors Do Not Track.
 
 ![A short tour of the FOSS Index: browsing the catalog, a category page, and a listing with its quick-start tabs.](docs/readme/tour.gif)
 
@@ -54,8 +56,10 @@ category navigation works with JavaScript disabled. A small local script adds
 name, purpose and license search and the `/` shortcut. Without JavaScript the
 search control is hidden and every listing remains available.
 
-No external requests, analytics, third-party scripts, remote icons or
-embedded widgets.
+Fonts, icons and images are served locally, with no embedded widgets. Hosted
+[Umami](https://index.fossadmin.com/about/#what-about-privacy-here) loads a third-party
+analytics script and sends analytics events. It uses no cookies and honors Do
+Not Track. The About page explains what it records.
 
 The palette comes from the FOSSadmin site theme and its warm-terminal CSS.
 Inter (400/600) and Lora (500) font files were copied from the first-party

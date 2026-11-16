@@ -18,8 +18,9 @@ screenshot of what looks wrong helps.
 ## Work on the site
 
 The README covers running it locally and how the release and license data is
-checked. Keep changes small and reviewable, and do not add tracking, accounts
-or third-party scripts: those are deliberate absences, not gaps.
+checked. Keep changes small and reviewable. Do not add tracking, accounts or
+additional third-party scripts. The disclosed hosted-[Umami](https://index.fossadmin.com/about/#what-about-privacy-here)
+analytics counter is an intentional exception.
 
 ## Adding a listing
 
