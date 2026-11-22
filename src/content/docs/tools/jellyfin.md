@@ -24,6 +24,10 @@ screenshot:
   credit: Jellyfin
   sourceUrl: https://github.com/jellyfin/jellyfin.org/blob/8bbab0075207076559c9cae64143cf44b26c65be/static/images/screenshots/home/10.8-playback.png
   license: CC BY-ND 4.0
+guides:
+  - label: "Self-Hosting Jellyfin on NixOS: Declarative Media Streaming That Just Works"
+    url: https://fossadmin.com/blog/2026-11-22-jellyfin-on-nixos/
+
 ---
 
 Jellyfin is a media server: point it at your collection of movies, shows,

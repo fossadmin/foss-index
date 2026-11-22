@@ -28,6 +28,10 @@ screenshot:
   sourceUrl: https://github.com/nextcloud/screenshots/blob/master/nextcloud-hub-25-files.png
   license: CC BY-SA 4.0
   captionNote: "Official Nextcloud Hub 25 marketing screenshot with demo content. Not our install."
+guides:
+  - label: "How to Set Up a Self-Hosted Cloud with Nextcloud: A Beginner's Guide"
+    url: https://fossadmin.com/blog/2026-10-25-nextcloud-self-hosted-guide/
+
 ---
 
 Nextcloud is a self-hosted collaboration hub: it stores files, calendars,

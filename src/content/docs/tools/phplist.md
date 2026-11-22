@@ -19,6 +19,10 @@ screenshot:
 icon: phplist.svg
 funding:
   githubSponsors: https://github.com/sponsors/phpList
+guides:
+  - label: "Best Open Source Email Marketing Platforms Compared"
+    url: https://fossadmin.com/blog/2026-11-08-open-source-email-marketing/
+
 ---
 
 phpList manages mailing lists, subscribers and newsletter campaigns. It

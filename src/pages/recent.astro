@@ -19,6 +19,7 @@ const addedDate = new Intl.DateTimeFormat("en-US", {
     <header class="detail-heading">
       <h1>Recently added</h1>
       <p class="lede">Listings added to the Index in the last 7 days, newest first.</p>
+      <p class="tour-note">We're regularly adding new tools to FOSS Index. Check back to see what's new.</p>
     </header>
     <p data-recent-empty hidden={recentTools.length > 0}>Nothing new this week. <a href={import.meta.env.BASE_URL}>Browse all tools &rarr;</a></p>
     {recentTools.length > 0 && <div data-recent-list>

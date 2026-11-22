@@ -16,6 +16,10 @@ screenshot:
   credit: "the GnuCash website"
   sourceUrl: https://www.gnucash.org/images/features/feature_register_lg.png
   captionNote: "Image from the GnuCash features page, last modified February 2014, so it shows an old 2.x interface that differs from current releases. Sample data."
+guides:
+  - label: "Ditch QuickBooks: A Practical Guide to Open-Source Bookkeeping"
+    url: https://fossadmin.com/blog/2026-11-15-ditch-quickbooks-open-source-bookkeeping/
+
 ---
 
 GnuCash is a desktop double-entry accounting program. It keeps accounts, transactions and reports in a file on your computer.

@@ -20,6 +20,10 @@ screenshot:
 funding:
   githubSponsors: https://github.com/sponsors/JC5
   liberapay: https://liberapay.com/JC5
+guides:
+  - label: "Ditch QuickBooks: A Practical Guide to Open-Source Bookkeeping"
+    url: https://fossadmin.com/blog/2026-11-15-ditch-quickbooks-open-source-bookkeeping/
+
 ---
 
 Firefly III helps a person or household track income, spending, accounts,

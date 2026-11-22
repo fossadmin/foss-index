@@ -17,6 +17,10 @@ screenshot:
   captionNote: Official project-site illustration with January 2020 example timestamps. Screenshot version is not recorded and may differ from the current v4 interface.
   sourceUrl: https://sendportal.io/img/landing/campaigns.png
 icon: sendportal.png
+guides:
+  - label: "Best Open Source Email Marketing Platforms Compared"
+    url: https://fossadmin.com/blog/2026-11-08-open-source-email-marketing/
+
 ---
 
 SendPortal manages subscribers, segments, email campaigns and workspaces.

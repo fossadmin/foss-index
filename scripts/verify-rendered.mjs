@@ -237,16 +237,19 @@ for (const page of walkHtml('dist')) {
 }
 
 // Outbound-click analytics: every tool page's Source-code anchor must be
-// tagged link="project", and every funding-link anchor (the support list
-// renders them as <li><a ...>Label ↗</a></li>, unlike contributing-route
-// anchors, which render </a>:) must be tagged link="support", both with the
-// tool slug - the About privacy note promises exactly this scope.
+// tagged link="project", and every list-rendered outbound anchor (the
+// support list and the related-guides list both render
+// <li><a ...>Label ↗</a></li>, unlike contributing-route anchors, which
+// render </a>:) must carry outbound-click + tool attributes and be tagged
+// with its own kind: link="support" for funding links, link="guide" for
+// related-guides links - the About privacy note promises exactly this scope.
 for (const page of walkHtml('dist/tools')) {
  const html = read(page);
  const src = html.match(/<a class="source-link" href="[^"]*"([^>]*)>/);
  if (!src || !src[1].includes('data-umami-event="outbound-click"') || !src[1].includes('data-umami-event-link="source"') || !src[1].includes('data-umami-event-tool="')) fails.push(page+': Source code anchor lost its outbound-click event attributes');
  for (const m of html.matchAll(/<a href="https?:\/\/[^"]*"([^>]*)>[^<]*↗<\/a><\/li>/g)) {
-  if (!m[1].includes('data-umami-event="outbound-click"') || !m[1].includes('data-umami-event-link="support"') || !m[1].includes('data-umami-event-tool="')) fails.push(page+': funding link lost its outbound-click event attributes');
+  const kind = m[1].includes('data-umami-event-link="support"') ? 'support' : m[1].includes('data-umami-event-link="guide"') ? 'guide' : null;
+  if (!m[1].includes('data-umami-event="outbound-click"') || !kind || !m[1].includes('data-umami-event-tool="')) fails.push(page+': '+(kind ? kind+' link' : 'outbound list link (funding or related-guide)')+' lost its outbound-click event attributes');
  }
 }
 for (const page of walkHtml('dist')) {

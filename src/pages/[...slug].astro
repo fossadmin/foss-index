@@ -79,6 +79,10 @@ const links = [
       : <>Official screenshot from <a href={shot.sourceUrl}>{shot.credit} ↗</a>{shot.license ? <> ({shot.license})</> : null}. {shot.captionNote ?? 'Demo data.'}</>)}{data.icon && <> The tool icon is the project's own mark.</>} {preview && <>{preview.note} </>}<a href={serviceCreditHref}>Image credits</a>.</figcaption></figure>}
     {!shot && data.icon && <p class="privacy-note"><a href={serviceCreditHref}>Image credits</a></p>}
     <div class="prose"><QuickStartPairing><Content />{setupPromptList.map(p => <SetupPrompt {...p} />)}</QuickStartPairing></div>
+    {tool && data.guides && data.guides.length > 0 && <section class="related-guides" aria-labelledby="guides-heading">
+      <p class="eyebrow">From our blog</p><h2 id="guides-heading">Related guides</h2>
+      <ul>{data.guides.map(g => <li><a href={g.url} data-umami-event="outbound-click" data-umami-event-link="guide" data-umami-event-tool={entry.id}>{g.label} ↗</a></li>)}</ul>
+    </section>}
     {tool && <aside class="support-panel" id="project-support" tabindex="-1"><p class="eyebrow">Keep open source going</p><h2>Support this project</h2>{links.length ? <><p>Support goes directly to the maintainers through their own channels. We do not take a cut.</p><ul>{links.map(l => <li><a href={l.url} data-umami-event="outbound-click" data-umami-event-link="support" data-umami-event-tool={entry.id}>{l.label} ↗</a></li>)}</ul></> : <p>No direct funding link is recorded for this tool yet. Check its <a href={data.repository}>source repository</a> for ways to contribute.</p>}{contribute && <ContributeRoutes {...contribute} />}</aside>}
     {tool && <p class="privacy-note">Tags: {tool.tags.map((tag, i) => <>{i > 0 && ", "}<a href={`${import.meta.env.BASE_URL}tag/${slugify(tag)}/`}>{tag}</a></>)}</p>}
     {tool && <p class="managed-line">Want help setting this up? <a href="https://fossadmin.com">Ask FOSSadmin ↗</a></p>}

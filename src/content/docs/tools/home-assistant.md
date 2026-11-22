@@ -26,6 +26,10 @@ screenshot:
   sourceUrl: https://github.com/home-assistant/core/blob/02035d3a159494266b282c8f5c5d159f1eedaf28/.github/assets/screenshot-states.png
   license: Apache-2.0
   captionNote: "Project-published demo image. Screenshot version not recorded."
+guides:
+  - label: "Getting Started with Home Assistant: Automate Your Smart Home Without Big Tech"
+    url: https://fossadmin.com/blog/2026-11-04-home-assistant-beginners/
+
 ---
 
 Home Assistant connects compatible devices and services, then lets you build

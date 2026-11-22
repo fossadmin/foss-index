@@ -913,6 +913,27 @@ html.js .qs-jump {
 .support-panel li + li {
   margin-top: 10px;
 }
+.related-guides {
+  margin-top: 34px;
+  padding: 24px;
+  background: var(--sand);
+  border-left: 3px solid var(--moss);
+}
+.related-guides h2 {
+  font:
+    500 26px Lora,
+    Georgia,
+    serif;
+  margin: 10px 0;
+}
+.related-guides ul {
+  padding-left: 20px;
+  font-size: 13px;
+  line-height: 1.8;
+}
+.related-guides a {
+  color: var(--rust);
+}
 .managed-line {
   margin-top: 24px;
   font-size: 15px;

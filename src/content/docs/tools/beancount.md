@@ -24,6 +24,10 @@ screenshot:
   terminal: true
   version: "3.2.3"
   captionNote: "Our own run on a made-up ledger; the text is unedited."
+guides:
+  - label: "Ditch QuickBooks: A Practical Guide to Open-Source Bookkeeping"
+    url: https://fossadmin.com/blog/2026-11-15-ditch-quickbooks-open-source-bookkeeping/
+
 ---
 
 Beancount keeps your accounts in a plain-text ledger and checks them with a command-line tool. Because the books are ordinary text files, they work with version control and any editor.

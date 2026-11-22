@@ -12,6 +12,13 @@ const selectedGroup = groups.find(g => g.slug === group);
 const selectedTag = tags.find(t => t.slug === tag);
 const selectedPlatform = platforms.find(p => p.slug === platform);
 const selected = selectedPlatform ?? selectedTag ?? selectedGroup ?? selectedCategory;
+// Proprietary-OS scoping: on the Windows and macOS platform pages the lede
+// spells out that the OS itself is proprietary and the page lists compatible
+// FOSS tools (Chris, 2026-11-22). Other platforms keep the plain lede.
+const proprietaryOsNote: Record<string, string> = {
+  Windows: 'Windows itself is proprietary. This page lists compatible FOSS tools.',
+  macOS: 'macOS itself is proprietary. This page lists compatible FOSS tools.',
+};
 const toolPlatforms = (t: (typeof tools)[number]) => [...(t.platformRecord?.platforms ?? []), ...(t.platformRecord?.server?.platforms ?? []), ...(t.platformRecord?.clients ?? [])];
 const visible = selectedPlatform ? tools.filter(t => toolPlatforms(t).some(row => row.name === selectedPlatform.name)) : selectedTag ? tools.filter(t => t.tags.includes(selectedTag.name)) : selectedGroup ? tools.filter(t => selectedGroup.categories.includes(t.data.category!)) : selectedCategory ? tools.filter(t => t.data.category === selectedCategory.name) : tools;
 const active = selectedGroup?.slug ?? (selectedCategory ? browseSlugForCategory(selectedCategory.name) : 'all');
@@ -64,14 +71,15 @@ const measureAttrs = (id: string) => !selected && cardPlacement.has(id) ? { 'dat
   <section class="catalog-heading">
     <p class="eyebrow">The directory / {selected?.name ?? 'All tools'}</p>
     <h1>{selected?.name ?? <>Discover open source.<br /><span>Support the projects.</span></>}</h1>
-    <p class="lede">{selectedPlatform ? `Explore listings with checked ${selectedPlatform.name} apps, clients or tools. Check each listing for browser-only, service-host and compatibility limits. Client support does not mean the server runs on that platform.` : selected ? (exploreLede[selected.name] ?? `Explore ${selected.name.toLowerCase()} open-source software.`) : 'Explore open-source software, with setup guides and project-support links.'}</p>
-        {!selected && <p class="tour-line"><button class="tour-open" type="button" data-tour-open><svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M10 8.5v7l5.5-3.5z" fill="currentColor"/></svg>New here? Watch the tour</button><a class="tour-open recent-link" href={`${import.meta.env.BASE_URL}recent/`} data-recent-link data-latest-added={latestAddedDate} hidden={!hasRecent}>Recently added <span aria-hidden="true">&rarr;</span></a></p>}
+    <p class="lede">{selectedPlatform ? `Explore listings with checked ${selectedPlatform.name} apps, clients or tools.${proprietaryOsNote[selectedPlatform.name] ? ' ' + proprietaryOsNote[selectedPlatform.name] : ''} Check each listing for browser-only, service-host and compatibility limits. Client support does not mean the server runs on that platform.` : selected ? (exploreLede[selected.name] ?? `Explore ${selected.name.toLowerCase()} open-source software.`) : 'Explore open-source software, with setup guides and project-support links.'}</p>
+        {!selected && <p class="tour-line"><button class="tour-open" type="button" data-tour-open><svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M10 8.5v7l5.5-3.5z" fill="currentColor"/></svg>New here? Watch the tour</button><a class="tour-open recent-link" href={`${import.meta.env.BASE_URL}recent/`} data-recent-link data-latest-added={latestAddedDate} hidden={!hasRecent}>Recently added <span aria-hidden="true">&rarr;</span></a><span class="tour-note" data-recent-fallback hidden={hasRecent}>Check back for newly added tools and weekly featured picks.</span></p>}
     {!selected && <script is:inline>
       (function () {
         var rl = document.querySelector('[data-recent-link]');
         if (!rl) return;
         var latest = rl.getAttribute('data-latest-added');
-        if (!latest || Date.now() - Date.parse(latest + 'T00:00:00Z') > 7 * 24 * 60 * 60 * 1000) rl.hidden = true;
+        var fb = document.querySelector('[data-recent-fallback]');
+        if (!latest || Date.now() - Date.parse(latest + 'T00:00:00Z') > 7 * 24 * 60 * 60 * 1000) { rl.hidden = true; if (fb) fb.hidden = false; }
       })();
     </script>}
   </section>

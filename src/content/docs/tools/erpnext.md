@@ -17,6 +17,10 @@ screenshot:
   credit: Frappe
   captionNote: Project-published illustration included in the v16.55.0 release source. It shows the project's example company, not FOSSadmin financial records.
   sourceUrl: https://raw.githubusercontent.com/frappe/erpnext/v16.55.0/erpnext/public/images/v16/hero_image.png
+guides:
+  - label: "Ditch QuickBooks: A Practical Guide to Open-Source Bookkeeping"
+    url: https://fossadmin.com/blog/2026-11-15-ditch-quickbooks-open-source-bookkeeping/
+
 ---
 
 ERPNext combines a double-entry ledger with sales, purchasing, stock,

@@ -17,6 +17,10 @@ screenshot:
   credit: Frappe
   captionNote: Project-published dashboard from the current server/browser app, included in release v16.2.1. This is not the archived Electron desktop application.
   sourceUrl: https://raw.githubusercontent.com/frappe/frappe-books/v16.2.1/docs/images/desktop-dashboard.png
+guides:
+  - label: "Ditch QuickBooks: A Practical Guide to Open-Source Bookkeeping"
+    url: https://fossadmin.com/blog/2026-11-15-ditch-quickbooks-open-source-bookkeeping/
+
 ---
 
 The current Frappe Books is an accounting app for the Frappe Framework.

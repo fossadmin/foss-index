@@ -21,6 +21,10 @@ screenshot:
   terminal: true
   version: "3.2.1"
   captionNote: "Our own run on a three-entry sample journal; the text is unedited. The listing tracks ledger 3.4.1."
+guides:
+  - label: "Ditch QuickBooks: A Practical Guide to Open-Source Bookkeeping"
+    url: https://fossadmin.com/blog/2026-11-15-ditch-quickbooks-open-source-bookkeeping/
+
 ---
 
 Ledger is a double-entry accounting program for the Unix command line. You keep transactions in a text file and run reports on them. The project's site says it began in 2003, is written by John Wiegley, and has inspired ports in other languages, including [hledger](/tools/hledger/). [Beancount](/tools/beancount/) takes a different approach with its own file format.

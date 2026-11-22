@@ -45,6 +45,10 @@ export const collections = {
         screenshot: screenshot.optional(),
         dripsEligible: z.boolean().default(true),
         nixosModule: z.string().optional(),
+        // Guides on our own FOSSadmin blog relevant to this tool.
+        guides: z
+          .array(z.object({ label: z.string(), url: z.string().url() }))
+          .optional(),
         managedHosting: z.boolean().default(false),
       })
       .superRefine((data, ctx) => {

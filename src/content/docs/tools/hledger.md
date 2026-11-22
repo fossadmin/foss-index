@@ -24,6 +24,10 @@ screenshot:
   sourceUrl: https://github.com/simonmichael/hledger/blob/972bf9099b2403c38a967618c45da3a6331ae501/.sandstorm/screenshot2.png
   license: GPL-3.0
   captionNote: "The project's own demo journal, not our data. The project does not say which release this shows, so the interface may differ from the current version."
+guides:
+  - label: "Ditch QuickBooks: A Practical Guide to Open-Source Bookkeeping"
+    url: https://fossadmin.com/blog/2026-11-15-ditch-quickbooks-open-source-bookkeeping/
+
 ---
 
 hledger keeps accounts in a plain-text journal and reports from it on the command line. It also has a terminal interface (hledger-ui) and a web interface (hledger-web). It ships as a single binary, and reads the Ledger-style journal format as well as its own.
