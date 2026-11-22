@@ -82,3 +82,17 @@ Do not add services, accounts, deployment changes, analytics or external
 dependencies without the maintainer's explicit approval. When asked to
 review or audit, report findings only; do not change, install, commit or
 push anything unless asked.
+
+## Agent skills
+
+### Issue tracker
+
+Issues are tracked in GitLab Issues for `fossadmin/foss-index` (uses `glab`). See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Default triage label vocabulary (`needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, `wontfix`). See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Single-context layout (`GLOSSARY.md` + `docs/adr/` at repo root). See `docs/agents/domain.md`.
