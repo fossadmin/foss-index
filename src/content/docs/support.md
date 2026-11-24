@@ -1,6 +1,6 @@
 ---
 title: Support FOSS Index
-description: Voluntary support that keeps the directory itself running. Liberapay is open; GitHub Sponsors and Bitcoin are planned.
+description: Voluntary support that keeps the directory itself running. Support through GitHub Sponsors or Liberapay. Bitcoin donations are coming soon.
 ---
 
 FOSS Index is free, has no ads, and does not sell anything about you.
@@ -16,34 +16,33 @@ giveback applies to sponsorship revenue, not to support given here.
 
 ## The routes
 
-### Open now: Recurring support on Liberapay
+### GitHub Sponsors
+
+[Support FOSSadmin on GitHub Sponsors](https://github.com/sponsors/fossadmin)
+for one-time or monthly contributions.
+
+### Recurring support on Liberapay
 
 [Support FOSS Index on Liberapay](https://liberapay.com/foss-index/).
-Liberapay is an open-source, donation-funded
-platform built for recurring support. It takes no platform cut, though
-payment processors still charge their own fees. One-time gifts are not
-properly supported there.
+Liberapay is an open-source, donation-funded platform built for recurring
+support. It takes no platform cut, though payment processors still charge
+their own fees. One-time gifts are not properly supported there.
 
-### Planned, not open yet
+### Coming soon: Bitcoin Donations
 
-Two more routes are planned. They get live links on this page when they
-open.
-
-- **GitHub Sponsors** for one-time and monthly contributions. It takes
-  no cut from personal accounts.
-- **Bitcoin through BTCPay Server**, a self-hosted, open-source payment
-  processor with no platform fees. Bitcoin payments are recorded on a
-  public ledger and are not anonymous.
+Through BTCPay Server, a self-hosted, open-source payment processor with
+no platform fees. It gets a live link on this page when it opens. Bitcoin
+payments are recorded on a public ledger and are not anonymous.
 
 ## What you see, what we see
 
-Our Liberapay profile uses the FOSS Index name, not a personal one.
-The planned routes will be activated only once we have checked what
-their payment processors and receipts show.
+Our GitHub Sponsors and Liberapay profiles use the FOSS Index and
+FOSSadmin names, not a personal one. Bitcoin donations will be enabled only once
+we have checked what it shows.
 
-On the donor side: Liberapay does not tell recipients who their patrons
-are by default, GitHub Sponsors lets you choose whether your support is
-shown publicly, and Bitcoin payments are visible to anyone on the
+On the donor side: GitHub Sponsors lets you choose whether your support
+is shown publicly, Liberapay does not tell recipients who their patrons
+are by default, and Bitcoin payments are visible to anyone on the
 public ledger.
 
 Support is voluntary: it keeps the directory running and buys nothing

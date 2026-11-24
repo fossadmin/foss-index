@@ -5,6 +5,7 @@
 [![License: AGPL-3.0-only](https://img.shields.io/badge/license-AGPL--3.0--only-blue)](LICENSE)
 [![Listings: 117 tools](docs/readme/badge-listings.svg)](https://index.fossadmin.com)
 [![Site: index.fossadmin.com](docs/readme/badge-site.svg)](https://index.fossadmin.com)
+[![Support: GitHub Sponsors](docs/readme/badge-sponsors.svg)](https://github.com/sponsors/fossadmin)
 [![Support: Liberapay](docs/readme/badge-support.svg)](https://liberapay.com/foss-index/)
 [![Deploy](https://github.com/fossadmin/foss-index/actions/workflows/pages.yml/badge.svg)](https://github.com/fossadmin/foss-index/actions/workflows/pages.yml)
 
