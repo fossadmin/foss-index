@@ -19,7 +19,7 @@ giveback applies to sponsorship revenue, not to support given here.
 ### Open now: Recurring support on Liberapay
 
 [Support FOSS Index on Liberapay](https://liberapay.com/foss-index/).
-[Liberapay](https://liberapay.com/) is an open-source, donation-funded
+Liberapay is an open-source, donation-funded
 platform built for recurring support. It takes no platform cut, though
 payment processors still charge their own fees. One-time gifts are not
 properly supported there.
