@@ -23,10 +23,10 @@ test('platform names and client roles enter normal AND search',()=>{
  assert.equal(platformSearch(undefined),'');
 });
 test('all platform claims have dated official evidence, no unreviewed platform guess',()=>{
- assert.equal(Object.keys(support).length,112);
+ assert.equal(Object.keys(support).length,117);
  for(const [id,r] of Object.entries(support)){
   assert.ok(fs.existsSync(new URL('../src/content/docs/'+id+'.md',import.meta.url)),id);
-  assert.ok(['2026-11-12','2026-11-15'].includes(r.checkedOn),id+' checkedOn '+r.checkedOn);assert.ok(r.note);
+  assert.ok(['2026-11-12','2026-11-15','2026-11-22','2026-11-23'].includes(r.checkedOn),id+' checkedOn '+r.checkedOn);assert.ok(r.note);
   if(r.server){
    assert.ok(r.server.label && r.server.platforms.length,'server block needs label and platforms: '+id);
    assert.ok((r.clients??[]).length,'server block needs clients: '+id);
@@ -58,7 +58,7 @@ test('unreviewed listings are not automatically called unsupported and aliases a
 
 test('all existing and new phone OS listings reviewed, OS hardware is not an app platform',()=>{
  const tools=fs.readdirSync(new URL('../src/content/docs/tools',import.meta.url)).filter(x=>x.endsWith('.md'));
- assert.equal(tools.length,112);
+ assert.equal(tools.length,117);
  for(const f of tools) assert.ok(support['tools/'+f.slice(0,-3)],f);
  const os=Object.values(support).filter(r=>r.role==='operating-system');
  assert.equal(os.length,19);assert.ok(os.every(r=>r.platforms.length===0));

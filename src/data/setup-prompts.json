@@ -12,6 +12,16 @@
     },
     "cls": "server"
   },
+  "tools/ardour": {
+    "purpose": "Free digital audio workstation for recording, editing and mixing audio and MIDI",
+    "checkedOn": "2026-11-22",
+    "methods": {
+      "Linux": {},
+      "Windows and macOS": {},
+      "NixOS": {}
+    },
+    "cls": "desktop"
+  },
   "tools/adguard-home": {
     "purpose": "Self-hosted network-wide DNS filtering for ads, trackers and unwanted domains",
     "methods": {
@@ -253,6 +263,16 @@
   },
   "tools/gimp": {
     "purpose": "Raster image editor for photo retouching, composition and illustration",
+    "methods": {
+      "Linux": {},
+      "Windows and macOS": {},
+      "NixOS": {}
+    },
+    "cls": "desktop"
+  },
+  "tools/gh-pull": {
+    "purpose": "Local pull request dashboard for the GitHub CLI",
+    "checkedOn": "2026-11-23",
     "methods": {
       "Linux": {},
       "Windows and macOS": {},
@@ -758,6 +778,16 @@
     },
     "cls": "server"
   },
+  "tools/sitewatcher": {
+    "purpose": "Self-hosted website monitor with uptime history, certificate and domain expiry checks, and status pages",
+    "checkedOn": "2026-11-23",
+    "methods": {
+      "Docker Compose": {
+        "stop": "docker compose down without -v (the -v flag deletes data)"
+      }
+    },
+    "cls": "server"
+  },
   "tools/simplex-chat": {
     "purpose": "Messenger with no user identifiers of any kind",
     "methods": {
@@ -1022,6 +1052,16 @@
     },
     "cls": "server"
   },
+  "tools/natron": {
+    "purpose": "Free node-based compositor for visual effects and motion graphics",
+    "checkedOn": "2026-11-22",
+    "methods": {
+      "Linux": {},
+      "Windows and macOS": {},
+      "NixOS": {}
+    },
+    "cls": "desktop"
+  },
   "tools/phplist": {
     "purpose": "Self-hosted mailing lists and newsletters with subscriber management and bounce handling",
     "checkedOn": "2026-11-15",
@@ -1041,6 +1081,16 @@
       }
     },
     "cls": "server"
+  },
+  "tools/shotcut": {
+    "purpose": "Free video editor with wide format support, built on MLT and FFmpeg",
+    "checkedOn": "2026-11-22",
+    "methods": {
+      "Linux": {},
+      "Windows and macOS": {},
+      "NixOS": {}
+    },
+    "cls": "desktop"
   },
   "tools/fail2ban": {
     "purpose": "Watch service logs and temporarily ban hosts that repeatedly fail authentication",

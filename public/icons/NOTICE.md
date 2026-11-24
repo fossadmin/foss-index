@@ -624,3 +624,29 @@ The official writing-about page asks for advance contact for logos and other vis
 - Source: https://avatars.githubusercontent.com/u/1087378?v=4
 - Changes: Official repository-owner avatar, verified through the repository API. Resized to 128px PNG.
 - The project's mark is used only to identify its independent listing. Code-license terms do not grant trademark rights; no endorsement is implied.
+## natron.svg
+- Project: Natron
+- Source: https://github.com/NatronGitHub/Natron/blob/c1e4cf222662184ccfd9683b509b8e717af77158/Gui/Resources/Images/natronIcon.svg
+- Repository license: GPL-2.0; a code license does not grant rights in the mark, which belongs to the project. The same file is also published on Wikimedia Commons under CC BY 4.0 (https://commons.wikimedia.org/wiki/File:Natron_icon.svg).
+- Changes: none
+## shotcut.svg
+- Project: Shotcut
+- Source: https://github.com/mltframework/shotcut/blob/2eba56a72af3b7806876f2a2956cfff789db1468/icons/shotcut-logo-64.svg
+- Repository license: GPL-3.0; a code license does not grant rights in the mark, which belongs to the project
+- Changes: none
+## ardour.png
+- Project: Ardour
+- Source: https://github.com/Ardour/ardour/blob/41cddfe2d89560361b18c4af18a225fe5b54f6a3/gtk2_ardour/icons/ardour-app-icon_osx.png
+- Repository license: GPL-2.0; the GitHub repository is a mirror of the project's own git server; a code license does not grant rights in the mark, which belongs to the project
+- Changes: none (128px PNG as shipped)
+## sitewatcher.svg
+- Project: SiteWatcher
+- Source: https://github.com/NikKurkov/sitewatcher/blob/dbaf88075a4e3b6ed5a1e2ee14779d15b09d5e21/assets/brand/icon-light.svg
+- Repository license: MIT; a code license does not grant rights in the mark, which belongs to the project
+- Changes: none (512px SVG app icon as shipped)
+
+## gh-pull.png
+- Project: gh-pull
+- Source: https://github.com/shiqicao/gh-pull/blob/e9a3d986a08af61d87f6beb80ddb926da2db2d9a/docs/favicon.png
+- Repository license: MIT; a code license does not grant rights in the mark, which belongs to the project
+- Changes: none (512px PNG as shipped)

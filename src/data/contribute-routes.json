@@ -24,6 +24,21 @@
   ],
   "aiNote": "Maintainer time is limited. Follow the <a href=\"https://actualbudget.org/docs/contributing/ai-usage-policy\">AI-use policy ↗</a>, review your own work and disclose significant AI help. Do not post unreviewed automated replies to maintainers."
  },
+ "tools/ardour": {
+  "checkedOn": "November 22, 2026",
+  "routes": [
+   {
+    "label": "Ardour development",
+    "href": "https://ardour.org/development",
+    "note": "How the project organizes development and how to get involved."
+   },
+   {
+    "label": "Donate to Ardour Development",
+    "href": "https://community.ardour.org/donate",
+    "note": "Donations and paid downloads fund the project's development."
+   }
+  ]
+ },
  "tools/almalinux": {
   "checkedOn": "November 12, 2026",
   "fundingSource": {
@@ -410,6 +425,21 @@
     "label": "Join GIMP development",
     "href": "https://www.gimp.org/develop/",
     "note": "the project's own developer page."
+   }
+  ]
+ },
+ "tools/gh-pull": {
+  "checkedOn": "November 23, 2026",
+  "routes": [
+   {
+    "label": "gh-pull issues",
+    "href": "https://github.com/shiqicao/gh-pull/issues",
+    "note": "The project's issue tracker for bug reports and requests."
+   },
+   {
+    "label": "gh-pull usage guide",
+    "href": "https://github.com/shiqicao/gh-pull/blob/main/docs/usage.md",
+    "note": "Shortcuts, permissions and dashboard details."
    }
   ]
  },
@@ -1153,6 +1183,21 @@
    }
   ]
  },
+ "tools/sitewatcher": {
+  "checkedOn": "November 23, 2026",
+  "routes": [
+   {
+    "label": "SiteWatcher issues",
+    "href": "https://github.com/NikKurkov/sitewatcher/issues",
+    "note": "The project's issue tracker for bug reports and requests."
+   },
+   {
+    "label": "SiteWatcher user guide",
+    "href": "https://github.com/NikKurkov/sitewatcher/blob/main/docs/usage.en.md",
+    "note": "Setup, checks, status pages, updates and backups."
+   }
+  ]
+ },
  "tools/syncthing": {
   "checkedOn": "November 12, 2026",
   "fundingSource": {
@@ -1365,6 +1410,21 @@
    "href": "https://github.com/mautic/mautic/blob/7.x/.github/FUNDING.yml"
   }
  },
+ "tools/natron": {
+  "checkedOn": "November 22, 2026",
+  "routes": [
+   {
+    "label": "Contributing to Natron",
+    "href": "https://github.com/NatronGitHub/Natron/blob/RB-2.6/CONTRIBUTING.md",
+    "note": "The project's contributing guide covers its process and code of conduct."
+   },
+   {
+    "label": "Community plugins and scripts",
+    "href": "https://github.com/NatronGitHub/natron-plugins",
+    "note": "Community PyPlugs add tools; the documentation also lists a companion scripting repository."
+   }
+  ]
+ },
  "tools/phplist": {
   "checkedOn": "November 15, 2026",
   "routes": [
@@ -1396,6 +1456,21 @@
     "label": "Read the source and contribute",
     "href": "https://github.com/mettle/sendportal",
     "note": "follow the project's contribution guidance before submitting changes."
+   }
+  ]
+ },
+ "tools/shotcut": {
+  "checkedOn": "November 22, 2026",
+  "routes": [
+   {
+    "label": "Shotcut forum",
+    "href": "https://forum.shotcut.org/",
+    "note": "The project's own forum for help, discussion and showing work."
+   },
+   {
+    "label": "Shotcut on GitHub",
+    "href": "https://github.com/mltframework/shotcut",
+    "note": "Source, issue tracker and development."
    }
   ]
  },

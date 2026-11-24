@@ -654,6 +654,27 @@
     ],
     "note": "Check the official download page for the supported OS version and processor architecture. A desktop download is not evidence of a native phone app."
   },
+  "tools/gh-pull": {
+    "checkedOn": "2026-11-23",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "GitHub CLI extension",
+        "url": "https://github.com/shiqicao/gh-pull#readme"
+      },
+      {
+        "name": "Windows",
+        "kind": "GitHub CLI extension",
+        "url": "https://github.com/shiqicao/gh-pull#readme"
+      },
+      {
+        "name": "macOS",
+        "kind": "GitHub CLI extension",
+        "url": "https://github.com/shiqicao/gh-pull#readme"
+      }
+    ],
+    "note": "Runs where the GitHub CLI runs and opens a local dashboard in the browser. Needs a GitHub.com account; GitHub Enterprise hosts are not supported. A desktop tool is not evidence of a native phone app."
+  },
   "tools/obs-studio": {
     "checkedOn": "2026-11-12",
     "platforms": [
@@ -950,6 +971,27 @@
       "label": "Run your own Actual server (official Docker guide)",
       "url": "https://actualbudget.org/docs/install/docker"
     }
+  },
+  "tools/ardour": {
+    "checkedOn": "2026-11-22",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Native desktop app",
+        "url": "https://ardour.org/download.html"
+      },
+      {
+        "name": "Windows",
+        "kind": "Native desktop app",
+        "url": "https://ardour.org/download.html"
+      },
+      {
+        "name": "macOS",
+        "kind": "Native desktop app",
+        "url": "https://ardour.org/download.html"
+      }
+    ],
+    "note": "Ready-to-run builds are paid downloads; the source code is free. A desktop download is not evidence of a native phone app."
   },
   "tools/dbeaver": {
     "checkedOn": "2026-11-12",
@@ -1295,6 +1337,27 @@
     ],
     "note": "This listing is scoped to the open-source MIT SilverBullet Server and its browser/PWA interface.",
     "details": "SilverBullet Desktop is explicitly not open source according to the project FAQ and is excluded from native Linux/Windows/macOS FOSS app counts. A PWA on a phone is not a separate native mobile app."
+  },
+  "tools/sitewatcher": {
+    "checkedOn": "2026-11-23",
+    "server": {
+      "label": "a self-hosted SiteWatcher server",
+      "platforms": [
+        {
+          "name": "Linux",
+          "kind": "Docker Compose",
+          "url": "https://github.com/NikKurkov/sitewatcher#readme"
+        }
+      ]
+    },
+    "clients": [
+      {
+        "name": "Web",
+        "kind": "Browser interface",
+        "url": "https://monitoring.kurkov.dev/demo"
+      }
+    ],
+    "note": "The monitoring dashboard is used in a browser; the service runs on your own server. No native phone app is asserted."
   },
   "tools/beszel": {
     "checkedOn": "2026-11-12",
@@ -2259,6 +2322,27 @@
     ],
     "note": "PHP, database, application updates, cron jobs, queues, mail delivery and consent records."
   },
+  "tools/natron": {
+    "checkedOn": "2026-11-22",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Native desktop app",
+        "url": "https://natrongithub.github.io/#download"
+      },
+      {
+        "name": "Windows",
+        "kind": "Native desktop app",
+        "url": "https://natrongithub.github.io/#download"
+      },
+      {
+        "name": "macOS",
+        "kind": "Native desktop app",
+        "url": "https://natrongithub.github.io/#download"
+      }
+    ],
+    "note": "The stable macOS build is Intel-only; on Apple Silicon it runs via Rosetta 2, per the official download page. A desktop download is not evidence of a native phone app."
+  },
   "tools/phplist": {
     "checkedOn": "2026-11-15",
     "server": {
@@ -2300,6 +2384,27 @@
       }
     ],
     "note": "The Laravel app, database, queues, scheduled tasks, delivery integration and updates."
+  },
+  "tools/shotcut": {
+    "checkedOn": "2026-11-22",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "Native desktop app",
+        "url": "https://www.shotcut.org/download/"
+      },
+      {
+        "name": "Windows",
+        "kind": "Native desktop app",
+        "url": "https://www.shotcut.org/download/"
+      },
+      {
+        "name": "macOS",
+        "kind": "Native desktop app",
+        "url": "https://www.shotcut.org/download/"
+      }
+    ],
+    "note": "64-bit builds; the download page lists the last release supporting older systems (Windows 7/8, macOS 10.14-11). A desktop download is not evidence of a native phone app."
   },
   "tools/fail2ban": {
     "checkedOn": "2026-11-15",

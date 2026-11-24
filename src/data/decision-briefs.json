@@ -32,6 +32,31 @@
   "checkedOn": "November 12, 2026",
   "installSource": "https://actualbudget.org/docs/install/"
  },
+ "tools/ardour": {
+  "heading": "A full recording and mixing desk that stays yours.",
+  "qas": [
+   {
+    "q": "Which package?",
+    "a": "Paid ready-to-run builds or the free source code from the project, distribution packages, the community Flatpak, or nixpkgs. Buying a build funds development."
+   },
+   {
+    "q": "Where does my work live?",
+    "a": "Sessions are folders on your disk and recordings stay where you put them. Recording, editing, mixing and export all happen locally."
+   },
+   {
+    "q": "Will it run on my machine?",
+    "a": "Linux, Windows, or macOS. Any interface your system can use works; complex sessions like a decent CPU and enough RAM."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 22, 2026",
+  "installSource": "https://ardour.org/download.html"
+ },
  "tools/almalinux": {
   "heading": "Choose your release line, then plan in years, not months.",
   "qas": [
@@ -831,6 +856,31 @@
   ],
   "checkedOn": "November 12, 2026",
   "installSource": "https://www.gimp.org/downloads/"
+ },
+ "tools/gh-pull": {
+  "heading": "Every pull request that needs you, in one local view.",
+  "qas": [
+   {
+    "q": "Which package?",
+    "a": "A GitHub CLI extension: gh extension install shiqicao/gh-pull, then gh pull. It uses your existing GitHub CLI sign-in."
+   },
+   {
+    "q": "Where does my work live?",
+    "a": "The dashboard runs locally in your browser against the GitHub API; your reviews and comments live on GitHub. A GitHub.com account is required."
+   },
+   {
+    "q": "Will it run on my machine?",
+    "a": "Linux, Windows, or macOS, anywhere the GitHub CLI runs. GitHub Enterprise hosts are not supported."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 23, 2026",
+  "installSource": "https://github.com/shiqicao/gh-pull#readme"
  },
  "tools/gnucash": {
   "heading": "Ledger accounting in a file on your computer.",
@@ -2286,6 +2336,31 @@
   "checkedOn": "November 12, 2026",
   "installSource": "https://docs.silverbullet.md/Install"
  },
+ "tools/sitewatcher": {
+  "heading": "Watch your sites from a server you control.",
+  "qas": [
+   {
+    "q": "What does it run on?",
+    "a": "A Docker Compose stack on your own machine or server that checks websites on a schedule and keeps the history."
+   },
+   {
+    "q": "Where is my data?",
+    "a": "Sites, check history and status pages live on your server. Alerts go to email, Telegram or both; VirusTotal reports are optional and use your own API key."
+   },
+   {
+    "q": "What will I maintain?",
+    "a": "The containers and their updates. The project is young (0.x) with a single maintainer, so expect active change."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 23, 2026",
+  "installSource": "https://github.com/NikKurkov/sitewatcher#readme"
+ },
  "tools/syncthing": {
   "heading": "Folders in sync, no third-party cloud.",
   "qas": [
@@ -2661,6 +2736,31 @@
   "checkedOn": "November 15, 2026",
   "installSource": "https://docs.mautic.org/en/7.0/getting_started/how_to_install_mautic.html"
  },
+ "tools/natron": {
+  "heading": "Node-based VFX compositing without a subscription.",
+  "qas": [
+   {
+    "q": "Which package?",
+    "a": "The project's own installer or portable build, the community Flatpak on Flathub, or nixpkgs. The latest stable is 2.5.0 from November 2022; development continues toward 2.6."
+   },
+   {
+    "q": "Where does my work live?",
+    "a": "Projects are files on your disk and footage stays where you keep it. Rendering happens locally, and headless rendering supports render farms."
+   },
+   {
+    "q": "Will it run on my machine?",
+    "a": "Linux x86_64 with X11, 64-bit Windows 8.1/10/11, or macOS on Intel hardware; Apple Silicon runs the stable build via Rosetta 2."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 22, 2026",
+  "installSource": "https://natrongithub.github.io/#download"
+ },
  "tools/phplist": {
   "heading": "A newsletter system you can run yourself.",
   "qas": [
@@ -2710,6 +2810,31 @@
   ],
   "checkedOn": "November 15, 2026",
   "installSource": "https://sendportal.io/docs/v4/getting-started/installation"
+ },
+ "tools/shotcut": {
+  "heading": "Timeline video editing without import steps or a subscription.",
+  "qas": [
+   {
+    "q": "Which package?",
+    "a": "The project's AppImage, portable tar or installers, the verified Flathub package, a Snap, or nixpkgs. New versions arrive about every two months; you choose when to update."
+   },
+   {
+    "q": "Where does my work live?",
+    "a": "Projects are files on your disk and media stays where you keep it. Editing and export happen locally."
+   },
+   {
+    "q": "Will it run on my machine?",
+    "a": "64-bit Linux, Windows 10/11 on Intel/AMD or ARM, or macOS 12+. The download page lists the last release for older systems."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 22, 2026",
+  "installSource": "https://www.shotcut.org/download/"
  },
  "tools/fail2ban": {
   "heading": "Slow repeated login failures, without pretending to replace strong authentication.",

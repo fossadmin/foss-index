@@ -659,3 +659,34 @@ Pi-hole's screenshot still needs a supported replacement or permission. The Comm
 - Source: https://github.com/balena-io/etcher/releases/latest
 - Provenance: Our capture of the portable Linux balenaEtcher 2.1.9 application, cropped to the 800x480 app window. No target selected, no drive written. The anonymous-usage notice is retained. Apache-2.0 application.
 - Changes: Resized where needed and converted to WebP. No endorsement implied.
+## natron.webp
+- Project: Natron
+- Source: https://commons.wikimedia.org/wiki/File:Natron-screenshot-20180619.png
+- Author: Sunderland93, 2018-06-19. License stated on the Commons file page: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). The license applies to this image only and was not inferred from the code license.
+- Changes: resized to 1280 px wide and recompressed to WebP only
+- What it shows: Natron from June 2018, an old capture. The current interface differs in places. The footage shown is part of the Commons upload.
+## shotcut.webp
+- Project: Shotcut
+- Source: https://commons.wikimedia.org/wiki/File:Shotcut_at_2024-07-10_15-28-45.png
+- Author: Meltytech, LLC (the project itself), 2024-07-10. License stated on the Commons file page: GPL-3.0. The license applies to this image only.
+- Changes: resized to 1280 px wide and recompressed to WebP only
+- What it shows: Shotcut from July 2024 playing a black-and-white film in the preview monitor. The film frame shown is part of the Commons upload.
+## ardour.webp
+- Project: Ardour
+- Source: https://commons.wikimedia.org/wiki/File:Ardour_6.7_Recorder_Editor_Mixer.png
+- Author: Derwok, 2021-05-29. License stated on the Commons file page: CC0 (public domain dedication). The license applies to this image only and was not inferred from the code license.
+- Changes: resized to 1280 px wide and recompressed to WebP only
+- What it shows: Ardour 6.7 from May 2021, an older major version, with its editor, recorder and mixer windows open. The current interface differs in places.
+## sitewatcher.webp
+- Project: SiteWatcher
+- Source: https://github.com/NikKurkov/sitewatcher/blob/dbaf88075a4e3b6ed5a1e2ee14779d15b09d5e21/docs/screenshots/readme-overview-dark-en.png
+- Author: Nikolai Kurkov (project README screenshot, demo data). License stated by the repository: MIT.
+- Changes: resized to 1280 px wide and recompressed to WebP only
+- What it shows: SiteWatcher dashboard in dark mode with grouped domains, status badges, uptime bars and response times. Demo data, not a live instance.
+
+## gh-pull.webp
+- Project: gh-pull
+- Source: https://github.com/shiqicao/gh-pull/blob/e9a3d986a08af61d87f6beb80ddb926da2db2d9a/docs/demo.png
+- Author: Shiqi Cao (project documentation screenshot). License stated by the repository: MIT.
+- Changes: resized to 1280 px wide and recompressed to WebP only
+- What it shows: gh-pull dashboard with a saved team-reviews view, PRs grouped by repository with dependency lanes, CI badges and review states. Fictional pull requests, per the project's README.

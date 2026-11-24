@@ -349,6 +349,20 @@
     "manual": true,
     "checkedOn": "2026-11-10"
   },
+  "NikKurkov/sitewatcher": {
+    "license": "MIT",
+    "version": "0.4.0",
+    "date": "2026-11-23",
+    "url": "https://github.com/NikKurkov/sitewatcher/blob/main/CHANGELOG.md",
+    "manual": true,
+    "checkedOn": "2026-11-23"
+  },
+  "shiqicao/gh-pull": {
+    "license": "MIT",
+    "version": "v1.17.0",
+    "date": "2026-11-19T05:29:08Z",
+    "url": "https://github.com/shiqicao/gh-pull/releases/tag/v1.17.0"
+  },
   "sources.debian.org": {
     "version": "13.7",
     "url": "https://www.debian.org/releases/trixie/",
@@ -767,6 +781,12 @@
     "changelog": "## Announcing Mautic 7.2.2: Alsciaukat Edition\r\n\r\n### Security Release\r\nThis release addresses several security vulnerabilities. We strongly advise updating your installation at your earliest convenience after performing a full backup and testing the upgrade in a staging environment.\r\n\r\n### \ud83d\udd12 Security Fixes\r\n* **CVE-2026-115188: Remote Code Execution in Campaign Import**\r\n  * **Attribution:** Reported by @m0xath, @iys8, @DavidCarliez, @Forrof, @sdrk3nD, @Hama1cco, @4n86rakam1, and @calbebop. Fixed by @patrykgruszka. Reviewed by @escopecz.\r\n  * **Advisory:** [GHSA-mxjf-pghx-h299](https://github.com/mautic/mautic/security/advisories/GHSA-mxjf-pghx-h299)\r\n\r\n* **CVE-2026-115189: Twig Sandbox Escape in Theme Templates**\r\n  * **Attribution:** Reported by @amagesh1, @manus-use, @sec-reex, @prakhar0x01, @lostfany, @trungpv19, @SRTSubmersionAI, @CyberKareem, @m0xath, @Forrof, @cxcsec, @lucasdodgson, @FlowOverFail, @tal2k9dev-star, and @tlavi00. Analysis by @Den1al. Fixed by @amagesh1. Reviewed by @escopecz and @patrykgruszka.\r\n  * **Advisory:** [GHSA-h7pm-79gc-8867](https://github.com/mautic/mautic/security/advisories/GHSA-h7pm-79gc-8867)\r\n\r\n* **CVE-2026-115191: SQL Injection in Contact Lookup AJAX Endpoint**\r\n  * **Attribution:** Reported by @cuongkt194, @tiencong-98, @bharatdevasani, @pavelkohout396, @blvck-ltr, @Haxset, @cy3erm, @Infinit3i, @AdamKorcz, and @manus-pi. Fixed by @cuongk",
     "license": "GPL-3.0-or-later"
   },
+  "NatronGitHub/Natron": {
+    "license": "GPL-2.0",
+    "version": "v2.5.0",
+    "date": "2022-11-26T00:48:14Z",
+    "url": "https://github.com/NatronGitHub/Natron/releases/tag/v2.5.0"
+  },
   "phpList/phplist3": {
     "version": "v3.6.17",
     "date": "2026-08-09T17:52:58Z",
@@ -808,5 +828,19 @@
     "url": "https://github.com/balena-io/etcher/releases/latest",
     "changelog": "Updates Electron to 44.9.1, etcher-util to Node.js 24 and native addon builds on Windows.",
     "license": "Apache-2.0"
+  },
+  "mltframework/shotcut": {
+    "license": "GPL-3.0",
+    "version": "v26.11.15",
+    "date": "2026-11-16T21:01:18Z",
+    "url": "https://github.com/mltframework/shotcut/releases/tag/v26.11.15"
+  },
+  "Ardour/ardour": {
+    "license": "GPL-2.0",
+    "version": "9.10",
+    "date": "2026-11-09",
+    "url": "https://ardour.org/",
+    "manual": true,
+    "checkedOn": "2026-11-22"
   }
 }
