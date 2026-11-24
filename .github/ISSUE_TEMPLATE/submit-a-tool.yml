@@ -1,0 +1,27 @@
+name: Submit a tool
+description: Suggest an open-source tool for the index. A person reviews every submission before anything is listed.
+body:
+  - type: input
+    attributes:
+      label: Project link
+      description: Its website or source repository is enough to start.
+  - type: input
+    attributes:
+      label: Support or contribute link
+      description: Where can people support the project? Donations, sponsorships, or non-monetary help like code, docs or translations. Use an official project link if available.
+  - type: input
+    attributes:
+      label: Name and what it does
+      description: The name and one line on what it does, in plain words, the way you would describe it to a colleague.
+  - type: input
+    attributes:
+      label: App or edition
+      description: If there is more than one. Some projects use different licenses for the app, the server or a paid version. Tell us which part you mean.
+  - type: input
+    attributes:
+      label: Category
+      description: If one fits. Not sure? Say so and we will place it.
+  - type: textarea
+    attributes:
+      label: Anything else worth knowing
+      description: Optional. Who it suits, why you like it, what to watch out for.

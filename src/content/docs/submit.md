@@ -11,6 +11,9 @@ person reviews each submission first.
 
 - **A link to the project.** Its website or source repository is enough
   to start.
+- **A support or contribute link, if the project has one.** Where
+  people can donate, sponsor, or help with code, docs or translations.
+  An official project link is best.
 - **The name and one line on what it does.** Plain words, the way you
   would describe it to a colleague.
 - **The app or edition, if there is more than one.** Some projects use
@@ -23,7 +26,7 @@ person reviews each submission first.
 ## How to send it
 
 Open an issue on the [index's GitHub
-repository](https://github.com/fossadmin/foss-index/issues/new) with
+repository](https://github.com/fossadmin/foss-index/issues/new?template=submit-a-tool.yml) with
 the details above. That route needs a GitHub account; if you would
 rather not create one, use the [FOSSadmin contact
 page](https://fossadmin.com/contact/) instead.
