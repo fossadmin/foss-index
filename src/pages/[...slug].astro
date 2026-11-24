@@ -37,7 +37,7 @@ const links = [
   { label: 'Polar', url: funding.polar }, { label: 'Liberapay', url: funding.liberapay }, ...(funding.custom ?? []),
 ].filter(l => l.url);
 ---
-<CatalogLayout title={data.title} description={data.description} active={data.category ? browseSlugForCategory(data.category) : ''} serifBody={['about', 'funding', 'submit', 'sponsor'].includes(entry.id)}>
+<CatalogLayout title={data.title} description={data.description} active={data.category ? browseSlugForCategory(data.category) : ''} serifBody={['about', 'funding', 'submit', 'sponsor', 'support'].includes(entry.id)}>
   <article class="detail">
     <a class="back-link" href={import.meta.env.BASE_URL}>← All tools</a>
     <header class="detail-heading">
@@ -86,6 +86,7 @@ const links = [
     {tool && <aside class="support-panel" id="project-support" tabindex="-1"><p class="eyebrow">Keep open source going</p><h2>Support this project</h2>{links.length ? <><p>Support goes directly to the maintainers through their own channels. We do not take a cut.</p><ul>{links.map(l => <li><a href={l.url} data-umami-event="outbound-click" data-umami-event-link="support" data-umami-event-tool={entry.id}>{l.label} ↗</a></li>)}</ul></> : <p>No direct funding link is recorded for this tool yet. Check its <a href={data.repository}>source repository</a> for ways to contribute.</p>}{contribute && <ContributeRoutes {...contribute} />}</aside>}
     {tool && <p class="privacy-note">Tags: {tool.tags.map((tag, i) => <>{i > 0 && ", "}<a href={`${import.meta.env.BASE_URL}tag/${slugify(tag)}/`}>{tag}</a></>)}</p>}
     {tool && <p class="managed-line">Want help setting this up? <a href="https://fossadmin.com">Ask FOSSadmin ↗</a></p>}
+    {tool && <p class="managed-line">Find FOSS Index useful? <a href={`${import.meta.env.BASE_URL}support/`}>Help keep it growing</a>. Your contribution supports maintaining this directory.</p>}
     {tool && relatedGroup && relatedPeers.length > 0 && <nav class="related" aria-labelledby="related-heading">
       <p class="eyebrow">Keep exploring</p><h2 id="related-heading">More in {relatedGroup.name}</h2>
       <ul class="related-list">

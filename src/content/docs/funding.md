@@ -32,3 +32,6 @@ the tools benefit too. Not active yet: there is no revenue to split.
 
 We will publish the actual numbers here once money is moving. Until
 then, treat this page as the plan, not a claim.
+
+Individuals who want to chip in without a company sponsorship: see
+[Support FOSS Index](/support/).
