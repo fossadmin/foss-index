@@ -8,7 +8,7 @@ CONTRIBUTING.md.
 ## Project
 
 FOSS Index (https://index.fossadmin.com) is a curated, editorial directory of
-open-source software. Static Astro site deployed to GitLab Pages. Licensed
+open-source software. Static Astro site deployed to GitHub Pages. Licensed
 AGPL-3.0-only. Every listing is reviewed by a person before it goes in; keep
 it that way.
 
@@ -87,7 +87,7 @@ push anything unless asked.
 
 ### Issue tracker
 
-Issues are tracked in GitLab Issues for `fossadmin/foss-index` (uses `glab`). See `docs/agents/issue-tracker.md`.
+Issues are tracked in GitHub Issues for `fossadmin/foss-index` (uses `gh`). See `docs/agents/issue-tracker.md`.
 
 ### Triage labels
 

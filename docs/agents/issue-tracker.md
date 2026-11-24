@@ -1,47 +1,47 @@
-# Issue tracker: GitLab
+# Issue tracker: GitHub
 
-Issues and specs for this repo live as GitLab issues. Use the [`glab`](https://gitlab.com/gitlab-org/cli) CLI for all operations.
+Issues and specs for this repo live as GitHub issues. Use the [`gh`](https://cli.github.com/) CLI for all operations.
 
 ## Conventions
 
-- **Create an issue**: `glab issue create --title "..." --description "..."`. Use a heredoc for multi-line descriptions. Pass `--description -` to open an editor.
-- **Read an issue**: `glab issue view <number> --comments`. Use `-F json` for machine-readable output.
-- **List issues**: `glab issue list -O json` with appropriate `--label` filters.
-- **Comment on an issue**: `glab issue note <number> --message "..."`. GitLab calls comments "notes".
-- **Apply / remove labels**: `glab issue update <number> --label "..."` / `--unlabel "..."`. Multiple labels can be comma-separated or by repeating the flag.
-- **Close**: `glab issue close <number>`. `glab issue close` does not accept a closing comment, so post the explanation first with `glab issue note <number> --message "..."`, then close.
-- **Assign an issue**: `glab issue update <number> --assignee fossadmin` (fossadmin is the verified maintainer username; `@me` is not assumed to work).
-- **Merge requests**: GitLab calls PRs "merge requests". Use `glab mr create --title "..." --description "..."` to create, `glab mr update --description "..."` to change the body, `glab mr view`, `glab mr note --message "..."` to comment. The `note`/`--message` convention applies to comments only; create and update use `--description`.
+- **Create an issue**: `gh issue create --title "..." --body "..."`. Use a heredoc with `--body-file -` for multi-line descriptions. Omit `--body` to open an editor.
+- **Read an issue**: `gh issue view <number> --comments`. Use `--json number,title,body,comments` for machine-readable output.
+- **List issues**: `gh issue list --json number,title,labels` with appropriate `--label` filters.
+- **Comment on an issue**: `gh issue comment <number> --body "..."`.
+- **Apply / remove labels**: `gh issue edit <number> --add-label "..."` / `--remove-label "..."`. Multiple labels can be comma-separated or by repeating the flag.
+- **Close**: `gh issue close <number>`. `gh issue close` accepts `--comment "..."`; otherwise post the explanation first with `gh issue comment <number> --body "..."`, then close.
+- **Assign an issue**: `gh issue edit <number> --add-assignee fossadmin` (fossadmin is the verified maintainer username; `@me` is not assumed to work).
+- **Pull requests**: Use `gh pr create --title "..." --body "..."` to create, `gh pr edit --body-file -` to change the body, `gh pr view`, `gh pr comment <number> --body "..."` to comment.
 
-**Tracker changes require approval.** Creating, commenting on, labeling, assigning, or closing issues or merge requests changes the public tracker. Propose the action first and run it only with the maintainer's explicit approval. Skill instructions to publish, claim, or resolve do not override this rule.
+**Tracker changes require approval.** Creating, commenting on, labeling, assigning, or closing issues or pull requests changes the public tracker. Propose the action first and run it only with the maintainer's explicit approval. Skill instructions to publish, claim, or resolve do not override this rule.
 
-## Merge requests as a triage surface
+## Pull requests as a triage surface
 
-**MRs as a request surface: no.** _(Set to `yes` if this repo treats external merge requests as feature requests; `/triage` reads this flag.)_
+**PRs as a request surface: no.** _(Set to `yes` if this repo treats external pull requests as feature requests; `/triage` reads this flag.)_
 
-When set to `yes`, MRs run through the same labels and states as issues, using the `glab mr` equivalents:
+When set to `yes`, PRs run through the same labels and states as issues, using the `gh pr` equivalents:
 
-- **Read an MR**: `glab mr view <number> --comments` and `glab mr diff <number>` for the diff.
-- **List external MRs for triage**: `glab mr list -F json`, then keep only MRs whose author is not a project member/owner (a contributor's MR, not a maintainer's in-flight work).
-- **Comment / label / close**: `glab mr note`, `glab mr update --label`/`--unlabel`, `glab mr close`.
+- **Read a PR**: `gh pr view <number> --comments` and `gh pr diff <number>` for the diff.
+- **List external PRs for triage**: `gh pr list --json number,title,author`, then keep only PRs whose author is not a project member/owner (a contributor's PR, not a maintainer's in-flight work).
+- **Comment / label / close**: `gh pr comment`, `gh pr edit --add-label`/`--remove-label`, `gh pr close`.
 
-Unlike GitHub, GitLab numbers issues and MRs separately, so `#42` is unambiguous once you know which surface the maintainer means.
+GitHub numbers issues and PRs from a single sequence, so `#42` identifies exactly one item across both surfaces.
 
 ## When a skill says "publish to the issue tracker"
 
-Create a GitLab issue. (Subject to the tracker-changes-require-approval rule above.)
+Create a GitHub issue. (Subject to the tracker-changes-require-approval rule above.)
 
 ## When a skill says "fetch the relevant ticket"
 
-Run `glab issue view <number> --comments`.
+Run `gh issue view <number> --comments`.
 
 ## Wayfinding operations
 
 Used by `/wayfinder`. The **map** is a single issue with **child** issues as tickets.
 
-- **Map**: a single issue labelled `wayfinder:map`, holding the Notes / Decisions-so-far / Fog body. `glab issue create --label wayfinder:map`. (On GitLab tiers with native epics, an epic may hold the map instead; a labelled issue works everywhere.)
-- **Child ticket**: an issue carrying `Part of #<map>` at the top of its description, linked to the map (`glab issue create --linked-issues <map> --link-type relates_to`), and labels `wayfinder:<type>` (`research`/`prototype`/`grilling`/`task`). Once claimed, the ticket is assigned to the driving dev.
-- **Blocking**: GitLab's **native blocking link**, the canonical, UI-visible representation. Add it with the `/blocked_by #<n>` quick action, posted as a note (`glab issue note <child> --message "/blocked_by #<blocker>"`). Native blocking links are a Premium/Ultimate feature; on the free tier (or where unavailable) fall back to a `Blocked by: #<n>, #<n>` line at the top of the description. A ticket is unblocked when every blocker is closed.
-- **Frontier query**: list the map's children with `glab api projects/:id/issues/<map>/links`, keeping open issues that carry a `wayfinder:<type>` label; drop any with an open blocker: a native `blocked_by` link to an open issue (`glab api projects/:id/issues/<child-iid>/links`), or an open issue in the `Blocked by` line, or an assignee; first in map order wins.
-- **Claim**: `glab issue update <n> --assignee fossadmin` (fossadmin is the verified maintainer username; `@me` is not assumed to be a valid assignee target).
-- **Resolve**: `glab issue note <n> --message "<answer>"`, then `glab issue close <n>`, then append a context pointer (gist + link) to the map's Decisions-so-far. (Subject to the tracker-changes-require-approval rule above.)
+- **Map**: a single issue labelled `wayfinder:map`, holding the Notes / Decisions-so-far / Fog body. `gh issue create --label wayfinder:map --title "..." --body "..."`. GitHub has no epic object on the standard tier; the labelled issue is the map everywhere.
+- **Child ticket**: an issue carrying `Part of #<map>` at the top of its description (GitHub renders this as a cross-reference to the map) and labels `wayfinder:<type>` (`research`/`prototype`/`grilling`/`task`). Once claimed, the ticket is assigned to the driving dev.
+- **Blocking**: GitHub has no native blocking link on the standard tier. The canonical representation is a `Blocked by: #<n>, #<n>` line at the top of the description. A ticket is unblocked when every blocker is closed.
+- **Frontier query**: list open issues carrying a `wayfinder:<type>` label with `gh issue list --label <type> --json number,title,body,assignees`; drop any with an open issue in its `Blocked by` line, or an assignee; first in map order wins.
+- **Claim**: `gh issue edit <n> --add-assignee fossadmin` (fossadmin is the verified maintainer username; `@me` is not assumed to be a valid assignee target).
+- **Resolve**: `gh issue comment <n> --body "<answer>"`, then `gh issue close <n>`, then append a context pointer (gist + link) to the map's Decisions-so-far. (Subject to the tracker-changes-require-approval rule above.)

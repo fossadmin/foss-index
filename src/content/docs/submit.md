@@ -22,13 +22,13 @@ person reviews each submission first.
 
 ## How to send it
 
-Open an issue on the [index's GitLab
-repository](https://gitlab.com/fossadmin/foss-index/-/issues/new) with
-the details above. That route needs a GitLab account; if you would
+Open an issue on the [index's GitHub
+repository](https://github.com/fossadmin/foss-index/issues/new) with
+the details above. That route needs a GitHub account; if you would
 rather not create one, use the [FOSSadmin contact
 page](https://fossadmin.com/contact/) instead.
 
-Comfortable editing the site? Merge requests are welcome too. Each
+Comfortable editing the site? Pull requests are welcome too. Each
 listing is one Markdown file under `src/content/docs/tools/`.
 
 ## What happens next

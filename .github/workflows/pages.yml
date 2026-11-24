@@ -1,0 +1,66 @@
+# GitHub Pages serves only dist/; there is no server-side runtime.
+name: Build and deploy
+
+on:
+  push:
+    branches: [main]
+  # Manual run also triggers the opt-in release check below.
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+env:
+  ASTRO_TELEMETRY_DISABLED: "1"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: https://index.fossadmin.com
+    steps:
+      - uses: actions/deploy-pages@v4
+
+  # Opt-in check only: no bot token, source writes, commits or deployment.
+  # Runs on manual dispatch; a schedule has to be added by a maintainer.
+  check-releases:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run test:releases
+      - run: npm run update-releases
+      - uses: actions/upload-artifact@v4
+        with:
+          name: release-check
+          path: .release-check/
+          include-hidden-files: true
+          retention-days: 14

@@ -133,15 +133,15 @@ sold, and no per-person data is shared.
 
 ## Source code and license
 
-The site source is public on [GitLab](https://gitlab.com/fossadmin/foss-index).
+The site source is public on [GitHub](https://github.com/fossadmin/foss-index).
 Its code and original text are licensed under the
-[GNU AGPL v3](https://gitlab.com/fossadmin/foss-index/-/blob/main/LICENSE) (version 3
+[GNU AGPL v3](https://github.com/fossadmin/foss-index/blob/main/LICENSE) (version 3
 only). Fonts, screenshots, icons and the FOSSadmin name and branding are not covered
-by it; see [LICENSING.md](https://gitlab.com/fossadmin/foss-index/-/blob/main/LICENSING.md).
+by it; see [LICENSING.md](https://github.com/fossadmin/foss-index/blob/main/LICENSING.md).
 The license shown on each listing is that project's own.
 
 ## Something missing or wrong?
 
 Found a mistake? Check the linked project sources before choosing a
 tool. Know a tool that belongs here? [Submit it](/submit/), or open an
-issue on the [GitLab repository](https://gitlab.com/fossadmin/foss-index).
+issue on the [GitHub repository](https://github.com/fossadmin/foss-index/issues).
