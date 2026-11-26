@@ -140,6 +140,11 @@ if ((home.match(/rel="preload"[^>]*font\/woff2/g) || []).length < 3) fails.push(
  if (home.includes('data-latest-added')) fails.push('homepage: data-latest-added aging leftover must be gone');
  if (home.includes('data-recent-fallback') || home.includes('Check back for newly added tools')) fails.push('homepage: recent empty-state wording belongs on /recent/, not the homepage');
  if (!home.includes('Featured first, then A-Z')) fails.push('homepage: sort-order note missing beside the All tools heading');
+ // Saved view: most recently saved first, wording switches to match
+ // (Chris, 2026-11-26). Hash-driven, so pinned at source level.
+ const catalogSrc = read('src/components/Catalog.astro');
+ if (!catalogSrc.includes("'Most recently saved first'")) fails.push('catalog: saved view must be labeled Most recently saved first');
+ if (!/originalOrder\.forEach[\s\S]{0,400}rank\.get/.test(catalogSrc)) fails.push('catalog: saved view must reorder rows by recency');
  if (home.includes('76 seconds, captions available')) fails.push('homepage: old tour duration note must be gone');
  if (home.includes('data-recent-dismiss') || home.includes('fossindex-recent-seen')) fails.push('homepage: banner/dismiss leftovers must be gone');
  const recentPage = fs.existsSync(new URL('../dist/recent/index.html', import.meta.url)) ? read('dist/recent/index.html') : '';

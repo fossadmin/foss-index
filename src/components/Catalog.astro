@@ -218,6 +218,9 @@ const measureAttrs = (id: string) => !selected && cardPlacement.has(id) ? { 'dat
   import { matchTool } from '../lib/search.mjs';
   const input = document.querySelector<HTMLInputElement>('[data-search]');
   const rows = [...document.querySelectorAll<HTMLElement>('[data-tool]')];
+  const toolList = document.querySelector<HTMLElement>('[data-tool-list]');
+  const originalOrder = rows.slice();
+  const sortNote = document.querySelector<HTMLElement>('.sort-note');
   const ui = document.querySelector<HTMLElement>('[data-search-ui]');
   const countEl = document.querySelector<HTMLElement>('[data-result-count]')!;
   const headingEl = document.querySelector<HTMLElement>('[data-list-heading]');
@@ -237,6 +240,20 @@ const measureAttrs = (id: string) => !selected && cardPlacement.has(id) ? { 'dat
     const matchedAlternatives = new Set<string>();
     const savedMode = location.hash === '#saved';
     const ids = savedMode ? savedIds() : [];
+    // Saved view is a shortlist: most recently saved first, featured status
+    // ignored (Chris, 2026-11-26). foss-index:saved appends on save, so the
+    // stored array is already chronological - show it reversed. Existing
+    // saves keep working; only the display order changes.
+    if (toolList) {
+      originalOrder.forEach(r => toolList.appendChild(r));
+      if (savedMode) {
+        const rank = new Map(ids.map((id, i) => [id, i]));
+        rows.slice()
+          .sort((a, b) => (rank.get(b.dataset.toolId!) ?? -1) - (rank.get(a.dataset.toolId!) ?? -1))
+          .forEach(r => toolList.appendChild(r));
+      }
+    }
+    if (sortNote) sortNote.textContent = savedMode ? 'Most recently saved first' : 'Featured first, then A-Z';
     let count = 0;
     for (const row of rows) {
       const match = matchTool(row.dataset.searchText!, alternativeNames.get(row)!, query);
