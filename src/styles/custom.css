@@ -584,6 +584,9 @@ html.js .qs-jump {
   margin-right: auto;
   margin-left: 14px;
 }
+.list-heading [data-result-count] {
+  margin-left: 12px;
+}
 .tool-list {
   list-style: none;
   margin: 0;
