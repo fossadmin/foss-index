@@ -27,9 +27,10 @@ person reviews each submission first.
 
 Open an issue on the [index's GitHub
 repository](https://github.com/fossadmin/foss-index/issues/new?template=submit-a-tool.yml) with
-the details above. That route needs a GitHub account; if you would
-rather not create one, use the [FOSSadmin contact
-page](https://fossadmin.com/contact/) instead.
+the details above. That route needs a GitHub account. The project you
+suggest does not have to live on GitHub - GitLab, Codeberg or its own
+server works just the same; the issue is only how the suggestion
+reaches us.
 
 Comfortable editing the site? Pull requests are welcome too. Each
 listing is one Markdown file under `src/content/docs/tools/`.

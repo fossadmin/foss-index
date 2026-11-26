@@ -842,5 +842,12 @@
     "url": "https://ardour.org/",
     "manual": true,
     "checkedOn": "2026-11-22"
+  },
+  "MGM-FALCON/quelllm-mcp": {
+    "version": "v1.1.0",
+    "date": "2026-05-23T22:21:16Z",
+    "url": "https://github.com/MGM-FALCON/quelllm-mcp/releases/tag/v1.1.0",
+    "changelog": "## What's new in v1.1.0\n\n### Packaging\n- Renamed the Python package `server/` \u2192 `quelllm_mcp/` with a proper `main()` console entry point. The old top-level `server` package name risked import collisions on user machines. Config and install are unchanged (`command: \"quelllm-mcp\"`).\n\n### Bug fixes\n- **`compare()`**: removed the `tokSec` field (it never existed in the quelllm.fr API, so it was always `null`) and exposed the real `ctx` (context window) instead. Replaced the bogus `more_recent` placeholder \u2014 which actually compared parameter counts \u2014 with honest `more_params` and `larger_context` ",
+    "license": "MIT"
   }
 }

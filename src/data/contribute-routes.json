@@ -1537,5 +1537,20 @@
     "note": "follow the project's contribution guidance before submitting changes."
    }
   ]
+ },
+ "tools/quelllm-mcp": {
+  "checkedOn": "November 26, 2026",
+  "routes": [
+   {
+    "label": "quelllm-mcp issues",
+    "href": "https://github.com/MGM-FALCON/quelllm-mcp/issues",
+    "note": "The project's issue tracker for bug reports and requests."
+   },
+   {
+    "label": "QuelLLM API documentation",
+    "href": "https://quelllm.fr/api/",
+    "note": "The free CC BY 4.0 catalog API the server queries."
+   }
+  ]
  }
 }

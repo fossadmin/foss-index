@@ -2479,5 +2479,26 @@
       }
     ],
     "note": "Choose the correct OS/architecture download. Windows installer ISOs need handling that Etcher does not provide."
+  },
+  "tools/quelllm-mcp": {
+    "checkedOn": "2026-11-26",
+    "platforms": [
+      {
+        "name": "Linux",
+        "kind": "MCP server (Python)",
+        "url": "https://github.com/MGM-FALCON/quelllm-mcp#readme"
+      },
+      {
+        "name": "Windows",
+        "kind": "MCP server (Python)",
+        "url": "https://github.com/MGM-FALCON/quelllm-mcp#readme"
+      },
+      {
+        "name": "macOS",
+        "kind": "MCP server (Python)",
+        "url": "https://github.com/MGM-FALCON/quelllm-mcp#readme"
+      }
+    ],
+    "note": "Runs locally wherever Python 3.10+ and an MCP-compatible client run; the README documents pip and uvx installs from git. Model data is fetched from the quelllm.fr API at query time, so it needs network access. A desktop tool is not evidence of a native phone app."
   }
 }

@@ -2935,5 +2935,30 @@
   ],
   "checkedOn": "November 15, 2026",
   "installSource": "https://etcher.balena.io/"
+ },
+ "tools/quelllm-mcp": {
+  "heading": "Ask your AI client which open-weight model fits your machine.",
+  "qas": [
+   {
+    "q": "Which package?",
+    "a": "An MCP server: uvx --from git+https://github.com/MGM-FALCON/quelllm-mcp.git quelllm-mcp, or pip install from the same repository, then add it to your MCP client's config."
+   },
+   {
+    "q": "Where does my work live?",
+    "a": "The server runs locally inside your MCP client. Model data comes from the free quelllm.fr API (CC BY 4.0, no key) and is cached locally for an hour."
+   },
+   {
+    "q": "Will it run on my machine?",
+    "a": "Linux, Windows, or macOS with Python 3.10+ and an MCP-compatible client such as Claude Code, Claude Desktop, Cursor or Continue."
+   }
+  ],
+  "actions": [
+   {
+    "label": "Give back",
+    "href": "#project-support"
+   }
+  ],
+  "checkedOn": "November 26, 2026",
+  "installSource": "https://github.com/MGM-FALCON/quelllm-mcp#readme"
  }
 }

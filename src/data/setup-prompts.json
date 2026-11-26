@@ -1135,5 +1135,14 @@
       "Linux, macOS and Windows": {}
     },
     "cls": "media"
+  },
+  "tools/quelllm-mcp": {
+    "purpose": "Local MCP server for searching and comparing open-weight LLMs from the QuelLLM catalog",
+    "checkedOn": "2026-11-26",
+    "methods": {
+      "Linux, macOS and Windows": {},
+      "NixOS": {}
+    },
+    "cls": "desktop"
   }
 }

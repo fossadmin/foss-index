@@ -650,3 +650,9 @@ The official writing-about page asks for advance contact for logos and other vis
 - Source: https://github.com/shiqicao/gh-pull/blob/e9a3d986a08af61d87f6beb80ddb926da2db2d9a/docs/favicon.png
 - Repository license: MIT; a code license does not grant rights in the mark, which belongs to the project
 - Changes: none (512px PNG as shipped)
+
+## quelllm-mcp.svg
+- Project: QuelLLM (quelllm.fr)
+- Source: https://quelllm.fr/favicon.svg
+- The site states no separate logo license; the mark belongs to the project
+- Changes: none (SVG as shipped)

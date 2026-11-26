@@ -690,3 +690,6 @@ Pi-hole's screenshot still needs a supported replacement or permission. The Comm
 - Author: Shiqi Cao (project documentation screenshot). License stated by the repository: MIT.
 - Changes: resized to 1280 px wide and recompressed to WebP only
 - What it shows: gh-pull dashboard with a saved team-reviews view, PRs grouped by repository with dependency lanes, CI badges and review states. Fictional pull requests, per the project's README.
+
+## quelllm-mcp.webp
+- Our own capture (2026-11-26): the quelllm.fr catalogue view (French), the open-weight model table the MCP server queries; the server itself has no interface. Dismissed the site's own Black Friday reminder and sticky kit bar via their on-page dismiss controls before capturing; converted to WebP only.
